@@ -24,8 +24,18 @@ class TesteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         controller.delegate = self
+        setNavigation()
+    }
+
+    func setNavigation() {
+        // MARK: Título
+        self.navigationItem.title = "Teste"
+        // MARK: Cor da Navigation
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
     }
 
     @IBAction func btnMudar(_ sender: Any) {
