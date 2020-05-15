@@ -10,6 +10,13 @@ import UIKit
 
 class RecomendacoesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageCard: UIImageView!
+    @IBOutlet weak var titleCard: UILabel!
+    @IBOutlet weak var subtitleCard: UILabel!
+    @IBOutlet weak var iconRating: UIImageView!
+    @IBOutlet weak var lbRating: UILabel!
+    @IBOutlet weak var costValue: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
