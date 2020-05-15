@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F17C7B5246F179400A2D212 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7B4246F179400A2D212 /* MainModel.swift */; };
+		0F17C7B9246F180300A2D212 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7B8246F180300A2D212 /* MainController.swift */; };
+		0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7BA246F184100A2D212 /* MainViewController.swift */; };
+		0F17C7BD246F184100A2D212 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7BB246F184100A2D212 /* MainViewController.xib */; };
 		CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */; };
 		CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */; };
 		CB4F8F87246DBA550004B5E5 /* TesteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F86246DBA550004B5E5 /* TesteModel.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F17C7B4246F179400A2D212 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		0F17C7B8246F180300A2D212 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		0F17C7BA246F184100A2D212 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F17C7BB246F184100A2D212 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
 		CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TesteViewController.xib; sourceTree = "<group>"; };
 		CB4F8F86246DBA550004B5E5 /* TesteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteModel.swift; sourceTree = "<group>"; };
@@ -49,6 +57,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F17C7B0246F16B500A2D212 /* Screen - Main */ = {
+			isa = PBXGroup;
+			children = (
+				0F17C7B1246F16C800A2D212 /* Model */,
+				0F17C7B2246F16FD00A2D212 /* View */,
+				0F17C7B3246F170600A2D212 /* Controller */,
+			);
+			path = "Screen - Main";
+			sourceTree = "<group>";
+		};
+		0F17C7B1246F16C800A2D212 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F17C7B4246F179400A2D212 /* MainModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F17C7B2246F16FD00A2D212 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F17C7BA246F184100A2D212 /* MainViewController.swift */,
+				0F17C7BB246F184100A2D212 /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F17C7B3246F170600A2D212 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F17C7B8246F180300A2D212 /* MainController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CB4F8F7E246DB8DD0004B5E5 /* Example (NomeDaTela) */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +162,7 @@
 		CBFECD40246DB56E005B621F /* ExperienceApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F17C7B0246F16B500A2D212 /* Screen - Main */,
 				CB4F8F7E246DB8DD0004B5E5 /* Example (NomeDaTela) */,
 				CBFECD58246DB58C005B621F /* Application */,
 				CBFECD59246DB5B3005B621F /* CoreData */,
@@ -210,6 +254,7 @@
 			files = (
 				CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */,
 				CBFECD51246DB571005B621F /* LaunchScreen.storyboard in Resources */,
+				0F17C7BD246F184100A2D212 /* MainViewController.xib in Resources */,
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
 				CBFECD49246DB56E005B621F /* Main.storyboard in Resources */,
 			);
@@ -244,11 +289,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBFECD46246DB56E005B621F /* ViewController.swift in Sources */,
+				0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */,
 				CBFECD42246DB56E005B621F /* AppDelegate.swift in Sources */,
 				CBFECD44246DB56E005B621F /* SceneDelegate.swift in Sources */,
 				CB4F8FA3246DCA350004B5E5 /* UIColor+Extensions.swift in Sources */,
 				CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */,
+				0F17C7B5246F179400A2D212 /* MainModel.swift in Sources */,
 				CBFECD4C246DB56E005B621F /* ExperienceApp.xcdatamodeld in Sources */,
+				0F17C7B9246F180300A2D212 /* MainController.swift in Sources */,
 				CB4F8F89246DBB060004B5E5 /* TesteController.swift in Sources */,
 				CB4F8F87246DBA550004B5E5 /* TesteModel.swift in Sources */,
 			);
