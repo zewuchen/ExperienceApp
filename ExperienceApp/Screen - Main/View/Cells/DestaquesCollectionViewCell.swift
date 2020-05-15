@@ -9,10 +9,12 @@
 import UIKit
 
 class DestaquesCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var imgDestaque: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
 }
+

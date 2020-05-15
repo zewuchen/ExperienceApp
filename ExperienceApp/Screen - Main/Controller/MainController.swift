@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+protocol MainControllerDelegate: AnyObject {
+    func reloadData(data: MainModel)
+}
+
+final class MainController {
+    private var data: [MainModel] = []
+    weak public var delegate: MainControllerDelegate?
+    
+    public init() {
+        //self.data.append
+        
+    }
+    
+    public func reload() {
+        delegate?.reloadData(data: data)
+    }
+}
