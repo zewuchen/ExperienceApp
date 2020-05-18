@@ -46,6 +46,7 @@
 		CB4F8F87246DBA550004B5E5 /* TesteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F86246DBA550004B5E5 /* TesteModel.swift */; };
 		CB4F8F89246DBB060004B5E5 /* TesteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F88246DBB060004B5E5 /* TesteController.swift */; };
 		CB4F8FA3246DCA350004B5E5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8FA2246DCA350004B5E5 /* UIColor+Extensions.swift */; };
+		CBED9A5E2473301A00739BFD /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED9A5D2473301A00739BFD /* Cloud.swift */; };
 		CBFECD42246DB56E005B621F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFECD41246DB56E005B621F /* AppDelegate.swift */; };
 		CBFECD44246DB56E005B621F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFECD43246DB56E005B621F /* SceneDelegate.swift */; };
 		CBFECD46246DB56E005B621F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFECD45246DB56E005B621F /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 		CB4F8F86246DBA550004B5E5 /* TesteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteModel.swift; sourceTree = "<group>"; };
 		CB4F8F88246DBB060004B5E5 /* TesteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteController.swift; sourceTree = "<group>"; };
 		CB4F8FA2246DCA350004B5E5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CBED9A5D2473301A00739BFD /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		CBFECD3E246DB56E005B621F /* ExperienceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperienceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFECD41246DB56E005B621F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBFECD43246DB56E005B621F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -452,6 +454,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CBED9A5C2473301A00739BFD /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				CBED9A5D2473301A00739BFD /* Cloud.swift */,
+			);
+			name = Cloud;
+			path = ExperienceApp/Cloud;
+			sourceTree = SOURCE_ROOT;
+		};
 		CBFECD35246DB56E005B621F = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +494,7 @@
 				CB4F8F7E246DB8DD0004B5E5 /* Example (NomeDaTela) */,
 				CBFECD58246DB58C005B621F /* Application */,
 				CBFECD59246DB5B3005B621F /* CoreData */,
+				CBED9A5C2473301A00739BFD /* Cloud */,
 				CB4F8F9F246DC9E30004B5E5 /* Helpers */,
 				CBFECD45246DB56E005B621F /* ViewController.swift */,
 				CBFECD4D246DB571005B621F /* Assets.xcassets */,
@@ -641,6 +653,7 @@
 				0F17C7B9246F180300A2D212 /* MainController.swift in Sources */,
 				0F17C7C5246F1B1B00A2D212 /* RecomendacoesTableViewCell.swift in Sources */,
 				0F17C7F5246F398900A2D212 /* PerfilTableViewCell.swift in Sources */,
+				CBED9A5E2473301A00739BFD /* Cloud.swift in Sources */,
 				CB4F8F89246DBB060004B5E5 /* TesteController.swift in Sources */,
 				9542EBC8247305240049E27E /* LoginViewController.swift in Sources */,
 				9542EBD124730ACA0049E27E /* EntrarNaContaViewController.swift in Sources */,
