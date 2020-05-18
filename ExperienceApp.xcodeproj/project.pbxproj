@@ -32,6 +32,8 @@
 		0F17C7F6246F398900A2D212 /* PerfilTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7F4246F398900A2D212 /* PerfilTableViewCell.xib */; };
 		0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7F7246F399C00A2D212 /* PerfilController.swift */; };
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
+		9542EBD624732C8E0049E27E /* GerarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBD424732C8E0049E27E /* GerarViewController.swift */; };
+		9542EBD724732C8E0049E27E /* GerarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542EBD524732C8E0049E27E /* GerarViewController.xib */; };
 		CB1A9DFD2472F9D900946B78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A9DFC2472F9D900946B78 /* CloudKit.framework */; };
 		CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */; };
 		CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */; };
@@ -73,6 +75,8 @@
 		0F17C7F4246F398900A2D212 /* PerfilTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilTableViewCell.xib; sourceTree = "<group>"; };
 		0F17C7F7246F399C00A2D212 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
+		9542EBD424732C8E0049E27E /* GerarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarViewController.swift; sourceTree = "<group>"; };
+		9542EBD524732C8E0049E27E /* GerarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GerarViewController.xib; sourceTree = "<group>"; };
 		CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExperienceApp.entitlements; sourceTree = "<group>"; };
 		CB1A9DFC2472F9D900946B78 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				0F17C800246F39EC00A2D212 /* GerarController.swift */,
+				9542EBD424732C8E0049E27E /* GerarViewController.swift */,
+				9542EBD524732C8E0049E27E /* GerarViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
 				CBFECD49246DB56E005B621F /* Main.storyboard in Resources */,
 				0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */,
+				9542EBD724732C8E0049E27E /* GerarViewController.xib in Resources */,
 				0F17C7E7246F391F00A2D212 /* DisponibilidadeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +546,7 @@
 				0F17C7E6246F391F00A2D212 /* DisponibilidadeViewController.swift in Sources */,
 				0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */,
 				0F17C7C1246F1B0300A2D212 /* DestaquesCollectionViewCell.swift in Sources */,
+				9542EBD624732C8E0049E27E /* GerarViewController.swift in Sources */,
 				0F17C7D5246F37C500A2D212 /* DestaquesController.swift in Sources */,
 				0F17C7E1246F387800A2D212 /* ExperienciasInfoController.swift in Sources */,
 				CBFECD42246DB56E005B621F /* AppDelegate.swift in Sources */,
