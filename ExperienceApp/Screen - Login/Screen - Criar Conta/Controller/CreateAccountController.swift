@@ -15,7 +15,7 @@ final class CreateAccountController {
 
     public init () { }
 
-    public func createAccount() {
-        // TODO: Implementar o login aqui
+    public func createAccount(user: AuthModel) {
+        Cloud.shared.createUser(data: user)
     }
 }

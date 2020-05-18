@@ -21,7 +21,11 @@ class CriarContaViewController: UIViewController {
     }
 
     @IBAction func btnLogin(_ sender: Any) {
-        // TODO: Mostrar sucesso pro usuário ou erro
+        guard let email = txtEmail.text else { return }
+        guard let password = txtSenha.text else { return }
+
+        let user = AuthModel(name: "", description: "", email: email, password: password)
+        controller.login(user: user)
     }
 
 }
@@ -29,5 +33,6 @@ class CriarContaViewController: UIViewController {
 extension CriarContaViewController: LoginControllerDelegate {
     func authResponser() {
         // TODO: Fazer algo
+        // TODO: Mostrar sucesso pro usuário ou erro
     }
 }

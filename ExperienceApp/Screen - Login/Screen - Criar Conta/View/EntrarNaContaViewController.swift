@@ -23,7 +23,13 @@ class EntrarNaContaViewController: UIViewController {
     }
 
     @IBAction func btnCreateAccount(_ sender: Any) {
-        // TODO: Mostrar sucesso pro usuário ou erro
+        guard let name = txtNome.text else { return }
+        guard let email = txtEmail.text else { return }
+        guard let password = txtSenha.text else { return }
+        guard let description = txtDescription.text else { return }
+
+        let user = AuthModel(name: name, description: description, email: email, password: password)
+        controller.createAccount(user: user)
     }
 
 }
@@ -31,5 +37,6 @@ class EntrarNaContaViewController: UIViewController {
 extension EntrarNaContaViewController: CreateAccountControllerDelegate {
     func authResponser() {
         // TODO: Fazer algo
+        // TODO: Mostrar sucesso pro usuário ou erro
     }
 }
