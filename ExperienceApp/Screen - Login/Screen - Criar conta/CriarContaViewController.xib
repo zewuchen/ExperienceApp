@@ -17,38 +17,25 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-g7-PCQ">
-                    <rect key="frame" x="24" y="273" width="69" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-g7-PCQ">
+                    <rect key="frame" x="25" y="268" width="365" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="jb2-AP-6s6"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                     <state key="normal" title="E-mail">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira teu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJk-rY-mjQ">
-                    <rect key="frame" x="24" y="312" width="366" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                            <integer key="value" value="25"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-H8-vtR">
-                    <rect key="frame" x="24" y="359" width="68" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-H8-vtR">
+                    <rect key="frame" x="24" y="356" width="366" height="45"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                     <state key="normal" title="Senha">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira tua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-UN-KNd">
-                    <rect key="frame" x="24" y="398" width="366" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira tua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-UN-KNd">
+                    <rect key="frame" x="24" y="395" width="366" height="34"/>
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,17 +46,21 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcS-vQ-I2x">
-                    <rect key="frame" x="25" y="158" width="98" height="41"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcS-vQ-I2x">
+                    <rect key="frame" x="25" y="159" width="365" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="ElH-BB-dmK"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="highlightedColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-y7-bEF">
-                    <rect key="frame" x="72" y="739" width="271" height="63"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-y7-bEF">
+                    <rect key="frame" x="25" y="742" width="365" height="60"/>
                     <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="T5Z-gd-ayY"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                     <state key="normal" title="Entrar">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,8 +71,40 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira teu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJk-rY-mjQ">
+                    <rect key="frame" x="24" y="306" width="366" height="34"/>
+                    <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xcS-vQ-I2x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="0M4-wy-oWz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bNt-y7-bEF" secondAttribute="bottom" constant="60" id="AaX-mz-GbB"/>
+                <constraint firstItem="mJk-rY-mjQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="DlN-rz-k3n"/>
+                <constraint firstItem="2hC-UN-KNd" firstAttribute="top" secondItem="JUE-H8-vtR" secondAttribute="bottom" constant="-6" id="FpD-0g-3IZ"/>
+                <constraint firstItem="xcS-vQ-I2x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="115" id="HtZ-5b-pGt"/>
+                <constraint firstItem="2hC-UN-KNd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="QyT-yt-mcz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2hC-UN-KNd" secondAttribute="trailing" constant="24" id="TfV-18-eNY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6eq-g7-PCQ" secondAttribute="trailing" constant="24" id="YtZ-gM-PaB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JUE-H8-vtR" secondAttribute="trailing" constant="24" id="aCs-dU-LE1"/>
+                <constraint firstItem="JUE-H8-vtR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="dJ6-Xb-nWv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xcS-vQ-I2x" secondAttribute="trailing" constant="24" id="dXc-6U-Gao"/>
+                <constraint firstItem="bNt-y7-bEF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="l5e-Jj-l0n"/>
+                <constraint firstItem="6eq-g7-PCQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="lDg-HY-B1I"/>
+                <constraint firstItem="JUE-H8-vtR" firstAttribute="top" secondItem="mJk-rY-mjQ" secondAttribute="bottom" constant="16" id="nqp-qy-7r7"/>
+                <constraint firstItem="mJk-rY-mjQ" firstAttribute="top" secondItem="6eq-g7-PCQ" secondAttribute="bottom" constant="-7" id="o4q-Dl-ijF"/>
+                <constraint firstItem="6eq-g7-PCQ" firstAttribute="top" secondItem="xcS-vQ-I2x" secondAttribute="bottom" constant="68" id="pOy-oZ-Qfq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mJk-rY-mjQ" secondAttribute="trailing" constant="24" id="ptN-21-Svq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bNt-y7-bEF" secondAttribute="trailing" constant="24" id="yri-cb-C9p"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
         </view>

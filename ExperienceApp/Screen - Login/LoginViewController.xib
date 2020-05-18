@@ -21,10 +21,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmi-W6-Nhq">
-                    <rect key="frame" x="72" y="659" width="271" height="63"/>
+                    <rect key="frame" x="25" y="660" width="365" height="60"/>
                     <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="63" id="W1k-2W-JLU"/>
+                        <constraint firstAttribute="height" constant="60" id="8sQ-GB-PkU"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                     <state key="normal" title="Entrar">
@@ -32,15 +32,15 @@
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                            <integer key="value" value="25"/>
+                            <integer key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpV-y7-5il">
-                    <rect key="frame" x="72" y="739" width="271" height="63"/>
+                    <rect key="frame" x="25" y="742" width="365" height="60"/>
                     <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="63" id="QrD-f2-ipH"/>
+                        <constraint firstAttribute="height" constant="60" id="syx-2H-5CL"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                     <state key="normal" title="Criar uma conta">
@@ -48,24 +48,23 @@
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                            <integer key="value" value="25"/>
+                            <integer key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Bgl-8A-BAD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3Or-rW-frj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xpV-y7-5il" secondAttribute="trailing" constant="71" id="CaT-Uu-NFr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpV-y7-5il" secondAttribute="bottom" constant="60" id="ED6-JU-VMg"/>
-                <constraint firstItem="Xmi-W6-Nhq" firstAttribute="leading" secondItem="xpV-y7-5il" secondAttribute="leading" id="EQB-bU-0SZ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xmi-W6-Nhq" secondAttribute="trailing" constant="71" id="H5y-DQ-jZH"/>
-                <constraint firstItem="Xmi-W6-Nhq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="72" id="SZC-oa-swt"/>
-                <constraint firstItem="Bgl-8A-BAD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="f5w-C6-PUF"/>
-                <constraint firstItem="Xmi-W6-Nhq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="615" id="kJ2-Eu-AEU"/>
-                <constraint firstItem="Bgl-8A-BAD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nCU-XV-VVp"/>
-                <constraint firstItem="xpV-y7-5il" firstAttribute="top" secondItem="Xmi-W6-Nhq" secondAttribute="bottom" constant="17" id="r55-rh-7eH"/>
-                <constraint firstItem="Bgl-8A-BAD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tHo-aW-w2v"/>
+                <constraint firstItem="Bgl-8A-BAD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3md-6w-P2M"/>
+                <constraint firstAttribute="bottom" secondItem="Bgl-8A-BAD" secondAttribute="bottom" id="H6E-vw-8tB"/>
+                <constraint firstItem="Xmi-W6-Nhq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="PID-wF-Ew5"/>
+                <constraint firstItem="Bgl-8A-BAD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qoy-Hg-pwf"/>
+                <constraint firstItem="xpV-y7-5il" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Qu6-gO-OYC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xpV-y7-5il" secondAttribute="trailing" constant="24" id="Zsp-GX-6Yx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xmi-W6-Nhq" secondAttribute="trailing" constant="24" id="eY5-bQ-SBx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpV-y7-5il" secondAttribute="bottom" constant="60" id="lCf-eY-R1t"/>
+                <constraint firstItem="xpV-y7-5il" firstAttribute="top" secondItem="Xmi-W6-Nhq" secondAttribute="bottom" constant="22" id="mLn-bh-Uj7"/>
+                <constraint firstItem="Bgl-8A-BAD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mS2-P9-EIh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
