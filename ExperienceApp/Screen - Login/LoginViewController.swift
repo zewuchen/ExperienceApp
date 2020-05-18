@@ -12,19 +12,18 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnLoginScreen(_ sender: Any) {
+        let novaTela = CriarContaViewController(nibName: "loginScreen", bundle: nil)
+//        novaTela.modalPresentationStyle = .fullScreen
+        self.present(novaTela, animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func btnLoginCreate(_ sender: Any) {
+        let novaTela = EntrarNaContaViewController(nibName: "createScreen", bundle: nil)
+//        novaTela.modalPresentationStyle = .fullScreen
+        self.present(novaTela, animated: true, completion: nil)
+    }
+    
 }
