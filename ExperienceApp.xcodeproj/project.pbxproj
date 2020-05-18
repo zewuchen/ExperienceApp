@@ -32,6 +32,8 @@
 		0F17C7F6246F398900A2D212 /* PerfilTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7F4246F398900A2D212 /* PerfilTableViewCell.xib */; };
 		0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7F7246F399C00A2D212 /* PerfilController.swift */; };
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
+		6F4232D124730DA9005C8BCF /* PerfilExperienciaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4232CF24730DA9005C8BCF /* PerfilExperienciaTableViewCell.swift */; };
+		6F4232D224730DA9005C8BCF /* PerfilExperienciaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4232D024730DA9005C8BCF /* PerfilExperienciaTableViewCell.xib */; };
 		CB1A9DFD2472F9D900946B78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A9DFC2472F9D900946B78 /* CloudKit.framework */; };
 		CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */; };
 		CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */; };
@@ -73,6 +75,8 @@
 		0F17C7F4246F398900A2D212 /* PerfilTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilTableViewCell.xib; sourceTree = "<group>"; };
 		0F17C7F7246F399C00A2D212 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
+		6F4232CF24730DA9005C8BCF /* PerfilExperienciaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PerfilExperienciaTableViewCell.swift; path = Cells/PerfilExperienciaTableViewCell.swift; sourceTree = "<group>"; };
+		6F4232D024730DA9005C8BCF /* PerfilExperienciaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PerfilExperienciaTableViewCell.xib; path = Cells/PerfilExperienciaTableViewCell.xib; sourceTree = "<group>"; };
 		CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExperienceApp.entitlements; sourceTree = "<group>"; };
 		CB1A9DFC2472F9D900946B78 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 				0F17C7F2246F397600A2D212 /* Cells */,
 				0F17C7EE246F397300A2D212 /* PerfilViewController.swift */,
 				0F17C7EF246F397300A2D212 /* PerfilViewController.xib */,
+				6F4232CF24730DA9005C8BCF /* PerfilExperienciaTableViewCell.swift */,
+				6F4232D024730DA9005C8BCF /* PerfilExperienciaTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 				0F17C7D3246F37B900A2D212 /* DestaquesTableViewCell.xib in Resources */,
 				0F17C7C2246F1B0300A2D212 /* DestaquesCollectionViewCell.xib in Resources */,
 				0F17C7BD246F184100A2D212 /* MainViewController.xib in Resources */,
+				6F4232D224730DA9005C8BCF /* PerfilExperienciaTableViewCell.xib in Resources */,
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
 				CBFECD49246DB56E005B621F /* Main.storyboard in Resources */,
 				0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */,
@@ -552,6 +559,7 @@
 				0F17C7EA246F393500A2D212 /* DisponibilidadeController.swift in Sources */,
 				0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */,
 				CBFECD4C246DB56E005B621F /* ExperienceApp.xcdatamodeld in Sources */,
+				6F4232D124730DA9005C8BCF /* PerfilExperienciaTableViewCell.swift in Sources */,
 				0F17C7B9246F180300A2D212 /* MainController.swift in Sources */,
 				0F17C7C5246F1B1B00A2D212 /* RecomendacoesTableViewCell.swift in Sources */,
 				0F17C7F5246F398900A2D212 /* PerfilTableViewCell.swift in Sources */,
