@@ -63,6 +63,13 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         celulaCollection.setUp(model: data[indexPath.row])
         return celulaCollection
     }
+    
+//    func collectionView(collectionView: UICollectionView,
+//        layout collectionViewLayout: UICollectionViewLayout,
+//        minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+//            return 100000.0
+//    }
+    
 }
 
 extension MainViewController: UITableViewDataSource {

@@ -14,6 +14,7 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgDestaque: UIImageView!
     
     override func awakeFromNib() {
+        self.layer.cornerRadius = 30
         super.awakeFromNib()
     }
     
