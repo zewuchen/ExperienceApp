@@ -9,22 +9,25 @@
 import UIKit
 
 class GerarViewController: UIViewController {
-
+    
+    @IBOutlet weak var txtTema: UITextField!
+    @IBOutlet weak var txtDescription: UITextField!
+    //Adicionar fotos
+    @IBOutlet weak var txtTamanho: UITextField!
+    //Adicionar disponibilidade
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnCreateExperience(_ sender: Any) {
+        guard let theme = txtTema.text else { return }
+        guard let description = txtDescription.text else { return}
+        //Add fotos
+        guard let size = txtTamanho.text else { return }
+        //Add disponibilidade
     }
-    */
 
 }
