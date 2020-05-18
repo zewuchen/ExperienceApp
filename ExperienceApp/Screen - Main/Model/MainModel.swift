@@ -9,6 +9,18 @@
 import Foundation
 
 struct MainModel {
+    var nomeDestaque: String
+    var nomeExp: String
+    var descricaoExp: String
+    var notaExp: Float
+    var precoExp: String
     
-    
+    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Float, precoExp: String) {
+        self.nomeDestaque = nomeDestaque
+        self.nomeExp = nomeExp
+        self.descricaoExp = descricaoExp
+        self.notaExp = notaExp
+        self.precoExp = precoExp
+    }
 }
+

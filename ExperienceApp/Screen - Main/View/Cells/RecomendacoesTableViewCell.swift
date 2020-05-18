@@ -11,21 +11,26 @@ import UIKit
 class RecomendacoesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imageCard: UIImageView!
-    @IBOutlet weak var titleCard: UILabel!
+    @IBOutlet weak var titleCard: UILabel?
     @IBOutlet weak var subtitleCard: UILabel!
     @IBOutlet weak var iconRating: UIImageView!
-    @IBOutlet weak var lbRating: UILabel!
-    @IBOutlet weak var costValue: UILabel!
+    @IBOutlet weak var lbRating: UILabel?
+    @IBOutlet weak var costValue: UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setUp(model: MainModel) {
+        self.lbRating?.text = String(model.notaExp)
+        self.costValue?.text = model.precoExp
+        self.titleCard?.text = model.nomeExp
     }
     
 }

@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = UIWindow(windowScene: windowScene)
 
-        guard let rootVC = TesteViewController(nibName: "TesteViewController", bundle: nil) as? TesteViewController else {
+        guard let rootVC = MainViewController(nibName: "MainViewController", bundle: nil) as? MainViewController else {
             print("ViewController not found")
             return
         }

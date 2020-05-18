@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MainControllerDelegate: AnyObject {
-    func reloadData(data: MainModel)
+    func reloadData(data: [MainModel])
 }
 
 final class MainController {
@@ -17,11 +17,11 @@ final class MainController {
     weak public var delegate: MainControllerDelegate?
     
     public init() {
-        //self.data.append
-        
+        self.data.append(MainModel(nomeDestaque: "Jogos", nomeExp: "Intercambio", descricaoExp: "panda panda panda", notaExp: 9.8, precoExp: "Gratuito"))
+        self.data.append(MainModel(nomeDestaque: "Pandas", nomeExp: "Meditacao", descricaoExp: "panda panda panda", notaExp: 9.8, precoExp: "Milhões de dórares"))
     }
     
     public func reload() {
-//        delegate?.reloadData(data: data)
+        delegate?.reloadData(data: data)
     }
 }

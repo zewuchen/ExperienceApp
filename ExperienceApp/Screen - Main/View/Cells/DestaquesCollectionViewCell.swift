@@ -16,5 +16,12 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func setUp(model: MainModel) {
+        self.lblTitulo.text = model.nomeDestaque
+//        self.imgDestaque.image =
+        self.backgroundColor = .white
+        
+    }
 }
 
