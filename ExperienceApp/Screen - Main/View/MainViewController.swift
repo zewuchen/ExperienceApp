@@ -23,3 +23,9 @@ class MainViewController: UIViewController {
         
     }
 }
+
+extension MainViewController: MainControllerDelegate {
+    func reloadData(data: MainModel) {
+        
+    }
+}

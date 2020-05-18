@@ -22,6 +22,6 @@ final class MainController {
     }
     
     public func reload() {
-        delegate?.reloadData(data: data)
+//        delegate?.reloadData(data: data)
     }
 }
