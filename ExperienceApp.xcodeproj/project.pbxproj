@@ -34,6 +34,7 @@
 		0F17C7FE246F39E100A2D212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7FC246F39E100A2D212 /* ViewController.swift */; };
 		0F17C7FF246F39E100A2D212 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7FD246F39E100A2D212 /* ViewController.xib */; };
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
+		CB1A9DFD2472F9D900946B78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A9DFC2472F9D900946B78 /* CloudKit.framework */; };
 		CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */; };
 		CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */; };
 		CB4F8F87246DBA550004B5E5 /* TesteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F86246DBA550004B5E5 /* TesteModel.swift */; };
@@ -76,6 +77,8 @@
 		0F17C7FC246F39E100A2D212 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F17C7FD246F39E100A2D212 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
+		CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExperienceApp.entitlements; sourceTree = "<group>"; };
+		CB1A9DFC2472F9D900946B78 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
 		CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TesteViewController.xib; sourceTree = "<group>"; };
 		CB4F8F86246DBA550004B5E5 /* TesteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteModel.swift; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1A9DFD2472F9D900946B78 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +320,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		CB1A9DFB2472F9D900946B78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A9DFC2472F9D900946B78 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB4F8F7E246DB8DD0004B5E5 /* Example (NomeDaTela) */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +384,7 @@
 			children = (
 				CBFECD40246DB56E005B621F /* ExperienceApp */,
 				CBFECD3F246DB56E005B621F /* Products */,
+				CB1A9DFB2472F9D900946B78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,6 +399,7 @@
 		CBFECD40246DB56E005B621F /* ExperienceApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */,
 				0F17C7F9246F39C000A2D212 /* Screen - Gerar */,
 				0F17C7EB246F393900A2D212 /* Screen - Perfil */,
 				0F17C7E2246F389B00A2D212 /* Screen - Disponibilidade */,
@@ -694,17 +708,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ExperienceApp/ExperienceApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DB2793VW42;
+				DEVELOPMENT_TEAM = 679BRJ4243;
 				INFOPLIST_FILE = ExperienceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.ExperienceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.nathalia.ExperienceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -712,17 +727,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ExperienceApp/ExperienceApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DB2793VW42;
+				DEVELOPMENT_TEAM = 679BRJ4243;
 				INFOPLIST_FILE = ExperienceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.ExperienceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.nathalia.ExperienceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
