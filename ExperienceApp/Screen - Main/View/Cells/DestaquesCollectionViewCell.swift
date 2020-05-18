@@ -19,7 +19,7 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
     
     func setUp(model: MainModel) {
         self.lblTitulo.text = model.nomeDestaque
-//        self.imgDestaque.image =
+        self.imgDestaque.image = UIImage(named: "cacto")
         self.backgroundColor = .white
         
     }

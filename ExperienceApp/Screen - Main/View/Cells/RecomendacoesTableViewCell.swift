@@ -32,5 +32,4 @@ class RecomendacoesTableViewCell: UITableViewCell {
         self.costValue?.text = model.precoExp
         self.titleCard?.text = model.nomeExp
     }
-    
 }
