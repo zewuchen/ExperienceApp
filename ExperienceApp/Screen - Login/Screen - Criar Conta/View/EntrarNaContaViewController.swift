@@ -32,6 +32,10 @@ class EntrarNaContaViewController: UIViewController {
         controller.createAccount(user: user)
     }
 
+    @IBAction func btnLogin(_ sender: Any) {
+            let novaTela = CriarContaViewController(nibName: "CriarContaViewController", bundle: nil)
+           self.present(novaTela, animated: true, completion: nil)
+    }
 }
 
 extension EntrarNaContaViewController: CreateAccountControllerDelegate {
