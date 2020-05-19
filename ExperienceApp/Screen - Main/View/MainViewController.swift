@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var btnPerfil: UIButton!
+    @IBOutlet weak var btnBusca: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,16 +27,33 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-        collectionView.dataSource = self
+        setUpTable()
+        setUpButtons(button: btnBusca, nome: "busca.png")
+        setUpButtons(button: btnPerfil, nome: "cacto")
+        setUpCollection()
+        controller.reload()
+    }
+    
+    func setUpTable() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: recomendacoesCell, bundle: nil), forCellReuseIdentifier: recomendacoesCell)
+        tableView.separatorStyle = .none
+    }
+    
+    func setUpCollection() {
+        collectionView.dataSource = self
         collectionView.register(UINib(nibName: destaquesCell, bundle: nil), forCellWithReuseIdentifier: destaquesCell)
-        controller.reload()
     }
     
     func setNavigation() {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+    }
+    
+    func setUpButtons(button: UIButton, nome: String) {
+        button.layer.cornerRadius = 22.5
+        button.layer.masksToBounds = true
+        button.setImage(UIImage(named: nome), for: .normal)
     }
 }
 
@@ -63,13 +82,6 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         celulaCollection.setUp(model: data[indexPath.row])
         return celulaCollection
     }
-    
-//    func collectionView(collectionView: UICollectionView,
-//        layout collectionViewLayout: UICollectionViewLayout,
-//        minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-//            return 100000.0
-//    }
-    
 }
 
 extension MainViewController: UITableViewDataSource {

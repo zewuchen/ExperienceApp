@@ -31,5 +31,6 @@ class RecomendacoesTableViewCell: UITableViewCell {
         self.lbRating?.text = String(model.notaExp)
         self.costValue?.text = model.precoExp
         self.titleCard?.text = model.nomeExp
+        self.imageCard.image = UIImage(named: "cacto")
     }
 }
