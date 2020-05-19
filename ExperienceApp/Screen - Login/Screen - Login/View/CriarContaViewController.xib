@@ -41,7 +41,7 @@
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" textContentType="password"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                             <integer key="value" value="25"/>
@@ -53,7 +53,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="ElH-BB-dmK"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="highlightedColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </label>
@@ -81,7 +81,7 @@
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                             <integer key="value" value="25"/>
