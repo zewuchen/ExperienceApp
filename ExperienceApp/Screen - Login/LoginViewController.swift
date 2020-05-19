@@ -16,13 +16,13 @@ class LoginViewController: UIViewController {
 
     @IBAction func btnLoginScreen(_ sender: Any) {
         let novaTela = CriarContaViewController(nibName: "CriarContaViewController", bundle: nil)
-//        novaTela.modalPresentationStyle = .fullScreen
+   //       novaTela.modalPresentationStyle = .fullScreen
         self.present(novaTela, animated: true, completion: nil)
     }
     
     @IBAction func btnLoginCreate(_ sender: Any) {
         let novaTela = EntrarNaContaViewController(nibName: "EntrarNaContaViewController", bundle: nil)
-//        novaTela.modalPresentationStyle = .fullScreen
+        novaTela.modalPresentationStyle = .fullScreen
         self.present(novaTela, animated: true, completion: nil)
     }
     
