@@ -20,7 +20,7 @@ class PerfilExperienciaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 20
-        self.backgroundColor = .green
+        self.backgroundColor = .vermelhoTijolo
     }
     
     func setUp(model: ModelExperiencePerfil) {

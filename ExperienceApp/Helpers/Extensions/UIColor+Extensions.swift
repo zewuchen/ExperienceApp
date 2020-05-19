@@ -9,19 +9,19 @@
 import UIKit
 
 extension UIColor {
-    static var color1: UIColor {
-        return #colorLiteral(red: 0.5960784314, green: 0.8901960784, blue: 0.568627451, alpha: 1)
+    static var vermelhoTijolo: UIColor {
+        return #colorLiteral(red: 0.7111877799, green: 0.2967664301, blue: 0.2963447571, alpha: 1)
     }
 
-    static var color2: UIColor {
-        return #colorLiteral(red: 0.8901960784, green: 0.568627451, blue: 0.568627451, alpha: 1)
+    static var background: UIColor {
+        return #colorLiteral(red: 0.9607003331, green: 0.9608382583, blue: 0.9606701732, alpha: 1)
     }
 
-    static var color3: UIColor {
-        return #colorLiteral(red: 0.2274509804, green: 0.2274509804, blue: 0.2274509804, alpha: 1)
+    static var esgotado: UIColor {
+        return #colorLiteral(red: 0.6971364617, green: 0.4479205012, blue: 0.4492017031, alpha: 1)
     }
-
-    static var color4: UIColor {
-        return #colorLiteral(red: 0.8509803922, green: 0.8509803922, blue: 0.8509803922, alpha: 1)
+    
+    static var RosaSelecionado: UIColor {
+        return #colorLiteral(red: 0.9931663871, green: 0.6809696555, blue: 0.6834092736, alpha: 1)
     }
 }
