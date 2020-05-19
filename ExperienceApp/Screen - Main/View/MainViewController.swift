@@ -60,8 +60,10 @@ class MainViewController: UIViewController {
 extension MainViewController: MainControllerDelegate {
     func reloadData(data: [MainModel]) {
         self.data = data
-        self.collectionView.reloadData()
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -73,14 +75,14 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let celulaCollection = collectionView.dequeueReusableCell(withReuseIdentifier: destaquesCell, for: indexPath) as! DestaquesCollectionViewCell
+        let celulaCollection = collectionView.dequeueReusableCell(withReuseIdentifier: destaquesCell, for: indexPath) as? DestaquesCollectionViewCell
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
         }
         
-        celulaCollection.setUp(model: data[indexPath.row])
-        return celulaCollection
+        celulaCollection?.setUp(model: data[indexPath.row])
+        return celulaCollection ?? UICollectionViewCell()
     }
 }
 
