@@ -11,6 +11,7 @@ import UIKit
 
 protocol PerfilControllerDelegate: AnyObject {
     func reloadData(data: [ModelExperiencePerfil])
+    func reloadProfileData(data: AuthModel)
 }
 
 final class PerfilController {
@@ -25,5 +26,16 @@ final class PerfilController {
     
     public func reload() {
         delegate?.reloadData(data: data)
+    }
+
+    public func setUpProfileData() {
+        guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+        guard let description = UserDefaults.standard.string(forKey: "description") else { return }
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+
+        let user = AuthModel(name: name, description: description, email: email, password: password)
+
+        delegate?.reloadProfileData(data: user)
     }
 }

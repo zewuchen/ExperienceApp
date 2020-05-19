@@ -42,6 +42,7 @@ class PerfilViewController: UIViewController {
         experienceTableView.register(UINib(nibName: "PerfilExperienciaTableViewCell", bundle: nil), forCellReuseIdentifier: "experiencePerfilCard")
             
         controller.reload()
+        controller.setUpProfileData()
     }
     
     func setUpImage() {
@@ -62,6 +63,11 @@ class PerfilViewController: UIViewController {
 }
 
 extension PerfilViewController: PerfilControllerDelegate {
+    func reloadProfileData(data: AuthModel) {
+        self.name.text = data.name
+        self.biographyText.text = data.description
+    }
+
     func reloadData(data: [ModelExperiencePerfil]) {
         self.data = data
         self.experienceTableView.reloadData()
