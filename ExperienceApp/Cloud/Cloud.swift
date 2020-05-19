@@ -32,14 +32,14 @@ struct ExperienceModel {
     let title: String
     let description: String
 //    let date: Date // Formato: YYYY-MM-DD HH:mm:ss
-    let duration: Double
+//    let duration: Double
     let howToParticipate: String
     let lengthGroup: Int64
-    let price: Double
+//    let price: Double
     let whatToTake: String
-    let availableVacancies: Int64
+//    let availableVacancies: Int64
     // Essa parte é feita no backend
-    let score: Double?
+//    let score: Double?
 //    let image: ??
 //    let participants: [AuthModel]
 //    let comments: [AuthModel]
@@ -147,17 +147,17 @@ final class Cloud {
             if let record = record {
                 let experience = CKRecord(recordType: "Experience")
 
-                experience.setValue(data.availableVacancies, forKey: "availableVacancies")
-                experience.setValue(data.description, forKey: "description")
-                experience.setValue(data.duration, forKey: "duration")
-                experience.setValue(data.howToParticipate, forKey: "howToParticipate")
-                experience.setValue(data.lengthGroup, forKey: "lengthGroup")
-                experience.setValue(data.price, forKey: "price")
-                // TODO: Pensar se o usuário excluir sua conta, suas experiências também serão excluídas
-                experience.setValue(CKRecord.Reference(recordID: record.recordID, action: .none), forKey: "responsible")
-                experience.setValue(data.score, forKey: "score")
                 experience.setValue(data.title, forKey: "title")
                 experience.setValue(data.whatToTake, forKey: "whatToTake")
+                experience.setValue(data.lengthGroup, forKey: "lengthGroup")
+                experience.setValue(data.howToParticipate, forKey: "howToParticipate")
+                experience.setValue(data.description, forKey: "description")
+//                experience.setValue(data.duration, forKey: "duration")
+//                experience.setValue(data.availableVacancies, forKey: "availableVacancies")
+//                experience.setValue(data.price, forKey: "price")
+                // TODO: Pensar se o usuário excluir sua conta, suas experiências também serão excluídas
+                experience.setValue(CKRecord.Reference(recordID: record.recordID, action: .none), forKey: "responsible")
+//                experience.setValue(data.score, forKey: "score")
 
                 self.cloudSave(record: experience, database: self.publicDB)
             }
