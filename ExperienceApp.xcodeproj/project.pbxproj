@@ -28,8 +28,6 @@
 		0F17C7EA246F393500A2D212 /* DisponibilidadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7E9246F393500A2D212 /* DisponibilidadeController.swift */; };
 		0F17C7F0246F397300A2D212 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7EE246F397300A2D212 /* PerfilViewController.swift */; };
 		0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7EF246F397300A2D212 /* PerfilViewController.xib */; };
-		0F17C7F5246F398900A2D212 /* PerfilTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7F3246F398900A2D212 /* PerfilTableViewCell.swift */; };
-		0F17C7F6246F398900A2D212 /* PerfilTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7F4246F398900A2D212 /* PerfilTableViewCell.xib */; };
 		0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7F7246F399C00A2D212 /* PerfilController.swift */; };
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
 		9542EBCC24730AA10049E27E /* CriarContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBCA24730AA10049E27E /* CriarContaViewController.swift */; };
@@ -44,6 +42,10 @@
 		CB4F8F87246DBA550004B5E5 /* TesteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F86246DBA550004B5E5 /* TesteModel.swift */; };
 		CB4F8F89246DBB060004B5E5 /* TesteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F88246DBB060004B5E5 /* TesteController.swift */; };
 		CB4F8FA3246DCA350004B5E5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8FA2246DCA350004B5E5 /* UIColor+Extensions.swift */; };
+		CB5C5AD324745C9600E91446 /* ModelExperiencePerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C5AD224745C9600E91446 /* ModelExperiencePerfil.swift */; };
+		CB5C5AD724745CAA00E91446 /* PerfilTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C5AD424745CAA00E91446 /* PerfilTableViewDelegate.swift */; };
+		CB5C5AD824745CAA00E91446 /* PerfilExperienciaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C5AD524745CAA00E91446 /* PerfilExperienciaTableViewCell.swift */; };
+		CB5C5AD924745CAA00E91446 /* PerfilExperienciaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5C5AD624745CAA00E91446 /* PerfilExperienciaTableViewCell.xib */; };
 		CBED9A5E2473301A00739BFD /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED9A5D2473301A00739BFD /* Cloud.swift */; };
 		CBED9A612473355D00739BFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED9A5F2473355D00739BFD /* LoginViewController.swift */; };
 		CBED9A622473355D00739BFD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBED9A602473355D00739BFD /* LoginViewController.xib */; };
@@ -78,8 +80,6 @@
 		0F17C7E9246F393500A2D212 /* DisponibilidadeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisponibilidadeController.swift; sourceTree = "<group>"; };
 		0F17C7EE246F397300A2D212 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		0F17C7EF246F397300A2D212 /* PerfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilViewController.xib; sourceTree = "<group>"; };
-		0F17C7F3246F398900A2D212 /* PerfilTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewCell.swift; sourceTree = "<group>"; };
-		0F17C7F4246F398900A2D212 /* PerfilTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilTableViewCell.xib; sourceTree = "<group>"; };
 		0F17C7F7246F399C00A2D212 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
 		9542EBCA24730AA10049E27E /* CriarContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContaViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +95,10 @@
 		CB4F8F86246DBA550004B5E5 /* TesteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteModel.swift; sourceTree = "<group>"; };
 		CB4F8F88246DBB060004B5E5 /* TesteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteController.swift; sourceTree = "<group>"; };
 		CB4F8FA2246DCA350004B5E5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CB5C5AD224745C9600E91446 /* ModelExperiencePerfil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelExperiencePerfil.swift; sourceTree = "<group>"; };
+		CB5C5AD424745CAA00E91446 /* PerfilTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilTableViewDelegate.swift; sourceTree = "<group>"; };
+		CB5C5AD524745CAA00E91446 /* PerfilExperienciaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilExperienciaTableViewCell.swift; sourceTree = "<group>"; };
+		CB5C5AD624745CAA00E91446 /* PerfilExperienciaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerfilExperienciaTableViewCell.xib; sourceTree = "<group>"; };
 		CBED9A5D2473301A00739BFD /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		CBED9A5F2473355D00739BFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBED9A602473355D00739BFD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 		0F17C7EB246F393900A2D212 /* Screen - Perfil */ = {
 			isa = PBXGroup;
 			children = (
+				CB5C5AD224745C9600E91446 /* ModelExperiencePerfil.swift */,
 				0F17C7ED246F394700A2D212 /* Controller */,
 				0F17C7EC246F394300A2D212 /* View */,
 			);
@@ -302,8 +307,9 @@
 		0F17C7F2246F397600A2D212 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0F17C7F3246F398900A2D212 /* PerfilTableViewCell.swift */,
-				0F17C7F4246F398900A2D212 /* PerfilTableViewCell.xib */,
+				CB5C5AD524745CAA00E91446 /* PerfilExperienciaTableViewCell.swift */,
+				CB5C5AD624745CAA00E91446 /* PerfilExperienciaTableViewCell.xib */,
+				CB5C5AD424745CAA00E91446 /* PerfilTableViewDelegate.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -586,11 +592,11 @@
 				CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */,
 				0F17C7DF246F386200A2D212 /* ExperienciasInfoViewController.xib in Resources */,
 				9542EBCD24730AA10049E27E /* CriarContaViewController.xib in Resources */,
-				0F17C7F6246F398900A2D212 /* PerfilTableViewCell.xib in Resources */,
 				0F17C7CE246F379700A2D212 /* DestaquesViewController.xib in Resources */,
 				CBFECD51246DB571005B621F /* LaunchScreen.storyboard in Resources */,
 				0F17C7D3246F37B900A2D212 /* DestaquesTableViewCell.xib in Resources */,
 				0F17C7C2246F1B0300A2D212 /* DestaquesCollectionViewCell.xib in Resources */,
+				CB5C5AD924745CAA00E91446 /* PerfilExperienciaTableViewCell.xib in Resources */,
 				0F17C7BD246F184100A2D212 /* MainViewController.xib in Resources */,
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
 				CBFECD49246DB56E005B621F /* Main.storyboard in Resources */,
@@ -629,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F17C7CD246F379700A2D212 /* DestaquesViewController.swift in Sources */,
+				CB5C5AD824745CAA00E91446 /* PerfilExperienciaTableViewCell.swift in Sources */,
 				CBFECD46246DB56E005B621F /* ViewController.swift in Sources */,
 				0F17C7D2246F37B900A2D212 /* DestaquesTableViewCell.swift in Sources */,
 				0F17C7E6246F391F00A2D212 /* DisponibilidadeViewController.swift in Sources */,
@@ -639,12 +646,14 @@
 				CBFECD42246DB56E005B621F /* AppDelegate.swift in Sources */,
 				CB1A9E0B24732C6000946B78 /* CreateAccountController.swift in Sources */,
 				CBFECD44246DB56E005B621F /* SceneDelegate.swift in Sources */,
+				CB5C5AD324745C9600E91446 /* ModelExperiencePerfil.swift in Sources */,
 				CB4F8FA3246DCA350004B5E5 /* UIColor+Extensions.swift in Sources */,
 				CB1A9E0D24732C7300946B78 /* LoginController.swift in Sources */,
 				CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */,
 				9542EBCC24730AA10049E27E /* CriarContaViewController.swift in Sources */,
 				0F17C7F0246F397300A2D212 /* PerfilViewController.swift in Sources */,
 				0F17C7B5246F179400A2D212 /* MainModel.swift in Sources */,
+				CB5C5AD724745CAA00E91446 /* PerfilTableViewDelegate.swift in Sources */,
 				0F17C7DE246F386200A2D212 /* ExperienciasInfoViewController.swift in Sources */,
 				CBED9A612473355D00739BFD /* LoginViewController.swift in Sources */,
 				0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */,
@@ -653,7 +662,6 @@
 				CBFECD4C246DB56E005B621F /* ExperienceApp.xcdatamodeld in Sources */,
 				0F17C7B9246F180300A2D212 /* MainController.swift in Sources */,
 				0F17C7C5246F1B1B00A2D212 /* RecomendacoesTableViewCell.swift in Sources */,
-				0F17C7F5246F398900A2D212 /* PerfilTableViewCell.swift in Sources */,
 				CBED9A5E2473301A00739BFD /* Cloud.swift in Sources */,
 				CB4F8F89246DBB060004B5E5 /* TesteController.swift in Sources */,
 				9542EBD124730ACA0049E27E /* EntrarNaContaViewController.swift in Sources */,
