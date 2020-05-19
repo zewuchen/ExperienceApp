@@ -94,7 +94,7 @@ final class Cloud {
         }
     }
 
-    private func encryptPassword(password: String) -> String {
+    public func encryptPassword(password: String) -> String {
         guard let keyChain = Bundle.main.object(forInfoDictionaryKey: "ChaveAcesso") else { return "" }
         var password = password
         if let aux = keyChain as? String {
@@ -145,7 +145,6 @@ final class Cloud {
         getUser(data: user) { (record, error) in
 
             if let record = record {
-
                 let experience = CKRecord(recordType: "Experience")
 
                 experience.setValue(data.availableVacancies, forKey: "availableVacancies")
