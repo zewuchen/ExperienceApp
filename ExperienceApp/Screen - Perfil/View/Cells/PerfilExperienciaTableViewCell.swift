@@ -23,7 +23,7 @@ class PerfilExperienciaTableViewCell: UITableViewCell {
         self.descriptionCard.font = .AvenirRoman
         self.dataCard.font = .AvenirRoman
         self.linkCard.font = .AvenirRoman
-        
+    
     }
     
     func setUp(model: ModelExperiencePerfil) {

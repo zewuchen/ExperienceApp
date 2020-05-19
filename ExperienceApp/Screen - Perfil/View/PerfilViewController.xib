@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="biographyText" destination="AZv-Db-OIC" id="Rwg-tM-sjx"/>
                 <outlet property="biographyTitle" destination="tRB-7d-TOU" id="Xem-it-lBk"/>
+                <outlet property="createExperienceButton" destination="iHl-9g-rbW" id="pUI-SS-Eqn"/>
                 <outlet property="experienceTableView" destination="OYD-k8-88k" id="MLQ-u2-fYo"/>
                 <outlet property="experienceTitle" destination="xRq-nj-NTb" id="8KD-0F-DLb"/>
                 <outlet property="name" destination="0Yg-AL-iqy" id="bB8-DH-mqG"/>
@@ -65,17 +66,29 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYD-k8-88k">
-                    <rect key="frame" x="20" y="621.5" width="374" height="128"/>
+                    <rect key="frame" x="20" y="621.5" width="374" height="374"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="OYD-k8-88k" secondAttribute="height" multiplier="187:64" id="XZK-qH-fcV"/>
+                        <constraint firstAttribute="width" secondItem="OYD-k8-88k" secondAttribute="height" id="XZK-qH-fcV"/>
                     </constraints>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHl-9g-rbW">
+                    <rect key="frame" x="194" y="811" width="200" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="C9r-t5-m3n"/>
+                        <constraint firstAttribute="height" constant="50" id="eRr-CZ-vzB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Criar Experiência"/>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="xRq-nj-NTb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1TO-Us-P5D"/>
                 <constraint firstItem="0Yg-AL-iqy" firstAttribute="top" secondItem="9Ux-1o-ned" secondAttribute="bottom" constant="20" id="26o-JL-Uxf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iHl-9g-rbW" secondAttribute="trailing" constant="20" id="7b4-L0-Rbe"/>
                 <constraint firstItem="AZv-Db-OIC" firstAttribute="top" secondItem="tRB-7d-TOU" secondAttribute="bottom" constant="10" id="9I0-Je-Nad"/>
                 <constraint firstItem="OYD-k8-88k" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Jn1-Kb-7UL"/>
                 <constraint firstItem="tRB-7d-TOU" firstAttribute="top" secondItem="0Yg-AL-iqy" secondAttribute="bottom" constant="20" id="Ojx-OF-yPT"/>
@@ -83,6 +96,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AZv-Db-OIC" secondAttribute="trailing" constant="20" id="Y1f-TI-Kep"/>
                 <constraint firstItem="OYD-k8-88k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Z6v-iw-dDM"/>
                 <constraint firstItem="OYD-k8-88k" firstAttribute="top" secondItem="xRq-nj-NTb" secondAttribute="bottom" constant="10" id="ZUE-Y9-tCh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iHl-9g-rbW" secondAttribute="bottom" constant="1" id="bwF-rO-Vh7"/>
                 <constraint firstItem="0Yg-AL-iqy" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dCg-uD-rD1"/>
                 <constraint firstItem="xRq-nj-NTb" firstAttribute="top" secondItem="AZv-Db-OIC" secondAttribute="bottom" constant="20" id="e9v-tp-I1Y"/>
                 <constraint firstItem="9Ux-1o-ned" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="68" id="jHD-1c-BFn"/>
