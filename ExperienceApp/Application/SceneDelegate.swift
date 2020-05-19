@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = UIWindow(windowScene: windowScene)
 
-        guard let rootVC = PerfilViewController(nibName: "PerfilViewController", bundle: nil) as? PerfilViewController else {
+        guard let rootVC = GerarViewController(nibName: "GerarViewController", bundle: nil) as? GerarViewController else {
             print("ViewController not found")
             return
         }
