@@ -31,18 +31,24 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yg-AL-iqy">
                     <rect key="frame" x="176" y="332" width="62.5" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0Yg-AL-iqy" secondAttribute="height" multiplier="62:29" id="wKd-18-Au9"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRB-7d-TOU">
-                    <rect key="frame" x="20" y="381" width="114.5" height="36"/>
+                    <rect key="frame" x="20" y="381" width="114.5" height="36.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="tRB-7d-TOU" secondAttribute="height" multiplier="19:6" id="PM1-UQ-JdJ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AZv-Db-OIC">
-                    <rect key="frame" x="20" y="427" width="374" height="128"/>
+                    <rect key="frame" x="20" y="427.5" width="374" height="128"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="AZv-Db-OIC" secondAttribute="height" multiplier="187:64" id="F5h-r1-uQN"/>
@@ -53,13 +59,13 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experiências" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRq-nj-NTb">
-                    <rect key="frame" x="20" y="575" width="164" height="36"/>
+                    <rect key="frame" x="20" y="575.5" width="164" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYD-k8-88k">
-                    <rect key="frame" x="20" y="621" width="374" height="128"/>
+                    <rect key="frame" x="20" y="621.5" width="374" height="128"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="OYD-k8-88k" secondAttribute="height" multiplier="187:64" id="XZK-qH-fcV"/>

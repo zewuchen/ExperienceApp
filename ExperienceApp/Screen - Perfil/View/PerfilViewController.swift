@@ -23,7 +23,12 @@ class PerfilViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-
+        
+        name.font = .Rockwell20
+        biographyTitle.font = .Rockwell24
+        biographyText.font = .AvenirRoman
+        experienceTitle.font = .Rockwell24
+        
         experienceTableView.dataSource = self
         experienceTableView.delegate = self
         experienceTableView.register(UINib(nibName: "PerfilExperienciaTableViewCell", bundle: nil), forCellReuseIdentifier: "experiencePerfilCard")

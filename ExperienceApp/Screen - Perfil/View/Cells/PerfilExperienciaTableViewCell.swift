@@ -19,6 +19,11 @@ class PerfilExperienciaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 20
+        self.titleCard.font = .AvenirHeavy20
+        self.descriptionCard.font = .AvenirRoman
+        self.dataCard.font = .AvenirRoman
+        self.linkCard.font = .AvenirRoman
+        
     }
     
     func setUp(model: ModelExperiencePerfil) {

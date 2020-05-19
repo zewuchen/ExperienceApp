@@ -58,4 +58,7 @@ extension UIFont {
     static var AvenirHeavy: UIFont {
         return UIFont(name: "Avenir-Heavy", size: 18) ?? systemFont(ofSize: 18, weight: .semibold)
     }
+    static var AvenirHeavy20: UIFont {
+        return UIFont(name: "Avenir-Heavy", size: 20) ?? systemFont(ofSize: 20, weight: .semibold)
+    }
 }
