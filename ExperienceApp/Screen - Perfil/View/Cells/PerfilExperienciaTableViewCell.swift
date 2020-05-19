@@ -10,7 +10,6 @@ import UIKit
 
 class PerfilExperienciaTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var titleCard: UILabel!
     @IBOutlet weak var imageCard: UIImageView!
     @IBOutlet weak var descriptionCard: UILabel!
@@ -20,7 +19,6 @@ class PerfilExperienciaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 20
-        self.backgroundColor = .vermelhoTijolo
     }
     
     func setUp(model: ModelExperiencePerfil) {

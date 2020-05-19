@@ -25,3 +25,37 @@ extension UIColor {
         return #colorLiteral(red: 0.9931663871, green: 0.6809696555, blue: 0.6834092736, alpha: 1)
     }
 }
+
+extension UIFont {
+    
+    static var Rockwell30: UIFont {
+        return UIFont(name: "Rockwell", size: 30) ?? systemFont(ofSize: 30)
+    }
+    static var RockwellBold30: UIFont {
+        return UIFont(name: "Rockwell-Bold", size: 30) ?? systemFont(ofSize: 30, weight: .bold)
+    }
+    static var Rockwell24: UIFont {
+        return UIFont(name: "Rockwell", size: 24) ?? systemFont(ofSize: 24)
+    }
+    static var RockwellBold24: UIFont {
+        return UIFont(name: "Rockwell-Bold", size: 24) ?? systemFont(ofSize: 24, weight: .bold)
+    }
+    static var Rockwell20: UIFont {
+        return UIFont(name: "Rockwell", size: 20) ?? systemFont(ofSize: 20)
+    }
+    static var RockwellBold20: UIFont {
+        return UIFont(name: "Rockwell", size: 20) ?? systemFont(ofSize: 20, weight: .bold)
+    }
+    static var Rockwell18: UIFont {
+        return UIFont(name: "Rockwell", size: 18) ?? systemFont(ofSize: 18)
+    }
+    static var RockwellBold18: UIFont {
+        return UIFont(name: "Rockwell-Bold", size: 18) ?? systemFont(ofSize: 18)
+    }
+    static var AvenirRoman: UIFont {
+        return UIFont(name: "Avenir-Roman", size: 18) ?? systemFont(ofSize: 18)
+    }
+    static var AvenirHeavy: UIFont {
+        return UIFont(name: "Avenir-Heavy", size: 18) ?? systemFont(ofSize: 18, weight: .semibold)
+    }
+}
