@@ -41,11 +41,12 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="loginView" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpV-y7-5il">
                     <rect key="frame" x="25" y="742" width="365" height="60"/>
-                    <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="contentStretch" x="0.14999999999999999" y="0.0" width="1" height="1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="syx-2H-5CL"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                    <size key="titleShadowOffset" width="9" height="0.0"/>
                     <state key="normal" title="Criar uma conta">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -58,8 +59,15 @@
                         <action selector="btnLoginCreate:" destination="-1" eventType="touchUpInside" id="gZR-3c-lsu"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aproveite cada experiência." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ms-ji-SZY">
+                    <rect key="frame" x="20" y="152" width="370" height="94"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
+                    <color key="textColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Bgl-8A-BAD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3md-6w-P2M"/>
                 <constraint firstAttribute="bottom" secondItem="Bgl-8A-BAD" secondAttribute="bottom" id="H6E-vw-8tB"/>
