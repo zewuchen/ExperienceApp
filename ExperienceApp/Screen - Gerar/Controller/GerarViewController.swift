@@ -19,7 +19,6 @@ class GerarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func btnCreateExperience(_ sender: Any) {
