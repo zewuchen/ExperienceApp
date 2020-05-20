@@ -41,16 +41,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título da experiência" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTx-Do-zzM">
-                                <rect key="frame" x="109" y="16" width="190" height="25"/>
+                                <rect key="frame" x="109" y="16" width="203" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="adh-cd-vIF"/>
+                                    <constraint firstAttribute="width" constant="203" id="adh-cd-vIF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição da experiência de destaque" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNC-K1-Baj">
-                                <rect key="frame" x="109" y="45" width="190" height="46.5"/>
+                                <rect key="frame" x="109" y="45" width="203" height="46.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Gsr-h3-puy" firstAttribute="leading" secondItem="hJy-oC-dnP" secondAttribute="leading" id="5PE-24-MWY"/>
-                            <constraint firstAttribute="trailing" secondItem="sNC-K1-Baj" secondAttribute="trailing" constant="21" id="9jp-fe-gqa"/>
+                            <constraint firstAttribute="trailing" secondItem="sNC-K1-Baj" secondAttribute="trailing" constant="8" id="9jp-fe-gqa"/>
                             <constraint firstItem="oTx-Do-zzM" firstAttribute="top" secondItem="hJy-oC-dnP" secondAttribute="top" constant="16" id="GnZ-wM-yDz"/>
                             <constraint firstAttribute="bottom" secondItem="Gsr-h3-puy" secondAttribute="bottom" id="NAr-65-0aA"/>
                             <constraint firstItem="sNC-K1-Baj" firstAttribute="leading" secondItem="Gsr-h3-puy" secondAttribute="trailing" constant="13" id="Y6T-r2-gk3"/>

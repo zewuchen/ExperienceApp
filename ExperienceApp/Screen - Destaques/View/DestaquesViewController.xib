@@ -22,11 +22,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cacto" translatesAutoresizingMaskIntoConstraints="NO" id="7tr-v6-v8C">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="466"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="478"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="466" id="6t9-wU-c6B"/>
+                        <constraint firstAttribute="height" constant="478" id="6t9-wU-c6B"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="">
+                            <integer key="value" value="-20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7h7-WZ-Flg">
+                    <rect key="frame" x="0.0" y="411" width="414" height="485"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwg-hx-7bO">
                     <rect key="frame" x="20" y="486" width="374" height="98.5"/>
                     <string key="text">Descrição geral da experiência. Exemplo: Experiências voltadas para recomendar livros, clubes de leitura e tudo que se relacione a livros</string>
@@ -51,18 +66,22 @@
             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="laI-fS-Qes" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="12Q-pM-hIj"/>
+                <constraint firstAttribute="bottom" secondItem="7h7-WZ-Flg" secondAttribute="bottom" id="1pK-6u-dn6"/>
                 <constraint firstItem="7tr-v6-v8C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4JV-AP-LYZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tyN-eb-R1g" secondAttribute="trailing" constant="20" id="5MM-w8-pjJ"/>
-                <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="20" id="6Q2-7k-MQp"/>
+                <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="8" id="6Q2-7k-MQp"/>
                 <constraint firstItem="7tr-v6-v8C" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8kQ-2A-vEj"/>
                 <constraint firstAttribute="bottom" secondItem="tyN-eb-R1g" secondAttribute="bottom" id="CE2-U5-pQf"/>
+                <constraint firstItem="7h7-WZ-Flg" firstAttribute="top" secondItem="laI-fS-Qes" secondAttribute="bottom" constant="269" id="Ede-Pa-H8V"/>
                 <constraint firstItem="7tr-v6-v8C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="F0f-4y-HQI"/>
                 <constraint firstItem="tyN-eb-R1g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JkZ-fd-qHq"/>
                 <constraint firstItem="laI-fS-Qes" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Ubw-My-Z3K"/>
                 <constraint firstItem="tyN-eb-R1g" firstAttribute="top" secondItem="Pwg-hx-7bO" secondAttribute="bottom" constant="20" id="ViV-7u-Bde"/>
                 <constraint firstItem="Pwg-hx-7bO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Wc2-Tr-iT5"/>
-                <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="20" id="dbA-FW-kep"/>
+                <constraint firstItem="7h7-WZ-Flg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b62-Md-xti"/>
+                <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="8" id="dbA-FW-kep"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pwg-hx-7bO" secondAttribute="trailing" constant="20" id="nmM-mc-l6D"/>
+                <constraint firstItem="7h7-WZ-Flg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="x3v-Z5-UiL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>

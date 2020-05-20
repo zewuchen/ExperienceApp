@@ -16,6 +16,7 @@ final class DestaquesController {
     private var data: [DestaquesModel] = []
     weak public var delegate: DestaquesControllerDelegate?
     
+    // OBS.: Essas infos peguei da classe da Main!
      public init() {
             let _ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(getDataCloud), userInfo: nil, repeats: true)
         }
@@ -30,8 +31,8 @@ final class DestaquesController {
             Cloud.shared.getExperience(data: nil) { (records, error) in
 
                 for record in records {
-                    guard let name = record?["title"] else { return }
-                    guard let description = record?["description"] else { return }
+                    guard (record?["title"]) != nil else { return }
+                    guard (record?["description"]) != nil else { return }
                     
                     self.data.append(DestaquesModel(infoGeralExp: "Experiências voltadas para recomendar livros e clubes de leitura", nomeExp: "Indicações para leitores iniciantes", descricaoExp: "Recomendações de livros para quem gosta de Aventura"))
                 }
@@ -40,4 +41,3 @@ final class DestaquesController {
             }
         }
     }
-
