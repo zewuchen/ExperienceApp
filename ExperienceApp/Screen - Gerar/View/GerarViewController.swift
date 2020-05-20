@@ -23,21 +23,22 @@ class GerarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
+        print(UserDefaults.standard.object(forKey: "name"))
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
-        
     }
 
     @IBAction func btnCreateExperience(_ sender: Any) {
-        guard let title = txtTema.text else { return }
-        guard let description = txtDescription.text else { return }
-        guard let howToParticipate = txtParticipar.text else { return }
-        guard let whatToTake = txtParticipar.text else { return }
-        guard let tamanho = txtTamanho.text else { return }
-        guard let lengthGroup = Int64(tamanho) else { return }
         
         if validate() {
+            guard let title = txtTema.text else { return }
+            guard let description = txtDescription.text else { return }
+            guard let tamanho = txtTamanho.text else { return }
+            guard let lengthGroup = Int64(tamanho) else { return }
+            guard let howToParticipate = txtParticipar.text else { return }
+            guard let whatToTake = txtParticipar.text else { return }
+            
             let experience = ExperienceModel(title: title, description: description, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake)
 
             controller.createExperience(data: experience)
@@ -52,13 +53,20 @@ class GerarViewController: UIViewController {
     //tamanho limite seja do tipo numerico - so posso por numero
     //add fotos -> modificar design
     //tocar fora no teclado
-
+    
     func validate() -> Bool {
         // TODO: Validar os campos de dados aqui
-//        if title?.count == 0 || description.count == 0 {
-//            print("faltam dados")
-//            return false
-//        }
+        let corBorda = UIColor.red.cgColor
+        let corBorda2 = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
+        
+        if txtTema.text == "" || txtTema.text == nil {
+            print("faltam dados")
+            
+            txtTema.layer.borderColor = corBorda2
+            txtTema.layer.borderWidth = 2.0
+            txtTema.layer.cornerRadius = 6
+            return false
+        }
         return true
     }
 }

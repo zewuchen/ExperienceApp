@@ -12,7 +12,7 @@
                 <outlet property="txtDescription" destination="Uh7-jL-3mm" id="T9f-xD-pwA"/>
                 <outlet property="txtParticipar" destination="dwO-v0-bnP" id="g72-xJ-mno"/>
                 <outlet property="txtRecursos" destination="tca-wM-3pF" id="v2b-Rj-Njq"/>
-                <outlet property="txtTamanho" destination="dwO-v0-bnP" id="1bG-mf-1Az"/>
+                <outlet property="txtTamanho" destination="7u8-Wc-ess" id="vI4-2y-epy"/>
                 <outlet property="txtTema" destination="qay-ie-GYn" id="DLe-Xz-5zt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wv-X2-Qy8">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wv-X2-Qy8">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-Qf-T7W">
@@ -130,7 +130,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="btnCreateExperience:" destination="-1" eventType="touchUpInside" id="8dm-rE-iM4"/>
+                                        <action selector="btnCreateExperience:" destination="-1" eventType="touchUpInside" id="h5z-cf-hvI"/>
                                     </connections>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Equipamentos, entusiasmo, felicidade... " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tca-wM-3pF">
