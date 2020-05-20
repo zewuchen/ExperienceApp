@@ -134,6 +134,22 @@ final class Cloud {
         }
     }
 
+    public func getExperience(data: ExperienceModel?, completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
+        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
+
+        if let data = data {
+            // TODO: Fazer o GET específico
+        }
+
+        publicDB.perform(query, inZoneWith: nil) { (records, error) in
+            if let records = records {
+                completionHandler(records, error)
+            } else {
+                completionHandler([], error)
+            }
+        }
+    }
+
     public func createExperience(data: ExperienceModel) {
         guard let name = UserDefaults.standard.string(forKey: "name") else { return }
         guard let description = UserDefaults.standard.string(forKey: "description") else { return }
@@ -163,4 +179,6 @@ final class Cloud {
             }
         }
     }
+
+
 }
