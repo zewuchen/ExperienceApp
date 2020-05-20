@@ -9,13 +9,16 @@
 import Foundation
 
 struct DestaquesModel {
+    var categoriaDaExp: String
     var infoGeralExp: String
     var nomeExp: String
     var descricaoExp: String
     
-    public init(infoGeralExp: String, nomeExp: String, descricaoExp: String) {
+    public init(categoriaDaExp: String, infoGeralExp: String, nomeExp: String, descricaoExp: String) {
+        
         self.infoGeralExp = infoGeralExp
         self.nomeExp = nomeExp
         self.descricaoExp = descricaoExp
+        self.categoriaDaExp = categoriaDaExp
 }
 }

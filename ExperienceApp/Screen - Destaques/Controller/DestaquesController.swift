@@ -34,7 +34,8 @@ final class DestaquesController {
                     guard (record?["title"]) != nil else { return }
                     guard (record?["description"]) != nil else { return }
                     
-                    self.data.append(DestaquesModel(infoGeralExp: "Experiências voltadas para recomendar livros e clubes de leitura", nomeExp: "Indicações para leitores iniciantes", descricaoExp: "Recomendações de livros para quem gosta de Aventura"))
+                    //Obs.: Aumentar núm. de caracteres
+                    self.data.append(DestaquesModel(categoriaDaExp: "Livros", infoGeralExp: "Experiências voltadas para recomendar livros", nomeExp: "Indicações para leitores iniciantes", descricaoExp: "Recomendações de livros para quem gosta de Aventura"))
                 }
 
                 self.delegate?.reloadData(data: self.data)

@@ -27,6 +27,13 @@ class DestaquesViewController: UIViewController, UITableViewDataSource {
         setUpTable()
         setNavigation()
         controller.delegate = self
+        condicional()
+    }
+
+    func condicional() {
+        if lblDestaque.text == "Livros" {
+            infoDestaque.text = "Compartilhe experiências sobre livros"
+        }
     }
     
     func setUpTable() {
@@ -34,6 +41,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource {
         tableView.register(UINib(nibName: destaquesCell, bundle: nil), forCellReuseIdentifier: destaquesCell)
         tableView.separatorStyle = .none
     }
+
     
     func setNavigation() {
          self.navigationController?.navigationBar.isTranslucent = true
