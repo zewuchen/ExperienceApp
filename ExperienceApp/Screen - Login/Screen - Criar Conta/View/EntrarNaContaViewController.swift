@@ -14,6 +14,7 @@ class EntrarNaContaViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
 
     let controller = CreateAccountController()
 
@@ -22,11 +23,18 @@ class EntrarNaContaViewController: UIViewController {
         controller.delegate = self
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
+        let selectorImage = UITapGestureRecognizer(target: self, action: #selector(addImage))
+        self.imageView.isUserInteractionEnabled = true
+        self.imageView.addGestureRecognizer(selectorImage)
         toque.cancelsTouchesInView = false
     }
     
     @objc func tirarTeclado() {
         self.view.endEditing(true)
+    }
+
+    @objc func addImage() {
+        controller.setImage()
     }
 
     @IBAction func btnCreateAccount(_ sender: Any) {
@@ -47,6 +55,12 @@ class EntrarNaContaViewController: UIViewController {
 }
 
 extension EntrarNaContaViewController: CreateAccountControllerDelegate {
+    func setImageProfile() {
+        Camera().selecionadorImagem(self){ imagem in
+            self.imageView.image = imagem
+        }
+    }
+
     func authResponser() {
         // TODO: Fazer algo
         // TODO: Mostrar sucesso pro usuário ou erro
