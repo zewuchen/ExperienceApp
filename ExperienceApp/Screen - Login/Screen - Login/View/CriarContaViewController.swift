@@ -18,7 +18,14 @@ class CriarContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-    }
+           controller.delegate = self
+            let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
+            self.view.addGestureRecognizer(toque)
+            toque.cancelsTouchesInView = false
+        }
+        @objc func tirarTeclado() {
+            self.view.endEditing(true)
+        }
 
     @IBAction func btnLogin(_ sender: Any) {
         guard let email = txtEmail.text else { return }
@@ -27,7 +34,6 @@ class CriarContaViewController: UIViewController {
         let user = AuthModel(name: "", description: "", email: email, password: password)
         controller.login(user: user)
     }
-
 }
 
 extension CriarContaViewController: LoginControllerDelegate {
