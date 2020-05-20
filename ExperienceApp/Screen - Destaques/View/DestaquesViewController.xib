@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="imgDestaque" destination="7tr-v6-v8C" id="CDz-vg-ZKM"/>
                 <outlet property="infoDestaque" destination="Pwg-hx-7bO" id="RWf-iu-Gpc"/>
+                <outlet property="lblDestaque" destination="laI-fS-Qes" id="qBR-h0-xrg"/>
                 <outlet property="tableView" destination="tyN-eb-R1g" id="NJ0-ly-rm1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -37,9 +38,19 @@
                     <rect key="frame" x="20" y="604.5" width="374" height="291.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laI-fS-Qes">
+                    <rect key="frame" x="20" y="94" width="236" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="dOc-n5-CiT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="48"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="laI-fS-Qes" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="12Q-pM-hIj"/>
                 <constraint firstItem="7tr-v6-v8C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4JV-AP-LYZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tyN-eb-R1g" secondAttribute="trailing" constant="20" id="5MM-w8-pjJ"/>
                 <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="20" id="6Q2-7k-MQp"/>
@@ -47,6 +58,7 @@
                 <constraint firstAttribute="bottom" secondItem="tyN-eb-R1g" secondAttribute="bottom" id="CE2-U5-pQf"/>
                 <constraint firstItem="7tr-v6-v8C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="F0f-4y-HQI"/>
                 <constraint firstItem="tyN-eb-R1g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JkZ-fd-qHq"/>
+                <constraint firstItem="laI-fS-Qes" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Ubw-My-Z3K"/>
                 <constraint firstItem="tyN-eb-R1g" firstAttribute="top" secondItem="Pwg-hx-7bO" secondAttribute="bottom" constant="20" id="ViV-7u-Bde"/>
                 <constraint firstItem="Pwg-hx-7bO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Wc2-Tr-iT5"/>
                 <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="20" id="dbA-FW-kep"/>

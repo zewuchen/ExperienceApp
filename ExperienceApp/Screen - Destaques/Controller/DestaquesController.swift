@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol DestaquesControllerDelegate {
+    func reloadData(data: [DestaquesModel])
+}
+
+final class DestaquesController {
+    private var data: [DestaquesModel] = []
+  //  weak public var delegate: DestaquesControllerDelegate?
+}
