@@ -26,7 +26,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         setUpTable()
         setNavigation()
-       //  controller.delegate = self
+        controller.delegate = self
     }
     
     func setUpTable() {
@@ -45,12 +45,9 @@ class DestaquesViewController: UIViewController, UITableViewDataSource {
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
             let celulaTable = self.tableView.dequeueReusableCell(withIdentifier: destaquesCell, for: indexPath) as? DestaquesTableViewCell
-            
-            celulaTable?.setUp(model: data[indexPath.row])
-        
-            return celulaTable ?? UITableViewCell()
+                    celulaTable?.setUp(model: data[indexPath.row])
+                        return celulaTable ?? UITableViewCell()
         }
 }
 

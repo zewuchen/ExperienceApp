@@ -89,7 +89,7 @@
                 <outlet property="subtitleCard" destination="sNC-K1-Baj" id="8mv-H0-2eK"/>
                 <outlet property="titleCard" destination="oTx-Do-zzM" id="tNU-ga-ZkF"/>
             </connections>
-            <point key="canvasLocation" x="138" y="12"/>
+            <point key="canvasLocation" x="137.68115942028987" y="11.71875"/>
         </tableViewCell>
     </objects>
 </document>

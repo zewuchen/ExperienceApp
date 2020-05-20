@@ -14,8 +14,30 @@ protocol DestaquesControllerDelegate: AnyObject {
 
 final class DestaquesController {
     private var data: [DestaquesModel] = []
-    
     weak public var delegate: DestaquesControllerDelegate?
     
-    
-}
+     public init() {
+            let _ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(getDataCloud), userInfo: nil, repeats: true)
+        }
+
+        @objc func getDataCloud() {
+            reload()
+            print("Os dados foram encontrados")
+        }
+        
+        public func reload() {
+            self.data = []
+            Cloud.shared.getExperience(data: nil) { (records, error) in
+
+                for record in records {
+                    guard let name = record?["title"] else { return }
+                    guard let description = record?["description"] else { return }
+                    
+                    self.data.append(DestaquesModel(infoGeralExp: "Experiências voltadas para recomendar livros e clubes de leitura", nomeExp: "Indicações para leitores iniciantes", descricaoExp: "Recomendações de livros para quem gosta de Aventura"))
+                }
+
+                self.delegate?.reloadData(data: self.data)
+            }
+        }
+    }
+
