@@ -12,6 +12,12 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
+        self.view.addGestureRecognizer(toque)
+        toque.cancelsTouchesInView = false
+    }
+    @objc func tirarTeclado() {
+        self.view.endEditing(true)
     }
 
     @IBAction func btnLoginScreen(_ sender: Any) {

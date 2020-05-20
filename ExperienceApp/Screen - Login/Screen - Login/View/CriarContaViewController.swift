@@ -18,7 +18,14 @@ class CriarContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-    }
+           controller.delegate = self
+            let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
+            self.view.addGestureRecognizer(toque)
+            toque.cancelsTouchesInView = false
+        }
+        @objc func tirarTeclado() {
+            self.view.endEditing(true)
+        }
 
     @IBAction func btnLogin(_ sender: Any) {
         guard let email = txtEmail.text else { return }
@@ -28,6 +35,11 @@ class CriarContaViewController: UIViewController {
         controller.login(user: user)
     }
 
+    @IBAction func btnCreateAccount(_ sender: Any) {
+                let novaTela = EntrarNaContaViewController(nibName: "EntrarNaContaViewController", bundle: nil)
+               novaTela.modalPresentationStyle = .fullScreen
+               self.present(novaTela, animated: true, completion: nil)
+    }
 }
 
 extension CriarContaViewController: LoginControllerDelegate {
