@@ -14,7 +14,6 @@ struct DestaquesModel {
     var descricaoExp: String
     
     public init(infoGeralExp: String, nomeExp: String, descricaoExp: String) {
-
         self.infoGeralExp = infoGeralExp
         self.nomeExp = nomeExp
         self.descricaoExp = descricaoExp

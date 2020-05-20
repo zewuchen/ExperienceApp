@@ -8,11 +8,14 @@
 
 import Foundation
 
-protocol DestaquesControllerDelegate {
+protocol DestaquesControllerDelegate: AnyObject {
     func reloadData(data: [DestaquesModel])
 }
 
 final class DestaquesController {
     private var data: [DestaquesModel] = []
-  //  weak public var delegate: DestaquesControllerDelegate?
+    
+    weak public var delegate: DestaquesControllerDelegate?
+    
+    
 }
