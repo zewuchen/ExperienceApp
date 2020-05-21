@@ -48,6 +48,7 @@ final class CreateAccountController {
         UserDefaults.standard.set(user.email, forKey: "email")
         UserDefaults.standard.set(Cloud.shared.encryptPassword(password: user.password), forKey: "password")
         UserDefaults.standard.set(user.description, forKey: "description")
+        UserDefaults.standard.set(user.image, forKey: "image")
         UserDefaults.standard.set(true, forKey: "logged")
     }
 

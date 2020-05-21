@@ -17,6 +17,7 @@ class EntrarNaContaViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
 
     let controller = CreateAccountController()
+    var urlString = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,7 @@ class EntrarNaContaViewController: UIViewController {
         guard let password = txtSenha.text else { return }
         guard let description = txtDescription.text else { return }
 
-        let user = AuthModel(name: name, description: description, email: email, password: password)
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: urlString)
         controller.createAccount(user: user)
     }
 
@@ -58,6 +59,12 @@ extension EntrarNaContaViewController: CreateAccountControllerDelegate {
     func setImageProfile() {
         Camera().selecionadorImagem(self){ imagem in
             self.imageView.image = imagem
+
+            if self.urlString != "" {
+                self.controller.deleteFoto(fileURL: self.urlString)
+            }
+
+            self.urlString = self.controller.saveFoto(imagem: self.imageView.image ?? UIImage())
         }
     }
 

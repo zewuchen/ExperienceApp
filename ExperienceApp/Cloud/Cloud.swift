@@ -8,6 +8,7 @@
 
 import CloudKit
 import CryptoKit
+import UIKit
 
 enum Record {
     case login
@@ -24,7 +25,7 @@ struct AuthModel {
     let description: String?
     let email: String
     let password: String
-//    let image: ??
+    let image: String
 }
 
 struct ExperienceModel {
@@ -53,6 +54,7 @@ final class Cloud {
     let privateDB: CKDatabase
     let sharedDB: CKDatabase
     var predicate: NSPredicate
+    var url: URL
 
     private init() {
         self.container = CKContainer(identifier: "iCloud.ExperienceApp")
@@ -60,6 +62,7 @@ final class Cloud {
         self.privateDB = container.privateCloudDatabase
         self.sharedDB = container.sharedCloudDatabase
         self.predicate = NSPredicate(value: true)
+        self.url = URL(fileURLWithPath: "")
     }
 
     static let shared = Cloud()
@@ -73,11 +76,34 @@ final class Cloud {
         user.setValue(data.email, forKey: "email")
         user.setValue(encryptPassword(password: data.password), forKey: "password")
 
+        self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
+
+        if data.image != "" {
+            guard let image = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") else { return }
+            guard let dataImage = image.jpegData(compressionQuality: 0) else { return }
+            do {
+                try dataImage.write(to: url)
+            } catch let erro as NSError {
+                print("Error! \(erro)")
+                return
+            }
+            user.setValue(CKAsset(fileURL: url), forKey: "image")
+//            Pegando o dado e transformando em imagem
+//            var file : CKAsset? = user.object(forKey: "image") as? CKAsset
+//
+//            if let file = file {
+//                if let dado = NSData(contentsOf: file.fileURL!) {
+//                    let imagem3 = UIImage(data: dado as Data)
+//                }
+//            }
+        }
+
         authUser(data: data) { (record, error) in
             if let record = record {
                 // TODO: Tratar erro para quando já tiver o usuário logado
                 print("Usuário já registrado")
             } else {
+                // FIXME: (Primeira vez que cadastra, ele buga)
                 self.cloudSave(record: user, database: self.publicDB)
             }
         }
@@ -90,6 +116,12 @@ final class Cloud {
                 print("Erro ao salvar")
             } else {
                 print("Salvo com Sucesso")
+            }
+            do {
+                try FileManager.default.removeItem(at: self.url)
+                print("Temp file deletado com sucesso")
+            } catch let erro {
+                print("Error deleting temp file: \(erro)")
             }
         }
     }
@@ -156,7 +188,7 @@ final class Cloud {
         guard let email = UserDefaults.standard.string(forKey: "email") else { return }
         guard let password = UserDefaults.standard.string(forKey: "password") else { return }
 
-        let user = AuthModel(name: name, description: description, email: email, password: password)
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
 
         getUser(data: user) { (record, error) in
 
@@ -180,5 +212,21 @@ final class Cloud {
         }
     }
 
-
+//    public func teste() {
+//        guard let image = UIImage(named: "busca") else { return }
+//
+//        let data = image.pngData()
+//        guard let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".jpg") else { return }
+//        do {
+//            try data!.write(to: url)
+//        } catch let erro as NSError {
+//            print("Error! \(erro)")
+//            return
+//        }
+//
+//        let asset = CKAsset(fileURL: url)
+//        let user = CKRecord(recordType: "Teste")
+//        user.setValue(asset, forKey: "image")
+//        cloudSave(record: user, database: publicDB)
+//    }
 }
