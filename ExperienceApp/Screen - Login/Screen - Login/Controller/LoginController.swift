@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CloudKit
+import UIKit
 
 protocol LoginControllerDelegate: AnyObject {
     func authResponser()
@@ -25,6 +27,18 @@ final class LoginController {
                 UserDefaults.standard.set(user["password"], forKey: "password")
                 UserDefaults.standard.set(user["description"], forKey: "description")
                 UserDefaults.standard.set(true, forKey: "logged")
+
+                if let image = user["image"] {
+                    guard let file: CKAsset? = image as? CKAsset else { return }
+                    if let file = file {
+                        if let dado = NSData(contentsOf: file.fileURL!) {
+                            guard let tempImage = UIImage(data: dado as Data) else { return }
+                            let fileName = UUID().uuidString
+                            FileHelper.saveImage(image: tempImage, nameWithoutExtension: fileName)
+                            UserDefaults.standard.set(fileName, forKey: "image")
+                        }
+                    }
+                }
             } else {
                 UserDefaults.standard.set(false, forKey: "logged")
             }

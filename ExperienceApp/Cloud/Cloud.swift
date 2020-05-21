@@ -88,14 +88,6 @@ final class Cloud {
                 return
             }
             user.setValue(CKAsset(fileURL: url), forKey: "image")
-//            Pegando o dado e transformando em imagem
-//            var file : CKAsset? = user.object(forKey: "image") as? CKAsset
-//
-//            if let file = file {
-//                if let dado = NSData(contentsOf: file.fileURL!) {
-//                    let imagem3 = UIImage(data: dado as Data)
-//                }
-//            }
         }
 
         authUser(data: data) { (record, error) in
