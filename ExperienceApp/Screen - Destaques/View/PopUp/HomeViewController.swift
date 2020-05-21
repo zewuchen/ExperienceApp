@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
 
 
     @IBAction func handleShowPopUp(_ sender: UIButton) {
-        let vc = AdicionarPopUpViewController()
+        let vc = AdicionarExpPopUpViewController()
         vc.modalTransitionStyle  =  .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)

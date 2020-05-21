@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdicionarPopUpViewController: UIViewController {
+class AdicionarExpPopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

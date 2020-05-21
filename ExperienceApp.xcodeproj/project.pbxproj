@@ -32,8 +32,8 @@
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
 		9524877B2476F02700C0A7F9 /* DeletarPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952487792476F02700C0A7F9 /* DeletarPopUpViewController.swift */; };
 		9524877C2476F02700C0A7F9 /* DeletarPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877A2476F02700C0A7F9 /* DeletarPopUpViewController.xib */; };
-		9524877F2476FC5200C0A7F9 /* AdicionarPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524877D2476FC5200C0A7F9 /* AdicionarPopUpViewController.swift */; };
-		952487802476FC5200C0A7F9 /* AdicionarPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877E2476FC5200C0A7F9 /* AdicionarPopUpViewController.xib */; };
+		9524877F2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524877D2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.swift */; };
+		952487802476FC5200C0A7F9 /* AdicionarExpPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877E2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.xib */; };
 		95248784247710CA00C0A7F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95248782247710CA00C0A7F9 /* HomeViewController.swift */; };
 		95248785247710CA00C0A7F9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95248783247710CA00C0A7F9 /* HomeViewController.xib */; };
 		9542EBCC24730AA10049E27E /* CriarContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBCA24730AA10049E27E /* CriarContaViewController.swift */; };
@@ -92,8 +92,8 @@
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
 		952487792476F02700C0A7F9 /* DeletarPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletarPopUpViewController.swift; sourceTree = "<group>"; };
 		9524877A2476F02700C0A7F9 /* DeletarPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletarPopUpViewController.xib; sourceTree = "<group>"; };
-		9524877D2476FC5200C0A7F9 /* AdicionarPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarPopUpViewController.swift; sourceTree = "<group>"; };
-		9524877E2476FC5200C0A7F9 /* AdicionarPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarPopUpViewController.xib; sourceTree = "<group>"; };
+		9524877D2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarExpPopUpViewController.swift; sourceTree = "<group>"; };
+		9524877E2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarExpPopUpViewController.xib; sourceTree = "<group>"; };
 		95248782247710CA00C0A7F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		95248783247710CA00C0A7F9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		9542EBCA24730AA10049E27E /* CriarContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContaViewController.swift; sourceTree = "<group>"; };
@@ -355,8 +355,8 @@
 				95248783247710CA00C0A7F9 /* HomeViewController.xib */,
 				952487792476F02700C0A7F9 /* DeletarPopUpViewController.swift */,
 				9524877A2476F02700C0A7F9 /* DeletarPopUpViewController.xib */,
-				9524877D2476FC5200C0A7F9 /* AdicionarPopUpViewController.swift */,
-				9524877E2476FC5200C0A7F9 /* AdicionarPopUpViewController.xib */,
+				9524877D2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.swift */,
+				9524877E2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.xib */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -631,7 +631,7 @@
 				CBFECD51246DB571005B621F /* LaunchScreen.storyboard in Resources */,
 				0F17C7D3246F37B900A2D212 /* DestaquesTableViewCell.xib in Resources */,
 				0F17C7C2246F1B0300A2D212 /* DestaquesCollectionViewCell.xib in Resources */,
-				952487802476FC5200C0A7F9 /* AdicionarPopUpViewController.xib in Resources */,
+				952487802476FC5200C0A7F9 /* AdicionarExpPopUpViewController.xib in Resources */,
 				CB5C5AD924745CAA00E91446 /* PerfilExperienciaTableViewCell.xib in Resources */,
 				0F17C7BD246F184100A2D212 /* MainViewController.xib in Resources */,
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
@@ -672,7 +672,7 @@
 			files = (
 				0F17C7CD246F379700A2D212 /* DestaquesViewController.swift in Sources */,
 				CB5C5AD824745CAA00E91446 /* PerfilExperienciaTableViewCell.swift in Sources */,
-				9524877F2476FC5200C0A7F9 /* AdicionarPopUpViewController.swift in Sources */,
+				9524877F2476FC5200C0A7F9 /* AdicionarExpPopUpViewController.swift in Sources */,
 				CBFECD46246DB56E005B621F /* ViewController.swift in Sources */,
 				0F17C7D2246F37B900A2D212 /* DestaquesTableViewCell.swift in Sources */,
 				0F17C7E6246F391F00A2D212 /* DisponibilidadeViewController.swift in Sources */,
