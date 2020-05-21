@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeletarPopUpViewController" customModule="ExperienceApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VR0-T7-QxQ">
+                    <rect key="frame" x="32" y="380" width="350" height="136.5"/>
+                    <subviews>
+                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VJd-zr-1d4">
+                            <rect key="frame" x="0.0" y="92.5" width="350" height="44"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7k-BW-ajr">
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="44"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                    <state key="normal" title="Cancelar">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-L2-X71">
+                                    <rect key="frame" x="183" y="0.0" width="167" height="44"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                    <state key="normal" title="Deletar">
+                                        <color key="titleColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="handleDismissPopup:" destination="-1" eventType="touchUpInside" id="jcN-M7-8oe"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="U3C-Nh-92R"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você sairá da experiência e não terá uma vaga reservada!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRo-tJ-Ijn">
+                            <rect key="frame" x="16" y="43.5" width="318" height="33"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deletar experiência" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-QS-UKf">
+                            <rect key="frame" x="16" y="8" width="318" height="19.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="EbI-QS-UKf" secondAttribute="trailing" constant="16" id="MEV-bO-rmC"/>
+                        <constraint firstItem="LRo-tJ-Ijn" firstAttribute="leading" secondItem="VR0-T7-QxQ" secondAttribute="leading" constant="16" id="Rbw-pX-lSL"/>
+                        <constraint firstAttribute="trailing" secondItem="VJd-zr-1d4" secondAttribute="trailing" id="SHO-up-FQ4"/>
+                        <constraint firstItem="LRo-tJ-Ijn" firstAttribute="top" secondItem="EbI-QS-UKf" secondAttribute="bottom" constant="16" id="apT-w8-Zoy"/>
+                        <constraint firstAttribute="trailing" secondItem="LRo-tJ-Ijn" secondAttribute="trailing" constant="16" id="cJx-29-P0K"/>
+                        <constraint firstAttribute="bottom" secondItem="VJd-zr-1d4" secondAttribute="bottom" id="lgN-ac-Bh9"/>
+                        <constraint firstItem="VJd-zr-1d4" firstAttribute="leading" secondItem="VR0-T7-QxQ" secondAttribute="leading" id="ow5-vy-8gT"/>
+                        <constraint firstItem="EbI-QS-UKf" firstAttribute="top" secondItem="VR0-T7-QxQ" secondAttribute="top" constant="8" id="rxY-ye-1nN"/>
+                        <constraint firstItem="EbI-QS-UKf" firstAttribute="leading" secondItem="VR0-T7-QxQ" secondAttribute="leading" constant="16" id="wn1-SB-2mR"/>
+                        <constraint firstItem="VJd-zr-1d4" firstAttribute="top" secondItem="LRo-tJ-Ijn" secondAttribute="bottom" constant="16" id="yfD-O0-GFP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VR0-T7-QxQ" secondAttribute="trailing" constant="32" id="Vm7-tU-Zk9"/>
+                <constraint firstItem="VR0-T7-QxQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="h4u-Gd-S0e"/>
+                <constraint firstItem="VR0-T7-QxQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hfT-eJ-r0G"/>
+                <constraint firstItem="VR0-T7-QxQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sDF-5E-GRd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+</document>
