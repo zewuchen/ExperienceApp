@@ -8,23 +8,62 @@
 
 import UIKit
 
-class DestaquesViewController: UIViewController {
-
+class DestaquesViewController: UIViewController, UITableViewDataSource {
+    
+    // MARK: Outlets
+    @IBOutlet weak var lblDestaque: UILabel!
+    @IBOutlet weak var imgDestaque: UIImageView!
+    @IBOutlet weak var infoDestaque: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Variáveis
+    let destaquesCell = "DestaquesTableViewCell"
+    private var data: [DestaquesModel] = []
+    private let controller = DestaquesController()
+       
+     // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpTable()
+        setNavigation()
+        controller.delegate = self
+        condicional()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func condicional() {
+        if lblDestaque.text == "Livros" {
+            infoDestaque.text = "Compartilhe experiências sobre livros"
+        }
     }
-    */
+    
+    func setUpTable() {
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: destaquesCell, bundle: nil), forCellReuseIdentifier: destaquesCell)
+        tableView.separatorStyle = .none
+    }
 
+    
+    func setNavigation() {
+         self.navigationController?.navigationBar.isTranslucent = true
+         self.navigationController?.view.backgroundColor = .clear
+     }
+    
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            data.count
+        }
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let celulaTable = self.tableView.dequeueReusableCell(withIdentifier: destaquesCell, for: indexPath) as? DestaquesTableViewCell
+                    celulaTable?.setUp(model: data[indexPath.row])
+                        return celulaTable ?? UITableViewCell()
+        }
+}
+
+extension DestaquesViewController: DestaquesControllerDelegate {
+    func reloadData(data: [DestaquesModel]) {
+        self.data = data
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }

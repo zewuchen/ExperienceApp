@@ -10,15 +10,24 @@ import UIKit
 
 class DestaquesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleCard: UILabel!
+    @IBOutlet weak var subtitleCard: UILabel!
+    @IBOutlet weak var imgCard: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    }
+    
+    func setUp(model: DestaquesModel) {
+        self.titleCard?.text = model.nomeExp
+        self.subtitleCard.text = model.descricaoExp
+        self.imgCard.image = UIImage(named: "cacto")
     }
     
 }
