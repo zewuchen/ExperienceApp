@@ -34,7 +34,11 @@ final class PerfilController {
         guard let email = UserDefaults.standard.string(forKey: "email") else { return }
         guard let password = UserDefaults.standard.string(forKey: "password") else { return }
 
-        let user = AuthModel(name: name, description: description, email: email, password: password)
+        var user = AuthModel(name: name, description: description, email: email, password: password, image: "")
+
+        if let image = UserDefaults.standard.string(forKey: "image") {
+            user = AuthModel(name: name, description: description, email: email, password: password, image: image)
+        }
 
         delegate?.reloadProfileData(data: user)
     }

@@ -82,6 +82,9 @@
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Criar Experiência"/>
+                    <connections>
+                        <action selector="btnNewExperience:" destination="-1" eventType="touchUpInside" id="v39-O1-ePT"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

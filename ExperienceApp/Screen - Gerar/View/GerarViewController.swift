@@ -46,6 +46,8 @@ class GerarViewController: UIViewController {
             
             
             controller.createExperience(data: experience)
+            // TODO: Dar dismiss na tela quando criar a experiência
+//            self.navigationController?.popToRootViewController(animated: false)
         }
     }
     
