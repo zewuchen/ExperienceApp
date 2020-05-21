@@ -39,6 +39,7 @@
 		CB1A9DFD2472F9D900946B78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A9DFC2472F9D900946B78 /* CloudKit.framework */; };
 		CB1A9E0B24732C6000946B78 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A9E0A24732C6000946B78 /* CreateAccountController.swift */; };
 		CB1A9E0D24732C7300946B78 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A9E0C24732C7300946B78 /* LoginController.swift */; };
+		CB41A1A424770F2400A273DE /* DestaquesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB41A1A324770F2400A273DE /* DestaquesModel.swift */; };
 		CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */; };
 		CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */; };
 		CB4F8F87246DBA550004B5E5 /* TesteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F86246DBA550004B5E5 /* TesteModel.swift */; };
@@ -96,6 +97,7 @@
 		CB1A9DFC2472F9D900946B78 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CB1A9E0A24732C6000946B78 /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		CB1A9E0C24732C7300946B78 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CB41A1A324770F2400A273DE /* DestaquesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestaquesModel.swift; sourceTree = "<group>"; };
 		CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
 		CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TesteViewController.xib; sourceTree = "<group>"; };
 		CB4F8F86246DBA550004B5E5 /* TesteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteModel.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		0F17C7CA246F371800A2D212 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CB41A1A324770F2400A273DE /* DestaquesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				0F17C7E6246F391F00A2D212 /* DisponibilidadeViewController.swift in Sources */,
 				0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */,
 				0F17C7C1246F1B0300A2D212 /* DestaquesCollectionViewCell.swift in Sources */,
+				CB41A1A424770F2400A273DE /* DestaquesModel.swift in Sources */,
 				0F17C7D5246F37C500A2D212 /* DestaquesController.swift in Sources */,
 				0F17C7E1246F387800A2D212 /* ExperienciasInfoController.swift in Sources */,
 				CBFECD42246DB56E005B621F /* AppDelegate.swift in Sources */,

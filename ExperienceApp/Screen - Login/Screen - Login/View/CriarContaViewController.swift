@@ -33,6 +33,7 @@ class CriarContaViewController: UIViewController {
 
         let user = AuthModel(name: "", description: "", email: email, password: password, image: "")
         controller.login(user: user)
+        self.navigationController?.popToRootViewController(animated: false)
     }
 }
 

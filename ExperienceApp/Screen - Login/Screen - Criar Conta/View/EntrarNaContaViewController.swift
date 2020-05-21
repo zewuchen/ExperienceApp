@@ -46,6 +46,7 @@ class EntrarNaContaViewController: UIViewController {
 
         let user = AuthModel(name: name, description: description, email: email, password: password, image: urlString)
         controller.createAccount(user: user)
+        self.navigationController?.popToRootViewController(animated: false)
     }
 
     @IBAction func btnLogin(_ sender: Any) {
