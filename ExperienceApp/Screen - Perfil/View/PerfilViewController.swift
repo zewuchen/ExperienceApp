@@ -59,6 +59,7 @@ class PerfilViewController: UIViewController {
     
     func setUpBiography() {
         biographyText.layer.cornerRadius = 20
+        biographyText.allowsEditingTextAttributes = false
     }
 }
 
