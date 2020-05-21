@@ -38,6 +38,8 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var descriptionHostLabel: UILabel!
     @IBOutlet weak var titleHowPartLabel: UILabel!
     @IBOutlet weak var descriptionHowPartLabel: UILabel!
+    @IBOutlet weak var whatDoINeedTitleLabel: UILabel!
+    @IBOutlet weak var whatDoINeedDescriptionLabel: UILabel!
     @IBOutlet weak var backgroundtExpImage: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var experienceButton: UIButton!
@@ -52,11 +54,14 @@ class ExperienciasInfoViewController: UIViewController {
         
         self.view.backgroundColor = .background
         self.infoView.backgroundColor = .background
+        self.infoScrollView.backgroundColor = .background
         
         setupHeaderDescription()
         setupHost()
         setupHowParticipate()
-        setUpExperienceButton()
+        setupExperienceButton()
+        setupWhatDoINeed()
+        tags()
         
         controller.reload()
     }
@@ -78,6 +83,8 @@ class ExperienciasInfoViewController: UIViewController {
         titlehostLabel.font = .RockwellBold20
         hostNameLabel.font = .AvenirHeavy
         descriptionHostLabel.font = .AvenirRoman
+        hostImage.layer.cornerRadius = self.hostImage.frame.size.height/2
+        
     }
     
     func setupHowParticipate() {
@@ -86,11 +93,25 @@ class ExperienciasInfoViewController: UIViewController {
         valueLabel.font = .Rockwell24
     }
     
-    func setUpExperienceButton() {
+    func setupWhatDoINeed() {
+        whatDoINeedTitleLabel.font = .RockwellBold20
+        whatDoINeedDescriptionLabel.font = .AvenirRoman
+        whatDoINeedTitleLabel.text = "O que preciso?"
+    }
+    
+    func setupExperienceButton() {
         experienceButton.backgroundColor = .vermelhoTijolo
         experienceButton.titleLabel?.font = .RockwellBold20
         experienceButton.layer.cornerRadius = 20
         experienceButton.titleLabel?.textColor = .white
+        experienceButton.layer.zPosition = 1
+    }
+    
+    func tags() {
+        if tagLabel1.text == "Label" {
+            tagsStackView.removeFromSuperview()
+            titlehostLabel
+        }
     }
 }
 
@@ -107,6 +128,7 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
         self.hostImage.image = data.hostImage
         self.descriptionHostLabel.text = data.hostDescription
         self.descriptionHowPartLabel.text = data.howParticipate
+        self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
         
     }
 }

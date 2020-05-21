@@ -23,7 +23,6 @@ final class ExperienciasInfoController {
     
     public init() {
 
-        
     }
     
     public func reload() {
