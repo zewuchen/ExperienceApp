@@ -66,6 +66,9 @@ extension PerfilViewController: PerfilControllerDelegate {
     func reloadProfileData(data: AuthModel) {
         self.name.text = data.name
         self.biographyText.text = data.description
+        if let imagem = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") {
+            self.perfilImage.image = imagem
+        }
     }
 
     func reloadData(data: [ModelExperiencePerfil]) {
