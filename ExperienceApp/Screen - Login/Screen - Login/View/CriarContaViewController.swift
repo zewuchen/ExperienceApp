@@ -17,6 +17,7 @@ class CriarContaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpPlaceholder()
         controller.delegate = self
            controller.delegate = self
             let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
@@ -28,12 +29,38 @@ class CriarContaViewController: UIViewController {
         }
 
     @IBAction func btnLogin(_ sender: Any) {
-        guard let email = txtEmail.text else { return }
-        guard let password = txtSenha.text else { return }
+        
+        if validar() {
+            guard let email = txtEmail.text else { return }
+            guard let password = txtSenha.text else { return }
 
-        let user = AuthModel(name: "", description: "", email: email, password: password, image: "")
-        controller.login(user: user)
-        self.navigationController?.popToRootViewController(animated: false)
+            let user = AuthModel(name: "", description: "", email: email, password: password, image: "")
+            controller.login(user: user)
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func validarEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    
+    func validar() -> Bool {
+        var array: [Bool] = []
+        array.append(validarEmail(txtEmail.text ?? "email"))
+        
+        if array.contains(false) {
+            //TODO: pop-up de erro?
+            return false
+        }
+        return true
+    }
+    
+    func setUpPlaceholder() {
+        let color = #colorLiteral(red: 0.7675922513, green: 0.7630307674, blue: 0.7710996866, alpha: 1)
+        txtEmail.attributedPlaceholder = NSAttributedString(string: "Insira seu e-mail", attributes: [NSAttributedString.Key.foregroundColor: color])
+        txtSenha.attributedPlaceholder = NSAttributedString(string: "Insira sua senha", attributes: [NSAttributedString.Key.foregroundColor: color])
     }
 }
 
