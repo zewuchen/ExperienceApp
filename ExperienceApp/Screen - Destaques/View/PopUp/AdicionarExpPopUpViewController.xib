@@ -58,16 +58,37 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-R6-3WV">
+                            <rect key="frame" x="0.0" y="105" width="350" height="2"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="bf3-MQ-Tqt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OA0-W6-gyd">
+                            <rect key="frame" x="174" y="107" width="2" height="50"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="oxB-3A-e4X"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OA0-W6-gyd" secondAttribute="trailing" constant="174" id="59M-BR-ILR"/>
+                        <constraint firstItem="anW-Sr-Ufo" firstAttribute="top" secondItem="bX1-R6-3WV" secondAttribute="bottom" constant="1.5" id="9W9-kO-Fm1"/>
+                        <constraint firstItem="OA0-W6-gyd" firstAttribute="leading" secondItem="KRF-Hq-cJT" secondAttribute="leading" constant="174" id="9vp-nb-N7N"/>
+                        <constraint firstAttribute="trailing" secondItem="bX1-R6-3WV" secondAttribute="trailing" id="FM9-vS-cMx"/>
                         <constraint firstItem="Q4E-gD-FQP" firstAttribute="leading" secondItem="KRF-Hq-cJT" secondAttribute="leading" constant="16" id="FcL-aH-SSl"/>
+                        <constraint firstItem="OA0-W6-gyd" firstAttribute="top" secondItem="KRF-Hq-cJT" secondAttribute="top" constant="107" id="GZk-zX-HaL"/>
                         <constraint firstItem="q2E-ad-9CN" firstAttribute="leading" secondItem="KRF-Hq-cJT" secondAttribute="leading" constant="16" id="GyI-lD-snb"/>
                         <constraint firstItem="Q4E-gD-FQP" firstAttribute="top" secondItem="KRF-Hq-cJT" secondAttribute="top" constant="8" id="LWk-4u-0fB"/>
                         <constraint firstAttribute="trailing" secondItem="q2E-ad-9CN" secondAttribute="trailing" constant="16" id="OUb-X4-Nee"/>
                         <constraint firstAttribute="trailing" secondItem="anW-Sr-Ufo" secondAttribute="trailing" id="R8n-Ww-CgM"/>
                         <constraint firstItem="anW-Sr-Ufo" firstAttribute="leading" secondItem="KRF-Hq-cJT" secondAttribute="leading" id="Tha-hV-Bg0"/>
+                        <constraint firstAttribute="bottom" secondItem="OA0-W6-gyd" secondAttribute="bottom" id="jdQ-iR-pzO"/>
                         <constraint firstAttribute="trailing" secondItem="Q4E-gD-FQP" secondAttribute="trailing" constant="16" id="nsR-p1-5bC"/>
+                        <constraint firstItem="bX1-R6-3WV" firstAttribute="leading" secondItem="KRF-Hq-cJT" secondAttribute="leading" id="uQi-Cr-vhP"/>
                         <constraint firstItem="q2E-ad-9CN" firstAttribute="top" secondItem="Q4E-gD-FQP" secondAttribute="bottom" constant="16" id="uXb-Tz-j7l"/>
                         <constraint firstAttribute="bottom" secondItem="anW-Sr-Ufo" secondAttribute="bottom" constant="4.5" id="wjg-Qa-aOw"/>
                         <constraint firstItem="anW-Sr-Ufo" firstAttribute="top" secondItem="q2E-ad-9CN" secondAttribute="bottom" constant="32" id="xX2-67-3UW"/>
