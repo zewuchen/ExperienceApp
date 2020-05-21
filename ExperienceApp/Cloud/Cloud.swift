@@ -204,21 +204,27 @@ final class Cloud {
         }
     }
 
-//    public func teste() {
-//        guard let image = UIImage(named: "busca") else { return }
-//
-//        let data = image.pngData()
-//        guard let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".jpg") else { return }
-//        do {
-//            try data!.write(to: url)
-//        } catch let erro as NSError {
-//            print("Error! \(erro)")
-//            return
-//        }
-//
-//        let asset = CKAsset(fileURL: url)
-//        let user = CKRecord(recordType: "Teste")
-//        user.setValue(asset, forKey: "image")
-//        cloudSave(record: user, database: publicDB)
-//    }
+    public func teste() {
+            guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+            guard let description = UserDefaults.standard.string(forKey: "description") else { return }
+            guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+            guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+
+            let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
+
+            getUser(data: user) { (usuario, error) in
+                guard let usuario = usuario else { return }
+                var employeeRecordIds = [CKRecord.Reference]()
+                self.getExperience(data: nil) { (experiences, errors) in
+                    for employeeReference in experiences {
+                        if let record = employeeReference {
+                            let reference = CKRecord.Reference(record: record, action: .none)
+                            employeeRecordIds.append(reference)
+                        }
+                    }
+                    usuario.setObject(employeeRecordIds as CKRecordValue, forKey: "experiences")
+                    self.cloudSave(record: usuario, database: self.publicDB)
+                }
+            }
+        }
 }
