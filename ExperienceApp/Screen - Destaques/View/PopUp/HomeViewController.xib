@@ -18,20 +18,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUn-JS-SKa">
-                    <rect key="frame" x="184" y="433" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="115" y="433" width="184" height="30"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Ir para  o PopUp de deletar">
+                        <color key="titleColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
                     <connections>
-                        <action selector="handleShowPopUp:" destination="-1" eventType="touchUpInside" id="gyQ-Ug-Heb"/>
+                        <action selector="deletarPopUp:" destination="-1" eventType="touchUpInside" id="gyQ-Ug-Heb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ir4-hc-9Xz">
+                    <rect key="frame" x="104" y="513" width="206" height="30"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XiE-9c-qNN"/>
+                    </constraints>
+                    <state key="normal" title="Ir para o PopUp de adicionar">
+                        <color key="titleColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="adicionarPopUp:" destination="-1" eventType="touchUpInside" id="9HP-ha-z91"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="Ir4-hc-9Xz" firstAttribute="top" secondItem="SUn-JS-SKa" secondAttribute="bottom" constant="50" id="Ptb-Mr-xzv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ir4-hc-9Xz" secondAttribute="trailing" constant="104" id="T4K-CU-eXa"/>
                 <constraint firstItem="SUn-JS-SKa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZPW-c6-JDq"/>
                 <constraint firstItem="SUn-JS-SKa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="haT-Xp-Su1"/>
+                <constraint firstItem="Ir4-hc-9Xz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="104" id="l0a-eA-JDW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="141"/>
+            <point key="canvasLocation" x="137.68115942028987" y="140.625"/>
         </view>
     </objects>
 </document>

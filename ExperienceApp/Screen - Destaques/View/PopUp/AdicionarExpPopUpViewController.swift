@@ -1,5 +1,5 @@
 //
-//  AdicionarPopUpViewController.swift
+//  AdicionarExpPopUpViewController.swift
 //  ExperienceApp
 //
 //  Created by Tamara Erlij on 21/05/20.
@@ -15,8 +15,11 @@ class AdicionarExpPopUpViewController: UIViewController {
 
     }
 
-    @IBAction func handleDismissPopup(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func btnConcluído(_ sender: UIButton) {
+        let novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
+          //       novaTela.modalPresentationStyle = .fullScreen
+               self.present(novaTela, animated: true, completion: nil)
+           
     }
     
 }

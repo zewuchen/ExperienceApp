@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, DeletarExpPopUpDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +17,23 @@ class HomeViewController: UIViewController {
     }
 
 
-    @IBAction func handleShowPopUp(_ sender: UIButton) {
-        let vc = AdicionarExpPopUpViewController()
+    @IBAction func deletarPopUp(_ sender: UIButton) {
+        let vc = DeletarExpPopUpViewController()
         vc.modalTransitionStyle  =  .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func adicionarPopUp(_ sender: UIButton) {
+        let vc = AdicionarExpPopUpViewController()
+           vc.modalTransitionStyle  =  .crossDissolve
+           vc.modalPresentationStyle = .overCurrentContext
+           self.present(vc, animated: true, completion: nil)
+    }
+    
+    func handleConfirm() {
+        let vc = ProfileViewController()
         self.present(vc, animated: true, completion: nil)
     }
 }
