@@ -66,6 +66,17 @@
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="highlightedColor" red="0.82745098039999998" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPL-Sj-9oA">
+                    <rect key="frame" x="354" y="64" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Mqj-dF-3hb"/>
+                        <constraint firstAttribute="height" constant="40" id="VAG-mi-qDm"/>
+                    </constraints>
+                    <state key="normal" image="botaoSair"/>
+                    <connections>
+                        <action selector="sairPaginaBotao:" destination="-1" eventType="touchUpInside" id="bMy-91-uUI"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -75,16 +86,25 @@
                 <constraint firstItem="Bgl-8A-BAD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qoy-Hg-pwf"/>
                 <constraint firstItem="xpV-y7-5il" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Qu6-gO-OYC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xpV-y7-5il" secondAttribute="trailing" constant="24" id="Zsp-GX-6Yx"/>
+                <constraint firstItem="WPL-Sj-9oA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="a0Y-vH-IcY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xmi-W6-Nhq" secondAttribute="trailing" constant="24" id="eY5-bQ-SBx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpV-y7-5il" secondAttribute="bottom" constant="82" id="lCf-eY-R1t"/>
                 <constraint firstItem="xpV-y7-5il" firstAttribute="top" secondItem="Xmi-W6-Nhq" secondAttribute="bottom" constant="20" id="mLn-bh-Uj7"/>
                 <constraint firstItem="Bgl-8A-BAD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mS2-P9-EIh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WPL-Sj-9oA" secondAttribute="trailing" constant="20" id="s5z-g5-0rV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ch1-6b-EOv">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+            <point key="canvasLocation" x="570" y="-72"/>
+        </button>
     </objects>
     <resources>
+        <image name="botaoSair" width="100" height="100"/>
         <image name="cacto" width="1106" height="1052"/>
     </resources>
 </document>

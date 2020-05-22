@@ -47,10 +47,33 @@ class CriarContaViewController: UIViewController {
     }
     
     func validar() -> Bool {
-        var array: [Bool] = []
-        array.append(validarEmail(txtEmail.text ?? "email"))
+        var arrayReturn: [Bool] = []
+        let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
+        let corBordaCerta = UIColor.lightGray.cgColor
         
-        if array.contains(false) {
+        if txtEmail.text == "" || txtEmail.text == nil || validarEmail(txtEmail.text ?? "email") == false {
+            txtEmail.layer.borderColor = corBordaErrada
+            txtEmail.layer.borderWidth = 2.0
+            txtEmail.layer.cornerRadius = 6
+            arrayReturn.append(false)
+        } else {
+            txtSenha.layer.borderColor = corBordaCerta
+            txtSenha.layer.borderWidth = 0.25
+            arrayReturn.append(true)
+        }
+        
+        if txtSenha.text == "" || txtSenha.text == nil {
+            txtSenha.layer.borderColor = corBordaErrada
+            txtSenha.layer.borderWidth = 2.0
+            txtSenha.layer.cornerRadius = 6
+            arrayReturn.append(false)
+        } else {
+            txtSenha.layer.borderColor = corBordaCerta
+            txtSenha.layer.borderWidth = 0.25
+            arrayReturn.append(true)
+        }
+        
+        if arrayReturn.contains(false) {
             //TODO: pop-up de erro?
             return false
         }
