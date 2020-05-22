@@ -10,6 +10,8 @@ import UIKit
 
 class PerfilViewController: UIViewController {
     
+    @IBOutlet weak var perfilScrollView: UIScrollView!
+    @IBOutlet weak var perfilView: UIView!
     @IBOutlet weak var perfilImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var biographyTitle: UILabel!
@@ -35,11 +37,15 @@ class PerfilViewController: UIViewController {
         setUpBiography()
         
         self.view.backgroundColor = .background
-        experienceTableView.backgroundColor = .background
+        self.experienceTableView.backgroundColor = .background
+        self.perfilView.backgroundColor = .background
+        self.perfilScrollView.backgroundColor = .background
                 
         experienceTableView.dataSource = self
         experienceTableView.delegate = self
         experienceTableView.register(UINib(nibName: "PerfilExperienciaTableViewCell", bundle: nil), forCellReuseIdentifier: "experiencePerfilCard")
+        
+        navigationController?.navigationBar.isHidden = true
             
         controller.reload()
         controller.setUpProfileData()
