@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdicionarExpPopUpViewController: UIViewController {
+class ExpCriadaPopUp: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class AdicionarExpPopUpViewController: UIViewController {
 
     @IBAction func btnConcluído(_ sender: UIButton) {
         let novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
-          //       novaTela.modalPresentationStyle = .fullScreen
+                 novaTela.modalPresentationStyle = .fullScreen
                self.present(novaTela, animated: true, completion: nil)
            
     }

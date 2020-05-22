@@ -18,19 +18,28 @@ class HomeViewController: UIViewController, DeletarExpPopUpDelegate {
 
 
     @IBAction func deletarPopUp(_ sender: UIButton) {
-        let vc = DeletarExpPopUpViewController()
+        let vc = DeletarExpPopUp()
         vc.modalTransitionStyle  =  .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func adicionarPopUp(_ sender: UIButton) {
-        let vc = AdicionarExpPopUpViewController()
+    @IBAction func adicionadaPopUp(_ sender: Any) {
+        let vc = ExpAdicionadaPopUp()
+        vc.modalTransitionStyle  =  .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func criadaPopUp(_ sender: UIButton) {
+        let vc = ExpCriadaPopUp()
            vc.modalTransitionStyle  =  .crossDissolve
            vc.modalPresentationStyle = .overCurrentContext
            self.present(vc, animated: true, completion: nil)
     }
+    
+    
     
     func handleConfirm() {
         let vc = ProfileViewController()

@@ -13,7 +13,7 @@ protocol DeletarExpPopUpDelegate {
 func handleConfirm()
    }
 
-class DeletarExpPopUpViewController: UIViewController {
+class DeletarExpPopUp: UIViewController {
     var delegate: DeletarExpPopUpDelegate?
 
     override func viewDidLoad() {
