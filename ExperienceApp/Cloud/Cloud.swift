@@ -243,5 +243,32 @@ final class Cloud {
         }
     }
 
+    public func desattachExperience(data: ExperienceModel) {
+        guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+        guard let description = UserDefaults.standard.string(forKey: "description") else { return }
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
+
+        getUser(data: user) { (usuario, error) in
+            guard let usuario = usuario else { return }
+            let assetsOld = usuario["experiences"] as? [CKRecord.Reference]
+
+            var experiencesRecords = [CKRecord.Reference]()
+
+            if let assetsOld = assetsOld {
+                for asset in assetsOld {
+                    guard let recordName = data.recordName else { return }
+                    if asset.recordID.recordName != recordName {
+                        experiencesRecords.append(asset)
+                    }
+                }
+            }
+            usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
+            self.cloudSave(record: usuario, database: self.publicDB)
+        }
+    }
+
     public func teste() {}
 }
