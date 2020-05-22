@@ -54,7 +54,6 @@ class ExperienciasInfoViewController: UIViewController {
         
     }
     
-   
     private let controller = ExperienciasInfoController()
 //    private var data: [ModelExperienciasInfo] = []
     
