@@ -270,5 +270,42 @@ final class Cloud {
         }
     }
 
+    public func getMyExperiences(completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+
+        let user = AuthModel(name: "", description: "", email: email, password: password, image: "")
+
+        getUser(data: user) { (usuario, error) in
+            guard let usuario = usuario else { return }
+            if let experiences = usuario["experiences"] as? [CKRecord.Reference] {
+                var recordsIDs = [CKRecord.ID]()
+                for experience in experiences {
+                    recordsIDs.append(experience.recordID)
+                }
+                var fetchOperation = CKFetchRecordsOperation(recordIDs: recordsIDs)
+                fetchOperation.fetchRecordsCompletionBlock = {
+                    recordData, erros in
+
+                    var data = [CKRecord]()
+
+                    if let recordData = recordData {
+//                        recordData.enumerated() // Devolve um vetor com todas as coisas
+//                        recordData.map {(chave, valor) -> Void in
+//                            data.append(valor)
+//                        } // Transformar um conjunto de dados num outro
+                        for(key, value) in recordData {
+                            data.append(value)
+                        }
+                        completionHandler(data, erros)
+                    } else {
+                        completionHandler([], erros)
+                    }
+                }
+                self.container.publicCloudDatabase.add(fetchOperation)
+            }
+        }
+    }
+
     public func teste() {}
 }
