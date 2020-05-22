@@ -31,8 +31,9 @@ class CriarContaViewController: UIViewController {
         guard let email = txtEmail.text else { return }
         guard let password = txtSenha.text else { return }
 
-        let user = AuthModel(name: "", description: "", email: email, password: password)
+        let user = AuthModel(name: "", description: "", email: email, password: password, image: "")
         controller.login(user: user)
+        self.navigationController?.popToRootViewController(animated: false)
     }
 }
 

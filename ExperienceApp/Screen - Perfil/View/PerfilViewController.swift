@@ -55,17 +55,30 @@ class PerfilViewController: UIViewController {
         createExperienceButton.titleLabel?.font = .RockwellBold20
         createExperienceButton.layer.cornerRadius = 20
         createExperienceButton.titleLabel?.textColor = .white
+        createExperienceButton.titleLabel?.textAlignment = .center
+
     }
     
     func setUpBiography() {
         biographyText.layer.cornerRadius = 20
+        biographyText.allowsEditingTextAttributes = false
     }
+
+    @IBAction func btnNewExperience(_ sender: Any) {
+        let novaTela = GerarViewController(nibName: "GerarViewController", bundle: nil)
+        novaTela.modalPresentationStyle = .fullScreen
+        self.present(novaTela, animated: true, completion: nil)
+    }
+    
 }
 
 extension PerfilViewController: PerfilControllerDelegate {
     func reloadProfileData(data: AuthModel) {
         self.name.text = data.name
         self.biographyText.text = data.description
+        if let imagem = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") {
+            self.perfilImage.image = imagem
+        }
     }
 
     func reloadData(data: [ModelExperiencePerfil]) {
