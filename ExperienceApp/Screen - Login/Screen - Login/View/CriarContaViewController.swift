@@ -19,14 +19,15 @@ class CriarContaViewController: UIViewController {
         super.viewDidLoad()
         setUpPlaceholder()
         controller.delegate = self
-           controller.delegate = self
-            let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
-            self.view.addGestureRecognizer(toque)
-            toque.cancelsTouchesInView = false
-        }
-        @objc func tirarTeclado() {
-            self.view.endEditing(true)
-        }
+        controller.delegate = self
+        let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
+        self.view.addGestureRecognizer(toque)
+        toque.cancelsTouchesInView = false
+    }
+    
+    @objc func tirarTeclado() {
+        self.view.endEditing(true)
+    }
 
     @IBAction func btnLogin(_ sender: Any) {
         
