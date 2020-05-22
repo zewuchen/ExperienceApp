@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // - Faço essa nova tela ficar em fullscreen ao invés de só um modal
         // - Não esquecer de colocar um Restoration ID na View do .xib
 
-        let novaTela = TesteViewController(nibName: "TesteViewController", bundle: nil)
+        let novaTela = MainViewController(nibName: "MainViewController", bundle: nil)
         novaTela.modalPresentationStyle = .fullScreen
         self.present(novaTela, animated: true, completion: nil)
     }
