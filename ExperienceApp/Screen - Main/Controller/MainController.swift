@@ -34,8 +34,9 @@ final class MainController {
             for record in records {
                 guard let name = record?["title"] else { return }
                 guard let description = record?["description"] else { return }
-                
-                self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito"))
+                guard let recordName = record?.recordID.recordName else { return }
+
+                self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: recordName))
             }
 
             self.delegate?.reloadData(data: self.data)
