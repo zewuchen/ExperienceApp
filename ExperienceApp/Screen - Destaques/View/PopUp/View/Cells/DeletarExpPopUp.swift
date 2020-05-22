@@ -8,21 +8,16 @@
 
 import UIKit
 
-protocol DeletarExpPopUpDelegate {
-    
-func handleConfirm()
-   }
-
 class DeletarExpPopUp: UIViewController {
-    var delegate: DeletarExpPopUpDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func handleDismissPopup(_ sender: UIButton) {
+    @IBAction func btnCancelar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
-        self.delegate?.handleConfirm()
     }
+    
+// Adicionar botão de Deletar
     
 }

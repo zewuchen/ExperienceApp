@@ -18,11 +18,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9l-MO-2uy">
-                    <rect key="frame" x="32" y="368" width="350" height="160"/>
+                    <rect key="frame" x="32" y="368" width="350" height="170"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experiência criada com sucesso, você consegue ver suas experiências no perfil." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c08-Vf-iHw">
                             <rect key="frame" x="16" y="55.5" width="334" height="33"/>
-                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -33,7 +33,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lX-e4-Voa">
-                            <rect key="frame" x="0.0" y="116.5" width="350" height="32"/>
+                            <rect key="frame" x="0.0" y="132.5" width="350" height="32"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                             <state key="normal" title="Concluído">
                                 <color key="titleColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -43,7 +43,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1G7-2M-yxT">
-                            <rect key="frame" x="0.0" y="106.5" width="350" height="2"/>
+                            <rect key="frame" x="0.0" y="124.5" width="350" height="2"/>
                             <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="2" id="a2X-9n-cUt"/>
@@ -58,16 +58,14 @@
                         <constraint firstItem="c08-Vf-iHw" firstAttribute="top" secondItem="j7L-2n-iH1" secondAttribute="bottom" constant="16" id="7CG-iY-TAu"/>
                         <constraint firstAttribute="trailing" secondItem="c08-Vf-iHw" secondAttribute="trailing" id="BUr-wP-xZK"/>
                         <constraint firstAttribute="trailing" secondItem="1G7-2M-yxT" secondAttribute="trailing" id="C1q-0B-Z7k"/>
-                        <constraint firstItem="1G7-2M-yxT" firstAttribute="top" secondItem="c08-Vf-iHw" secondAttribute="bottom" constant="18" id="I3u-55-I97"/>
-                        <constraint firstAttribute="bottom" secondItem="5lX-e4-Voa" secondAttribute="bottom" constant="11.5" id="OYu-Fb-thE"/>
+                        <constraint firstItem="1G7-2M-yxT" firstAttribute="top" secondItem="c08-Vf-iHw" secondAttribute="bottom" constant="36" id="I3u-55-I97"/>
+                        <constraint firstAttribute="bottom" secondItem="5lX-e4-Voa" secondAttribute="bottom" constant="5.5" id="OYu-Fb-thE"/>
                         <constraint firstAttribute="trailing" secondItem="j7L-2n-iH1" secondAttribute="trailing" constant="16" id="RYh-rc-t7Z"/>
-                        <constraint firstItem="1G7-2M-yxT" firstAttribute="top" secondItem="c08-Vf-iHw" secondAttribute="bottom" constant="18" id="SLC-KH-zDf"/>
-                        <constraint firstItem="1G7-2M-yxT" firstAttribute="top" secondItem="c08-Vf-iHw" secondAttribute="bottom" constant="18" id="X3c-xp-E7x"/>
                         <constraint firstAttribute="trailing" secondItem="5lX-e4-Voa" secondAttribute="trailing" id="YzF-aE-uSI"/>
                         <constraint firstItem="c08-Vf-iHw" firstAttribute="leading" secondItem="i9l-MO-2uy" secondAttribute="leading" constant="16" id="aVc-l1-S2h"/>
                         <constraint firstAttribute="trailing" secondItem="c08-Vf-iHw" secondAttribute="trailing" id="de6-J7-ei4"/>
                         <constraint firstItem="c08-Vf-iHw" firstAttribute="leading" secondItem="i9l-MO-2uy" secondAttribute="leading" constant="16" id="iQH-KA-pif"/>
-                        <constraint firstItem="5lX-e4-Voa" firstAttribute="top" secondItem="1G7-2M-yxT" secondAttribute="bottom" constant="8" id="jc6-k9-jrH"/>
+                        <constraint firstItem="5lX-e4-Voa" firstAttribute="top" secondItem="1G7-2M-yxT" secondAttribute="bottom" constant="6" id="jc6-k9-jrH"/>
                         <constraint firstItem="1G7-2M-yxT" firstAttribute="leading" secondItem="i9l-MO-2uy" secondAttribute="leading" id="lYo-PF-RqL"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -77,11 +75,11 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i9l-MO-2uy" secondAttribute="trailing" constant="32" id="06d-GZ-uyd"/>
                 <constraint firstItem="i9l-MO-2uy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Jep-OZ-KTK"/>
-                <constraint firstItem="i9l-MO-2uy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fRN-jI-uTf"/>
+                <constraint firstItem="i9l-MO-2uy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="5" id="fRN-jI-uTf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>

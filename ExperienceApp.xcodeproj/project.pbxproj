@@ -34,8 +34,6 @@
 		952487802476FC5200C0A7F9 /* DeletarExpPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */; };
 		95248784247710CA00C0A7F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95248782247710CA00C0A7F9 /* HomeViewController.swift */; };
 		95248785247710CA00C0A7F9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95248783247710CA00C0A7F9 /* HomeViewController.xib */; };
-		9524878824771C4F00C0A7F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524878624771C4F00C0A7F9 /* ProfileViewController.swift */; };
-		9524878924771C4F00C0A7F9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524878724771C4F00C0A7F9 /* ProfileViewController.xib */; };
 		9524878C2477220800C0A7F9 /* ExpCriadaPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524878A2477220700C0A7F9 /* ExpCriadaPopUp.swift */; };
 		9524878D2477220800C0A7F9 /* ExpCriadaPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */; };
 		9542072624776FAA009C7A43 /* ExpAdicionadaPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */; };
@@ -98,8 +96,6 @@
 		9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletarExpPopUp.xib; sourceTree = "<group>"; };
 		95248782247710CA00C0A7F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		95248783247710CA00C0A7F9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		9524878624771C4F00C0A7F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		9524878724771C4F00C0A7F9 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		9524878A2477220700C0A7F9 /* ExpCriadaPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpCriadaPopUp.swift; sourceTree = "<group>"; };
 		9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpCriadaPopUp.xib; sourceTree = "<group>"; };
 		9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpAdicionadaPopUp.swift; sourceTree = "<group>"; };
@@ -359,10 +355,24 @@
 		952487812476FD2200C0A7F9 /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				95420728247840DA009C7A43 /* View */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		95420728247840DA009C7A43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95420729247840FA009C7A43 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95420729247840FA009C7A43 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				95248782247710CA00C0A7F9 /* HomeViewController.swift */,
 				95248783247710CA00C0A7F9 /* HomeViewController.xib */,
-				9524878624771C4F00C0A7F9 /* ProfileViewController.swift */,
-				9524878724771C4F00C0A7F9 /* ProfileViewController.xib */,
 				9524878A2477220700C0A7F9 /* ExpCriadaPopUp.swift */,
 				9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */,
 				9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */,
@@ -370,7 +380,7 @@
 				9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */,
 				9542072524776FAA009C7A43 /* ExpAdicionadaPopUp.xib */,
 			);
-			path = PopUp;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9542EBC5247304FD0049E27E /* Screen - Login */ = {
@@ -651,7 +661,6 @@
 				CBFECD49246DB56E005B621F /* Main.storyboard in Resources */,
 				0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */,
 				0F17C7E7246F391F00A2D212 /* DisponibilidadeViewController.xib in Resources */,
-				9524878924771C4F00C0A7F9 /* ProfileViewController.xib in Resources */,
 				9542EBD224730ACA0049E27E /* EntrarNaContaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,7 +699,6 @@
 				CBFECD46246DB56E005B621F /* ViewController.swift in Sources */,
 				0F17C7D2246F37B900A2D212 /* DestaquesTableViewCell.swift in Sources */,
 				0F17C7E6246F391F00A2D212 /* DisponibilidadeViewController.swift in Sources */,
-				9524878824771C4F00C0A7F9 /* ProfileViewController.swift in Sources */,
 				0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */,
 				0F17C7C1246F1B0300A2D212 /* DestaquesCollectionViewCell.swift in Sources */,
 				0F17C7D5246F37C500A2D212 /* DestaquesController.swift in Sources */,
