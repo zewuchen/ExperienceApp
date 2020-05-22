@@ -206,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				0F17C7CF246F379B00A2D212 /* Cells */,
-				952487812476FD2200C0A7F9 /* PopUp */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */,
+				952487812476FD2200C0A7F9 /* PopUp */,
 				9542EBC5247304FD0049E27E /* Screen - Login */,
 				0F17C7F9246F39C000A2D212 /* Screen - Gerar */,
 				0F17C7EB246F393900A2D212 /* Screen - Perfil */,
