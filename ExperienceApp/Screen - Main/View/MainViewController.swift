@@ -36,6 +36,7 @@ class MainViewController: UIViewController {
     
     func setUpTable() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: recomendacoesCell, bundle: nil), forCellReuseIdentifier: recomendacoesCell)
         tableView.separatorStyle = .none
     }
@@ -113,5 +114,14 @@ extension MainViewController: UITableViewDataSource {
         celulaTable?.setUp(model: data[indexPath.row])
     
         return celulaTable ?? UITableViewCell()
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let novaTela = ExperienciasInfoViewController(nibName: "ExperienciasInfoViewController", bundle: nil)
+        novaTela.modalPresentationStyle = .fullScreen
+        novaTela.controller.dataToConvert = data[indexPath.row]
+        self.present(novaTela, animated: true, completion: nil)
     }
 }

@@ -54,7 +54,7 @@ class ExperienciasInfoViewController: UIViewController {
         
     }
     
-    private let controller = ExperienciasInfoController()
+    public var controller = ExperienciasInfoController()
 //    private var data: [ModelExperienciasInfo] = []
     
     override func viewDidLoad() {

@@ -16,8 +16,11 @@ struct MainModel {
     var precoExp: String
     let recordName: String
     let image: Data?
+    var recursos: String?
+    var comoParticipar: String?
+    var tamanho: Int?
     
-    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String, recordName: String, image: Data) {
+    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String, recordName: String, image: Data, recursos: String?, comoParticipar: String?, tamanho: Int?) {
         self.nomeDestaque = nomeDestaque
         self.nomeExp = nomeExp
         self.descricaoExp = descricaoExp
@@ -25,6 +28,9 @@ struct MainModel {
         self.precoExp = precoExp
         self.recordName = recordName
         self.image = image
+        self.recursos = recursos
+        self.comoParticipar = comoParticipar
+        self.tamanho = tamanho
     }
 }
 
