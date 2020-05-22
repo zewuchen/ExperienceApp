@@ -208,36 +208,40 @@ final class Cloud {
         }
     }
 
-    public func teste() {
-            guard let name = UserDefaults.standard.string(forKey: "name") else { return }
-            guard let description = UserDefaults.standard.string(forKey: "description") else { return }
-            guard let email = UserDefaults.standard.string(forKey: "email") else { return }
-            guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+    // MARK: User
+    public func attachExperience(data: ExperienceModel) {
+        guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+        guard let description = UserDefaults.standard.string(forKey: "description") else { return }
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
 
-            let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
 
-            getUser(data: user) { (usuario, error) in
-                guard let usuario = usuario else { return }
-                let assetsOld = usuario["experiences"] as? [CKRecord.Reference]
+        getUser(data: user) { (usuario, error) in
+            guard let usuario = usuario else { return }
+            let assetsOld = usuario["experiences"] as? [CKRecord.Reference]
 
-                var experiencesRecords = [CKRecord.Reference]()
+            var experiencesRecords = [CKRecord.Reference]()
 
-                if let assetsOld = assetsOld {
-                    for asset in assetsOld {
-                        experiencesRecords.append(asset)
-                    }
-                }
-                let data = ExperienceModel(title: "", description: "", recordName: "3BE7B3EA-3162-48B8-8F11-D1266779066A", howToParticipate: "", lengthGroup: Int64(0), whatToTake: "")
-                self.getExperience(data: data) { (experiences, errors) in
-                    for experience in experiences {
-                        if let record = experience {
-                            let reference = CKRecord.Reference(record: record, action: .none)
-                            experiencesRecords.append(reference)
-                        }
-                    }
-                    usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
-                    self.cloudSave(record: usuario, database: self.publicDB)
+            if let assetsOld = assetsOld {
+                for asset in assetsOld {
+                    experiencesRecords.append(asset)
                 }
             }
+            self.getExperience(data: data) { (experiences, errors) in
+                for experience in experiences {
+                    if let record = experience {
+                        let reference = CKRecord.Reference(record: record, action: .none)
+                        experiencesRecords.append(reference)
+
+                        // TODO: Adicionar usuário na referência de participantes da Experiência
+                    }
+                }
+                usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
+                self.cloudSave(record: usuario, database: self.publicDB)
+            }
         }
+    }
+
+    public func teste() {}
 }
