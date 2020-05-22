@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpCriadaPopUp" customModule="ExperienceApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daf-hb-Sxc">
+                    <rect key="frame" x="32" y="361" width="350" height="170"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experiência criada com sucesso, você consegue ver suas experiências no perfil." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2m-WE-Di1">
+                            <rect key="frame" x="16" y="55.5" width="318" height="33"/>
+                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experiência criada" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBb-hO-1Ik">
+                            <rect key="frame" x="16" y="20" width="318" height="19.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-hb-bB3">
+                            <rect key="frame" x="0.0" y="123.5" width="350" height="2"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="DjS-aF-96Z"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWi-PD-OSt">
+                            <rect key="frame" x="0.0" y="130.5" width="350" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="kwe-Tp-uyd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                            <state key="normal" title="Concluído">
+                                <color key="titleColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="btnConcluído:" destination="-1" eventType="touchUpInside" id="gEp-OB-iE2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="G2m-WE-Di1" firstAttribute="top" secondItem="pBb-hO-1Ik" secondAttribute="bottom" constant="16" id="1zL-no-Lvp"/>
+                        <constraint firstAttribute="trailing" secondItem="TWi-PD-OSt" secondAttribute="trailing" id="6qj-x8-Whf"/>
+                        <constraint firstItem="G2m-WE-Di1" firstAttribute="leading" secondItem="daf-hb-Sxc" secondAttribute="leading" constant="16" id="7fe-ed-vhO"/>
+                        <constraint firstAttribute="bottom" secondItem="TWi-PD-OSt" secondAttribute="bottom" constant="7.5" id="ADb-P1-Lqn"/>
+                        <constraint firstItem="pBb-hO-1Ik" firstAttribute="leading" secondItem="daf-hb-Sxc" secondAttribute="leading" constant="16" id="LpR-zY-tD8"/>
+                        <constraint firstItem="pBb-hO-1Ik" firstAttribute="top" secondItem="daf-hb-Sxc" secondAttribute="top" constant="20" id="RMM-cW-hgx"/>
+                        <constraint firstItem="TWi-PD-OSt" firstAttribute="leading" secondItem="daf-hb-Sxc" secondAttribute="leading" id="VRF-f5-CcL"/>
+                        <constraint firstAttribute="trailing" secondItem="G2m-WE-Di1" secondAttribute="trailing" constant="16" id="YnU-IJ-ZRY"/>
+                        <constraint firstItem="TWi-PD-OSt" firstAttribute="top" secondItem="hwz-hb-bB3" secondAttribute="bottom" constant="5" id="Zbd-fe-OcU"/>
+                        <constraint firstAttribute="trailing" secondItem="pBb-hO-1Ik" secondAttribute="trailing" constant="16" id="acc-zr-5fU"/>
+                        <constraint firstItem="hwz-hb-bB3" firstAttribute="leading" secondItem="TWi-PD-OSt" secondAttribute="leading" id="pgp-Sy-71I"/>
+                        <constraint firstItem="TWi-PD-OSt" firstAttribute="top" secondItem="G2m-WE-Di1" secondAttribute="bottom" constant="42" id="tcv-F8-bOY"/>
+                        <constraint firstItem="hwz-hb-bB3" firstAttribute="trailing" secondItem="TWi-PD-OSt" secondAttribute="trailing" id="tgT-Yx-HG4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="daf-hb-Sxc" secondAttribute="trailing" constant="32" id="VvB-CI-hEK"/>
+                <constraint firstItem="daf-hb-Sxc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="afE-Sk-4tr"/>
+                <constraint firstItem="daf-hb-Sxc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-2" id="i35-oF-dOO"/>
+                <constraint firstItem="daf-hb-Sxc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="nvI-hI-gP2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
+        </view>
+    </objects>
+</document>
