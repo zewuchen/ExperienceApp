@@ -42,7 +42,7 @@ class GerarViewController: UIViewController {
             guard let howToParticipate = txtParticipar.text else { return }
             guard let whatToTake = txtRecursos.text else { return }
             
-            let experience = ExperienceModel(title: title, description: description, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake)
+            let experience = ExperienceModel(title: title, description: description, recordName: nil, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake)
             
             
             controller.createExperience(data: experience)

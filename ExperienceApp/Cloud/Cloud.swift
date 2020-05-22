@@ -32,6 +32,7 @@ struct ExperienceModel {
     // Data
     let title: String
     let description: String
+    let recordName: String?
 //    let date: Date // Formato: YYYY-MM-DD HH:mm:ss
 //    let duration: Double
     let howToParticipate: String
@@ -162,7 +163,10 @@ final class Cloud {
         var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
 
         if let data = data {
-            // TODO: Fazer o GET específico
+            guard let search = data.recordName else { return }
+//            self.predicate = NSPredicate(format: "title == '\(reference)'")
+            self.predicate = NSPredicate(format: "recordID = %@", CKRecord.ID(recordName: search))
+            query = CKQuery(recordType: "Experience", predicate: predicate)
         }
 
         publicDB.perform(query, inZoneWith: nil) { (records, error) in
@@ -214,15 +218,24 @@ final class Cloud {
 
             getUser(data: user) { (usuario, error) in
                 guard let usuario = usuario else { return }
-                var employeeRecordIds = [CKRecord.Reference]()
-                self.getExperience(data: nil) { (experiences, errors) in
-                    for employeeReference in experiences {
-                        if let record = employeeReference {
+                let assetsOld = usuario["experiences"] as? [CKRecord.Reference]
+
+                var experiencesRecords = [CKRecord.Reference]()
+
+                if let assetsOld = assetsOld {
+                    for asset in assetsOld {
+                        experiencesRecords.append(asset)
+                    }
+                }
+                let data = ExperienceModel(title: "", description: "", recordName: "3BE7B3EA-3162-48B8-8F11-D1266779066A", howToParticipate: "", lengthGroup: Int64(0), whatToTake: "")
+                self.getExperience(data: data) { (experiences, errors) in
+                    for experience in experiences {
+                        if let record = experience {
                             let reference = CKRecord.Reference(record: record, action: .none)
-                            employeeRecordIds.append(reference)
+                            experiencesRecords.append(reference)
                         }
                     }
-                    usuario.setObject(employeeRecordIds as CKRecordValue, forKey: "experiences")
+                    usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
                     self.cloudSave(record: usuario, database: self.publicDB)
                 }
             }

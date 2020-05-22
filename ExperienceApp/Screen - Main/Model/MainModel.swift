@@ -14,13 +14,15 @@ struct MainModel {
     var descricaoExp: String
     var notaExp: Double
     var precoExp: String
+    let recordName: String
     
-    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String) {
+    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String, recordName: String) {
         self.nomeDestaque = nomeDestaque
         self.nomeExp = nomeExp
         self.descricaoExp = descricaoExp
         self.notaExp = notaExp
         self.precoExp = precoExp
+        self.recordName = recordName
     }
 }
 
