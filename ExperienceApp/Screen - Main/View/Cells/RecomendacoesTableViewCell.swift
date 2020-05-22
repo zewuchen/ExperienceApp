@@ -32,5 +32,9 @@ class RecomendacoesTableViewCell: UITableViewCell {
         self.costValue?.text = model.precoExp
         self.titleCard?.text = model.nomeExp
         self.imageCard.image = UIImage(named: "cacto")
+
+        if let imagem = model.image {
+            self.imageCard.image = UIImage(data: imagem)
+        }
     }
 }
