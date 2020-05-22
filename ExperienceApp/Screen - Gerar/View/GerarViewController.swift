@@ -18,7 +18,9 @@ class GerarViewController: UIViewController {
     @IBOutlet weak var txtRecursos: UITextField!
     @IBOutlet weak var txtParticipar: UITextField!
     @IBOutlet weak var imgFoto: UIImageView!
-
+    @IBOutlet weak var txtData: UITextField!
+    
+    private var dataPicker: UIDatePicker?
     private let controller = GerarController()
     let corBordaCerta = UIColor.lightGray.cgColor
     let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
@@ -28,13 +30,47 @@ class GerarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigation()
         controller.delegate = self
+        setUpPicker()
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
         let selectorImage = UITapGestureRecognizer(target: self, action: #selector(addImage))
         self.imgFoto.isUserInteractionEnabled = true
         self.imgFoto.addGestureRecognizer(selectorImage)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func aparecerTeclado(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func esconderTeclado(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    func setUpPicker() {
+        dataPicker = UIDatePicker()
+        dataPicker?.locale = Locale(identifier: "pt")
+        dataPicker?.datePickerMode = .date
+        dataPicker?.addTarget(self, action: #selector(mudarData), for: .valueChanged)
+        txtData.inputView = dataPicker
+        
+    }
+    
+    @objc func mudarData(dataPicker: UIDatePicker) {
+        let formatarData = DateFormatter()
+        formatarData.dateFormat = "dd/MM/yyyy"
+        txtData.text = formatarData.string(from: dataPicker.date)
     }
 
     @objc func addImage() {
@@ -62,10 +98,15 @@ class GerarViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    //nenhum campo seja nulo
-    //tamanho limite seja do tipo numerico - so posso por numero
-    //add fotos -> modificar design
-    //tocar fora no teclado
+    func setNavigation() {
+        // MARK: Título
+//        self.navigationItem.title = "Teste"
+        // MARK: Cor da Navigation
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.9921568627, blue: 0.9921568627, alpha: 1)
+    }
     
     func validate() -> Bool {
         // TODO: Validar os campos de dados aqui
