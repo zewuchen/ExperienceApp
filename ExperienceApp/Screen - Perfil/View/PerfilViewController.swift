@@ -55,10 +55,13 @@ class PerfilViewController: UIViewController {
         createExperienceButton.titleLabel?.font = .RockwellBold20
         createExperienceButton.layer.cornerRadius = 20
         createExperienceButton.titleLabel?.textColor = .white
+        createExperienceButton.titleLabel?.textAlignment = .center
+
     }
     
     func setUpBiography() {
         biographyText.layer.cornerRadius = 20
+        biographyText.allowsEditingTextAttributes = false
     }
 
     @IBAction func btnNewExperience(_ sender: Any) {
