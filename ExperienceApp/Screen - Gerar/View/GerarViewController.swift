@@ -17,20 +17,28 @@ class GerarViewController: UIViewController {
     @IBOutlet weak var txtTamanho: UITextField!
     @IBOutlet weak var txtRecursos: UITextField!
     @IBOutlet weak var txtParticipar: UITextField!
+    @IBOutlet weak var imgFoto: UIImageView!
 
     private let controller = GerarController()
     let corBordaCerta = UIColor.lightGray.cgColor
     let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
     var arrayReturn: [Bool] = []
+    var urlString = ""
     let border = 0.25
     
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-        print(UserDefaults.standard.object(forKey: "name"))
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
+        let selectorImage = UITapGestureRecognizer(target: self, action: #selector(addImage))
+        self.imgFoto.isUserInteractionEnabled = true
+        self.imgFoto.addGestureRecognizer(selectorImage)
+    }
+
+    @objc func addImage() {
+        controller.setImage()
     }
 
     @IBAction func btnCreateExperience(_ sender: Any) {
@@ -163,6 +171,18 @@ class GerarViewController: UIViewController {
 }
 
 extension GerarViewController: GerarControllerDelegate {
+    func setImageProfile() {
+        Camera().selecionadorImagem(self){ imagem in
+            self.imgFoto.image = imagem
+
+            if self.urlString != "" {
+                self.controller.deleteFoto(fileURL: self.urlString)
+            }
+
+            self.urlString = self.controller.saveFoto(imagem: self.imgFoto.image ?? UIImage())
+        }
+    }
+
     func reload() {
         // TODO: Fazer algo
     }
