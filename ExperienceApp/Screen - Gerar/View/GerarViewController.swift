@@ -50,8 +50,7 @@ class GerarViewController: UIViewController {
             guard let howToParticipate = txtParticipar.text else { return }
             guard let whatToTake = txtRecursos.text else { return }
             
-            let experience = ExperienceModel(title: title, description: description, recordName: nil, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake)
-            
+            let experience = ExperienceModel(title: title, description: description, recordName: nil, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake, image: urlString)
             
             controller.createExperience(data: experience)
             // TODO: Dar dismiss na tela quando criar a experiência

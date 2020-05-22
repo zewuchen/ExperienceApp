@@ -15,14 +15,16 @@ struct MainModel {
     var notaExp: Double
     var precoExp: String
     let recordName: String
+    let image: Data?
     
-    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String, recordName: String) {
+    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String, recordName: String, image: Data) {
         self.nomeDestaque = nomeDestaque
         self.nomeExp = nomeExp
         self.descricaoExp = descricaoExp
         self.notaExp = notaExp
         self.precoExp = precoExp
         self.recordName = recordName
+        self.image = image
     }
 }
 

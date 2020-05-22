@@ -42,7 +42,7 @@ struct ExperienceModel {
 //    let availableVacancies: Int64
     // Essa parte é feita no backend
 //    let score: Double?
-//    let image: ??
+    let image: String
 //    let participants: [AuthModel]
 //    let comments: [AuthModel]
 //    let tags: [String]
@@ -190,7 +190,6 @@ final class Cloud {
 
             if let record = record {
                 let experience = CKRecord(recordType: "Experience")
-
                 experience.setValue(data.title, forKey: "title")
                 experience.setValue(data.whatToTake, forKey: "whatToTake")
                 experience.setValue(data.lengthGroup, forKey: "lengthGroup")
@@ -202,6 +201,21 @@ final class Cloud {
                 // TODO: Pensar se o usuário excluir sua conta, suas experiências também serão excluídas
                 experience.setValue(CKRecord.Reference(recordID: record.recordID, action: .none), forKey: "responsible")
 //                experience.setValue(data.score, forKey: "score")
+
+                self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
+
+                if data.image != "" {
+                    guard let image = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") else { return }
+                    guard let dataImage = image.jpegData(compressionQuality: 0) else { return }
+                    do {
+                        try dataImage.write(to: self.url)
+                    } catch let erro as NSError {
+                        print("Error! \(erro)")
+                        return
+                    }
+                    experience.setValue(CKAsset(fileURL: self.url), forKey: "image")
+                    FileHelper.deleteImage(filePathWithoutExtension: data.image)
+                }
 
                 self.cloudSave(record: experience, database: self.publicDB)
             }
