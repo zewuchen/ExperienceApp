@@ -25,12 +25,30 @@ class EntrarNaContaViewController: UIViewController {
         setUpPlaceholder()
         setImage()
         controller.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         let selectorImage = UITapGestureRecognizer(target: self, action: #selector(addImage))
         self.imageView.isUserInteractionEnabled = true
         self.imageView.addGestureRecognizer(selectorImage)
         toque.cancelsTouchesInView = false
+    }
+    
+    @objc func aparecerTeclado(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func esconderTeclado(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
     
     @objc func tirarTeclado() {
@@ -152,6 +170,8 @@ class EntrarNaContaViewController: UIViewController {
         imageView.layer.shadowRadius = 1.0
         imageView.clipsToBounds = false
     }
+    
+    
 }
 
 extension EntrarNaContaViewController: CreateAccountControllerDelegate {
