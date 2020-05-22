@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let rootVC = MainViewController(nibName: "MainViewController", bundle: nil) as? MainViewController else {
 
-    
             print("ViewController not found")
             return
         }
