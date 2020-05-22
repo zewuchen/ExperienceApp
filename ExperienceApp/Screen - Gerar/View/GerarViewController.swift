@@ -85,7 +85,6 @@ class GerarViewController: UIViewController {
         
         
         // Validando Texto Descrição
-        // TODO: quantidade de caracteres
         if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 240 {
             txtDescription.layer.borderColor = corBordaErrada
             txtDescription.layer.borderWidth = 2.0
