@@ -18,6 +18,9 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var starIconImage: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var reviewButton: UIButton!
+    @IBAction func reviewButton(_ sender: Any) {
+        
+    }
     @IBOutlet weak var timeIconImage: UIImageView!
     @IBOutlet weak var titleTimeLabel: UILabel!
     @IBOutlet weak var groupIconImage: UIImageView!
@@ -43,7 +46,15 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var backgroundtExpImage: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var experienceButton: UIButton!
+    @IBAction func experienceButton(_ sender: Any) {
+        
+    }
+    @IBOutlet weak var exitButton: UIButton!
+    @IBAction func exitButton(_ sender: Any) {
+        
+    }
     
+   
     private let controller = ExperienciasInfoController()
 //    private var data: [ModelExperienciasInfo] = []
     
@@ -56,12 +67,31 @@ class ExperienciasInfoViewController: UIViewController {
         self.infoView.backgroundColor = .background
         self.infoScrollView.backgroundColor = .background
         
+        switch tagLabel1.text == "Label" {
+        case true:
+            tagsStackView.removeFromSuperview()
+            titlehostLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 25).isActive = true
+        default:
+            titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 25).isActive = true
+        }
+        
+        hostImage.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 20).isActive = true
+         hostNameLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 20).isActive = true
+         descriptionHostLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 25).isActive = true
+         titleHowPartLabel.topAnchor.constraint(equalTo: descriptionHostLabel.bottomAnchor, constant: 10).isActive = true
+         descriptionHowPartLabel.topAnchor.constraint(equalTo: titleHowPartLabel.bottomAnchor, constant: 10).isActive = true
+         whatDoINeedTitleLabel.topAnchor.constraint(equalTo: descriptionHowPartLabel.bottomAnchor, constant: 20).isActive = true
+         whatDoINeedDescriptionLabel.topAnchor.constraint(equalTo: whatDoINeedTitleLabel.topAnchor, constant: 20).isActive = true
+        
+        navigationController?.navigationBar.isHidden = true
+        
         setupHeaderDescription()
         setupHost()
         setupHowParticipate()
         setupExperienceButton()
         setupWhatDoINeed()
-        tags()
+        setupTags()
+        setupReviewButton()
         
         controller.reload()
     }
@@ -105,14 +135,22 @@ class ExperienciasInfoViewController: UIViewController {
         experienceButton.layer.cornerRadius = 20
         experienceButton.titleLabel?.textColor = .white
         experienceButton.layer.zPosition = 1
+        experienceButton.titleLabel?.textAlignment = .center
     }
     
-    func tags() {
-        if tagLabel1.text == "Label" {
-            tagsStackView.removeFromSuperview()
-            titlehostLabel
-        }
+    func setupReviewButton() {
+        reviewButton.titleLabel?.textColor = .vermelhoTijolo
+        reviewButton.titleLabel?.text = "(Review)"
+        reviewButton.titleLabel?.font = .AvenirHeavy
     }
+    
+    func  setupTags() {
+        tagLabel1.font = .AvenirHeavy
+        tagLabel2.font = .AvenirHeavy
+        tagLabel3.font = .AvenirHeavy
+        tagLabel4.font = .AvenirHeavy
+    }
+    
 }
 
 extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
@@ -129,6 +167,7 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
         self.descriptionHostLabel.text = data.hostDescription
         self.descriptionHowPartLabel.text = data.howParticipate
         self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
+//        self.tagLabel1.text = data.tags[0]
         
     }
 }

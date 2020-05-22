@@ -14,7 +14,7 @@ protocol ExperienciasInfoControllerDelegate: AnyObject {
 }
 
 final class ExperienciasInfoController {
-    private var data = ModelExperienciasInfo(infoImage: UIImage(named: "Fire_Demon_Ramen")!, titleExp: "Pandas fofos comendo bambu",durationTime: 3, howManyPeople: 5, tags: [""],
+    private var data = ModelExperienciasInfo(infoImage: UIImage(named: "Fire_Demon_Ramen")!, titleExp: "Pandas fofos comendo bambu",durationTime: 3, howManyPeople: 5, tags: ["lala"],
                                         descriptionExp: "Venha conhecer os pandas mais fofos que voce vera na sua vida! Eles comem bambu e sao felizes.",
                                         hostImage: UIImage(named: "Fire_Demon_Ramen")!, hostName: "Merida Valente", hostDescription: "Eu sou Merida, princesa de um reino distante e gosto de ursos!",
                                         howParticipate: "zoom é o caminho", whatYouNeedDescription: "Amor no coracao")
