@@ -88,7 +88,14 @@ class GerarViewController: UIViewController {
             
             let experience = ExperienceModel(title: title, description: description, recordName: nil, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake, image: urlString)
             
-            controller.createExperience(data: experience)
+    controller.createExperience(data: experience)
+            
+            // Ir para o PopUp
+            let telaExpCriada = ExpCriadaPopUp()
+               telaExpCriada.modalTransitionStyle  =  .crossDissolve
+               telaExpCriada.modalPresentationStyle = .overCurrentContext
+               self.present(telaExpCriada, animated: true, completion: nil)
+            
             // TODO: Dar dismiss na tela quando criar a experiência
 //            self.navigationController?.popToRootViewController(animated: false)
         }
@@ -138,7 +145,6 @@ class GerarViewController: UIViewController {
             arrayReturn.append(true)
         }
         
-        
         // Validando Texto Tamanhos
         let validacaoTamanho = verificarTam()
         arrayReturn.append(validacaoTamanho)
@@ -155,7 +161,6 @@ class GerarViewController: UIViewController {
                 arrayReturn.append(true)
             }
         }
-        
         
         // Validando Texto HowToParticipate
         if txtParticipar.text == "" || txtParticipar.text == nil || txtParticipar.text?.count ?? 1 > 240 {
