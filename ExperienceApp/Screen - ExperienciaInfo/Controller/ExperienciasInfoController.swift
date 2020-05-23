@@ -30,8 +30,8 @@ final class ExperienciasInfoController {
         self.data = ModelExperienciasInfo(infoImage: UIImage(named: "Fire_Demon_Ramen")!, titleExp: "Pandas fofos comendo bambu",durationTime: 3, howManyPeople: 5, tags: ["lala"],
         descriptionExp: "Venha conhecer os pandas mais fofos que voce vera na sua vida! Eles comem bambu e sao felizes.",
         hostImage: UIImage(named: "Fire_Demon_Ramen")!, hostName: "Merida Valente", hostDescription: "Eu sou Merida, princesa de um reino distante e gosto de ursos!",
-        howParticipate: "zoom é o caminho", whatYouNeedDescription: "Amor no coracao", recordName: "", responsible: "")
-        self.dataToConvert = MainModel(nomeDestaque: "", nomeExp: "", descricaoExp: "", notaExp: 0, precoExp: "", recordName: "", image: Data(), recursos: "", comoParticipar: "", tamanho: 0, responsible: "")
+        howParticipate: "zoom é o caminho", whatYouNeedDescription: "Amor no coracao", recordName: "", responsible: "", data: "")
+        self.dataToConvert = MainModel(nomeDestaque: "", nomeExp: "", descricaoExp: "", notaExp: 0, precoExp: "", recordName: "", image: Data(), recursos: "", comoParticipar: "", tamanho: 0, responsible: "", data: "")
     }
     
     public func reload() {
@@ -39,8 +39,9 @@ final class ExperienciasInfoController {
         guard let tamanho = dataToConvert.tamanho else { return }
         guard let participar = dataToConvert.comoParticipar else { return }
         guard let recursos = dataToConvert.recursos else { return }
+        guard let data = dataToConvert.data else { return }
         let newData = ModelExperienciasInfo(infoImage: image, titleExp: dataToConvert.nomeExp, durationTime: 0, howManyPeople: tamanho, tags: [], descriptionExp: dataToConvert.descricaoExp, hostImage: image, hostName: "Teste"
-            , hostDescription: "Teste", howParticipate: participar, whatYouNeedDescription: recursos, recordName: dataToConvert.recordName, responsible: dataToConvert.responsible ?? "")
+            , hostDescription: "Teste", howParticipate: participar, whatYouNeedDescription: recursos, recordName: dataToConvert.recordName, responsible: dataToConvert.responsible ?? "", data: data)
         self.data = newData
         self.delegate?.reloadData(data: self.data, responsible: nil)
         
@@ -61,10 +62,10 @@ final class ExperienciasInfoController {
     }
 
     public func attach(recordName: String) {
-        Cloud.shared.attachExperience(data: ExperienceModel(title: "", description: "", recordName: recordName, howToParticipate: "", lengthGroup: Int64(0), whatToTake: "", image: ""))
+        Cloud.shared.attachExperience(data: ExperienceModel(title: "", description: "", recordName: recordName, date: Date(), howToParticipate: "", lengthGroup: Int64(0), whatToTake: "", image: ""))
     }
 
     public func desattach(recordName: String) {
-        Cloud.shared.desattachExperience(data: ExperienceModel(title: "", description: "", recordName: recordName, howToParticipate: "", lengthGroup: Int64(0), whatToTake: "", image: ""))
+        Cloud.shared.desattachExperience(data: ExperienceModel(title: "", description: "", recordName: recordName, date: Date(), howToParticipate: "", lengthGroup: Int64(0), whatToTake: "", image: ""))
     }
 }

@@ -26,6 +26,7 @@ class GerarViewController: UIViewController {
     let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
     var arrayReturn: [Bool] = []
     var urlString = ""
+    var data: Date = Date()
     let border = 0.25
     
     override func viewDidLoad() {
@@ -64,13 +65,14 @@ class GerarViewController: UIViewController {
         dataPicker?.datePickerMode = .date
         dataPicker?.addTarget(self, action: #selector(mudarData), for: .valueChanged)
         txtData.inputView = dataPicker
-        
     }
     
     @objc func mudarData(dataPicker: UIDatePicker) {
         let formatarData = DateFormatter()
         formatarData.dateFormat = "dd/MM/yyyy"
         txtData.text = formatarData.string(from: dataPicker.date)
+        formatarData.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        self.data = dataPicker.date
     }
 
     @objc func addImage() {
@@ -86,7 +88,7 @@ class GerarViewController: UIViewController {
             guard let howToParticipate = txtParticipar.text else { return }
             guard let whatToTake = txtRecursos.text else { return }
             
-            let experience = ExperienceModel(title: title, description: description, recordName: nil, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake, image: urlString)
+            let experience = ExperienceModel(title: title, description: description, recordName: nil, date: self.data, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake, image: urlString)
             
             controller.createExperience(data: experience)
             // TODO: Dar dismiss na tela quando criar a experiência

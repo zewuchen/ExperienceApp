@@ -33,7 +33,7 @@ struct ExperienceModel {
     let title: String
     let description: String
     let recordName: String?
-//    let date: Date // Formato: YYYY-MM-DD HH:mm:ss
+    let date: Date
 //    let duration: Double
     let howToParticipate: String
     let lengthGroup: Int64
@@ -239,6 +239,7 @@ final class Cloud {
                 experience.setValue(data.lengthGroup, forKey: "lengthGroup")
                 experience.setValue(data.howToParticipate, forKey: "howToParticipate")
                 experience.setValue(data.description, forKey: "description")
+                experience.setValue(data.date, forKey: "date")
 //                experience.setValue(data.duration, forKey: "duration")
 //                experience.setValue(data.availableVacancies, forKey: "availableVacancies")
 //                experience.setValue(data.price, forKey: "price")
