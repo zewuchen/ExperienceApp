@@ -21,7 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
 
         guard let rootVC = TesteViewController(nibName: "TesteViewController", bundle: nil) as? TesteViewController else {
-
             print("ViewController not found")
             return
         }

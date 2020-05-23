@@ -12,24 +12,22 @@ class PerfilExperienciaTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleCard: UILabel!
     @IBOutlet weak var imageCard: UIImageView!
-    @IBOutlet weak var descriptionCard: UILabel!
     @IBOutlet weak var dataCard: UILabel!
     @IBOutlet weak var linkCard: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 20
+        self.imageCard.layer.cornerRadius = 20
         self.titleCard.font = .AvenirHeavy20
-        self.descriptionCard.font = .AvenirRoman
         self.dataCard.font = .AvenirRoman
         self.linkCard.font = .AvenirRoman
-    
+        
     }
     
     func setUp(model: ModelExperiencePerfil) {
         self.titleCard.text = model.titulo
         self.imageCard.image = model.imagem
-        self.descriptionCard.text = model.descricao
         self.dataCard.text = model.data
         self.linkCard.text = model.link
    

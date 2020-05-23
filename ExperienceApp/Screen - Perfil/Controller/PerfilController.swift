@@ -19,9 +19,9 @@ final class PerfilController {
     weak public var delegate: PerfilControllerDelegate?
     
     public init() {
-    self.data.append(ModelExperiencePerfil(titulo: "Panda", imagem: UIImage(named: "Fire_Demon_Ramen")!,descricao: "pandas fofos sao a salvacao! Vamos adora-los", data: "15/08/2020", link: "www.pandas.org"))
+    self.data.append(ModelExperiencePerfil(titulo: "Panda", imagem: UIImage(named: "Fire_Demon_Ramen")!,descricao: "", data: "15/08/2020", link: "www.pandas.org"))
         
-    self.data.append(ModelExperiencePerfil(titulo: "Lamen Com Demonios", imagem: UIImage(named: "Fire_Demon_Ramen")!, descricao: "Coma lamen com um demonio do fogo!", data: "13/09/2020", link: "demonio-do-fogo.com.br"))
+    self.data.append(ModelExperiencePerfil(titulo: "Lamen Com Demonios", imagem: UIImage(named: "Fire_Demon_Ramen")!, descricao: "", data: "13/09/2020", link: "demonio-do-fogo.com.br"))
     }
     
     public func reload() {
@@ -38,6 +38,10 @@ final class PerfilController {
 
         if let image = UserDefaults.standard.string(forKey: "image") {
             user = AuthModel(name: name, description: description, email: email, password: password, image: image)
+        }
+        
+        Cloud.shared.getMyExperiences { (<#[CKRecord?]#>, <#Error?#>) in
+            <#code#>
         }
 
         delegate?.reloadProfileData(data: user)
