@@ -39,6 +39,20 @@ final class LoginController {
                         }
                     }
                 }
+                if let experiences = user["experiences"] {
+                    let experiencias = user["experiences"] as? [CKRecord.Reference]
+
+                    var experiencesRecords: [String] = []
+
+                    if let experiencias = experiencias {
+                        for experiencia in experiencias {
+                            let recordName = experiencia.recordID.recordName
+                            experiencesRecords.append(recordName)
+                        }
+                    }
+
+                    UserDefaults.standard.set(experiencesRecords, forKey: "marcadas")
+                }
             } else {
                 UserDefaults.standard.set(false, forKey: "logged")
             }

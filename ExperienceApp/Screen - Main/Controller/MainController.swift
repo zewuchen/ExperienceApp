@@ -35,18 +35,24 @@ final class MainController {
             for record in records {
                 guard let name = record?["title"] else { return }
                 guard let description = record?["description"] else { return }
+                guard let comoParticipar = record?["howToParticipate"] else { return }
+                guard let tamanho = record?["lengthGroup"] else { return }
+                guard let recursos = record?["whatToTake"] else { return }
                 guard let recordName = record?.recordID.recordName else { return }
-
+                guard let responsible = record?["responsible"] else { return }
+                guard let pessoa = responsible as? CKRecord.Reference else { return }
                 if let image = record?["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
                     if let file = file {
                         if let dado = NSData(contentsOf: file.fileURL!) {
 //                            guard let tempImage = UIImage(data: dado as Data) else { return }
-                            self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: recordName, image: dado as Data))
+                            self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: record?.recordID.recordName ?? ""
+                                , image: dado as Data, recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description), responsible: pessoa.recordID.recordName))
                         }
                     }
                 } else {
-                    self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: recordName, image: Data()))
+                    self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: record?.recordID.recordName ?? "", image: Data()
+                        , recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description), responsible: pessoa.recordID.recordName))
                 }
             }
 

@@ -46,15 +46,13 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var backgroundtExpImage: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var experienceButton: UIButton!
-    @IBAction func experienceButton(_ sender: Any) {
-        
-    }
     @IBOutlet weak var exitButton: UIButton!
     @IBAction func exitButton(_ sender: Any) {
         
     }
+    var recordName: String = ""
     
-    private let controller = ExperienciasInfoController()
+    public var controller = ExperienciasInfoController()
 //    private var data: [ModelExperienciasInfo] = []
     
     override func viewDidLoad() {
@@ -83,7 +81,7 @@ class ExperienciasInfoViewController: UIViewController {
          whatDoINeedDescriptionLabel.topAnchor.constraint(equalTo: whatDoINeedTitleLabel.topAnchor, constant: 20).isActive = true
         
         navigationController?.navigationBar.isHidden = true
-        
+
         setupHeaderDescription()
         setupHost()
         setupHowParticipate()
@@ -93,6 +91,10 @@ class ExperienciasInfoViewController: UIViewController {
         setupReviewButton()
         
         controller.reload()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        setUserHasExperience()
     }
     
     func setupHeaderDescription() {
@@ -143,30 +145,94 @@ class ExperienciasInfoViewController: UIViewController {
         reviewButton.titleLabel?.font = .AvenirHeavy
     }
     
-    func  setupTags() {
+    func setupTags() {
         tagLabel1.font = .AvenirHeavy
         tagLabel2.font = .AvenirHeavy
         tagLabel3.font = .AvenirHeavy
         tagLabel4.font = .AvenirHeavy
     }
-    
+
+    @IBAction func btnExperimentar(_ sender: Any) {
+        if UserDefaults.standard.bool(forKey: "logged") {
+            if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
+                var registro = true
+                if !marcadas.isEmpty {
+                    for record in 0...marcadas.count-1 {
+                        if marcadas[record] == recordName {
+                            registro = false
+                            marcadas.remove(at: record)
+                            controller.desattach(recordName: recordName)
+                            setReserva(disponivel: true)
+                        }
+                    }
+                }
+
+                if registro {
+                    marcadas.append(recordName)
+                    controller.attach(recordName: recordName)
+                    setReserva(disponivel: false)
+                }
+                UserDefaults.standard.set(marcadas, forKey: "marcadas")
+            }
+        } else {
+            let novaTela = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            novaTela.modalPresentationStyle = .fullScreen
+            self.present(novaTela, animated: true, completion: nil)
+        }
+    }
+
+    func setUserHasExperience() {
+        if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
+            if !marcadas.isEmpty {
+                for record in 0...marcadas.count-1 {
+                    if marcadas[record] == recordName {
+                        setReserva(disponivel: false)
+                    }
+                }
+            }
+        }
+    }
+
+    // FIXME: Problema ao alterar o título da label quando clicada, o background vai normal
+    func setReserva(disponivel: Bool) {
+        if disponivel {
+            DispatchQueue.main.async {
+                self.experienceButton.titleLabel?.text = "Experimentar"
+                self.experienceButton.backgroundColor = .vermelhoTijolo
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.experienceButton.titleLabel?.text = "Reservado"
+                self.experienceButton.backgroundColor = .black
+            }
+        }
+    }
+
 }
 
 extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
-    
-    func reloadData(data: ModelExperienciasInfo) {
+    func reloadData(data: ModelExperienciasInfo, responsible: UserResponsavel?) {
 //        self.data = data
-        self.infoImage.image = data.infoImage
-        self.titleLabel.text = data.titleExp
-        self.timeLabel.text = String(data.durationTime)
-        self.peopleQuantLabel.text = String(data.howManyPeople)
-        self.descriptionLabel.text = data.descriptionExp
-        self.hostNameLabel.text = data.hostName
-        self.hostImage.image = data.hostImage
-        self.descriptionHostLabel.text = data.hostDescription
-        self.descriptionHowPartLabel.text = data.howParticipate
-        self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
+        DispatchQueue.main.async {
+            self.recordName = data.recordName
+            self.infoImage.image = data.infoImage
+            self.titleLabel.text = data.titleExp
+            self.timeLabel.text = String(data.durationTime)
+            self.peopleQuantLabel.text = String(data.howManyPeople)
+            self.descriptionLabel.text = data.descriptionExp
+            self.hostNameLabel.text = data.hostName
+            self.hostImage.image = data.hostImage
+            self.descriptionHostLabel.text = data.hostDescription
+            self.descriptionHowPartLabel.text = data.howParticipate
+            self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
+        }
 //        self.tagLabel1.text = data.tags[0]
-        
+        if let responsible = responsible {
+            DispatchQueue.main.async {
+                self.hostImage.image = UIImage(data: responsible.image)
+                self.hostNameLabel.text = responsible.name
+                self.descriptionHostLabel.text = responsible.description
+            }
+        }
     }
 }
