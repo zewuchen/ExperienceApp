@@ -110,6 +110,9 @@ final class Cloud {
             } else {
                 print("Salvo com Sucesso")
             }
+
+            // TODO: Tratar o erro de quando não se tem um arquivo para excluido, este save é genérico
+            // CASE: Cliquei em Experimentar a experiência, não há arquivo para ser excluído
             do {
                 try FileManager.default.removeItem(at: self.url)
                 print("Temp file deletado com sucesso")
@@ -174,6 +177,21 @@ final class Cloud {
                 completionHandler(records, error)
             } else {
                 completionHandler([], error)
+            }
+        }
+    }
+
+    public func getUserResponsible(user: String, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
+        self.predicate = NSPredicate(format: "recordID = %@", CKRecord.ID(recordName: user))
+        var query = CKQuery(recordType: "User", predicate: predicate)
+
+        if user != "" {
+            publicDB.perform(query, inZoneWith: nil) { (records, error) in
+                if let records = records {
+                    completionHandler(records.first, error)
+                } else {
+                    completionHandler(nil, error)
+                }
             }
         }
     }

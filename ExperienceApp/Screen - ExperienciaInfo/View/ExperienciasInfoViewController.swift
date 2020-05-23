@@ -175,7 +175,9 @@ class ExperienciasInfoViewController: UIViewController {
                 UserDefaults.standard.set(marcadas, forKey: "marcadas")
             }
         } else {
-            // TODO: Tela de logar
+            let novaTela = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            novaTela.modalPresentationStyle = .fullScreen
+            self.present(novaTela, animated: true, completion: nil)
         }
     }
 
@@ -209,20 +211,28 @@ class ExperienciasInfoViewController: UIViewController {
 }
 
 extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
-    
-    func reloadData(data: ModelExperienciasInfo) {
+    func reloadData(data: ModelExperienciasInfo, responsible: UserResponsavel?) {
 //        self.data = data
-        self.recordName = data.recordName
-        self.infoImage.image = data.infoImage
-        self.titleLabel.text = data.titleExp
-        self.timeLabel.text = String(data.durationTime)
-        self.peopleQuantLabel.text = String(data.howManyPeople)
-        self.descriptionLabel.text = data.descriptionExp
-        self.hostNameLabel.text = data.hostName
-        self.hostImage.image = data.hostImage
-        self.descriptionHostLabel.text = data.hostDescription
-        self.descriptionHowPartLabel.text = data.howParticipate
-        self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
+        DispatchQueue.main.async {
+            self.recordName = data.recordName
+            self.infoImage.image = data.infoImage
+            self.titleLabel.text = data.titleExp
+            self.timeLabel.text = String(data.durationTime)
+            self.peopleQuantLabel.text = String(data.howManyPeople)
+            self.descriptionLabel.text = data.descriptionExp
+            self.hostNameLabel.text = data.hostName
+            self.hostImage.image = data.hostImage
+            self.descriptionHostLabel.text = data.hostDescription
+            self.descriptionHowPartLabel.text = data.howParticipate
+            self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
+        }
 //        self.tagLabel1.text = data.tags[0]
+        if let responsible = responsible {
+            DispatchQueue.main.async {
+                self.hostImage.image = UIImage(data: responsible.image)
+                self.hostNameLabel.text = responsible.name
+                self.descriptionHostLabel.text = responsible.description
+            }
+        }
     }
 }

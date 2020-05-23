@@ -39,19 +39,20 @@ final class MainController {
                 guard let tamanho = record?["lengthGroup"] else { return }
                 guard let recursos = record?["whatToTake"] else { return }
                 guard let recordName = record?.recordID.recordName else { return }
-
+                guard let responsible = record?["responsible"] else { return }
+                guard let pessoa = responsible as? CKRecord.Reference else { return }
                 if let image = record?["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
                     if let file = file {
                         if let dado = NSData(contentsOf: file.fileURL!) {
 //                            guard let tempImage = UIImage(data: dado as Data) else { return }
                             self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: record?.recordID.recordName ?? ""
-                                , image: dado as Data, recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description)))
+                                , image: dado as Data, recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description), responsible: pessoa.recordID.recordName))
                         }
                     }
                 } else {
                     self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: record?.recordID.recordName ?? "", image: Data()
-                        , recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description)))
+                        , recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description), responsible: pessoa.recordID.recordName))
                 }
             }
 

@@ -23,9 +23,10 @@ class ModelExperienciasInfo {
     var howParticipate = String()
     var whatYouNeedDescription = String()
     var recordName = String()
+    var responsible = String()
     
     init(infoImage: UIImage, titleExp: String, durationTime: Int, howManyPeople: Int, tags: [String], descriptionExp: String,
-         hostImage:UIImage, hostName: String, hostDescription: String, howParticipate: String, whatYouNeedDescription: String, recordName: String) {
+         hostImage:UIImage, hostName: String, hostDescription: String, howParticipate: String, whatYouNeedDescription: String, recordName: String, responsible: String) {
         self.infoImage = infoImage
         self.titleExp = titleExp
         self.durationTime = durationTime
@@ -38,5 +39,6 @@ class ModelExperienciasInfo {
         self.howParticipate = howParticipate
         self.whatYouNeedDescription = whatYouNeedDescription
         self.recordName = recordName
+        self.responsible = responsible
     }
 }
