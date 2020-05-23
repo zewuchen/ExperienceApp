@@ -88,8 +88,10 @@ extension PerfilViewController: PerfilControllerDelegate {
     }
 
     func reloadData(data: [ModelExperiencePerfil]) {
-        self.data = data
-        self.experienceTableView.reloadData()
+        DispatchQueue.main.async {
+            self.data = data
+            self.experienceTableView.reloadData()
+        }
     }
 }
     

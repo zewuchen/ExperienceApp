@@ -162,6 +162,32 @@ final class Cloud {
         }
     }
 
+    public func getExperienceCreatedByUser(completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
+        guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+        guard let description = UserDefaults.standard.string(forKey: "description") else { return }
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
+
+        getUser(data: user) { (record, erros) in
+
+            if let record = record {
+                let recordToMatch = CKRecord.Reference(record: record, action: .none)
+                self.predicate = NSPredicate(format: "responsible == %@", recordToMatch)
+                let query = CKQuery(recordType: "Experience", predicate: self.predicate)
+
+                self.publicDB.perform(query, inZoneWith: nil) { (records, error) in
+                    if let records = records {
+                        completionHandler(records, error)
+                    } else {
+                        completionHandler([], error)
+                    }
+                }
+            }
+        }
+    }
+
     public func getExperience(data: ExperienceModel?, completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
         var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
 
