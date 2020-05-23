@@ -30,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-CJ-eyT">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1050"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1020"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYD-k8-88k">
                                     <rect key="frame" x="20" y="626" width="374" height="374"/>
@@ -99,7 +99,7 @@
                                 <constraint firstAttribute="trailing" secondItem="tRB-7d-TOU" secondAttribute="trailing" constant="20" id="dwm-AD-Eed"/>
                                 <constraint firstItem="xRq-nj-NTb" firstAttribute="top" secondItem="AZv-Db-OIC" secondAttribute="bottom" constant="30" id="eJZ-Pc-pKQ"/>
                                 <constraint firstItem="AZv-Db-OIC" firstAttribute="leading" secondItem="hfe-CJ-eyT" secondAttribute="leading" constant="20" id="ePs-Do-JD2"/>
-                                <constraint firstAttribute="bottom" secondItem="OYD-k8-88k" secondAttribute="bottom" constant="50" id="fap-9B-gd5"/>
+                                <constraint firstAttribute="bottom" secondItem="OYD-k8-88k" secondAttribute="bottom" constant="20" id="fap-9B-gd5"/>
                                 <constraint firstItem="OYD-k8-88k" firstAttribute="leading" secondItem="hfe-CJ-eyT" secondAttribute="leading" constant="20" id="j5c-d7-QM9"/>
                                 <constraint firstItem="OYD-k8-88k" firstAttribute="top" secondItem="AZv-Db-OIC" secondAttribute="bottom" constant="60" id="rog-RZ-1Mf"/>
                                 <constraint firstAttribute="trailing" secondItem="AZv-Db-OIC" secondAttribute="trailing" constant="20" id="s4R-nU-uyR"/>
