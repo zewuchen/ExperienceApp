@@ -8,6 +8,7 @@
 
 import CloudKit
 import CryptoKit
+import UIKit
 
 enum Record {
     case login
@@ -24,13 +25,14 @@ struct AuthModel {
     let description: String?
     let email: String
     let password: String
-//    let image: ??
+    let image: String
 }
 
 struct ExperienceModel {
     // Data
     let title: String
     let description: String
+    let recordName: String?
 //    let date: Date // Formato: YYYY-MM-DD HH:mm:ss
 //    let duration: Double
     let howToParticipate: String
@@ -40,7 +42,7 @@ struct ExperienceModel {
 //    let availableVacancies: Int64
     // Essa parte é feita no backend
 //    let score: Double?
-//    let image: ??
+    let image: String
 //    let participants: [AuthModel]
 //    let comments: [AuthModel]
 //    let tags: [String]
@@ -53,6 +55,7 @@ final class Cloud {
     let privateDB: CKDatabase
     let sharedDB: CKDatabase
     var predicate: NSPredicate
+    var url: URL
 
     private init() {
         self.container = CKContainer(identifier: "iCloud.ExperienceApp")
@@ -60,6 +63,7 @@ final class Cloud {
         self.privateDB = container.privateCloudDatabase
         self.sharedDB = container.sharedCloudDatabase
         self.predicate = NSPredicate(value: true)
+        self.url = URL(fileURLWithPath: "")
     }
 
     static let shared = Cloud()
@@ -73,11 +77,26 @@ final class Cloud {
         user.setValue(data.email, forKey: "email")
         user.setValue(encryptPassword(password: data.password), forKey: "password")
 
+        self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
+
+        if data.image != "" {
+            guard let image = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") else { return }
+            guard let dataImage = image.jpegData(compressionQuality: 0) else { return }
+            do {
+                try dataImage.write(to: url)
+            } catch let erro as NSError {
+                print("Error! \(erro)")
+                return
+            }
+            user.setValue(CKAsset(fileURL: url), forKey: "image")
+        }
+
         authUser(data: data) { (record, error) in
             if let record = record {
                 // TODO: Tratar erro para quando já tiver o usuário logado
                 print("Usuário já registrado")
             } else {
+                // FIXME: (Primeira vez que cadastra, ele buga)
                 self.cloudSave(record: user, database: self.publicDB)
             }
         }
@@ -90,6 +109,12 @@ final class Cloud {
                 print("Erro ao salvar")
             } else {
                 print("Salvo com Sucesso")
+            }
+            do {
+                try FileManager.default.removeItem(at: self.url)
+                print("Temp file deletado com sucesso")
+            } catch let erro {
+                print("Error deleting temp file: \(erro)")
             }
         }
     }
@@ -138,7 +163,10 @@ final class Cloud {
         var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
 
         if let data = data {
-            // TODO: Fazer o GET específico
+            guard let search = data.recordName else { return }
+//            self.predicate = NSPredicate(format: "title == '\(reference)'")
+            self.predicate = NSPredicate(format: "recordID = %@", CKRecord.ID(recordName: search))
+            query = CKQuery(recordType: "Experience", predicate: predicate)
         }
 
         publicDB.perform(query, inZoneWith: nil) { (records, error) in
@@ -156,13 +184,12 @@ final class Cloud {
         guard let email = UserDefaults.standard.string(forKey: "email") else { return }
         guard let password = UserDefaults.standard.string(forKey: "password") else { return }
 
-        let user = AuthModel(name: name, description: description, email: email, password: password)
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
 
         getUser(data: user) { (record, error) in
 
             if let record = record {
                 let experience = CKRecord(recordType: "Experience")
-
                 experience.setValue(data.title, forKey: "title")
                 experience.setValue(data.whatToTake, forKey: "whatToTake")
                 experience.setValue(data.lengthGroup, forKey: "lengthGroup")
@@ -175,10 +202,124 @@ final class Cloud {
                 experience.setValue(CKRecord.Reference(recordID: record.recordID, action: .none), forKey: "responsible")
 //                experience.setValue(data.score, forKey: "score")
 
+                self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
+
+                if data.image != "" {
+                    guard let image = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") else { return }
+                    guard let dataImage = image.jpegData(compressionQuality: 0) else { return }
+                    do {
+                        try dataImage.write(to: self.url)
+                    } catch let erro as NSError {
+                        print("Error! \(erro)")
+                        return
+                    }
+                    experience.setValue(CKAsset(fileURL: self.url), forKey: "image")
+                    FileHelper.deleteImage(filePathWithoutExtension: data.image)
+                }
+
                 self.cloudSave(record: experience, database: self.publicDB)
             }
         }
     }
 
+    // MARK: User
+    public func attachExperience(data: ExperienceModel) {
+        guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+        guard let description = UserDefaults.standard.string(forKey: "description") else { return }
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
 
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
+
+        getUser(data: user) { (usuario, error) in
+            guard let usuario = usuario else { return }
+            let assetsOld = usuario["experiences"] as? [CKRecord.Reference]
+
+            var experiencesRecords = [CKRecord.Reference]()
+
+            if let assetsOld = assetsOld {
+                for asset in assetsOld {
+                    experiencesRecords.append(asset)
+                }
+            }
+            self.getExperience(data: data) { (experiences, errors) in
+                for experience in experiences {
+                    if let record = experience {
+                        let reference = CKRecord.Reference(record: record, action: .none)
+                        experiencesRecords.append(reference)
+
+                        // TODO: Adicionar usuário na referência de participantes da Experiência
+                    }
+                }
+                usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
+                self.cloudSave(record: usuario, database: self.publicDB)
+            }
+        }
+    }
+
+    public func desattachExperience(data: ExperienceModel) {
+        guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+        guard let description = UserDefaults.standard.string(forKey: "description") else { return }
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+
+        let user = AuthModel(name: name, description: description, email: email, password: password, image: "")
+
+        getUser(data: user) { (usuario, error) in
+            guard let usuario = usuario else { return }
+            let assetsOld = usuario["experiences"] as? [CKRecord.Reference]
+
+            var experiencesRecords = [CKRecord.Reference]()
+
+            if let assetsOld = assetsOld {
+                for asset in assetsOld {
+                    guard let recordName = data.recordName else { return }
+                    if asset.recordID.recordName != recordName {
+                        experiencesRecords.append(asset)
+                    }
+                }
+            }
+            usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
+            self.cloudSave(record: usuario, database: self.publicDB)
+        }
+    }
+
+    public func getMyExperiences(completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+
+        let user = AuthModel(name: "", description: "", email: email, password: password, image: "")
+
+        getUser(data: user) { (usuario, error) in
+            guard let usuario = usuario else { return }
+            if let experiences = usuario["experiences"] as? [CKRecord.Reference] {
+                var recordsIDs = [CKRecord.ID]()
+                for experience in experiences {
+                    recordsIDs.append(experience.recordID)
+                }
+                var fetchOperation = CKFetchRecordsOperation(recordIDs: recordsIDs)
+                fetchOperation.fetchRecordsCompletionBlock = {
+                    recordData, erros in
+
+                    var data = [CKRecord]()
+
+                    if let recordData = recordData {
+//                        recordData.enumerated() // Devolve um vetor com todas as coisas
+//                        recordData.map {(chave, valor) -> Void in
+//                            data.append(valor)
+//                        } // Transformar um conjunto de dados num outro
+                        for(key, value) in recordData {
+                            data.append(value)
+                        }
+                        completionHandler(data, erros)
+                    } else {
+                        completionHandler([], erros)
+                    }
+                }
+                self.container.publicCloudDatabase.add(fetchOperation)
+            }
+        }
+    }
+
+    public func teste() {}
 }

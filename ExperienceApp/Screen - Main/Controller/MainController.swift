@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 protocol MainControllerDelegate: AnyObject {
     func reloadData(data: [MainModel])
@@ -34,8 +35,19 @@ final class MainController {
             for record in records {
                 guard let name = record?["title"] else { return }
                 guard let description = record?["description"] else { return }
-                
-                self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito"))
+                guard let recordName = record?.recordID.recordName else { return }
+
+                if let image = record?["image"] {
+                    guard let file: CKAsset? = image as? CKAsset else { return }
+                    if let file = file {
+                        if let dado = NSData(contentsOf: file.fileURL!) {
+//                            guard let tempImage = UIImage(data: dado as Data) else { return }
+                            self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: recordName, image: dado as Data))
+                        }
+                    }
+                } else {
+                    self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: "Gratuito", recordName: recordName, image: Data()))
+                }
             }
 
             self.delegate?.reloadData(data: self.data)

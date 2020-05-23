@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,29 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-g7-PCQ">
-                    <rect key="frame" x="25" y="268" width="365" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="jb2-AP-6s6"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
-                    <state key="normal" title="E-mail">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-H8-vtR">
-                    <rect key="frame" x="24" y="356" width="366" height="45"/>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
-                    <state key="normal" title="Senha">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira tua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-UN-KNd">
-                    <rect key="frame" x="24" y="395" width="366" height="34"/>
+                    <rect key="frame" x="24" y="393" width="366" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                             <integer key="value" value="25"/>
@@ -73,11 +57,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="btnCreate:" destination="-1" eventType="touchUpInside" id="uZr-q3-nmg"/>
+                        <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="FVP-J4-38J"/>
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira teu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJk-rY-mjQ">
                     <rect key="frame" x="24" y="306" width="366" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -88,25 +73,35 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-Yz-HAH">
+                    <rect key="frame" x="25" y="269" width="69" height="33"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYH-hd-jTz">
+                    <rect key="frame" x="25" y="356" width="68" height="33"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="xcS-vQ-I2x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="0M4-wy-oWz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bNt-y7-bEF" secondAttribute="bottom" constant="82" id="AaX-mz-GbB"/>
+                <constraint firstItem="fYH-hd-jTz" firstAttribute="top" secondItem="mJk-rY-mjQ" secondAttribute="bottom" constant="16" id="CAY-6v-260"/>
                 <constraint firstItem="mJk-rY-mjQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="DlN-rz-k3n"/>
-                <constraint firstItem="2hC-UN-KNd" firstAttribute="top" secondItem="JUE-H8-vtR" secondAttribute="bottom" constant="-6" id="FpD-0g-3IZ"/>
+                <constraint firstItem="fYH-hd-jTz" firstAttribute="top" secondItem="Kta-Yz-HAH" secondAttribute="bottom" constant="54" id="Fkf-Eo-QIL"/>
                 <constraint firstItem="xcS-vQ-I2x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="115" id="HtZ-5b-pGt"/>
+                <constraint firstItem="Kta-Yz-HAH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="MV7-OA-zS5"/>
                 <constraint firstItem="2hC-UN-KNd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="QyT-yt-mcz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2hC-UN-KNd" secondAttribute="trailing" constant="24" id="TfV-18-eNY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6eq-g7-PCQ" secondAttribute="trailing" constant="24" id="YtZ-gM-PaB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JUE-H8-vtR" secondAttribute="trailing" constant="24" id="aCs-dU-LE1"/>
-                <constraint firstItem="JUE-H8-vtR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="dJ6-Xb-nWv"/>
+                <constraint firstItem="fYH-hd-jTz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="WLn-02-EYb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xcS-vQ-I2x" secondAttribute="trailing" constant="24" id="dXc-6U-Gao"/>
+                <constraint firstItem="2hC-UN-KNd" firstAttribute="top" secondItem="fYH-hd-jTz" secondAttribute="bottom" constant="4" id="fE8-6x-hXP"/>
                 <constraint firstItem="bNt-y7-bEF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="l5e-Jj-l0n"/>
-                <constraint firstItem="6eq-g7-PCQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="lDg-HY-B1I"/>
-                <constraint firstItem="JUE-H8-vtR" firstAttribute="top" secondItem="mJk-rY-mjQ" secondAttribute="bottom" constant="16" id="nqp-qy-7r7"/>
-                <constraint firstItem="mJk-rY-mjQ" firstAttribute="top" secondItem="6eq-g7-PCQ" secondAttribute="bottom" constant="-7" id="o4q-Dl-ijF"/>
-                <constraint firstItem="6eq-g7-PCQ" firstAttribute="top" secondItem="xcS-vQ-I2x" secondAttribute="bottom" constant="68" id="pOy-oZ-Qfq"/>
+                <constraint firstItem="Kta-Yz-HAH" firstAttribute="top" secondItem="xcS-vQ-I2x" secondAttribute="bottom" constant="69" id="peb-Ju-KdM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mJk-rY-mjQ" secondAttribute="trailing" constant="24" id="ptN-21-Svq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bNt-y7-bEF" secondAttribute="trailing" constant="24" id="yri-cb-C9p"/>
             </constraints>

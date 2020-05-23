@@ -30,14 +30,28 @@
 		0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7EF246F397300A2D212 /* PerfilViewController.xib */; };
 		0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7F7246F399C00A2D212 /* PerfilController.swift */; };
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
+
+		9524877F2476FC5200C0A7F9 /* DeletarExpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */; };
+		952487802476FC5200C0A7F9 /* DeletarExpPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */; };
+		95248784247710CA00C0A7F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95248782247710CA00C0A7F9 /* HomeViewController.swift */; };
+		95248785247710CA00C0A7F9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95248783247710CA00C0A7F9 /* HomeViewController.xib */; };
+		9524878C2477220800C0A7F9 /* ExpCriadaPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524878A2477220700C0A7F9 /* ExpCriadaPopUp.swift */; };
+		9524878D2477220800C0A7F9 /* ExpCriadaPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */; };
+		9542072624776FAA009C7A43 /* ExpAdicionadaPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */; };
+		9542072724776FAA009C7A43 /* ExpAdicionadaPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542072524776FAA009C7A43 /* ExpAdicionadaPopUp.xib */; };
+
+		6F5305412475C60F008D8449 /* ModelExperienciasInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */; };
+
 		9542EBCC24730AA10049E27E /* CriarContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBCA24730AA10049E27E /* CriarContaViewController.swift */; };
 		9542EBCD24730AA10049E27E /* CriarContaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542EBCB24730AA10049E27E /* CriarContaViewController.xib */; };
 		9542EBD124730ACA0049E27E /* EntrarNaContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBCF24730ACA0049E27E /* EntrarNaContaViewController.swift */; };
 		9542EBD224730ACA0049E27E /* EntrarNaContaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542EBD024730ACA0049E27E /* EntrarNaContaViewController.xib */; };
-		9565EBA02475A6FE00A18E66 /* DestaquesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9565EB9F2475A6FE00A18E66 /* DestaquesModel.swift */; };
+		CB18BD1D2475A45B00DAD245 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18BD1C2475A45B00DAD245 /* FileHelper.swift */; };
+		CB18BD1F2475A5B100DAD245 /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18BD1E2475A5B100DAD245 /* CameraHelper.swift */; };
 		CB1A9DFD2472F9D900946B78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A9DFC2472F9D900946B78 /* CloudKit.framework */; };
 		CB1A9E0B24732C6000946B78 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A9E0A24732C6000946B78 /* CreateAccountController.swift */; };
 		CB1A9E0D24732C7300946B78 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A9E0C24732C7300946B78 /* LoginController.swift */; };
+		CB41A1A424770F2400A273DE /* DestaquesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB41A1A324770F2400A273DE /* DestaquesModel.swift */; };
 		CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */; };
 		CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */; };
 		CB4F8F87246DBA550004B5E5 /* TesteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F8F86246DBA550004B5E5 /* TesteModel.swift */; };
@@ -85,15 +99,29 @@
 		0F17C7EF246F397300A2D212 /* PerfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilViewController.xib; sourceTree = "<group>"; };
 		0F17C7F7246F399C00A2D212 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
+
+		9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletarExpPopUp.swift; sourceTree = "<group>"; };
+		9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletarExpPopUp.xib; sourceTree = "<group>"; };
+		95248782247710CA00C0A7F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		95248783247710CA00C0A7F9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		9524878A2477220700C0A7F9 /* ExpCriadaPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpCriadaPopUp.swift; sourceTree = "<group>"; };
+		9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpCriadaPopUp.xib; sourceTree = "<group>"; };
+		9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpAdicionadaPopUp.swift; sourceTree = "<group>"; };
+		9542072524776FAA009C7A43 /* ExpAdicionadaPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpAdicionadaPopUp.xib; sourceTree = "<group>"; };
+
+		6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExperienciasInfo.swift; sourceTree = "<group>"; };
+
 		9542EBCA24730AA10049E27E /* CriarContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContaViewController.swift; sourceTree = "<group>"; };
 		9542EBCB24730AA10049E27E /* CriarContaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CriarContaViewController.xib; sourceTree = "<group>"; };
 		9542EBCF24730ACA0049E27E /* EntrarNaContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrarNaContaViewController.swift; sourceTree = "<group>"; };
 		9542EBD024730ACA0049E27E /* EntrarNaContaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntrarNaContaViewController.xib; sourceTree = "<group>"; };
-		9565EB9F2475A6FE00A18E66 /* DestaquesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestaquesModel.swift; sourceTree = "<group>"; };
+		CB18BD1C2475A45B00DAD245 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		CB18BD1E2475A5B100DAD245 /* CameraHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelper.swift; sourceTree = "<group>"; };
 		CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExperienceApp.entitlements; sourceTree = "<group>"; };
 		CB1A9DFC2472F9D900946B78 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CB1A9E0A24732C6000946B78 /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		CB1A9E0C24732C7300946B78 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CB41A1A324770F2400A273DE /* DestaquesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestaquesModel.swift; sourceTree = "<group>"; };
 		CB4F8F7F246DB9110004B5E5 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
 		CB4F8F80246DB9110004B5E5 /* TesteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TesteViewController.xib; sourceTree = "<group>"; };
 		CB4F8F86246DBA550004B5E5 /* TesteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteModel.swift; sourceTree = "<group>"; };
@@ -192,8 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				0F17C7CF246F379B00A2D212 /* Cells */,
-				0F17C7CB246F379700A2D212 /* DestaquesViewController.swift */,
-				0F17C7CC246F379700A2D212 /* DestaquesViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,7 +235,7 @@
 		0F17C7CA246F371800A2D212 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9565EB9F2475A6FE00A18E66 /* DestaquesModel.swift */,
+				CB41A1A324770F2400A273DE /* DestaquesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +245,8 @@
 			children = (
 				0F17C7D0246F37B900A2D212 /* DestaquesTableViewCell.swift */,
 				0F17C7D1246F37B900A2D212 /* DestaquesTableViewCell.xib */,
+				0F17C7CB246F379700A2D212 /* DestaquesViewController.swift */,
+				0F17C7CC246F379700A2D212 /* DestaquesViewController.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -236,6 +264,7 @@
 		0F17C7D9246F383A00A2D212 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */,
 				0F17C7DC246F386200A2D212 /* ExperienciasInfoViewController.swift */,
 				0F17C7DD246F386200A2D212 /* ExperienciasInfoViewController.xib */,
 			);
@@ -336,6 +365,37 @@
 				0F17C800246F39EC00A2D212 /* GerarController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		952487812476FD2200C0A7F9 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				95420728247840DA009C7A43 /* View */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		95420728247840DA009C7A43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95420729247840FA009C7A43 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95420729247840FA009C7A43 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				95248782247710CA00C0A7F9 /* HomeViewController.swift */,
+				95248783247710CA00C0A7F9 /* HomeViewController.xib */,
+				9524878A2477220700C0A7F9 /* ExpCriadaPopUp.swift */,
+				9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */,
+				9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */,
+				9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */,
+				9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */,
+				9542072524776FAA009C7A43 /* ExpAdicionadaPopUp.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9542EBC5247304FD0049E27E /* Screen - Login */ = {
@@ -448,6 +508,8 @@
 			isa = PBXGroup;
 			children = (
 				CB4F8FA1246DCA0A0004B5E5 /* Extensions */,
+				CB18BD1C2475A45B00DAD245 /* FileHelper.swift */,
+				CB18BD1E2475A5B100DAD245 /* CameraHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -499,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */,
+				952487812476FD2200C0A7F9 /* PopUp */,
 				9542EBC5247304FD0049E27E /* Screen - Login */,
 				0F17C7F9246F39C000A2D212 /* Screen - Gerar */,
 				0F17C7EB246F393900A2D212 /* Screen - Perfil */,
@@ -596,19 +659,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9524878D2477220800C0A7F9 /* ExpCriadaPopUp.xib in Resources */,
 				CBED9A622473355D00739BFD /* LoginViewController.xib in Resources */,
 				0F17C7C6246F1B1B00A2D212 /* RecomendacoesTableViewCell.xib in Resources */,
 				CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */,
 				0F17C7DF246F386200A2D212 /* ExperienciasInfoViewController.xib in Resources */,
 				9542EBCD24730AA10049E27E /* CriarContaViewController.xib in Resources */,
 				CB8A4AD7247461DD0037F9FD /* GerarViewController.xib in Resources */,
+				95248785247710CA00C0A7F9 /* HomeViewController.xib in Resources */,
 				0F17C7CE246F379700A2D212 /* DestaquesViewController.xib in Resources */,
 				CBFECD51246DB571005B621F /* LaunchScreen.storyboard in Resources */,
 				0F17C7D3246F37B900A2D212 /* DestaquesTableViewCell.xib in Resources */,
 				0F17C7C2246F1B0300A2D212 /* DestaquesCollectionViewCell.xib in Resources */,
+				952487802476FC5200C0A7F9 /* DeletarExpPopUp.xib in Resources */,
 				CB5C5AD924745CAA00E91446 /* PerfilExperienciaTableViewCell.xib in Resources */,
 				0F17C7BD246F184100A2D212 /* MainViewController.xib in Resources */,
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
+				9542072724776FAA009C7A43 /* ExpAdicionadaPopUp.xib in Resources */,
 				CBFECD49246DB56E005B621F /* Main.storyboard in Resources */,
 				0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */,
 				0F17C7E7246F391F00A2D212 /* DisponibilidadeViewController.xib in Resources */,
@@ -646,18 +713,22 @@
 			files = (
 				0F17C7CD246F379700A2D212 /* DestaquesViewController.swift in Sources */,
 				CB5C5AD824745CAA00E91446 /* PerfilExperienciaTableViewCell.swift in Sources */,
+				9524877F2476FC5200C0A7F9 /* DeletarExpPopUp.swift in Sources */,
 				CBFECD46246DB56E005B621F /* ViewController.swift in Sources */,
 				0F17C7D2246F37B900A2D212 /* DestaquesTableViewCell.swift in Sources */,
 				0F17C7E6246F391F00A2D212 /* DisponibilidadeViewController.swift in Sources */,
-				9565EBA02475A6FE00A18E66 /* DestaquesModel.swift in Sources */,
 				0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */,
 				0F17C7C1246F1B0300A2D212 /* DestaquesCollectionViewCell.swift in Sources */,
+				CB41A1A424770F2400A273DE /* DestaquesModel.swift in Sources */,
 				0F17C7D5246F37C500A2D212 /* DestaquesController.swift in Sources */,
 				0F17C7E1246F387800A2D212 /* ExperienciasInfoController.swift in Sources */,
 				CBFECD42246DB56E005B621F /* AppDelegate.swift in Sources */,
 				CB1A9E0B24732C6000946B78 /* CreateAccountController.swift in Sources */,
+				6F5305412475C60F008D8449 /* ModelExperienciasInfo.swift in Sources */,
 				CBFECD44246DB56E005B621F /* SceneDelegate.swift in Sources */,
+				CB18BD1F2475A5B100DAD245 /* CameraHelper.swift in Sources */,
 				CB5C5AD324745C9600E91446 /* ModelExperiencePerfil.swift in Sources */,
+				CB18BD1D2475A45B00DAD245 /* FileHelper.swift in Sources */,
 				CB4F8FA3246DCA350004B5E5 /* UIColor+Extensions.swift in Sources */,
 				CB1A9E0D24732C7300946B78 /* LoginController.swift in Sources */,
 				CB4F8F81246DB9110004B5E5 /* TesteViewController.swift in Sources */,
@@ -667,12 +738,15 @@
 				CB5C5AD724745CAA00E91446 /* PerfilTableViewDelegate.swift in Sources */,
 				CB8A4AD8247461DD0037F9FD /* GerarViewController.swift in Sources */,
 				0F17C7DE246F386200A2D212 /* ExperienciasInfoViewController.swift in Sources */,
+				95248784247710CA00C0A7F9 /* HomeViewController.swift in Sources */,
 				CBED9A612473355D00739BFD /* LoginViewController.swift in Sources */,
 				0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */,
 				0F17C7EA246F393500A2D212 /* DisponibilidadeController.swift in Sources */,
+				9524878C2477220800C0A7F9 /* ExpCriadaPopUp.swift in Sources */,
 				0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */,
 				CBFECD4C246DB56E005B621F /* ExperienceApp.xcdatamodeld in Sources */,
 				0F17C7B9246F180300A2D212 /* MainController.swift in Sources */,
+				9542072624776FAA009C7A43 /* ExpAdicionadaPopUp.swift in Sources */,
 				0F17C7C5246F1B1B00A2D212 /* RecomendacoesTableViewCell.swift in Sources */,
 				CBED9A5E2473301A00739BFD /* Cloud.swift in Sources */,
 				CB4F8F89246DBB060004B5E5 /* TesteController.swift in Sources */,

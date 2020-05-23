@@ -55,6 +55,19 @@ class MainViewController: UIViewController {
         button.layer.masksToBounds = true
         button.setImage(UIImage(named: nome), for: .normal)
     }
+
+    @IBAction func btnPerfilAction(_ sender: Any) {
+        var novaTela = UIViewController()
+        if !UserDefaults.standard.bool(forKey: "logged") {
+            novaTela = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            novaTela.modalPresentationStyle = .fullScreen
+        } else {
+            novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
+            novaTela.modalPresentationStyle = .fullScreen
+        }
+        self.present(novaTela, animated: true, completion: nil)
+    }
+
 }
 
 extension MainViewController: MainControllerDelegate {
