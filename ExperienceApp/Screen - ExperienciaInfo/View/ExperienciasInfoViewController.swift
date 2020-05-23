@@ -225,6 +225,7 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
             self.descriptionHostLabel.text = data.hostDescription
             self.descriptionHowPartLabel.text = data.howParticipate
             self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
+            self.timeLabel.text = data.data
         }
 //        self.tagLabel1.text = data.tags[0]
         if let responsible = responsible {
