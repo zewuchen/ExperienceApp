@@ -40,9 +40,9 @@ final class PerfilController {
             user = AuthModel(name: name, description: description, email: email, password: password, image: image)
         }
         
-//        Cloud.shared.getMyExperiences { (<#[CKRecord?]#>, <#Error?#>) in
-//            <#code#>
-//        }
+        Cloud.shared.getMyExperiences { (<#[CKRecord?]#>, <#Error?#>) in
+            <#code#>
+        }
 
         delegate?.reloadProfileData(data: user)
     }
