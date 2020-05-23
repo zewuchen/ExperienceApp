@@ -37,4 +37,12 @@ final class ExperienciasInfoController {
         self.data = newData
         delegate?.reloadData(data: data)
     }
+
+    public func attach(recordName: String) {
+        Cloud.shared.attachExperience(data: ExperienceModel(title: "", description: "", recordName: recordName, howToParticipate: "", lengthGroup: Int64(0), whatToTake: "", image: ""))
+    }
+
+    public func desattach(recordName: String) {
+        Cloud.shared.desattachExperience(data: ExperienceModel(title: "", description: "", recordName: recordName, howToParticipate: "", lengthGroup: Int64(0), whatToTake: "", image: ""))
+    }
 }
