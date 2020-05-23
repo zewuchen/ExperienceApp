@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-Qf-T7W">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promova uma experiência diferenciada!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yk-cC-qwe">
                                     <rect key="frame" x="20" y="0.0" width="374" height="54"/>
@@ -55,13 +55,13 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWB-pd-EkA">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWB-pd-EkA">
                                     <rect key="frame" x="20" y="268" width="372.5" height="33"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Quais recursos são necessários?">
                                             <attributes>
                                                 <font key="NSFont" size="24" name="Avenir-Heavy"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -141,7 +141,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" textContentType="url"/>
                                 </textField>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire_Demon_Ramen" translatesAutoresizingMaskIntoConstraints="NO" id="CBp-2B-k9T">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addFoto" translatesAutoresizingMaskIntoConstraints="NO" id="CBp-2B-k9T">
                                     <rect key="frame" x="20" y="685" width="167" height="106"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="167" id="GxC-2J-4TC"/>
@@ -164,6 +164,7 @@
                                 <constraint firstItem="wGX-1a-ise" firstAttribute="top" secondItem="qay-ie-GYn" secondAttribute="bottom" constant="24" id="5Ze-nW-qPi"/>
                                 <constraint firstItem="tca-wM-3pF" firstAttribute="trailing" secondItem="BdV-Oh-HGE" secondAttribute="trailing" constant="-1.5" id="6fX-ZD-xJy"/>
                                 <constraint firstItem="CBp-2B-k9T" firstAttribute="leading" secondItem="IwA-Qf-T7W" secondAttribute="leading" constant="20" id="9Gl-tt-I2z"/>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="414" id="AG9-4s-kt3"/>
                                 <constraint firstItem="wGX-1a-ise" firstAttribute="trailing" secondItem="Uh7-jL-3mm" secondAttribute="trailing" id="BHZ-X7-jS7"/>
                                 <constraint firstItem="BXU-uH-xBn" firstAttribute="trailing" secondItem="7mT-4X-WZV" secondAttribute="trailing" id="BLx-Vg-Un5"/>
                                 <constraint firstItem="7mT-4X-WZV" firstAttribute="top" secondItem="dwO-v0-bnP" secondAttribute="bottom" constant="24" id="BsO-5C-Muh"/>
@@ -187,6 +188,7 @@
                                 <constraint firstItem="qay-ie-GYn" firstAttribute="leading" secondItem="wGX-1a-ise" secondAttribute="leading" id="YMO-Jr-FAV"/>
                                 <constraint firstItem="9Vl-Lq-e4R" firstAttribute="top" secondItem="CBp-2B-k9T" secondAttribute="bottom" constant="24" id="Zhw-JE-Jyt"/>
                                 <constraint firstItem="51Z-jx-okD" firstAttribute="leading" secondItem="BXU-uH-xBn" secondAttribute="leading" id="bOT-08-I4I"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="ch2-mG-Zpe"/>
                                 <constraint firstItem="Uh7-jL-3mm" firstAttribute="top" secondItem="wGX-1a-ise" secondAttribute="bottom" constant="4" id="f8z-Q8-Bcz"/>
                                 <constraint firstItem="CBp-2B-k9T" firstAttribute="top" secondItem="aS3-EG-RPB" secondAttribute="bottom" constant="4" id="fCi-d3-f8Z"/>
                                 <constraint firstItem="6yk-cC-qwe" firstAttribute="top" secondItem="IwA-Qf-T7W" secondAttribute="top" id="fvh-a2-b6a"/>
@@ -194,6 +196,7 @@
                                 <constraint firstItem="tca-wM-3pF" firstAttribute="top" secondItem="wWB-pd-EkA" secondAttribute="bottom" constant="4" id="hhu-9H-Z48"/>
                                 <constraint firstItem="BdV-Oh-HGE" firstAttribute="top" secondItem="tca-wM-3pF" secondAttribute="bottom" constant="24" id="j8P-x5-9JV"/>
                                 <constraint firstItem="hZJ-c4-lyp" firstAttribute="trailing" secondItem="qay-ie-GYn" secondAttribute="trailing" id="jMg-Ze-82D"/>
+                                <constraint firstAttribute="width" constant="415" id="l5F-Wv-uAH"/>
                                 <constraint firstItem="qay-ie-GYn" firstAttribute="trailing" secondItem="wGX-1a-ise" secondAttribute="trailing" id="m7u-Q7-V61"/>
                                 <constraint firstItem="BdV-Oh-HGE" firstAttribute="leading" secondItem="dwO-v0-bnP" secondAttribute="leading" id="mU4-3y-F3C"/>
                                 <constraint firstItem="hZJ-c4-lyp" firstAttribute="top" secondItem="6yk-cC-qwe" secondAttribute="bottom" constant="24" id="rGv-LB-pE7"/>
@@ -205,7 +208,7 @@
                                 <constraint firstItem="51Z-jx-okD" firstAttribute="top" secondItem="BXU-uH-xBn" secondAttribute="bottom" constant="4" id="wp8-N7-P4B"/>
                                 <constraint firstItem="BXU-uH-xBn" firstAttribute="top" secondItem="7u8-Wc-ess" secondAttribute="bottom" constant="24" id="xC5-eY-ugx"/>
                                 <constraint firstItem="9Vl-Lq-e4R" firstAttribute="trailing" secondItem="7u8-Wc-ess" secondAttribute="trailing" id="xvZ-A7-BMG"/>
-                                <constraint firstAttribute="height" constant="1100" id="yVZ-Ja-hML"/>
+                                <constraint firstAttribute="height" constant="1300" id="yVZ-Ja-hML"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -213,8 +216,8 @@
                     <constraints>
                         <constraint firstItem="IwA-Qf-T7W" firstAttribute="centerX" secondItem="8wv-X2-Qy8" secondAttribute="centerX" id="19V-7g-frj"/>
                         <constraint firstItem="IwA-Qf-T7W" firstAttribute="top" secondItem="28j-sR-b1k" secondAttribute="top" id="5MI-cI-aWA"/>
-                        <constraint firstAttribute="bottom" secondItem="IwA-Qf-T7W" secondAttribute="bottom" constant="-204" id="H67-97-O6p"/>
-                        <constraint firstAttribute="trailing" secondItem="IwA-Qf-T7W" secondAttribute="trailing" constant="-0.5" id="Hv3-f2-UQF"/>
+                        <constraint firstAttribute="bottom" secondItem="IwA-Qf-T7W" secondAttribute="bottom" constant="-304" id="H67-97-O6p"/>
+                        <constraint firstAttribute="trailing" secondItem="IwA-Qf-T7W" secondAttribute="trailing" id="Hv3-f2-UQF"/>
                         <constraint firstItem="IwA-Qf-T7W" firstAttribute="leading" secondItem="EKU-bY-d2y" secondAttribute="leading" id="ZTw-X4-JRf"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="28j-sR-b1k"/>
@@ -233,6 +236,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Fire_Demon_Ramen" width="500" height="500"/>
+        <image name="addFoto" width="244" height="236"/>
     </resources>
 </document>
