@@ -52,12 +52,16 @@ final class PerfilController {
                 guard let name = record?["title"] else { return }
                 guard let description = record?["description"] else { return }
                 guard let recursos = record?["whatToTake"] else { return }
+                guard let data = record?["date"] else { return }
+                guard let dataExperiencia = data as? Date else { return }
+                let formatarData = DateFormatter()
+                formatarData.dateFormat = "dd/MM/yyyy"
 
                 if let image = record?["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
                     if let file = file {
                         if let dado = NSData(contentsOf: file.fileURL!) {
-                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: "TESTE", link: recursos.description)
+                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: formatarData.string(from: dataExperiencia), link: recursos.description)
                             self.data.append(model)
                         }
                     }
@@ -71,12 +75,16 @@ final class PerfilController {
                 guard let name = record?["title"] else { return }
                 guard let description = record?["description"] else { return }
                 guard let recursos = record?["whatToTake"] else { return }
+                guard let data = record?["date"] else { return }
+                guard let dataExperiencia = data as? Date else { return }
+                let formatarData = DateFormatter()
+                formatarData.dateFormat = "dd/MM/yyyy"
 
                 if let image = record?["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
                     if let file = file {
                         if let dado = NSData(contentsOf: file.fileURL!) {
-                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: "TESTE", link: recursos.description)
+                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: formatarData.string(from: dataExperiencia), link: recursos.description)
                             self.data.append(model)
                         }
                     }
