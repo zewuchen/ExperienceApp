@@ -156,12 +156,14 @@ class ExperienciasInfoViewController: UIViewController {
         if UserDefaults.standard.bool(forKey: "logged") {
             if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
                 var registro = true
-                for record in 0...marcadas.count-1 {
-                    if marcadas[record] == recordName {
-                        registro = false
-                        marcadas.remove(at: record)
-                        controller.desattach(recordName: recordName)
-                        setReserva(disponivel: true)
+                if !marcadas.isEmpty {
+                    for record in 0...marcadas.count-1 {
+                        if marcadas[record] == recordName {
+                            registro = false
+                            marcadas.remove(at: record)
+                            controller.desattach(recordName: recordName)
+                            setReserva(disponivel: true)
+                        }
                     }
                 }
 
@@ -179,9 +181,11 @@ class ExperienciasInfoViewController: UIViewController {
 
     func setUserHasExperience() {
         if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
-            for record in 0...marcadas.count-1 {
-                if marcadas[record] == recordName {
-                    setReserva(disponivel: false)
+            if !marcadas.isEmpty {
+                for record in 0...marcadas.count-1 {
+                    if marcadas[record] == recordName {
+                        setReserva(disponivel: false)
+                    }
                 }
             }
         }

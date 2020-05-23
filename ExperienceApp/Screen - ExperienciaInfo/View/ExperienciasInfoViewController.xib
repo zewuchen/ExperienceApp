@@ -338,7 +338,7 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Experimentar"/>
                     <connections>
-                        <action selector="experienceButton:" destination="-1" eventType="touchUpInside" id="B5e-q9-bgO"/>
+                        <action selector="btnExperimentar:" destination="-1" eventType="touchUpInside" id="6Hu-FZ-bQ4"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gratuito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2M-MU-DUo">
