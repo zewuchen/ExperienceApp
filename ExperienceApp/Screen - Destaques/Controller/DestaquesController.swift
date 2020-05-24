@@ -36,6 +36,8 @@ final class DestaquesController {
                     
                     //Obs.: Aumentar núm. de caracteres
                     self.data.append(DestaquesModel(categoriaDaExp: "Livros", infoGeralExp: "Experiências voltadas para recomendar livros", nomeExp: "Indicações para leitores iniciantes", descricaoExp: "Recomendações de livros para quem gosta de Aventura"))
+                    
+                    self.data.append(DestaquesModel(categoriaDaExp: "Ta na Disney", infoGeralExp: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!", nomeExp: "Experiências relacionadas com Disney", descricaoExp: "Experiências relacionadas com Disney"))
                 }
 
                 self.delegate?.reloadData(data: self.data)

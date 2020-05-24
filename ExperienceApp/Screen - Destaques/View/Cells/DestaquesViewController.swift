@@ -28,9 +28,22 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
+        setNavigation()
         controller.delegate = self
       
     }
+    
+    func setNavigation() {
+        // MARK: Título
+//        self.navigationItem.title = "Teste"
+        // MARK: Cor da Navigation
+        navigationController?.setNavigationBarHidden(true, animated: false)
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = .clear
+    }
+    
     func setUpTable() {
         tableView.dataSource = self
         tableView.delegate   = self
@@ -39,7 +52,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     }
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             //  data.count
-            return 30
+            return 3
         
         }
 
