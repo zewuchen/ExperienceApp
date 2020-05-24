@@ -47,8 +47,9 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var experienceButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
-    @IBAction func exitButton(_ sender: Any) {
-        
+    @IBAction func exitButton(_
+        sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     var recordName: String = ""
     
@@ -67,18 +68,36 @@ class ExperienciasInfoViewController: UIViewController {
         switch tagLabel1.text == "Label" {
         case true:
             tagsStackView.removeFromSuperview()
-            titlehostLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 25).isActive = true
+            titlehostLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 20).isActive = true
         default:
-            titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 25).isActive = true
+            titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 20).isActive = true
         }
         
+//        Remove "h" de horas na data, mudar text se voltar a "Duraçāo" e remove page control da image
+        self.hoursFixedLabel.text = ""
+        self.imagePageControl.removeFromSuperview()
+        
+        switch scoreLabel.text == "" {
+        case true:
+            scoreLabel.removeFromSuperview()
+            starIconImage.removeFromSuperview()
+            reviewButton.removeFromSuperview()
+            titleTimeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
+            titleGroupLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
+        default:
+            scoreLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
+            starIconImage.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
+            reviewButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
+        }
+        
+        descriptionLabel.topAnchor.constraint(equalTo: timeIconImage.bottomAnchor, constant: 25).isActive = true
         hostImage.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 20).isActive = true
          hostNameLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 20).isActive = true
-         descriptionHostLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 25).isActive = true
-         titleHowPartLabel.topAnchor.constraint(equalTo: descriptionHostLabel.bottomAnchor, constant: 10).isActive = true
-         descriptionHowPartLabel.topAnchor.constraint(equalTo: titleHowPartLabel.bottomAnchor, constant: 10).isActive = true
+         descriptionHostLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 30).isActive = true
+         titleHowPartLabel.topAnchor.constraint(equalTo: descriptionHostLabel.bottomAnchor, constant: 20).isActive = true
+         descriptionHowPartLabel.topAnchor.constraint(equalTo: titleHowPartLabel.bottomAnchor, constant: 15).isActive = true
          whatDoINeedTitleLabel.topAnchor.constraint(equalTo: descriptionHowPartLabel.bottomAnchor, constant: 20).isActive = true
-         whatDoINeedDescriptionLabel.topAnchor.constraint(equalTo: whatDoINeedTitleLabel.topAnchor, constant: 20).isActive = true
+         whatDoINeedDescriptionLabel.topAnchor.constraint(equalTo: whatDoINeedTitleLabel.bottomAnchor, constant: 10).isActive = true
         
         navigationController?.navigationBar.isHidden = true
 
@@ -221,7 +240,7 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
             self.peopleQuantLabel.text = String(data.howManyPeople)
             self.descriptionLabel.text = data.descriptionExp
             self.hostNameLabel.text = data.hostName
-            self.hostImage.image = data.hostImage
+//            self.hostImage.image = data.hostImage
             self.descriptionHostLabel.text = data.hostDescription
             self.descriptionHowPartLabel.text = data.howParticipate
             self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription

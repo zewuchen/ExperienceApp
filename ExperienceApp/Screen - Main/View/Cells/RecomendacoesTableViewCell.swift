@@ -31,6 +31,7 @@ class RecomendacoesTableViewCell: UITableViewCell {
         self.lbRating?.text = String(model.notaExp)
         self.costValue?.text = model.precoExp
         self.titleCard?.text = model.nomeExp
+        self.titleCard?.font = UIFont.boldSystemFont(ofSize: 17)
         self.imageCard.image = UIImage(named: "cacto")
 
         if let imagem = model.image {
