@@ -40,8 +40,8 @@ final class ExperienciasInfoController {
         guard let participar = dataToConvert.comoParticipar else { return }
         guard let recursos = dataToConvert.recursos else { return }
         guard let data = dataToConvert.data else { return }
-        let newData = ModelExperienciasInfo(infoImage: image, titleExp: dataToConvert.nomeExp, durationTime: 0, howManyPeople: tamanho, tags: [], descriptionExp: dataToConvert.descricaoExp, hostImage: image, hostName: "Teste"
-            , hostDescription: "Teste", howParticipate: participar, whatYouNeedDescription: recursos, recordName: dataToConvert.recordName, responsible: dataToConvert.responsible ?? "", data: data)
+        let newData = ModelExperienciasInfo(infoImage: image, titleExp: dataToConvert.nomeExp, durationTime: 0, howManyPeople: tamanho, tags: [], descriptionExp: dataToConvert.descricaoExp, hostImage: image, hostName: ""
+            , hostDescription: "", howParticipate: participar, whatYouNeedDescription: recursos, recordName: dataToConvert.recordName, responsible: dataToConvert.responsible ?? "", data: data)
         self.data = newData
         self.delegate?.reloadData(data: self.data, responsible: nil)
         

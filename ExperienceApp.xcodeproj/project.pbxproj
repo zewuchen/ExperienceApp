@@ -30,7 +30,7 @@
 		0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F17C7EF246F397300A2D212 /* PerfilViewController.xib */; };
 		0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7F7246F399C00A2D212 /* PerfilController.swift */; };
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
-
+		6F5305412475C60F008D8449 /* ModelExperienciasInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */; };
 		9524877F2476FC5200C0A7F9 /* DeletarExpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */; };
 		952487802476FC5200C0A7F9 /* DeletarExpPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */; };
 		95248784247710CA00C0A7F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95248782247710CA00C0A7F9 /* HomeViewController.swift */; };
@@ -39,9 +39,6 @@
 		9524878D2477220800C0A7F9 /* ExpCriadaPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */; };
 		9542072624776FAA009C7A43 /* ExpAdicionadaPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */; };
 		9542072724776FAA009C7A43 /* ExpAdicionadaPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542072524776FAA009C7A43 /* ExpAdicionadaPopUp.xib */; };
-
-		6F5305412475C60F008D8449 /* ModelExperienciasInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */; };
-
 		9542EBCC24730AA10049E27E /* CriarContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBCA24730AA10049E27E /* CriarContaViewController.swift */; };
 		9542EBCD24730AA10049E27E /* CriarContaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542EBCB24730AA10049E27E /* CriarContaViewController.xib */; };
 		9542EBD124730ACA0049E27E /* EntrarNaContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBCF24730ACA0049E27E /* EntrarNaContaViewController.swift */; };
@@ -99,7 +96,7 @@
 		0F17C7EF246F397300A2D212 /* PerfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilViewController.xib; sourceTree = "<group>"; };
 		0F17C7F7246F399C00A2D212 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
-
+		6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExperienciasInfo.swift; sourceTree = "<group>"; };
 		9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletarExpPopUp.swift; sourceTree = "<group>"; };
 		9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletarExpPopUp.xib; sourceTree = "<group>"; };
 		95248782247710CA00C0A7F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -108,9 +105,6 @@
 		9524878B2477220700C0A7F9 /* ExpCriadaPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpCriadaPopUp.xib; sourceTree = "<group>"; };
 		9542072424776FAA009C7A43 /* ExpAdicionadaPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpAdicionadaPopUp.swift; sourceTree = "<group>"; };
 		9542072524776FAA009C7A43 /* ExpAdicionadaPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpAdicionadaPopUp.xib; sourceTree = "<group>"; };
-
-		6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExperienciasInfo.swift; sourceTree = "<group>"; };
-
 		9542EBCA24730AA10049E27E /* CriarContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContaViewController.swift; sourceTree = "<group>"; };
 		9542EBCB24730AA10049E27E /* CriarContaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CriarContaViewController.xib; sourceTree = "<group>"; };
 		9542EBCF24730ACA0049E27E /* EntrarNaContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrarNaContaViewController.swift; sourceTree = "<group>"; };
