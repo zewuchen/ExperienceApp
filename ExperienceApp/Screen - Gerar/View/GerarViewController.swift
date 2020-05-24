@@ -53,6 +53,10 @@ class GerarViewController: UIViewController {
         }
     }
 
+    @IBAction func sairBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func esconderTeclado(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
