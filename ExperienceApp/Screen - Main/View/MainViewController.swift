@@ -32,6 +32,10 @@ class MainViewController: UIViewController {
         setUpButtons(button: btnPerfil, nome: "cacto")
         setUpCollection()
         controller.reload()
+
+        // Desabilitado o botão de procurar aqui
+        btnBusca.removeFromSuperview()
+        setNavigation()
     }
     
     func setUpTable() {
@@ -47,6 +51,11 @@ class MainViewController: UIViewController {
     }
     
     func setNavigation() {
+        // MARK: Título
+//        self.navigationItem.title = "Teste"
+        // MARK: Cor da Navigation
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
     }
@@ -55,6 +64,13 @@ class MainViewController: UIViewController {
         button.layer.cornerRadius = 22.5
         button.layer.masksToBounds = true
         button.setImage(UIImage(named: nome), for: .normal)
+
+        if let nameImage = UserDefaults.standard.string(forKey: "image") {
+            if let imagePath = FileHelper.getFile(filePathWithoutExtension: nameImage) {
+                let image = UIImage(contentsOfFile: imagePath)
+                button.setImage(image, for: .normal)
+            }
+        }
     }
 
     @IBAction func btnPerfilAction(_ sender: Any) {
