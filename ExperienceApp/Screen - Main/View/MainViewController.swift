@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         controller.delegate = self
         setUpTable()
         setUpButtons(button: btnBusca, nome: "busca.png")
-        setUpButtons(button: btnPerfil, nome: "cacto")
+        setUpButtons(button: btnPerfil, nome: "userDefault")
         setUpCollection()
         controller.reload()
 
