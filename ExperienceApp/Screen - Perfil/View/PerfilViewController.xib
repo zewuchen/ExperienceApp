@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,14 +30,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-CJ-eyT">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1046"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1376"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYD-k8-88k">
-                                    <rect key="frame" x="20" y="652" width="374" height="374"/>
+                                    <rect key="frame" x="20" y="652" width="374" height="1124"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="OYD-k8-88k" secondAttribute="height" id="XZK-qH-fcV"/>
-                                    </constraints>
                                 </tableView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRB-7d-TOU">
                                     <rect key="frame" x="20" y="372" width="374" height="40"/>
@@ -112,12 +109,13 @@
                                 <constraint firstAttribute="trailing" secondItem="tRB-7d-TOU" secondAttribute="trailing" constant="20" id="dwm-AD-Eed"/>
                                 <constraint firstItem="xRq-nj-NTb" firstAttribute="top" secondItem="AZv-Db-OIC" secondAttribute="bottom" constant="30" id="eJZ-Pc-pKQ"/>
                                 <constraint firstItem="AZv-Db-OIC" firstAttribute="leading" secondItem="hfe-CJ-eyT" secondAttribute="leading" constant="20" id="ePs-Do-JD2"/>
-                                <constraint firstAttribute="bottom" secondItem="OYD-k8-88k" secondAttribute="bottom" constant="20" id="fap-9B-gd5"/>
+                                <constraint firstAttribute="bottom" secondItem="OYD-k8-88k" secondAttribute="bottom" constant="-400" id="fap-9B-gd5"/>
                                 <constraint firstItem="OYD-k8-88k" firstAttribute="leading" secondItem="hfe-CJ-eyT" secondAttribute="leading" constant="20" id="j5c-d7-QM9"/>
                                 <constraint firstItem="OYD-k8-88k" firstAttribute="top" secondItem="AZv-Db-OIC" secondAttribute="bottom" constant="60" id="rog-RZ-1Mf"/>
                                 <constraint firstAttribute="trailing" secondItem="AZv-Db-OIC" secondAttribute="trailing" constant="20" id="s4R-nU-uyR"/>
                                 <constraint firstItem="9Ux-1o-ned" firstAttribute="top" secondItem="tiG-3a-3pK" secondAttribute="bottom" constant="16" id="xWu-7Z-P99"/>
                                 <constraint firstAttribute="trailing" secondItem="OYD-k8-88k" secondAttribute="trailing" constant="20" id="yEK-9c-qbJ"/>
+                                <constraint firstAttribute="height" constant="1376" id="yhE-i2-LcB"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -157,10 +155,10 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iHl-9g-rbW" secondAttribute="trailing" constant="20" id="7b4-L0-Rbe"/>
                 <constraint firstAttribute="bottom" secondItem="qsI-jn-4DM" secondAttribute="bottom" id="DT1-Ru-nto"/>
-                <constraint firstItem="kkh-tI-7bj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" symbolic="YES" id="VY2-2S-b14"/>
+                <constraint firstItem="kkh-tI-7bj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VY2-2S-b14"/>
                 <constraint firstAttribute="bottom" secondItem="kkh-tI-7bj" secondAttribute="bottom" id="XIU-vQ-cJn"/>
                 <constraint firstAttribute="bottom" secondItem="iHl-9g-rbW" secondAttribute="bottom" constant="30" id="bwF-rO-Vh7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kkh-tI-7bj" secondAttribute="trailing" constant="20" symbolic="YES" id="dV7-4f-YQl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kkh-tI-7bj" secondAttribute="trailing" id="dV7-4f-YQl"/>
                 <constraint firstAttribute="trailing" secondItem="qsI-jn-4DM" secondAttribute="trailing" id="f7M-w6-c93"/>
                 <constraint firstItem="qsI-jn-4DM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jL2-JK-t0F"/>
                 <constraint firstItem="qsI-jn-4DM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mcC-Xk-t4y"/>
