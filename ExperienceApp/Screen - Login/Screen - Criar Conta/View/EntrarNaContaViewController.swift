@@ -66,14 +66,17 @@ class EntrarNaContaViewController: UIViewController {
             guard let email = txtEmail.text else { return }
             guard let password = txtSenha.text else { return }
             guard let description = txtDescription.text else { return }
-
+            
             let user = AuthModel(name: name, description: description, email: email, password: password, image: urlString)
             controller.createAccount(user: user)
-            self.navigationController?.popToRootViewController(animated: false)
+            
+            let telaContaCriada = LoginCriarPopViewController()
+            telaContaCriada.modalTransitionStyle  =  .crossDissolve
+            telaContaCriada.modalPresentationStyle = .overCurrentContext
+            self.present(telaContaCriada, animated: false, completion: nil)
         }
-        
     }
-    
+
     func validarEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
@@ -144,8 +147,10 @@ class EntrarNaContaViewController: UIViewController {
     }
 
     @IBAction func btnLogin(_ sender: Any) {
+        
             let novaTela = CriarContaViewController(nibName: "CriarContaViewController", bundle: nil)
       //     novaTela.modalPresentationStyle = .fullScreen
+        
            self.present(novaTela, animated: true, completion: nil)
     }
     
@@ -170,8 +175,6 @@ class EntrarNaContaViewController: UIViewController {
         imageView.layer.shadowRadius = 1.0
         imageView.clipsToBounds = false
     }
-    
-    
 }
 
 extension EntrarNaContaViewController: CreateAccountControllerDelegate {
