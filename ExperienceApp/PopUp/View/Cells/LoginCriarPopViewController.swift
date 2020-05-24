@@ -1,5 +1,5 @@
 //
-//  LoginPopViewController.swift
+//  LoginCriarPopViewController.swift
 //  ExperienceApp
 //
 //  Created by Juliana Vigato Pavan on 24/05/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginPopViewController: UIViewController {
+class LoginCriarPopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -70,19 +70,13 @@ class EntrarNaContaViewController: UIViewController {
             let user = AuthModel(name: name, description: description, email: email, password: password, image: urlString)
             controller.createAccount(user: user)
             
-            let telaContaCriada = LoginPopViewController()
+            let telaContaCriada = LoginCriarPopViewController()
             telaContaCriada.modalTransitionStyle  =  .crossDissolve
             telaContaCriada.modalPresentationStyle = .overCurrentContext
             self.present(telaContaCriada, animated: true, completion: nil)
-//            let _ = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(criarUsuario), userInfo: nil, repeats: true)
         }
     }
-    
-    @objc func criarUsuario() {
-        
-        self.navigationController?.popToRootViewController(animated: false)
-    }
-    
+
     func validarEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)

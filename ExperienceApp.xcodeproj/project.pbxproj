@@ -32,6 +32,8 @@
 		0F17C801246F39EC00A2D212 /* GerarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C800246F39EC00A2D212 /* GerarController.swift */; };
 		0F2B3A0A247AEF250071BD65 /* LoginPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B3A08247AEF250071BD65 /* LoginPopViewController.swift */; };
 		0F2B3A0B247AEF250071BD65 /* LoginPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B3A09247AEF250071BD65 /* LoginPopViewController.xib */; };
+		0F2B3A0E247AF0070071BD65 /* LoginCriarPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B3A0C247AF0070071BD65 /* LoginCriarPopViewController.swift */; };
+		0F2B3A0F247AF0070071BD65 /* LoginCriarPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B3A0D247AF0070071BD65 /* LoginCriarPopViewController.xib */; };
 		6F5305412475C60F008D8449 /* ModelExperienciasInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */; };
 		9524877F2476FC5200C0A7F9 /* DeletarExpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */; };
 		952487802476FC5200C0A7F9 /* DeletarExpPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */; };
@@ -100,6 +102,8 @@
 		0F17C800246F39EC00A2D212 /* GerarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerarController.swift; sourceTree = "<group>"; };
 		0F2B3A08247AEF250071BD65 /* LoginPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopViewController.swift; sourceTree = "<group>"; };
 		0F2B3A09247AEF250071BD65 /* LoginPopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPopViewController.xib; sourceTree = "<group>"; };
+		0F2B3A0C247AF0070071BD65 /* LoginCriarPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCriarPopViewController.swift; sourceTree = "<group>"; };
+		0F2B3A0D247AF0070071BD65 /* LoginCriarPopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCriarPopViewController.xib; sourceTree = "<group>"; };
 		6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExperienciasInfo.swift; sourceTree = "<group>"; };
 		9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletarExpPopUp.swift; sourceTree = "<group>"; };
 		9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletarExpPopUp.xib; sourceTree = "<group>"; };
@@ -365,15 +369,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		0F2B3A07247AEF0C0071BD65 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				0F2B3A08247AEF250071BD65 /* LoginPopViewController.swift */,
-				0F2B3A09247AEF250071BD65 /* LoginPopViewController.xib */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		952487812476FD2200C0A7F9 /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,7 +388,10 @@
 		95420729247840FA009C7A43 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0F2B3A07247AEF0C0071BD65 /* New Group */,
+				0F2B3A08247AEF250071BD65 /* LoginPopViewController.swift */,
+				0F2B3A09247AEF250071BD65 /* LoginPopViewController.xib */,
+				0F2B3A0C247AF0070071BD65 /* LoginCriarPopViewController.swift */,
+				0F2B3A0D247AF0070071BD65 /* LoginCriarPopViewController.xib */,
 				95248782247710CA00C0A7F9 /* HomeViewController.swift */,
 				95248783247710CA00C0A7F9 /* HomeViewController.xib */,
 				9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */,
@@ -686,6 +684,7 @@
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
 				9542072724776FAA009C7A43 /* ExpAdicionadaPopUp.xib in Resources */,
 				CBFECD49246DB56E005B621F /* Main.storyboard in Resources */,
+				0F2B3A0F247AF0070071BD65 /* LoginCriarPopViewController.xib in Resources */,
 				0F17C7F1246F397300A2D212 /* PerfilViewController.xib in Resources */,
 				0F17C7E7246F391F00A2D212 /* DisponibilidadeViewController.xib in Resources */,
 				9542EBD224730ACA0049E27E /* EntrarNaContaViewController.xib in Resources */,
@@ -757,6 +756,7 @@
 				CBFECD4C246DB56E005B621F /* ExperienceApp.xcdatamodeld in Sources */,
 				0F17C7B9246F180300A2D212 /* MainController.swift in Sources */,
 				9542072624776FAA009C7A43 /* ExpAdicionadaPopUp.swift in Sources */,
+				0F2B3A0E247AF0070071BD65 /* LoginCriarPopViewController.swift in Sources */,
 				0F17C7C5246F1B1B00A2D212 /* RecomendacoesTableViewCell.swift in Sources */,
 				CBED9A5E2473301A00739BFD /* Cloud.swift in Sources */,
 				CB4F8F89246DBB060004B5E5 /* TesteController.swift in Sources */,
