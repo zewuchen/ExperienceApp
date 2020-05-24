@@ -54,6 +54,10 @@ class GerarViewController: UIViewController {
     }
 
     @IBAction func sairBtn(_ sender: Any) {
+        dismissTela()
+    }
+    
+    @objc func dismissTela() {
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -94,7 +98,7 @@ class GerarViewController: UIViewController {
             
             let experience = ExperienceModel(title: title, description: description, recordName: nil, date: self.data, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake, image: urlString)
             
-    controller.createExperience(data: experience)
+                controller.createExperience(data: experience)
             
             // Ir para o PopUp
             let telaExpCriada = ExpCriadaPopUp()
@@ -102,6 +106,7 @@ class GerarViewController: UIViewController {
                telaExpCriada.modalPresentationStyle = .overCurrentContext
                self.present(telaExpCriada, animated: true, completion: nil)
             
+//            let _ = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(dismissTela), userInfo: nil, repeats: true)
             // TODO: Dar dismiss na tela quando criar a experiência
 //            self.navigationController?.popToRootViewController(animated: false)
         }
