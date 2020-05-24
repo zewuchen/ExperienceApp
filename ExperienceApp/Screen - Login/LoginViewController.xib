@@ -17,11 +17,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cacto" translatesAutoresizingMaskIntoConstraints="NO" id="Bgl-8A-BAD">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Experience_Mountain" translatesAutoresizingMaskIntoConstraints="NO" id="Bgl-8A-BAD">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmi-W6-Nhq">
-                    <rect key="frame" x="25" y="640" width="365" height="60"/>
+                    <rect key="frame" x="25" y="682" width="365" height="60"/>
                     <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="8sQ-GB-PkU"/>
@@ -40,7 +40,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="loginView" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpV-y7-5il">
-                    <rect key="frame" x="25" y="720" width="365" height="60"/>
+                    <rect key="frame" x="25" y="762" width="365" height="60"/>
                     <rect key="contentStretch" x="0.14999999999999999" y="0.0" width="1" height="1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="syx-2H-5CL"/>
@@ -48,7 +48,7 @@
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                     <size key="titleShadowOffset" width="9" height="0.0"/>
                     <state key="normal" title="Criar uma conta">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -88,7 +88,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xpV-y7-5il" secondAttribute="trailing" constant="24" id="Zsp-GX-6Yx"/>
                 <constraint firstItem="WPL-Sj-9oA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="a0Y-vH-IcY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xmi-W6-Nhq" secondAttribute="trailing" constant="24" id="eY5-bQ-SBx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpV-y7-5il" secondAttribute="bottom" constant="82" id="lCf-eY-R1t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpV-y7-5il" secondAttribute="bottom" constant="40" id="lCf-eY-R1t"/>
                 <constraint firstItem="xpV-y7-5il" firstAttribute="top" secondItem="Xmi-W6-Nhq" secondAttribute="bottom" constant="20" id="mLn-bh-Uj7"/>
                 <constraint firstItem="Bgl-8A-BAD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mS2-P9-EIh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WPL-Sj-9oA" secondAttribute="trailing" constant="20" id="s5z-g5-0rV"/>
@@ -104,7 +104,7 @@
         </button>
     </objects>
     <resources>
+        <image name="Experience_Mountain" width="414" height="896"/>
         <image name="botaoSair" width="100" height="100"/>
-        <image name="cacto" width="1106" height="1052"/>
     </resources>
 </document>
