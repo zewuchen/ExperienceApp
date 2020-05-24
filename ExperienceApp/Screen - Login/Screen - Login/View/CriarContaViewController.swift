@@ -37,6 +37,7 @@ class CriarContaViewController: UIViewController {
 
             let user = AuthModel(name: "", description: "", email: email, password: password, image: "")
             controller.login(user: user)
+//            self.dismiss(animated: false, completion: nil)
             
             let telaLogar = LoginPopViewController()
             telaLogar.modalTransitionStyle  =  .crossDissolve
@@ -82,6 +83,7 @@ class CriarContaViewController: UIViewController {
             //TODO: pop-up de erro?
             return false
         }
+        
         return true
     }
     

@@ -73,7 +73,7 @@ class EntrarNaContaViewController: UIViewController {
             let telaContaCriada = LoginCriarPopViewController()
             telaContaCriada.modalTransitionStyle  =  .crossDissolve
             telaContaCriada.modalPresentationStyle = .overCurrentContext
-            self.present(telaContaCriada, animated: true, completion: nil)
+            self.present(telaContaCriada, animated: false, completion: nil)
         }
     }
 
