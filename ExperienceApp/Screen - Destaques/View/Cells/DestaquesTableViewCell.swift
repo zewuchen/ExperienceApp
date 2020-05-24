@@ -25,9 +25,9 @@ class DestaquesTableViewCell: UITableViewCell {
     }
     
     func setUp(model: DestaquesModel) {
-        self.titleCard?.text = model.nomeExp
-        self.subtitleCard.text = model.descricaoExp
-        self.imgCard.image = UIImage(named: "cacto")
+        self.titleCard?.text = model.nomeDestaque
+        self.subtitleCard.text = model.descricaoDestaque
+        self.imgCard.image = UIImage(named: model.imgDestaque)
     }
     
 }

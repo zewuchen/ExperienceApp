@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var data: [MainModel] = []
+    private var dataDestaques: [DestaquesModel] = [DestaquesModel(nomeDestaque: "Ta na Disney?", descricaoDestaque: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!", imgDestaque: "disney"), DestaquesModel(nomeDestaque: "Ler até a madrugada", descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros")]
     
     private let controller = MainController()
     
@@ -38,6 +39,11 @@ class MainViewController: UIViewController {
         setNavigation()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //TODO: Mudar foto de perfil default
+        setUpButtons(button: btnPerfil, nome: "cacto")
+    }
+    
     func setUpTable() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -47,6 +53,7 @@ class MainViewController: UIViewController {
     
     func setUpCollection() {
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UINib(nibName: destaquesCell, bundle: nil), forCellWithReuseIdentifier: destaquesCell)
     }
     
@@ -90,16 +97,16 @@ extension MainViewController: MainControllerDelegate {
     func reloadData(data: [MainModel]) {
         self.data = data
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+//            self.collectionView.reloadData()
             self.tableView.reloadData()
         }
     }
 }
 
-extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        data.count
+        dataDestaques.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -110,8 +117,14 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             layout.scrollDirection = .horizontal
         }
         
-        celulaCollection?.setUp(model: data[indexPath.row])
+        celulaCollection?.setUp(model: dataDestaques[indexPath.row])
         return celulaCollection ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var tela = DestaquesViewController(nibName: "DestaquesViewController", bundle: nil)
+        tela.data = self.dataDestaques[indexPath.row]
+        self.present(tela, animated: false, completion: nil)
     }
 }
 

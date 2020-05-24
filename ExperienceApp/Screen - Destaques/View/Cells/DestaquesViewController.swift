@@ -20,7 +20,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     // MARK: Variáveis
     let destaquesCell = "DestaquesTableViewCell"
-    private var data: [DestaquesModel] = []
+    public var data: DestaquesModel?
     private let controller = DestaquesController()
     var tururu = ["oi", "tudo", "bem"]
        
@@ -28,9 +28,22 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
+        setNavigation()
         controller.delegate = self
       
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        lblDestaque.text = data?.nomeDestaque
+        imgDestaque.image = UIImage(named: data?.imgDestaque ?? "cacto")
+        infoDestaque.text = data?.descricaoDestaque
+    }
+    
+    func setNavigation() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+
+    }
+    
     func setUpTable() {
         tableView.dataSource = self
         tableView.delegate   = self
@@ -39,7 +52,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     }
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             //  data.count
-            return 30
+            return 3
         
         }
 
@@ -79,9 +92,9 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
 
 extension DestaquesViewController: DestaquesControllerDelegate {
     func reloadData(data: [DestaquesModel]) {
-        self.data = data
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+//        self.data = data
+//        DispatchQueue.main.async {
+//            self.tableView.reloadData()
+//        }
     }
 }

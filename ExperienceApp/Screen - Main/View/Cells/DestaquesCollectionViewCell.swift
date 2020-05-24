@@ -18,9 +18,9 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setUp(model: MainModel) {
+    func setUp(model: DestaquesModel) {
         self.lblTitulo.text = model.nomeDestaque
-        self.imgDestaque.image = UIImage(named: "cacto")
+        self.imgDestaque.image = UIImage(named: model.imgDestaque)
         self.backgroundColor = .white
         
     }
