@@ -176,13 +176,17 @@ class ExperienciasInfoViewController: UIViewController {
             if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
                 var registro = true
                 if !marcadas.isEmpty {
+                    var indices: [Int] = []
                     for record in 0...marcadas.count-1 {
                         if marcadas[record] == recordName {
                             registro = false
-                            marcadas.remove(at: record)
+                            indices.append(record)
                             controller.desattach(recordName: recordName)
                             setReserva(disponivel: true)
                         }
+                    }
+                    for index in indices {
+                        marcadas.remove(at: index)
                     }
                 }
 
