@@ -66,12 +66,21 @@ class EntrarNaContaViewController: UIViewController {
             guard let email = txtEmail.text else { return }
             guard let password = txtSenha.text else { return }
             guard let description = txtDescription.text else { return }
-
+            
             let user = AuthModel(name: name, description: description, email: email, password: password, image: urlString)
             controller.createAccount(user: user)
-            self.navigationController?.popToRootViewController(animated: false)
+            
+            let telaContaCriada = LoginPopViewController()
+            telaContaCriada.modalTransitionStyle  =  .crossDissolve
+            telaContaCriada.modalPresentationStyle = .overCurrentContext
+            self.present(telaContaCriada, animated: true, completion: nil)
+//            let _ = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(criarUsuario), userInfo: nil, repeats: true)
         }
+    }
+    
+    @objc func criarUsuario() {
         
+        self.navigationController?.popToRootViewController(animated: false)
     }
     
     func validarEmail(_ email: String) -> Bool {
@@ -144,8 +153,10 @@ class EntrarNaContaViewController: UIViewController {
     }
 
     @IBAction func btnLogin(_ sender: Any) {
+        
             let novaTela = CriarContaViewController(nibName: "CriarContaViewController", bundle: nil)
       //     novaTela.modalPresentationStyle = .fullScreen
+        
            self.present(novaTela, animated: true, completion: nil)
     }
     
@@ -170,8 +181,6 @@ class EntrarNaContaViewController: UIViewController {
         imageView.layer.shadowRadius = 1.0
         imageView.clipsToBounds = false
     }
-    
-    
 }
 
 extension EntrarNaContaViewController: CreateAccountControllerDelegate {

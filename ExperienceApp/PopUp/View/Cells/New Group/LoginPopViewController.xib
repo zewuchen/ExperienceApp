@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginPopViewController" customModule="ExperienceApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-50-nMX">
+                    <rect key="frame" x="32" y="372" width="350" height="152"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua experiência está sendo criada, aguarde um momento..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk4-81-BsK">
+                            <rect key="frame" x="31.5" y="56.5" width="287" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="287" id="84u-df-jJQ"/>
+                                <constraint firstAttribute="height" constant="39" id="wsw-B2-KaW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="fk4-81-BsK" firstAttribute="centerX" secondItem="KMZ-50-nMX" secondAttribute="centerX" id="mDs-sp-57O"/>
+                        <constraint firstItem="fk4-81-BsK" firstAttribute="centerY" secondItem="KMZ-50-nMX" secondAttribute="centerY" id="zPo-zn-MMg"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="KMZ-50-nMX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="UEm-0c-UrC"/>
+                <constraint firstItem="KMZ-50-nMX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fNe-48-4YA"/>
+                <constraint firstItem="KMZ-50-nMX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lbR-i1-CgI"/>
+                <constraint firstItem="KMZ-50-nMX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="328" id="sQP-uI-46y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="109"/>
+        </view>
+    </objects>
+</document>

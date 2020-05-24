@@ -51,6 +51,10 @@ class PerfilViewController: UIViewController {
         controller.setUpProfileData()
     }
     
+    @IBAction func sairBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func setUpImage() {
         perfilImage.image = UIImage(named: "Fire_Demon_Ramen")!
         perfilImage.layer.cornerRadius = 20
