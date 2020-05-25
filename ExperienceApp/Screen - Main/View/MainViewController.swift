@@ -16,10 +16,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var data: [MainModel] = []
-    private var dataDestaques: [DestaquesModel] = [DestaquesModel(nomeDestaque: "Ta na Disney?", descricaoDestaque: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!", imgDestaque: "disney"), DestaquesModel(nomeDestaque: "Ler até a madrugada", descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros")]
-    
+    private var dataDestaques: [DestaquesModel] = [DestaquesModel(nomeDestaque: "Ta na Disney?",
+                                                    descricaoDestaque: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!",
+                                                    imgDestaque: "disney"),
+                                                    DestaquesModel(nomeDestaque: "Ler até a madrugada",
+                                                    descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros")]
+
     private let controller = MainController()
-    
+
     let recomendacoesCell = "RecomendacoesTableViewCell"
     let destaquesCell = "DestaquesCollectionViewCell"
     
@@ -33,6 +37,9 @@ class MainViewController: UIViewController {
         setUpButtons(button: btnPerfil, nome: "userDefault")
         setUpCollection()
         controller.reload()
+        
+        self.tableView.showsVerticalScrollIndicator = false
+        self.collectionView.showsHorizontalScrollIndicator = false
 
         // Desabilitado o botão de procurar aqui
         btnBusca.removeFromSuperview()
@@ -41,7 +48,7 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         //TODO: Mudar foto de perfil default
-        setUpButtons(button: btnPerfil, nome: "cacto")
+        setUpButtons(button: btnPerfil, nome: "userDefault")
     }
     
     func setUpTable() {
