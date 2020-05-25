@@ -16,6 +16,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var infoDestaque: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bottomTableView: NSLayoutConstraint!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     // MARK: Variáveis
@@ -34,6 +35,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
         setUpTable()
         setNavigation()
         controller.delegate = self
+        scrollView.delegate = self
         controller.reload()
     }
     
@@ -42,7 +44,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
         imgDestaque.image = UIImage(named: data?.imgDestaque ?? "cacto")
         infoDestaque.text = data?.descricaoDestaque
     }
-    
+
     func setNavigation() {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -85,5 +87,12 @@ extension DestaquesViewController: DestaquesControllerDelegate {
             self.dataExpDestaques = dataExpDestaques
             self.tableView.reloadData()
         }
+    }
+}
+
+extension DestaquesViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //Disable bounce only at the top of the screen
+        scrollView.bounces = scrollView.contentOffset.y > 100
     }
 }
