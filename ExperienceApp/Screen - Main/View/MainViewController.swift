@@ -56,12 +56,14 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: recomendacoesCell, bundle: nil), forCellReuseIdentifier: recomendacoesCell)
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .background
     }
     
     func setUpCollection() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: destaquesCell, bundle: nil), forCellWithReuseIdentifier: destaquesCell)
+        collectionView.backgroundColor = .background
     }
     
     func setNavigation() {
