@@ -118,13 +118,13 @@ extension PerfilViewController: UITableViewDataSource {
         return headerView
     }
 
-           func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-               let cell = tableView.dequeueReusableCell(withIdentifier: "experiencePerfilCard", for: indexPath) as? PerfilExperienciaTableViewCell
-            cell?.setUp(model: data[indexPath.section])
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "experiencePerfilCard", for: indexPath) as? PerfilExperienciaTableViewCell
+        cell?.setUp(model: data[indexPath.section])
 
-               return cell ?? UITableViewCell()
-           }
+        return cell ?? UITableViewCell()
     }
+}
 
 extension PerfilViewController: UITableViewDelegate {
     

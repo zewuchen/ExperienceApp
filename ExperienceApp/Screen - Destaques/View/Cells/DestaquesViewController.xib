@@ -66,7 +66,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-eb-R1g">
-                                    <rect key="frame" x="24" y="579" width="366" height="421"/>
+                                    <rect key="frame" x="24" y="579" width="366" height="411"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="sectionIndexBackgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,7 +86,7 @@
                                 <constraint firstItem="Ow7-K9-jpK" firstAttribute="top" secondItem="2V8-Yq-IhT" secondAttribute="top" constant="30" id="Wac-LK-HM6"/>
                                 <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="16" id="ZbF-Xd-wSF"/>
                                 <constraint firstAttribute="trailing" secondItem="7tr-v6-v8C" secondAttribute="trailing" id="gaa-29-EbQ"/>
-                                <constraint firstAttribute="bottom" secondItem="tyN-eb-R1g" secondAttribute="bottom" id="iNt-pQ-vRM"/>
+                                <constraint firstAttribute="bottom" secondItem="tyN-eb-R1g" secondAttribute="bottom" constant="10" id="iNt-pQ-vRM"/>
                                 <constraint firstItem="7tr-v6-v8C" firstAttribute="leading" secondItem="2V8-Yq-IhT" secondAttribute="leading" id="lLb-b1-Mgg"/>
                                 <constraint firstItem="T2E-qW-nCN" firstAttribute="leading" secondItem="2V8-Yq-IhT" secondAttribute="leading" constant="24" id="q9B-6L-KVa"/>
                                 <constraint firstItem="7tr-v6-v8C" firstAttribute="top" secondItem="2V8-Yq-IhT" secondAttribute="top" id="yft-Hh-SjK"/>
