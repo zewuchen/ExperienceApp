@@ -35,7 +35,8 @@ final class DestaquesController {
                     guard (record?["description"]) != nil else { return }
                     
                     //Obs.: Aumentar núm. de caracteres
-                    self.data.append(DestaquesModel(nomeDestaque: "Ta na Disney?", descricaoDestaque: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!", imgDestaque: "disney"))
+                    self.data.append(DestaquesModel(nomeDestaque: "Ta na Disney?", descricaoDestaque: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!",
+                                                imgDestaque: "disney"))
                                      
                                     
                     self.data.append(DestaquesModel(nomeDestaque: "Ler até a madrugada", descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros"))
