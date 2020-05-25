@@ -20,7 +20,11 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     // MARK: Variáveis
     let destaquesCell = "DestaquesTableViewCell"
+//    var numberOfRows: Int = 2
+    
     public var data: DestaquesModel?
+    private var dataExpDestaques: [ExperienciaDestaquesModel] = []
+    
     private let controller = DestaquesController()
     var tururu = ["oi", "tudo", "bem"]
        
@@ -30,7 +34,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
         setUpTable()
         setNavigation()
         controller.delegate = self
-      
+        controller.reload()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +45,6 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     
     func setNavigation() {
         navigationController?.setNavigationBarHidden(true, animated: false)
-
     }
     
     func setUpTable() {
@@ -52,43 +55,22 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     }
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             //  data.count
-            return 3
-        
+            
+            return dataExpDestaques.count
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let celulaTable = self.tableView.dequeueReusableCell(withIdentifier: destaquesCell, for: indexPath) as? DestaquesTableViewCell
-          //      celulaTable?.setUp(model: data[indexPath.row])
-            //tableView.frame.size = //tableView.contentSize + valor
-          
-           //    self.tableViewHeight?.constant = self.tableView.contentSize.height
-                        return celulaTable ?? UITableViewCell()
+            
+            celulaTable?.setUp(model: dataExpDestaques[indexPath.row])
+ 
+            return celulaTable ?? UITableViewCell()
         }
     
     @IBAction func sairBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 }
-//func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//
-//    if scrollView == self.tableView {
-//
-//        let currentOffset: Float = Float(scrollView.contentOffset.y)
-//
-//        if currentOffset < 25 {
-//            //refresh content
-//        }
-//
-//        let offsetY       = tableView.contentOffset.y
-//        let contentHeight = tableView.contentSize.height
-//
-//        if offsetY > contentHeight - scrollView.frame.size.height + 25 {
-//            // load more
-//        }
-//
-//    }
-
-//}
 
 extension DestaquesViewController: DestaquesControllerDelegate {
     func reloadData(data: [DestaquesModel]) {
@@ -96,5 +78,12 @@ extension DestaquesViewController: DestaquesControllerDelegate {
 //        DispatchQueue.main.async {
 //            self.tableView.reloadData()
 //        }
+    }
+    
+    func reloadExp(dataExpDestaques: [ExperienciaDestaquesModel]) {
+        DispatchQueue.main.async {
+            self.dataExpDestaques = dataExpDestaques
+            self.tableView.reloadData()
+        }
     }
 }
