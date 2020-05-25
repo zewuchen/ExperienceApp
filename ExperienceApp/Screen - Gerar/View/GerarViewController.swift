@@ -141,8 +141,7 @@ class GerarViewController: UIViewController {
             txtTema.layer.borderWidth = 0.25
             arrayReturn.append(true)
         }
-        
-        
+
         // Validando Texto Descrição
         if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 240 {
             txtDescription.layer.borderColor = corBordaErrada
@@ -197,6 +196,28 @@ class GerarViewController: UIViewController {
             arrayReturn.append(true)
         }
 
+        // Validando Imagem
+        if self.urlString == "" {
+            self.imgFoto.layer.borderColor = corBordaErrada
+            self.imgFoto.layer.borderWidth = 2.0
+            arrayReturn.append(false)
+        } else {
+            self.imgFoto.layer.borderColor = corBordaCerta
+            self.imgFoto.layer.borderWidth = 0.25
+            arrayReturn.append(true)
+        }
+
+        // Validando a data com um intervalo de 5 minutos a frente
+        if self.data.addingTimeInterval(TimeInterval(5.0 * 60.0)) <= Date() {
+            self.txtData.layer.borderColor = corBordaErrada
+            self.txtData.layer.borderWidth = 2.0
+            arrayReturn.append(false)
+        } else {
+            self.txtData.layer.borderColor = corBordaCerta
+            self.txtData.layer.borderWidth = 0.25
+            arrayReturn.append(true)
+        }
+
         if arrayReturn.contains(false) {
             return false
         } else {
@@ -227,7 +248,7 @@ class GerarViewController: UIViewController {
 
 extension GerarViewController: GerarControllerDelegate {
     func setImageProfile() {
-        Camera().selecionadorImagem(self){ imagem in
+        Camera().selecionadorImagem(self) { imagem in
             self.imgFoto.image = imagem
 
             if self.urlString != "" {
