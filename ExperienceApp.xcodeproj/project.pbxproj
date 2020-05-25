@@ -138,7 +138,7 @@
 		CBED9A5D2473301A00739BFD /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		CBED9A5F2473355D00739BFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBED9A602473355D00739BFD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		CBFECD3E246DB56E005B621F /* ExperienceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperienceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFECD3E246DB56E005B621F /* Experia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFECD41246DB56E005B621F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBFECD43246DB56E005B621F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CBFECD45246DB56E005B621F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -558,7 +558,7 @@
 		CBFECD3F246DB56E005B621F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBFECD3E246DB56E005B621F /* ExperienceApp.app */,
+				CBFECD3E246DB56E005B621F /* Experia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -624,7 +624,7 @@
 			);
 			name = ExperienceApp;
 			productName = ExperienceApp;
-			productReference = CBFECD3E246DB56E005B621F /* ExperienceApp.app */;
+			productReference = CBFECD3E246DB56E005B621F /* Experia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -907,6 +907,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ExperienceApp/ExperienceApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 679BRJ4243;
 				INFOPLIST_FILE = ExperienceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -914,7 +915,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nathalia.ExperienceApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Experia;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -926,6 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ExperienceApp/ExperienceApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 679BRJ4243;
 				INFOPLIST_FILE = ExperienceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -933,7 +935,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nathalia.ExperienceApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Experia;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
