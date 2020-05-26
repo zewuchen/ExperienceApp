@@ -8,12 +8,11 @@
 
 import UIKit
 
-class GerarViewController: UIViewController {
-
-    // TODO: Adicionar fotos
+class GerarViewController: UIViewController, UITextViewDelegate {
+    
     // TODO: Adicionar disponibilidade
     @IBOutlet weak var txtTema: UITextField!
-    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var txtTamanho: UITextField!
     @IBOutlet weak var txtRecursos: UITextField!
     @IBOutlet weak var txtParticipar: UITextField!
@@ -40,6 +39,7 @@ class GerarViewController: UIViewController {
         let selectorImage = UITapGestureRecognizer(target: self, action: #selector(addImage))
         self.imgFoto.isUserInteractionEnabled = true
         self.imgFoto.addGestureRecognizer(selectorImage)
+        setUpDescription()
         
         NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -125,6 +125,41 @@ class GerarViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.9921568627, blue: 0.9921568627, alpha: 1)
     }
+    func setUpDescription() {
+        txtDescription.layer.cornerRadius = 6
+        txtDescription.allowsEditingTextAttributes = false
+        txtDescription.text = "Conte como a experiência será incrível"
+        txtDescription.textColor = UIColor.lightGray
+        txtDescription.font = UIFont(name: "avenir", size: 16.0)
+        txtDescription.returnKeyType = .done
+        txtDescription.delegate = self
+        txtDescription.backgroundColor = UIColor.white
+        //Borda
+        txtDescription.layer.borderColor = UIColor.lightGray.cgColor
+        txtDescription.layer.borderWidth = 0.5
+        }
+        // MARK: UITextViewDelegates
+           func textViewDidBeginEditing(_ textView: UITextView) {
+               if textView.text == "Conte como a experiência será incrível" {
+                  textView.text = ""
+                  textView.textColor = UIColor.black
+                  textView.font = UIFont(name: "avenir", size: 16.0)
+               }
+           }
+           func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+               if text == "\n" {
+                   textView.resignFirstResponder()
+               }
+               return true
+           }
+           
+           func textViewDidEndEditing(_ textView: UITextView) {
+               if textView.text == "" {
+                   textView.text = "Conte como a experiência será incrível"
+                   textView.textColor = UIColor.lightGray
+                   textView.font = UIFont(name: "avenir", size: 16.0)
+               }
+           }
     
     func validate() -> Bool {
         // TODO: Validar os campos de dados aqui
@@ -141,18 +176,20 @@ class GerarViewController: UIViewController {
             txtTema.layer.borderWidth = 0.25
             arrayReturn.append(true)
         }
-
+      
         // Validando Texto Descrição
         if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 240 {
             txtDescription.layer.borderColor = corBordaErrada
             txtDescription.layer.borderWidth = 2.0
             txtDescription.layer.cornerRadius = 6
             arrayReturn.append(false)
+            print("Prencha a descrição")
         } else {
             txtDescription.layer.borderColor = corBordaCerta
 //            print(txtDescription.text?.count ?? "juu")
             txtDescription.layer.borderWidth = 0.25
             arrayReturn.append(true)
+             print("Descrição feita")
         }
         
         // Validando Texto Tamanhos

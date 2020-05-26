@@ -2,12 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CriarContaViewController" customModule="ExperienceApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CriarContaViewController" customModule="Experia" customModuleProvider="target">
             <connections>
                 <outlet property="txtEmail" destination="mJk-rY-mjQ" id="dx4-Cf-y2b"/>
                 <outlet property="txtSenha" destination="2hC-UN-KNd" id="8fO-p8-6Vc"/>
@@ -23,8 +23,7 @@
                     <rect key="frame" x="24" y="393" width="366" height="34"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -37,12 +36,12 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="ElH-BB-dmK"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
                     <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="highlightedColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-y7-bEF">
-                    <rect key="frame" x="25" y="720" width="365" height="60"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-y7-bEF">
+                    <rect key="frame" x="42" y="740" width="330" height="60"/>
                     <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="T5Z-gd-ayY"/>
@@ -64,8 +63,7 @@
                     <rect key="frame" x="24" y="306" width="366" height="34"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -86,10 +84,10 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="xcS-vQ-I2x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="0M4-wy-oWz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bNt-y7-bEF" secondAttribute="bottom" constant="82" id="AaX-mz-GbB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bNt-y7-bEF" secondAttribute="bottom" constant="62" id="AaX-mz-GbB"/>
                 <constraint firstItem="fYH-hd-jTz" firstAttribute="top" secondItem="mJk-rY-mjQ" secondAttribute="bottom" constant="16" id="CAY-6v-260"/>
                 <constraint firstItem="mJk-rY-mjQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="DlN-rz-k3n"/>
                 <constraint firstItem="fYH-hd-jTz" firstAttribute="top" secondItem="Kta-Yz-HAH" secondAttribute="bottom" constant="54" id="Fkf-Eo-QIL"/>
@@ -100,10 +98,10 @@
                 <constraint firstItem="fYH-hd-jTz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="WLn-02-EYb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xcS-vQ-I2x" secondAttribute="trailing" constant="24" id="dXc-6U-Gao"/>
                 <constraint firstItem="2hC-UN-KNd" firstAttribute="top" secondItem="fYH-hd-jTz" secondAttribute="bottom" constant="4" id="fE8-6x-hXP"/>
-                <constraint firstItem="bNt-y7-bEF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="l5e-Jj-l0n"/>
+                <constraint firstItem="bNt-y7-bEF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="l5e-Jj-l0n"/>
                 <constraint firstItem="Kta-Yz-HAH" firstAttribute="top" secondItem="xcS-vQ-I2x" secondAttribute="bottom" constant="69" id="peb-Ju-KdM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mJk-rY-mjQ" secondAttribute="trailing" constant="24" id="ptN-21-Svq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bNt-y7-bEF" secondAttribute="trailing" constant="24" id="yri-cb-C9p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bNt-y7-bEF" secondAttribute="trailing" constant="42" id="yri-cb-C9p"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
