@@ -21,12 +21,17 @@ class DestaquesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     func setUp(model: ExperienciaDestaquesModel) {
         self.titleCard?.text = model.tituloExp
         self.subtitleCard.text = model.descricaoExp
         self.imgCard.image = model.imagemExp
+    }
+    
+    func setUpCriarDestaques(model: DestaquesModel) {
+        self.titleCard.text = model.nomeDestaque
+        self.imgCard.image = UIImage(named: model.imgDestaque)
+        self.subtitleCard.text = model.descricaoDestaque
     }
 }

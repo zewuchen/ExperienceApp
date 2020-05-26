@@ -34,6 +34,7 @@
 		0F2B3A0B247AEF250071BD65 /* LoginPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B3A09247AEF250071BD65 /* LoginPopViewController.xib */; };
 		0F2B3A0E247AF0070071BD65 /* LoginCriarPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B3A0C247AF0070071BD65 /* LoginCriarPopViewController.swift */; };
 		0F2B3A0F247AF0070071BD65 /* LoginCriarPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B3A0D247AF0070071BD65 /* LoginCriarPopViewController.xib */; };
+		0F35B05D247DA610006E5C06 /* TelaAdmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35B05C247DA610006E5C06 /* TelaAdmModel.swift */; };
 		0F848F3A247C5D90000AB70E /* TelaAdmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F848F38247C5D90000AB70E /* TelaAdmViewController.swift */; };
 		0F848F3B247C5D90000AB70E /* TelaAdmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F848F39247C5D90000AB70E /* TelaAdmViewController.xib */; };
 		0F848F3F247C5DD8000AB70E /* TelaAdmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F848F3E247C5DD8000AB70E /* TelaAdmController.swift */; };
@@ -107,6 +108,7 @@
 		0F2B3A09247AEF250071BD65 /* LoginPopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPopViewController.xib; sourceTree = "<group>"; };
 		0F2B3A0C247AF0070071BD65 /* LoginCriarPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCriarPopViewController.swift; sourceTree = "<group>"; };
 		0F2B3A0D247AF0070071BD65 /* LoginCriarPopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCriarPopViewController.xib; sourceTree = "<group>"; };
+		0F35B05C247DA610006E5C06 /* TelaAdmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaAdmModel.swift; sourceTree = "<group>"; };
 		0F848F38247C5D90000AB70E /* TelaAdmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaAdmViewController.swift; sourceTree = "<group>"; };
 		0F848F39247C5D90000AB70E /* TelaAdmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelaAdmViewController.xib; sourceTree = "<group>"; };
 		0F848F3E247C5DD8000AB70E /* TelaAdmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaAdmController.swift; sourceTree = "<group>"; };
@@ -375,9 +377,18 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		0F35B05B247DA5F5006E5C06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F35B05C247DA610006E5C06 /* TelaAdmModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0F848F35247C5CAB000AB70E /* Screen - Adm */ = {
 			isa = PBXGroup;
 			children = (
+				0F35B05B247DA5F5006E5C06 /* Model */,
 				0F848F3D247C5DC9000AB70E /* Controller */,
 				0F848F3C247C5DBD000AB70E /* View */,
 			);
@@ -753,6 +764,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F35B05D247DA610006E5C06 /* TelaAdmModel.swift in Sources */,
 				0F17C7CD246F379700A2D212 /* DestaquesViewController.swift in Sources */,
 				CB5C5AD824745CAA00E91446 /* PerfilExperienciaTableViewCell.swift in Sources */,
 				9524877F2476FC5200C0A7F9 /* DeletarExpPopUp.swift in Sources */,

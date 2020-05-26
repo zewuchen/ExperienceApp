@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import UIKit
+import CloudKit
+
+protocol TelaAdmControllerDelegate: AnyObject {
+    func reloadData(data: [DestaquesModel])
+}
+
+final class TelaAdmController {
+    private var data: [DestaquesModel] = []
+    weak public var delegate: TelaAdmControllerDelegate?
+    
+    public init() {
+        //self.append
+    }
+}
