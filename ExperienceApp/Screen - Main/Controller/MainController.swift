@@ -45,6 +45,11 @@ final class MainController {
                 guard let dataExperiencia = data as? Date else { return }
                 let formatarData = DateFormatter()
                 formatarData.dateFormat = "dd/MM/yyyy"
+                let participantes = record?["participants"] as? [CKRecord.Reference]
+                var available: Bool = true
+                if let numParticipantes = participantes?.count, numParticipantes >= Int(tamanho.description) ?? 0 {
+                    available = false
+                }
 
                 if let image = record?["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
@@ -52,7 +57,8 @@ final class MainController {
                         if let dado = NSData(contentsOf: file.fileURL!) {
 //                            guard let tempImage = UIImage(data: dado as Data) else { return }
                             self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: description.description, recordName: record?.recordID.recordName ?? ""
-                                , image: dado as Data, recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description), responsible: pessoa.recordID.recordName, data: formatarData.string(from: dataExperiencia)))
+                                , image: dado as Data, recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description),
+                                  responsible: pessoa.recordID.recordName, data: formatarData.string(from: dataExperiencia), available: available))
                         }
                     }
                 } else {

@@ -21,8 +21,9 @@ struct MainModel {
     var tamanho: Int?
     var responsible: String?
     var data: String?
+    var available: Bool
     
-    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String, recordName: String, image: Data, recursos: String?, comoParticipar: String?, tamanho: Int?, responsible: String, data: String) {
+    public init(nomeDestaque: String, nomeExp: String, descricaoExp: String, notaExp: Double, precoExp: String, recordName: String, image: Data, recursos: String?, comoParticipar: String?, tamanho: Int?, responsible: String, data: String, available: Bool = true) {
         self.nomeDestaque = nomeDestaque
         self.nomeExp = nomeExp
         self.descricaoExp = descricaoExp
@@ -35,5 +36,6 @@ struct MainModel {
         self.tamanho = tamanho
         self.responsible = responsible
         self.data = data
+        self.available = available
     }
 }
