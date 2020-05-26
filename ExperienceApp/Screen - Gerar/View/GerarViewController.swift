@@ -9,8 +9,7 @@
 import UIKit
 
 class GerarViewController: UIViewController, UITextViewDelegate {
-
-    // TODO: Adicionar fotos
+    
     // TODO: Adicionar disponibilidade
     @IBOutlet weak var txtTema: UITextField!
     @IBOutlet weak var txtDescription: UITextView!
@@ -126,6 +125,41 @@ class GerarViewController: UIViewController, UITextViewDelegate {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.9921568627, blue: 0.9921568627, alpha: 1)
     }
+    func setUpDescription() {
+        txtDescription.layer.cornerRadius = 6
+        txtDescription.allowsEditingTextAttributes = false
+        txtDescription.text = "Conte como a experiência será incrível"
+        txtDescription.textColor = UIColor.lightGray
+        txtDescription.font = UIFont(name: "avenir", size: 16.0)
+        txtDescription.returnKeyType = .done
+        txtDescription.delegate = self
+        txtDescription.backgroundColor = UIColor.white
+        //Borda
+        txtDescription.layer.borderColor = UIColor.lightGray.cgColor
+        txtDescription.layer.borderWidth = 0.5
+        }
+        // MARK: UITextViewDelegates
+           func textViewDidBeginEditing(_ textView: UITextView) {
+               if textView.text == "Conte como a experiência será incrível" {
+                  textView.text = ""
+                  textView.textColor = UIColor.black
+                  textView.font = UIFont(name: "avenir", size: 16.0)
+               }
+           }
+           func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+               if text == "\n" {
+                   textView.resignFirstResponder()
+               }
+               return true
+           }
+           
+           func textViewDidEndEditing(_ textView: UITextView) {
+               if textView.text == "" {
+                   textView.text = "Conte como a experiência será incrível"
+                   textView.textColor = UIColor.lightGray
+                   textView.font = UIFont(name: "avenir", size: 16.0)
+               }
+           }
     
     func validate() -> Bool {
         // TODO: Validar os campos de dados aqui
@@ -149,11 +183,13 @@ class GerarViewController: UIViewController, UITextViewDelegate {
             txtDescription.layer.borderWidth = 2.0
             txtDescription.layer.cornerRadius = 6
             arrayReturn.append(false)
+            print("Prencha a descrição")
         } else {
             txtDescription.layer.borderColor = corBordaCerta
 //            print(txtDescription.text?.count ?? "juu")
             txtDescription.layer.borderWidth = 0.25
             arrayReturn.append(true)
+             print("Descrição feita")
         }
         
         // Validando Texto Tamanhos
@@ -223,43 +259,6 @@ class GerarViewController: UIViewController, UITextViewDelegate {
             return true
         }
     }
-    func setUpDescription() {
-        txtDescription.layer.cornerRadius = 6
-        txtDescription.allowsEditingTextAttributes = false
-        txtDescription.text = "Conte como a experiência será incrível"
-        txtDescription.textColor = UIColor.lightGray
-        txtDescription.font = UIFont(name: "avenir", size: 16.0)
-        txtDescription.returnKeyType = .done
-        txtDescription.delegate = self
-        txtDescription.backgroundColor = UIColor.white
-        //Borda
-        txtDescription.layer.borderColor = UIColor.lightGray.cgColor
-        txtDescription.layer.borderWidth = 0.5
-        }
-        // MARK: UITextViewDelegates
-           func textViewDidBeginEditing(_ textView: UITextView) {
-               if textView.text == "Conte como a experiência será incrível" {
-                  textView.text = ""
-                  textView.textColor = UIColor.black
-                  textView.font = UIFont(name: "avenir", size: 16.0)
-               }
-           }
-           
-           func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-               if text == "\n" {
-                   textView.resignFirstResponder()
-               }
-               return true
-           }
-           
-           func textViewDidEndEditing(_ textView: UITextView) {
-               if textView.text == "" {
-                   textView.text = "Conte como a experiência será incrível"
-                   textView.textColor = UIColor.lightGray
-                   textView.font = UIFont(name: "avenir", size: 16.0)
-               }
-           }
-
 }
 
 extension GerarViewController: GerarControllerDelegate {
