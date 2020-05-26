@@ -21,7 +21,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmi-W6-Nhq">
-                    <rect key="frame" x="25" y="682" width="365" height="60"/>
+                    <rect key="frame" x="42" y="682" width="330" height="60"/>
                     <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="8sQ-GB-PkU"/>
@@ -40,7 +40,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="loginView" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpV-y7-5il">
-                    <rect key="frame" x="25" y="762" width="365" height="60"/>
+                    <rect key="frame" x="42" y="760" width="330" height="60"/>
                     <rect key="contentStretch" x="0.14999999999999999" y="0.0" width="1" height="1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="syx-2H-5CL"/>
@@ -82,14 +82,14 @@
             <constraints>
                 <constraint firstItem="Bgl-8A-BAD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3md-6w-P2M"/>
                 <constraint firstAttribute="bottom" secondItem="Bgl-8A-BAD" secondAttribute="bottom" id="H6E-vw-8tB"/>
-                <constraint firstItem="Xmi-W6-Nhq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="PID-wF-Ew5"/>
+                <constraint firstItem="Xmi-W6-Nhq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="PID-wF-Ew5"/>
                 <constraint firstItem="Bgl-8A-BAD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qoy-Hg-pwf"/>
-                <constraint firstItem="xpV-y7-5il" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Qu6-gO-OYC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xpV-y7-5il" secondAttribute="trailing" constant="24" id="Zsp-GX-6Yx"/>
+                <constraint firstItem="xpV-y7-5il" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="Qu6-gO-OYC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xpV-y7-5il" secondAttribute="trailing" constant="42" id="Zsp-GX-6Yx"/>
                 <constraint firstItem="WPL-Sj-9oA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="a0Y-vH-IcY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xmi-W6-Nhq" secondAttribute="trailing" constant="24" id="eY5-bQ-SBx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpV-y7-5il" secondAttribute="bottom" constant="40" id="lCf-eY-R1t"/>
-                <constraint firstItem="xpV-y7-5il" firstAttribute="top" secondItem="Xmi-W6-Nhq" secondAttribute="bottom" constant="20" id="mLn-bh-Uj7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xmi-W6-Nhq" secondAttribute="trailing" constant="42" id="eY5-bQ-SBx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpV-y7-5il" secondAttribute="bottom" constant="42" id="lCf-eY-R1t"/>
+                <constraint firstItem="xpV-y7-5il" firstAttribute="top" secondItem="Xmi-W6-Nhq" secondAttribute="bottom" constant="18" id="mLn-bh-Uj7"/>
                 <constraint firstItem="Bgl-8A-BAD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mS2-P9-EIh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WPL-Sj-9oA" secondAttribute="trailing" constant="20" id="s5z-g5-0rV"/>
             </constraints>

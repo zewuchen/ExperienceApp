@@ -127,7 +127,6 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
             arrayReturn.append(true)
         }
         
-        
         // Validar biografia/description
         if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 240 {
             txtDescription.layer.borderColor = corBordaErrada
@@ -174,7 +173,7 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
     }
     
     func setUpBiography() {
-        txtDescription.layer.cornerRadius = 20
+        txtDescription.layer.cornerRadius = 6
         txtDescription.allowsEditingTextAttributes = false
     }
     
@@ -198,9 +197,9 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
        
        func textViewDidEndEditing(_ textView: UITextView) {
            if textView.text == "" {
-               textView.text = "Placeholder for UITextView"
+               textView.text = "Fale um pouco sobre você"
                textView.textColor = UIColor.lightGray
-               textView.font = UIFont(name: "verdana", size: 13.0)
+               textView.font = UIFont(name: "avenir", size: 16.0)
            }
        }
 
