@@ -8,12 +8,12 @@
 
 import UIKit
 
-class EntrarNaContaViewController: UIViewController {
+class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var txtNome: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
-    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
 
@@ -25,6 +25,7 @@ class EntrarNaContaViewController: UIViewController {
         setUpPlaceholder()
         setImage()
         controller.delegate = self
+        setUpBiography()
         
         NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -160,8 +161,53 @@ class EntrarNaContaViewController: UIViewController {
         txtNome.attributedPlaceholder = NSAttributedString(string: "Insira seu nome completo", attributes: [NSAttributedString.Key.foregroundColor: color])
         txtEmail.attributedPlaceholder = NSAttributedString(string: "Insira seu e-mail", attributes: [NSAttributedString.Key.foregroundColor: color])
         txtSenha.attributedPlaceholder = NSAttributedString(string: "Insira sua senha", attributes: [NSAttributedString.Key.foregroundColor: color])
-        txtDescription.attributedPlaceholder = NSAttributedString(string: "Fale um pouco sobre você", attributes: [NSAttributedString.Key.foregroundColor: color])
+        //        txtDescription.attributedPlaceholder = NSAttributedString(string: "Fale um pouco sobre você", attributes: [NSAttributedString.Key.foregroundColor: color])
+        
+        txtDescription.text = "Fale um pouco sobre você"
+        txtDescription.textColor = UIColor.lightGray
+        txtDescription.font = UIFont(name: "avenir", size: 13.0)
+        txtDescription.returnKeyType = .done
+        txtDescription.delegate = self
+        txtDescription.backgroundColor = UIColor.white
+       self.txtDescription.layer.borderColor = UIColor.black.cgColor
+  
     }
+    
+    func setUpBiography() {
+        txtDescription.layer.cornerRadius = 20
+        txtDescription.allowsEditingTextAttributes = false
+    }
+    
+    // MARK: UITextViewDelegates
+   
+       func textViewDidBeginEditing(_ textView: UITextView) {
+           if textView.text == "Fale um pouco sobre você" {
+               textView.text = ""
+//            textView.textColor = UIColor(red: 183, green: 77, blue: 77, alpha: 1)
+            textView.textColor = UIColor.black
+               textView.font = UIFont(name: "avenir", size: 16.0)
+           }
+       }
+       
+       func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+           if text == "\n" {
+               textView.resignFirstResponder()
+           }
+           return true
+       }
+       
+       func textViewDidEndEditing(_ textView: UITextView) {
+           if textView.text == "" {
+               textView.text = "Placeholder for UITextView"
+               textView.textColor = UIColor.lightGray
+               textView.font = UIFont(name: "verdana", size: 13.0)
+           }
+       }
+
+       override func didReceiveMemoryWarning() {
+           super.didReceiveMemoryWarning()
+           // Dispose of any resources that can be recreated.
+       }
     
     @IBAction func sairBtn(_ sender: Any) {
 //        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)

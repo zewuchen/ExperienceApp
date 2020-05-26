@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PerfilViewController" customModule="ExperienceApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PerfilViewController" customModule="Experia" customModuleProvider="target">
             <connections>
                 <outlet property="biographyText" destination="AZv-Db-OIC" id="Rwg-tM-sjx"/>
                 <outlet property="biographyTitle" destination="tRB-7d-TOU" id="Xem-it-lBk"/>
@@ -93,7 +93,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="tRB-7d-TOU" firstAttribute="top" secondItem="0Yg-AL-iqy" secondAttribute="bottom" constant="20" id="20h-Ol-Nv7"/>
                                 <constraint firstItem="9Ux-1o-ned" firstAttribute="centerX" secondItem="hfe-CJ-eyT" secondAttribute="centerX" id="E77-HB-qH5"/>
