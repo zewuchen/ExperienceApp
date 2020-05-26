@@ -9,6 +9,15 @@
 import UIKit
 
 class TelaAdmViewController: UIViewController, TelaAdmControllerDelegate {
+    
+    func setImageProfile() {
+        //hello
+    }
+    
+    
+    func reloadData(data: [DestaquesModel]) {
+        //hello
+    }
 
     //Outlets
     @IBOutlet weak var txtFieldTemaDestaque: UITextField!
