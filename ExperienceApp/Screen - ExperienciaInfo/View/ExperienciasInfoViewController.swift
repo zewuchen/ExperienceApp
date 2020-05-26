@@ -114,6 +114,8 @@ class ExperienciasInfoViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         setUserHasExperience()
+
+
     }
     
     func setupHeaderDescription() {
@@ -249,6 +251,12 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
             self.descriptionHowPartLabel.text = data.howParticipate
             self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
             self.timeLabel.text = data.data
+
+            // Desabilita o botão caso tenha todas as vagas preenchidas
+            if !data.available {
+                self.experienceButton.isEnabled = false
+                self.experienceButton.isHidden = true
+            }
         }
 //        self.tagLabel1.text = data.tags[0]
         if let responsible = responsible {
