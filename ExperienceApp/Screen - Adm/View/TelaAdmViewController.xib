@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelaAdmViewController" customModule="Experia" customModuleProvider="target">
             <connections>
                 <outlet property="btnEnviar" destination="C0f-va-kWw" id="aiI-rw-bQ6"/>
+                <outlet property="imgAdd" destination="z6X-cn-Ucz" id="i9K-Go-As3"/>
                 <outlet property="tableViewExpEscolhidas" destination="Fas-Ws-PFc" id="vww-Nb-jkP"/>
                 <outlet property="txtFieldDescricaoDestaque" destination="MfU-gF-mc4" id="qQP-GS-bGn"/>
                 <outlet property="txtFieldTemaDestaque" destination="d6f-3R-3bK" id="1qF-yg-KNE"/>

@@ -8,28 +8,41 @@
 
 import UIKit
 
-class TelaAdmViewController: UIViewController {
+class TelaAdmViewController: UIViewController, TelaAdmControllerDelegate {
 
     //Outlets
     @IBOutlet weak var txtFieldTemaDestaque: UITextField!
     @IBOutlet weak var txtFieldDescricaoDestaque: UITextField!
     @IBOutlet weak var tableViewExpEscolhidas: UITableView!
     @IBOutlet weak var btnEnviar: UIButton!
+    @IBOutlet weak var imgAdd: UIImageView!
     
     public var data: [DestaquesModel] = []
+    private let controller = TelaAdmController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnEnviar.layer.cornerRadius = 10
+        controller.delegate = self
         setNavigation()
         setKeyboard()
+    }
+    
+    func setAddImage() {
+        let selectorImg = UITapGestureRecognizer(target: self, action: #selector(addImg))
+        
+        self.imgAdd.isUserInteractionEnabled = true
+        self.imgAdd.addGestureRecognizer(selectorImg)
+    }
+    
+    @objc func addImg() {
+        controller.setImage()
     }
     
     @IBAction func btnCriarDestaque() {
         if validar() {
             guard let tema = txtFieldTemaDestaque.text else { return }
             guard let descricao = txtFieldDescricaoDestaque.text else { return }
-            
         }
     }
     
@@ -81,6 +94,4 @@ extension TelaAdmViewController: UITableViewDataSource {
         celula?.setUpCriarDestaques(model: data[indexPath.row])
         return celula ?? UITableViewCell()
     }
-    
-    
 }

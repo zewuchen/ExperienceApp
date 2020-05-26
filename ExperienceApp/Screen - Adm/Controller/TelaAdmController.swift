@@ -12,6 +12,7 @@ import CloudKit
 
 protocol TelaAdmControllerDelegate: AnyObject {
     func reloadData(data: [DestaquesModel])
+    func setImageProfile()
 }
 
 final class TelaAdmController {
@@ -20,5 +21,9 @@ final class TelaAdmController {
     
     public init() {
         //self.append
+    }
+    
+    public func setImage() {
+        delegate?.setImageProfile()
     }
 }
