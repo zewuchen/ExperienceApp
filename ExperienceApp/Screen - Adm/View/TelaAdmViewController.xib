@@ -22,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gT8-4v-dmQ">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT8-4v-dmQ">
+                    <rect key="frame" x="0.0" y="34" width="414" height="828"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzd-fU-Z58">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
@@ -62,6 +62,9 @@
                                         <constraint firstAttribute="width" constant="40" id="fBk-FX-ElI"/>
                                     </constraints>
                                     <state key="normal" image="botaoSair"/>
+                                    <connections>
+                                        <action selector="sairBtn:" destination="-1" eventType="touchUpInside" id="bfV-MZ-a26"/>
+                                    </connections>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-3R-3bK">
                                     <rect key="frame" x="24" y="213" width="366" height="34"/>
@@ -178,6 +181,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gT8-4v-dmQ" secondAttribute="trailing" id="9Gq-Ed-Gdt"/>
                 <constraint firstItem="gT8-4v-dmQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9qo-f8-rA8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gT8-4v-dmQ" secondAttribute="bottom" id="J0x-rG-1RG"/>
+                <constraint firstItem="gT8-4v-dmQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oIG-o4-EwZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>

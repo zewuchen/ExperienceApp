@@ -26,4 +26,15 @@ final class TelaAdmController {
     public func setImage() {
         delegate?.setImageProfile()
     }
+    
+    func salvarFoto(imagem:UIImage) -> String {
+        let fileName = UUID().uuidString
+        FileHelper.saveImage(image: imagem, nameWithoutExtension: fileName)
+        return fileName
+    }
+    
+    func deleteFoto(fileURL: String?) {
+        guard let fileURL = fileURL else { return }
+        FileHelper.deleteImage(filePathWithoutExtension: fileURL)
+    }
 }

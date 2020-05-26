@@ -8,16 +8,7 @@
 
 import UIKit
 
-class TelaAdmViewController: UIViewController, TelaAdmControllerDelegate {
-    
-    func setImageProfile() {
-        //hello
-    }
-    
-    
-    func reloadData(data: [DestaquesModel]) {
-        //hello
-    }
+class TelaAdmViewController: UIViewController {
 
     //Outlets
     @IBOutlet weak var txtFieldTemaDestaque: UITextField!
@@ -25,6 +16,8 @@ class TelaAdmViewController: UIViewController, TelaAdmControllerDelegate {
     @IBOutlet weak var tableViewExpEscolhidas: UITableView!
     @IBOutlet weak var btnEnviar: UIButton!
     @IBOutlet weak var imgAdd: UIImageView!
+    
+    var urlString = ""
     
     public var data: [DestaquesModel] = []
     private let controller = TelaAdmController()
@@ -35,6 +28,7 @@ class TelaAdmViewController: UIViewController, TelaAdmControllerDelegate {
         controller.delegate = self
         setNavigation()
         setKeyboard()
+        setAddImage()
     }
     
     func setAddImage() {
@@ -79,6 +73,10 @@ class TelaAdmViewController: UIViewController, TelaAdmControllerDelegate {
         }
     }
     
+    @IBAction func sairBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func setNavigation() {
         navigationController?.navigationBar.isHidden = true
     }
@@ -102,5 +100,25 @@ extension TelaAdmViewController: UITableViewDataSource {
         let celula = self.tableViewExpEscolhidas.dequeueReusableCell(withIdentifier: "DestaquesTableViewCell", for: indexPath) as? DestaquesTableViewCell
         celula?.setUpCriarDestaques(model: data[indexPath.row])
         return celula ?? UITableViewCell()
+    }
+}
+
+extension TelaAdmViewController: TelaAdmControllerDelegate {
+    
+    func setImageProfile() {
+        Camera().selecionadorImagem(self) {
+            imagem in
+            self.imgAdd.image = imagem
+            
+            if self.urlString != ""{
+                self.controller.deleteFoto(fileURL: self.urlString)
+            }
+            
+            self.urlString = self.controller.salvarFoto(imagem: self.imgAdd.image ?? UIImage())
+        }
+    }
+    
+    func reloadData(data: [DestaquesModel]) {
+        //hello
     }
 }
