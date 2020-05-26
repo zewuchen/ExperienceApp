@@ -61,7 +61,7 @@
                                     <textInputTraits key="textInputTraits" textContentType="honorifix-prefix"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                            <integer key="value" value="25"/>
+                                            <integer key="value" value="20"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
@@ -86,7 +86,7 @@
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                            <integer key="value" value="25"/>
+                                            <integer key="value" value="20"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
@@ -110,7 +110,7 @@
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                            <integer key="value" value="25"/>
+                                            <integer key="value" value="20"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
@@ -124,12 +124,12 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Fale um pouco sobre você" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-Mr-aYo">
-                                    <rect key="frame" x="24" y="619" width="366" height="92"/>
+                                    <rect key="frame" x="24" y="619" width="366" height="97"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="92" id="f1E-w2-iB8"/>
+                                        <constraint firstAttribute="height" constant="97" id="f1E-w2-iB8"/>
                                     </constraints>
-                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     <userDefinedRuntimeAttributes>
@@ -198,7 +198,7 @@
                                 <constraint firstItem="ati-rC-hjj" firstAttribute="trailing" secondItem="Dfw-Kt-Klc" secondAttribute="trailing" id="FVc-Wd-jq8"/>
                                 <constraint firstItem="TWW-43-kxG" firstAttribute="top" secondItem="Ssy-72-ynz" secondAttribute="top" constant="30" id="GOD-MO-br1"/>
                                 <constraint firstItem="wpu-Xi-OY3" firstAttribute="leading" secondItem="Ssy-72-ynz" secondAttribute="leading" constant="25" id="InU-5m-wVk"/>
-                                <constraint firstItem="SnO-9Q-hHC" firstAttribute="top" secondItem="1wb-Mr-aYo" secondAttribute="bottom" constant="29" id="Jog-wK-och"/>
+                                <constraint firstItem="SnO-9Q-hHC" firstAttribute="top" secondItem="1wb-Mr-aYo" secondAttribute="bottom" constant="24" id="Jog-wK-och"/>
                                 <constraint firstItem="wpu-Xi-OY3" firstAttribute="top" secondItem="Gij-Fc-3cc" secondAttribute="bottom" constant="24" id="Qfh-FA-EIW"/>
                                 <constraint firstItem="ywC-8e-j6E" firstAttribute="leading" secondItem="Gij-Fc-3cc" secondAttribute="leading" id="Qrf-g0-HBc"/>
                                 <constraint firstItem="1wb-Mr-aYo" firstAttribute="centerX" secondItem="SnO-9Q-hHC" secondAttribute="centerX" id="QzV-kp-5ih"/>

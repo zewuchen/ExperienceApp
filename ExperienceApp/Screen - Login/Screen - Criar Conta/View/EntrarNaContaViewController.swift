@@ -164,11 +164,14 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
         
         txtDescription.text = "Fale um pouco sobre você"
         txtDescription.textColor = UIColor.lightGray
-        txtDescription.font = UIFont(name: "avenir", size: 13.0)
+        txtDescription.font = UIFont(name: "avenir", size: 16.0)
         txtDescription.returnKeyType = .done
         txtDescription.delegate = self
         txtDescription.backgroundColor = UIColor.white
-       self.txtDescription.layer.borderColor = UIColor.black.cgColor
+        //Borda
+        txtDescription.layer.borderColor = UIColor.lightGray.cgColor
+        txtDescription.layer.borderWidth = 0.5
+      // txtDescription.layer.cornerRadius = 15
   
     }
     
