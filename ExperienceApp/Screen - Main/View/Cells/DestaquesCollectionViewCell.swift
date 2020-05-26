@@ -14,6 +14,7 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgDestaque: UIImageView!
     
     override func awakeFromNib() {
+        self.lblTitulo.font = .Rockwell24
         self.layer.cornerRadius = 30
         super.awakeFromNib()
     }
