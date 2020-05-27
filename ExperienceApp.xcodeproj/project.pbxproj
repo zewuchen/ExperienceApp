@@ -274,7 +274,6 @@
 		0F17C7D9246F383A00A2D212 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */,
 				0F17C7DC246F386200A2D212 /* ExperienciasInfoViewController.swift */,
 				0F17C7DD246F386200A2D212 /* ExperienciasInfoViewController.xib */,
 			);
@@ -292,6 +291,7 @@
 		0F17C7DB246F384500A2D212 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
