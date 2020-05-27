@@ -113,9 +113,7 @@ class ExperienciasInfoViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        setUserHasExperience()
-
-
+        let _ = setUserHasExperience()
     }
     
     func setupHeaderDescription() {
@@ -136,7 +134,6 @@ class ExperienciasInfoViewController: UIViewController {
         hostNameLabel.font = .AvenirHeavy
         descriptionHostLabel.font = .AvenirRoman
         hostImage.layer.cornerRadius = self.hostImage.frame.size.height/2
-        
     }
     
     func setupHowParticipate() {
@@ -206,16 +203,18 @@ class ExperienciasInfoViewController: UIViewController {
         }
     }
 
-    func setUserHasExperience() {
+    func setUserHasExperience() -> Bool {
         if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
             if !marcadas.isEmpty {
                 for record in 0...marcadas.count-1 {
                     if marcadas[record] == recordName {
                         setReserva(disponivel: false)
+                        return true
                     }
                 }
             }
         }
+        return false
     }
 
     // FIXME: Problema ao alterar o título da label quando clicada, o background vai normal
@@ -253,7 +252,7 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
             self.timeLabel.text = data.data
 
             // Desabilita o botão caso tenha todas as vagas preenchidas
-            if !data.available {
+            if !data.available && !self.setUserHasExperience() {
                 self.experienceButton.isEnabled = false
                 self.experienceButton.isHidden = true
             }
