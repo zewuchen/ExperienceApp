@@ -240,6 +240,7 @@ final class Cloud {
                 experience.setValue(data.howToParticipate, forKey: "howToParticipate")
                 experience.setValue(data.description, forKey: "description")
                 experience.setValue(data.date, forKey: "date")
+                experience.setValue(data.lengthGroup, forKey: "availableVacancies")
 //                experience.setValue(data.duration, forKey: "duration")
 //                experience.setValue(data.availableVacancies, forKey: "availableVacancies")
 //                experience.setValue(data.price, forKey: "price")
@@ -293,7 +294,10 @@ final class Cloud {
                         let reference = CKRecord.Reference(record: record, action: .none)
                         experiencesRecords.append(reference)
 
-                        // TODO: Adicionar usuário na referência de participantes da Experiência
+                        if let vaga = record["availableVacancies"], let numVagas = vaga as? Int, (numVagas-1) >= 0 {
+                            record.setValue(Int64(numVagas-1), forKey: "availableVacancies")
+                            self.cloudSave(record: record, database: self.publicDB)
+                        }
                     }
                 }
                 usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
@@ -325,6 +329,23 @@ final class Cloud {
                 }
             }
             usuario.setObject(experiencesRecords as CKRecordValue, forKey: "experiences")
+
+            let experiencia = ExperienceModel(title: "", description: "", recordName: data.recordName, date: Date(), howToParticipate: "", lengthGroup: Int64(), whatToTake: "", image: "")
+            self.getExperience(data: experiencia) { (record, error) in
+                guard let experience = record.first else { return }
+
+                if let experience = experience {
+                    guard let tamanho = experience["lengthGroup"] else { return }
+                    guard let vaga = experience["availableVacancies"] else { return }
+                    guard let numTamanho = tamanho as? Int else { return }
+                    guard let numVagas = vaga as? Int else { return }
+
+                    if (numVagas+1) <= numTamanho {
+                        experience.setValue(Int64(numVagas+1), forKey: "availableVacancies")
+                        self.cloudSave(record: experience, database: self.publicDB)
+                    }
+                }
+            }
             self.cloudSave(record: usuario, database: self.publicDB)
         }
     }

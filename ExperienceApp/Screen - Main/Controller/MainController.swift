@@ -45,10 +45,10 @@ final class MainController {
                 guard let dataExperiencia = data as? Date else { return }
                 let formatarData = DateFormatter()
                 formatarData.dateFormat = "dd/MM/yyyy"
-                let participantes = record?["participants"] as? [CKRecord.Reference]
-                var available: Bool = true
-                if let numParticipantes = participantes?.count, numParticipantes >= Int(tamanho.description) ?? 0 {
-                    available = false
+                let vagas = record?["availableVacancies"] as? Int
+                var available: Bool = false
+                if let numVagas = vagas, numVagas >= 1 {
+                    available = true
                 }
 
                 if let image = record?["image"] {
