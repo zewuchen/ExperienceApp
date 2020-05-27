@@ -40,6 +40,14 @@ class MainViewController: UIViewController {
         
         self.tableView.showsVerticalScrollIndicator = false
         self.collectionView.showsHorizontalScrollIndicator = false
+        self.data.append(MainModel(nomeDestaque: "", nomeExp: "Treino em casa", descricaoExp: "", notaExp: 0.0, precoExp: "Faremos alguns exercícios físicos para acabar com o sedentarismo! para iniciantes :)", recordName: "",
+                                   image: UIImage(named: "treino")?.pngData() ?? Data(), recursos: "Muita disposição! Se preferir, você pode usar um colchonete.", comoParticipar: "https://da-br.zoom.us/j/111111111", tamanho: 20, responsible: "a", data: "27/06/2020"))
+        self.data.append(MainModel(nomeDestaque: "", nomeExp: "Dicas de leitura", descricaoExp: "", notaExp: 0.0, precoExp: "Dicas de livro para você ler em Junho!", recordName: "", image: UIImage(named: "livro")?.pngData() ?? Data(),
+                                   recursos: "Você!", comoParticipar: "https://da-br.zoom.us/j/111111111", tamanho: 10, responsible: "a", data: "27/06/2020"))
+        self.data.append(MainModel(nomeDestaque: "", nomeExp: "Aprenda cubo mágico!", descricaoExp: "", notaExp: 0.0, precoExp: "Faremos alguns exercícios físicos para acabar com o sedentarismo! para iniciantes :)", recordName: "",
+                                   image: UIImage(named: "cubo")?.pngData() ?? Data(), recursos: "Um cubo mágico e muita determinação", comoParticipar: "https://da-br.zoom.us/j/111111111", tamanho: 10, responsible: "a", data: "27/06/2020"))
+        self.data.append(MainModel(nomeDestaque: "", nomeExp: "Yoga", descricaoExp: "", notaExp: 0.0, precoExp: "Uma sessão de Yoga para iniciantes.", recordName: "", image: UIImage(named: "yoga")?.pngData() ?? Data(),
+                                   recursos: "Água e tapete de Yoga.", comoParticipar: "https://da-br.zoom.us/j/111111111", tamanho: 20, responsible: "a", data: "27/06/2020"))
 
         // Desabilitado o botão de procurar aqui
         btnBusca.removeFromSuperview()

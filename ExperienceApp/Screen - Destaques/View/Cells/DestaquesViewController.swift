@@ -84,7 +84,10 @@ extension DestaquesViewController: DestaquesControllerDelegate {
     
     func reloadExp(dataExpDestaques: [ExperienciaDestaquesModel]) {
         DispatchQueue.main.async {
-            self.dataExpDestaques = dataExpDestaques
+            self.dataExpDestaques.append(ExperienciaDestaquesModel(tituloExp: "Treino em casa", imagemExp: UIImage(named: "treino") ?? UIImage(), descricaoExp: "Faremos alguns exercícios físicos para acabar com o sedentarismo! para iniciantes :)"))
+            self.dataExpDestaques.append(ExperienciaDestaquesModel(tituloExp: "Dicas de leitura", imagemExp: UIImage(named: "livro") ?? UIImage(), descricaoExp: "Dicas de livro para você ler em Junho!"))
+            self.dataExpDestaques.append(ExperienciaDestaquesModel(tituloExp: "Yoga", imagemExp: UIImage(named: "yoga") ?? UIImage(), descricaoExp: "Uma sessão de Yoga para iniciantes."))
+            self.dataExpDestaques.append(ExperienciaDestaquesModel(tituloExp: "Treino em casa", imagemExp: UIImage(named: "treino") ?? UIImage(), descricaoExp: "Faremos alguns exercícios físicos para acabar com o sedentarismo! para iniciantes :)"))
             self.tableView.reloadData()
         }
     }

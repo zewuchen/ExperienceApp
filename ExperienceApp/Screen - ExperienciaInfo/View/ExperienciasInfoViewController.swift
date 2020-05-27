@@ -180,7 +180,7 @@ class ExperienciasInfoViewController: UIViewController {
                         if marcadas[record] == recordName {
                             registro = false
                             indices.append(record)
-                            controller.desattach(recordName: recordName)
+//                            controller.desattach(recordName: recordName)
                             setReserva(disponivel: true)
                         }
                     }
@@ -191,7 +191,7 @@ class ExperienciasInfoViewController: UIViewController {
 
                 if registro {
                     marcadas.append(recordName)
-                    controller.attach(recordName: recordName)
+//                    controller.attach(recordName: recordName)
                     setReserva(disponivel: false)
                 }
                 UserDefaults.standard.set(marcadas, forKey: "marcadas")
