@@ -133,7 +133,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var tela = DestaquesViewController(nibName: "DestaquesViewController", bundle: nil)
         tela.data = self.dataDestaques[indexPath.row]
-        self.present(tela, animated: false, completion: nil)
+        self.present(tela, animated: true, completion: nil)
     }
 }
 
