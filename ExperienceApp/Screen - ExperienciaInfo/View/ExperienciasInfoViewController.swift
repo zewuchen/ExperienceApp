@@ -52,6 +52,7 @@ class ExperienciasInfoViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     var recordName: String = ""
+    var botao = true
     
     public var controller = ExperienciasInfoController()
 //    private var data: [ModelExperienciasInfo] = []
@@ -171,36 +172,8 @@ class ExperienciasInfoViewController: UIViewController {
     }
 
     @IBAction func btnExperimentar(_ sender: Any) {
-        if UserDefaults.standard.bool(forKey: "logged") {
-            if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
-                var registro = true
-                if !marcadas.isEmpty {
-                    var indices: [Int] = []
-                    for record in 0...marcadas.count-1 {
-                        if marcadas[record] == recordName {
-                            registro = false
-                            indices.append(record)
-//                            controller.desattach(recordName: recordName)
-                            setReserva(disponivel: true)
-                        }
-                    }
-                    for index in indices {
-                        marcadas.remove(at: index)
-                    }
-                }
-
-                if registro {
-                    marcadas.append(recordName)
-//                    controller.attach(recordName: recordName)
-                    setReserva(disponivel: false)
-                }
-                UserDefaults.standard.set(marcadas, forKey: "marcadas")
-            }
-        } else {
-            let novaTela = LoginViewController(nibName: "LoginViewController", bundle: nil)
-            novaTela.modalPresentationStyle = .fullScreen
-            self.present(novaTela, animated: true, completion: nil)
-        }
+        setReserva(disponivel: !botao)
+        botao = !botao
     }
 
     func setUserHasExperience() -> Bool {
@@ -250,6 +223,9 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
             self.descriptionHowPartLabel.text = data.howParticipate
             self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
             self.timeLabel.text = data.data
+            self.hostImage.image = UIImage(named: "userDefault") ?? UIImage()
+            self.hostNameLabel.text = "User"
+            self.descriptionHostLabel.text = "Amante de experiências"
 
             // Desabilita o botão caso tenha todas as vagas preenchidas
             if !data.available && !self.setUserHasExperience() {

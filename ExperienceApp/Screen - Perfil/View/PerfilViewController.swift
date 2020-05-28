@@ -72,6 +72,9 @@ class PerfilViewController: UIViewController {
     func setUpBiography() {
         biographyText.layer.cornerRadius = 20
         biographyText.allowsEditingTextAttributes = false
+        self.name.text = "User"
+        self.biographyText.text = "Sou um novo usuário atrás de novas experiências"
+        self.perfilImage.image = UIImage(named: "userDefault")
     }
 
     @IBAction func btnNewExperience(_ sender: Any) {
@@ -84,10 +87,11 @@ class PerfilViewController: UIViewController {
 
 extension PerfilViewController: PerfilControllerDelegate {
     func reloadProfileData(data: AuthModel) {
-        self.name.text = data.name
-        self.biographyText.text = data.description
+        self.name.text = "User"
+        self.biographyText.text = "Sou um novo usuário atrás de novas experiências"
+        self.perfilImage.image = UIImage(named: "userDefault")
         if let imagem = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") {
-            self.perfilImage.image = imagem
+            self.perfilImage.image = UIImage(named: "userDefault")
         }
     }
 

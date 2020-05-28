@@ -98,7 +98,7 @@ class GerarViewController: UIViewController, UITextViewDelegate {
             
             let experience = ExperienceModel(title: title, description: description, recordName: nil, date: self.data, howToParticipate: howToParticipate, lengthGroup: lengthGroup, whatToTake: whatToTake, image: urlString)
             
-                controller.createExperience(data: experience)
+//                controller.createExperience(data: experience)
             
             // Ir para o PopUp
             let telaExpCriada = ExpCriadaPopUp()

@@ -27,6 +27,7 @@ final class PerfilController {
     
     public func reload() {
         delegate?.reloadData(data: data)
+        getExperiences()
     }
 
     public func setUpProfileData() {
@@ -47,50 +48,57 @@ final class PerfilController {
     }
 
     private func getExperiences() {
-        Cloud.shared.getMyExperiences { (records, erros) in
-            for record in records {
-                guard let name = record?["title"] else { return }
-                guard let description = record?["description"] else { return }
-                guard let recursos = record?["whatToTake"] else { return }
-                guard let data = record?["date"] else { return }
-                guard let dataExperiencia = data as? Date else { return }
-                let formatarData = DateFormatter()
-                formatarData.dateFormat = "dd/MM/yyyy"
-
-                if let image = record?["image"] {
-                    guard let file: CKAsset? = image as? CKAsset else { return }
-                    if let file = file {
-                        if let dado = NSData(contentsOf: file.fileURL!) {
-                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: formatarData.string(from: dataExperiencia), link: recursos.description)
-                            self.data.append(model)
-                        }
-                    }
-                }
-            }
-            self.delegate?.reloadData(data: self.data)
-        }
-
-        Cloud.shared.getExperienceCreatedByUser { (records, erros) in
-            for record in records {
-                guard let name = record?["title"] else { return }
-                guard let description = record?["description"] else { return }
-                guard let recursos = record?["whatToTake"] else { return }
-                guard let data = record?["date"] else { return }
-                guard let dataExperiencia = data as? Date else { return }
-                let formatarData = DateFormatter()
-                formatarData.dateFormat = "dd/MM/yyyy"
-
-                if let image = record?["image"] {
-                    guard let file: CKAsset? = image as? CKAsset else { return }
-                    if let file = file {
-                        if let dado = NSData(contentsOf: file.fileURL!) {
-                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: formatarData.string(from: dataExperiencia), link: recursos.description)
-                            self.data.append(model)
-                        }
-                    }
-                }
-            }
-            self.delegate?.reloadData(data: self.data)
-        }
+        self.data.append(ModelExperiencePerfil(titulo: "Treino em casa", imagem: UIImage(named: "treino") ?? UIImage(),
+                                               descricao: "Faremos alguns exercícios físicos para acabar com o sedentarismo! para iniciantes :)", data: "27/06/2020", link: "https://da-br.zoom.us/j/111111111"))
+        self.data.append(ModelExperiencePerfil(titulo: "Dicas de leitura", imagem: UIImage(named: "livro") ?? UIImage(), descricao: "Dicas de livro para você ler em Junho!", data: "27/06/2020", link: "https://da-br.zoom.us/j/111111111"))
+        self.data.append(ModelExperiencePerfil(titulo: "Aprenda cubo mágico!", imagem: UIImage(named: "cubo") ?? UIImage(),
+                                               descricao: "Faremos alguns exercícios físicos para acabar com o sedentarismo! para iniciantes :)", data: "27/06/2020", link: "https://da-br.zoom.us/j/111111111"))
+        self.data.append(ModelExperiencePerfil(titulo: "Yoga", imagem: UIImage(named: "yoga") ?? UIImage(), descricao: "Uma sessão de Yoga para iniciantes.", data: "27/06/2020", link: "https://da-br.zoom.us/j/111111111"))
+        self.delegate?.reloadData(data: self.data)
+//        Cloud.shared.getMyExperiences { (records, erros) in
+//            for record in records {
+//                guard let name = record?["title"] else { return }
+//                guard let description = record?["description"] else { return }
+//                guard let recursos = record?["whatToTake"] else { return }
+//                guard let data = record?["date"] else { return }
+//                guard let dataExperiencia = data as? Date else { return }
+//                let formatarData = DateFormatter()
+//                formatarData.dateFormat = "dd/MM/yyyy"
+//
+//                if let image = record?["image"] {
+//                    guard let file: CKAsset? = image as? CKAsset else { return }
+//                    if let file = file {
+//                        if let dado = NSData(contentsOf: file.fileURL!) {
+//                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: formatarData.string(from: dataExperiencia), link: recursos.description)
+//                            self.data.append(model)
+//                        }
+//                    }
+//                }
+//            }
+//            self.delegate?.reloadData(data: self.data)
+//        }
+//
+//        Cloud.shared.getExperienceCreatedByUser { (records, erros) in
+//            for record in records {
+//                guard let name = record?["title"] else { return }
+//                guard let description = record?["description"] else { return }
+//                guard let recursos = record?["whatToTake"] else { return }
+//                guard let data = record?["date"] else { return }
+//                guard let dataExperiencia = data as? Date else { return }
+//                let formatarData = DateFormatter()
+//                formatarData.dateFormat = "dd/MM/yyyy"
+//
+//                if let image = record?["image"] {
+//                    guard let file: CKAsset? = image as? CKAsset else { return }
+//                    if let file = file {
+//                        if let dado = NSData(contentsOf: file.fileURL!) {
+//                            let model = ModelExperiencePerfil(titulo: name.description, imagem: UIImage(data: dado as? Data ?? Data()) ?? UIImage(), descricao: description.description, data: formatarData.string(from: dataExperiencia), link: recursos.description)
+//                            self.data.append(model)
+//                        }
+//                    }
+//                }
+//            }
+//            self.delegate?.reloadData(data: self.data)
+//        }
     }
 }
