@@ -172,8 +172,37 @@ class ExperienciasInfoViewController: UIViewController {
     }
 
     @IBAction func btnExperimentar(_ sender: Any) {
-        setReserva(disponivel: !botao)
-        botao = !botao
+        if UserDefaults.standard.bool(forKey: "logged") {
+            if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
+                var registro = true
+                if !marcadas.isEmpty {
+                    var indices: [Int] = []
+                    for record in 0...marcadas.count-1 {
+                        if marcadas[record] == recordName {
+                            registro = false
+                            indices.append(record)
+                            //                            controller.desattach(recordName: recordName)
+                            setReserva(disponivel: true)
+                        }
+                    }
+                    for index in indices {
+                        marcadas.remove(at: index)
+                    }
+                }
+
+                if registro {
+                    marcadas.append(recordName)
+                    //                    controller.attach(recordName: recordName)
+                    setReserva(disponivel: false)
+                }
+                UserDefaults.standard.set(marcadas, forKey: "marcadas")
+            }
+        } else {
+            let novaTela = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            novaTela.modalPresentationStyle = .fullScreen
+            self.present(novaTela, animated: true, completion: nil)
+        }
+
     }
 
     func setUserHasExperience() -> Bool {

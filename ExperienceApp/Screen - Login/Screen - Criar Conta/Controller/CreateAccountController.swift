@@ -43,7 +43,7 @@ final class CreateAccountController {
     }
 
     public func createAccount(user: AuthModel) {
-        Cloud.shared.createUser(data: user)
+//        Cloud.shared.createUser(data: user)
         UserDefaults.standard.set(user.name, forKey: "name")
         UserDefaults.standard.set(user.email, forKey: "email")
         UserDefaults.standard.set(Cloud.shared.encryptPassword(password: user.password), forKey: "password")

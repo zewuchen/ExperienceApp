@@ -33,45 +33,45 @@ final class DestaquesController {
         public func reload() {
             self.data = []
             self.dataDestaques = []
-            Cloud.shared.getExperience(data: nil) { (records, error) in
-
-                for record in records {
-                    guard (record?["title"]) != nil else { return }
-                    guard (record?["description"]) != nil else { return }
-                    guard let name = record?["title"] else { return }
-                    guard let description = record?["description"] else { return }
-                    guard let recursos = record?["whatToTake"] else { return }
-                    guard let data = record?["date"] else { return }
-                    guard let dataExperiencia = data as? Date else { return }
-                    let formatarData = DateFormatter()
-                    formatarData.dateFormat = "dd/MM/yyyy"
-                    
-                    if let image = record?["image"] {
-                        guard let file: CKAsset? = image as? CKAsset else { return }
-                            if let file = file {
-                                if let dado = NSData(contentsOf: file.fileURL!) {
-                                    let model = ExperienciaDestaquesModel(tituloExp: name.description,
-                                                                          imagemExp: UIImage(data: dado as? Data ?? Data()) ?? UIImage(),
-                                                                                             descricaoExp: description.description)
-                                    self.dataDestaques.append(model)
-                                }
-                            }
-                    }
-                    
-                    //Obs.: Aumentar núm. de caracteres
-                    self.data.append(DestaquesModel(nomeDestaque: "Ta na Disney?",
-                                                    descricaoDestaque: "Você também é um amante de desenhos? Bora ver essas experiências relacionadas com a Disney então!",
-                                                    imgDestaque: "disney"))
-                                     
-                                    
-                    self.data.append(DestaquesModel(nomeDestaque: "Ler até a madrugada", descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros"))
-                    
-                    
-                    
-                }
-
-                self.delegate?.reloadData(data: self.data)
-                self.delegate?.reloadExp(dataExpDestaques: self.dataDestaques)
-            }
+//            Cloud.shared.getExperience(data: nil) { (records, error) in
+//
+//                for record in records {
+//                    guard (record?["title"]) != nil else { return }
+//                    guard (record?["description"]) != nil else { return }
+//                    guard let name = record?["title"] else { return }
+//                    guard let description = record?["description"] else { return }
+//                    guard let recursos = record?["whatToTake"] else { return }
+//                    guard let data = record?["date"] else { return }
+//                    guard let dataExperiencia = data as? Date else { return }
+//                    let formatarData = DateFormatter()
+//                    formatarData.dateFormat = "dd/MM/yyyy"
+//                    
+//                    if let image = record?["image"] {
+//                        guard let file: CKAsset? = image as? CKAsset else { return }
+//                            if let file = file {
+//                                if let dado = NSData(contentsOf: file.fileURL!) {
+//                                    let model = ExperienciaDestaquesModel(tituloExp: name.description,
+//                                                                          imagemExp: UIImage(data: dado as? Data ?? Data()) ?? UIImage(),
+//                                                                                             descricaoExp: description.description)
+//                                    self.dataDestaques.append(model)
+//                                }
+//                            }
+//                    }
+//                    
+//                    //Obs.: Aumentar núm. de caracteres
+//                    self.data.append(DestaquesModel(nomeDestaque: "Ta na Disney?",
+//                                                    descricaoDestaque: "Você também é um amante de desenhos? Bora ver essas experiências relacionadas com a Disney então!",
+//                                                    imgDestaque: "disney"))
+//                                     
+//                                    
+//                    self.data.append(DestaquesModel(nomeDestaque: "Ler até a madrugada", descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros"))
+//                    
+//                    
+//                    
+//                }
+//
+//            }
+            self.delegate?.reloadData(data: self.data)
+            self.delegate?.reloadExp(dataExpDestaques: self.dataDestaques)
         }
     }

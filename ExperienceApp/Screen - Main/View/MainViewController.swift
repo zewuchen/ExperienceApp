@@ -98,8 +98,13 @@ class MainViewController: UIViewController {
 
     @IBAction func btnPerfilAction(_ sender: Any) {
         var novaTela = UIViewController()
-        novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
-        novaTela.modalPresentationStyle = .fullScreen
+        if !UserDefaults.standard.bool(forKey: "logged") {
+            novaTela = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            novaTela.modalPresentationStyle = .fullScreen
+        } else {
+            novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
+            novaTela.modalPresentationStyle = .fullScreen
+        }
         self.present(novaTela, animated: true, completion: nil)
     }
 
