@@ -13,11 +13,15 @@ struct DestaquesModel {
     var nomeDestaque: String
     var descricaoDestaque: String
     var imgDestaque = String()
+    var experienciasID: [String]
+    var image: UIImage
     
-    public init(nomeDestaque: String, descricaoDestaque: String, imgDestaque: String) {
+    public init(nomeDestaque: String, descricaoDestaque: String, imgDestaque: String, experienciasID: [String] = [], image: UIImage = UIImage()) {
         self.nomeDestaque = nomeDestaque
         self.descricaoDestaque = descricaoDestaque
         self.imgDestaque = imgDestaque
+        self.experienciasID = experienciasID
+        self.image = image
     }
 }
 

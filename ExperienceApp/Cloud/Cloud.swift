@@ -447,5 +447,35 @@ final class Cloud {
         }
     }
 
+    public func getExperiencesInHighlight(highlights: [String], completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
+
+        var experiences = [CKRecord.Reference]()
+
+        for record in highlights {
+            experiences.append(CKRecord.Reference(recordID: CKRecord.ID(recordName: record), action: .none))
+        }
+        
+        var recordsIDs = [CKRecord.ID]()
+        for experience in experiences {
+            recordsIDs.append(experience.recordID)
+        }
+        var fetchOperation = CKFetchRecordsOperation(recordIDs: recordsIDs)
+        fetchOperation.fetchRecordsCompletionBlock = {
+            recordData, erros in
+
+            var data = [CKRecord]()
+
+            if let recordData = recordData {
+                for(key, value) in recordData {
+                    data.append(value)
+                }
+                completionHandler(data, erros)
+            } else {
+                completionHandler([], erros)
+            }
+        }
+        self.container.publicCloudDatabase.add(fetchOperation)
+    }
+
     public func teste() {}
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import CloudKit
+import UIKit
 
 protocol MainControllerDelegate: AnyObject {
     func reloadData(data: [MainModel])
@@ -79,12 +80,18 @@ final class MainController {
             for record in records {
                 guard let name = record?["title"] else { return }
                 guard let description = record?["description"] else { return }
-                if let image = record?["image"] {
+                if let image = record?["image"], let experienciasID = record?["experiences"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
+                    guard let experienciasID = experienciasID as? [CKRecord.Reference] else { return }
                     if let file = file {
                         if let dado = NSData(contentsOf: file.fileURL!) {
-                            // TODO: Fazer aparecer a imagem
-                            self.dataHighlights.append(DestaquesModel(nomeDestaque: name.description, descricaoDestaque: description.description, imgDestaque: "disney"))
+                            var ids: [String] = []
+
+                            for recordName in experienciasID {
+                                ids.append(recordName.recordID.recordName)
+                            }
+
+                            self.dataHighlights.append(DestaquesModel(nomeDestaque: name.description, descricaoDestaque: description.description, imgDestaque: "disney", experienciasID: ids, image: UIImage(data: dado as Data) ?? UIImage()))
                         }
                     }
                 }
