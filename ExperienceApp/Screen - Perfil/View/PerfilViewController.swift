@@ -27,19 +27,11 @@ class PerfilViewController: UIViewController {
         super.viewDidLoad()
         controller.delegate = self
         
-        name.font = .Rockwell20
-        biographyTitle.font = .Rockwell24
-        biographyText.font = .AvenirRoman
-        experienceTitle.font = .Rockwell24
-        
         setUpImage()
         setUpButton()
         setUpBiography()
-        
-        self.view.backgroundColor = .background
-        self.experienceTableView.backgroundColor = .background
-        self.perfilView.backgroundColor = .background
-        self.perfilScrollView.backgroundColor = .background
+        setUpUserData()
+        setUpBackground()
                 
         experienceTableView.dataSource = self
         experienceTableView.delegate = self
@@ -57,21 +49,34 @@ class PerfilViewController: UIViewController {
     
     func setUpImage() {
         perfilImage.image = UIImage(named: "Fire_Demon_Ramen")!
-        perfilImage.layer.cornerRadius = 20
+        perfilImage.layer.cornerRadius = 10
     }
     
     func setUpButton() {
         createExperienceButton.backgroundColor = .vermelhoTijolo
         createExperienceButton.titleLabel?.font = .RockwellBold20
-        createExperienceButton.layer.cornerRadius = 20
+        createExperienceButton.layer.cornerRadius = 10
         createExperienceButton.titleLabel?.textColor = .white
         createExperienceButton.titleLabel?.textAlignment = .center
-
     }
     
     func setUpBiography() {
-        biographyText.layer.cornerRadius = 20
+        biographyText.layer.cornerRadius = 10
         biographyText.allowsEditingTextAttributes = false
+    }
+    
+    func setUpUserData() {
+        name.font = .Rockwell20
+        biographyTitle.font = .Rockwell24
+        biographyText.font = .AvenirRoman
+        experienceTitle.font = .Rockwell24
+    }
+    
+    func setUpBackground() {
+        self.view.backgroundColor = .background
+        self.experienceTableView.backgroundColor = .background
+        self.perfilView.backgroundColor = .background
+        self.perfilScrollView.backgroundColor = .background
     }
 
     @IBAction func btnNewExperience(_ sender: Any) {

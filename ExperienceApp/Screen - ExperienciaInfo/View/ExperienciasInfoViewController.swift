@@ -151,7 +151,7 @@ class ExperienciasInfoViewController: UIViewController {
     func setupExperienceButton() {
         experienceButton.backgroundColor = .vermelhoTijolo
         experienceButton.titleLabel?.font = .RockwellBold20
-        experienceButton.layer.cornerRadius = 20
+        experienceButton.layer.cornerRadius = 10
         experienceButton.titleLabel?.textColor = .white
         experienceButton.layer.zPosition = 1
         experienceButton.titleLabel?.textAlignment = .center

@@ -26,6 +26,7 @@ class RecomendacoesTableViewCell: UITableViewCell {
         costValue?.font = .AvenirRoman
         price.font = .AvenirRoman
         price.textColor = .vermelhoTijolo
+        imageCard.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
