@@ -76,6 +76,7 @@ final class Cloud {
         user.setValue(data.description, forKey: "description")
         user.setValue(data.email, forKey: "email")
         user.setValue(encryptPassword(password: data.password), forKey: "password")
+        user.setValue(Int64(0), forKey: "access") // 0 é o usuário padrão, 1 é admin
 
         self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
 
