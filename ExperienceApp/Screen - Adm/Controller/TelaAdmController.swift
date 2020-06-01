@@ -11,7 +11,7 @@ import UIKit
 import CloudKit
 
 protocol TelaAdmControllerDelegate: AnyObject {
-    func reloadData(data: [DestaquesModel])
+    func reloadData(data: [MainModel])
     func setImageProfile()
 }
 

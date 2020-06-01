@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TelaAdmViewController: UIViewController {
+class TelaAdmViewController: UIViewController, UITableViewDelegate {
 
     //Outlets
     @IBOutlet weak var txtFieldTemaDestaque: UITextField!
@@ -19,7 +19,7 @@ class TelaAdmViewController: UIViewController {
     
     var urlString = ""
     
-    public var data: [DestaquesModel] = []
+    public var data: [MainModel] = []
     private let controller = TelaAdmController()
     
     override func viewDidLoad() {
@@ -28,7 +28,14 @@ class TelaAdmViewController: UIViewController {
         controller.delegate = self
         setNavigation()
         setKeyboard()
+        setUpTable()
         setAddImage()
+    }
+    
+    func setUpTable() {
+        tableViewExpEscolhidas.dataSource = self
+        tableViewExpEscolhidas.delegate = self
+        tableViewExpEscolhidas.register(UINib(nibName: "RecomendacoesTableViewCell", bundle: nil), forCellReuseIdentifier: "RecomendacoesTableViewCell")
     }
     
     func setAddImage() {
@@ -85,25 +92,6 @@ class TelaAdmViewController: UIViewController {
         //TODO: Validar entradas
         return true
     }
-}
-
-//extension TelaAdmViewController: TemaControllerDelegate {
-//    
-//}
-
-extension TelaAdmViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = self.tableViewExpEscolhidas.dequeueReusableCell(withIdentifier: "DestaquesTableViewCell", for: indexPath) as? DestaquesTableViewCell
-        celula?.setUpCriarDestaques(model: data[indexPath.row])
-        return celula ?? UITableViewCell()
-    }
-}
-
-extension TelaAdmViewController: TelaAdmControllerDelegate {
     
     func setImageProfile() {
         Camera().selecionadorImagem(self) {
@@ -117,8 +105,26 @@ extension TelaAdmViewController: TelaAdmControllerDelegate {
             self.urlString = self.controller.salvarFoto(imagem: self.imgAdd.image ?? UIImage())
         }
     }
+}
+
+extension TelaAdmViewController: TelaAdmControllerDelegate {
+    func reloadData(data: [MainModel]) {
+        self.data = data
+        DispatchQueue.main.async {
+            self.tableViewExpEscolhidas.reloadData()
+        }
+    }
+}
+
+extension TelaAdmViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        data.count
+    }
     
-    func reloadData(data: [DestaquesModel]) {
-        //hello
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celula = self.tableViewExpEscolhidas.dequeueReusableCell(withIdentifier: "RecomendacoesTableViewCell", for: indexPath) as? RecomendacoesTableViewCell
+        celula?.setUp(model: data[indexPath.row])
+        
+        return celula ?? UITableViewCell()
     }
 }
