@@ -189,7 +189,10 @@ final class Cloud {
     }
 
     public func getExperience(data: ExperienceModel?, completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
-        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
+        // Puxa somente as que tem vagas
+        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(format: "availableVacancies != 0"))
+        // Puxa todas
+//        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
 
         if let data = data {
             guard let search = data.recordName else { return }
