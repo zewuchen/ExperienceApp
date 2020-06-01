@@ -37,6 +37,7 @@ class MainViewController: UIViewController {
         setUpButtons(button: btnPerfil, nome: "userDefault")
         setUpCollection()
         controller.reload()
+        controller.reloadHighlights()
         
         self.tableView.showsVerticalScrollIndicator = false
         self.collectionView.showsHorizontalScrollIndicator = false
@@ -103,6 +104,13 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainControllerDelegate {
+    func reloadHighlight(data: [DestaquesModel]) {
+        self.dataDestaques = data
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+
     func reloadData(data: [MainModel]) {
         self.data = data
         DispatchQueue.main.async {
