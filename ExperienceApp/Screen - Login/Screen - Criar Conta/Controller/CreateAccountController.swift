@@ -51,6 +51,7 @@ final class CreateAccountController {
         UserDefaults.standard.set(user.image, forKey: "image")
         UserDefaults.standard.set([], forKey: "marcadas")
         UserDefaults.standard.set(true, forKey: "logged")
+        UserDefaults.standard.set(false, forKey: "admin")
     }
 
     public func setImage() {

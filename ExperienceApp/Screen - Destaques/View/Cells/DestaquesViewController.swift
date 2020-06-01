@@ -36,13 +36,13 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
         setNavigation()
         controller.delegate = self
         scrollView.delegate = self
-        controller.reload()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         lblDestaque.text = data?.nomeDestaque
-        imgDestaque.image = UIImage(named: data?.imgDestaque ?? "cacto")
+        imgDestaque.image = data?.image
         infoDestaque.text = data?.descricaoDestaque
+        controller.reload(data: data?.experienciasID ?? [])
     }
 
     func setNavigation() {

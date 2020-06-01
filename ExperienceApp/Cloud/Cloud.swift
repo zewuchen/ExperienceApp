@@ -48,6 +48,13 @@ struct ExperienceModel {
 //    let tags: [String]
 }
 
+struct HighlightModel {
+    let title: String
+    let description: String
+    let image: String
+    let experiences: [String]
+}
+
 final class Cloud {
 
     let container: CKContainer
@@ -76,6 +83,7 @@ final class Cloud {
         user.setValue(data.description, forKey: "description")
         user.setValue(data.email, forKey: "email")
         user.setValue(encryptPassword(password: data.password), forKey: "password")
+        user.setValue(Int64(0), forKey: "access") // 0 é o usuário padrão, 1 é admin
 
         self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
 
@@ -189,7 +197,10 @@ final class Cloud {
     }
 
     public func getExperience(data: ExperienceModel?, completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
-        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
+        // Puxa somente as que tem vagas
+        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(format: "availableVacancies != 0"))
+        // Puxa todas
+//        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
 
         if let data = data {
             guard let search = data.recordName else { return }
@@ -385,6 +396,85 @@ final class Cloud {
                 self.container.publicCloudDatabase.add(fetchOperation)
             }
         }
+    }
+
+    // MARK: Highlights
+    public func createHighlight(data: HighlightModel) {
+        let highlight = CKRecord(recordType: "Highlight")
+
+        highlight.setValue(data.title, forKey: "title")
+        highlight.setValue(data.description, forKey: "description")
+
+        self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
+
+        if data.image != "" {
+            guard let image = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") else { return }
+            guard let dataImage = image.jpegData(compressionQuality: 0) else { return }
+            do {
+                try dataImage.write(to: url)
+            } catch let erro as NSError {
+                print("Error! \(erro)")
+                return
+            }
+            highlight.setValue(CKAsset(fileURL: url), forKey: "image")
+            FileHelper.deleteImage(filePathWithoutExtension: data.image)
+        }
+
+        var experiencesInHighlight = [CKRecord.Reference]()
+        for experience in data.experiences {
+            let experienceReference = CKRecord.Reference(recordID: CKRecord.ID(recordName: experience), action: .none)
+            experiencesInHighlight.append(experienceReference)
+        }
+        highlight.setValue(experiencesInHighlight, forKey: "experiences")
+
+        self.cloudSave(record: highlight, database: publicDB)
+    }
+
+    public func getHighlight(data: HighlightModel?, completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
+        var query = CKQuery(recordType: "Highlight", predicate: NSPredicate(value: true))
+
+        if let data = data {
+            self.predicate = NSPredicate(format: "title = %@", data.title)
+            query = CKQuery(recordType: "Highlight", predicate: predicate)
+        }
+
+        publicDB.perform(query, inZoneWith: nil) { (records, error) in
+            if let records = records {
+                completionHandler(records, error)
+            } else {
+                completionHandler([], error)
+            }
+        }
+    }
+
+    public func getExperiencesInHighlight(highlights: [String], completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
+
+        var experiences = [CKRecord.Reference]()
+
+        for record in highlights {
+            experiences.append(CKRecord.Reference(recordID: CKRecord.ID(recordName: record), action: .none))
+        }
+        
+        var recordsIDs = [CKRecord.ID]()
+        for experience in experiences {
+            recordsIDs.append(experience.recordID)
+        }
+        var fetchOperation = CKFetchRecordsOperation(recordIDs: recordsIDs)
+        fetchOperation.fetchRecordsCompletionBlock = {
+            recordData, erros in
+
+            var data = [CKRecord]()
+
+            if let recordData = recordData {
+                for(key, value) in recordData {
+                    data.append(value)
+                }
+                completionHandler(data, erros)
+            } else {
+                completionHandler([], erros)
+            }
+        }
+        self.container.publicCloudDatabase.add(fetchOperation)
     }
 
     public func teste() {}

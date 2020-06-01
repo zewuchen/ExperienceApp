@@ -21,7 +21,7 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
     
     func setUp(model: DestaquesModel) {
         self.lblTitulo.text = model.nomeDestaque
-        self.imgDestaque.image = UIImage(named: model.imgDestaque)
+        self.imgDestaque.image = model.image
         self.backgroundColor = .white
         
     }
