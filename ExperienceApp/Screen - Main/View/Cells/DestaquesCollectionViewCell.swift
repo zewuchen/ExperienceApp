@@ -15,7 +15,7 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         self.lblTitulo.font = .Rockwell24
-        self.layer.cornerRadius = 30
+        self.layer.cornerRadius = 5
         super.awakeFromNib()
     }
     

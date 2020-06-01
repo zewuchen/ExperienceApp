@@ -12,17 +12,23 @@ class CriarContaViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
-
+    @IBOutlet weak var btnEntrar: UIButton!
+    
     let controller = LoginController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPlaceholder()
+        setUpButton()
         controller.delegate = self
         controller.delegate = self
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
+    }
+    
+    func setUpButton() {
+        btnEntrar.layer.cornerRadius = 10
     }
     
     @objc func tirarTeclado() {

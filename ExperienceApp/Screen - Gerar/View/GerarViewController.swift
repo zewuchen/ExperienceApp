@@ -18,6 +18,7 @@ class GerarViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var txtParticipar: UITextField!
     @IBOutlet weak var imgFoto: UIImageView!
     @IBOutlet weak var txtData: UITextField!
+    @IBOutlet weak var btnCriar: UIButton!
     
     private var dataPicker: UIDatePicker?
     private let controller = GerarController()
@@ -33,6 +34,7 @@ class GerarViewController: UIViewController, UITextViewDelegate {
         setNavigation()
         controller.delegate = self
         setUpPicker()
+        setUpButton()
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
@@ -43,6 +45,10 @@ class GerarViewController: UIViewController, UITextViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func setUpButton() {
+        btnCriar.layer.cornerRadius = 10
     }
     
     @objc func aparecerTeclado(notification: NSNotification) {

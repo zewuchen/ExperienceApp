@@ -15,6 +15,7 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var btnCriarConta: UIButton!
     
 
     let controller = CreateAccountController()
@@ -26,6 +27,7 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
         setImage()
         controller.delegate = self
         setUpBiography()
+        setUpButton()
         
         NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -36,6 +38,10 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
         self.imageView.isUserInteractionEnabled = true
         self.imageView.addGestureRecognizer(selectorImage)
         toque.cancelsTouchesInView = false
+    }
+    
+    func setUpButton () {
+        btnCriarConta.layer.cornerRadius = 10
     }
     
     @objc func aparecerTeclado(notification: NSNotification) {
