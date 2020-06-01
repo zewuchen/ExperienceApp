@@ -76,7 +76,7 @@ class MainViewController: UIViewController {
     }
     
     func setUpButtons(button: UIButton, nome: String) {
-        button.layer.cornerRadius = 22.5
+        button.layer.cornerRadius =  button.frame.size.height/2
         button.layer.masksToBounds = true
         button.setImage(UIImage(named: nome), for: .normal)
 

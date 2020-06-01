@@ -10,12 +10,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var btnLogin: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
-        
+        btnLogin.layer.cornerRadius = 10
     }
     @objc func tirarTeclado() {
         self.view.endEditing(true)
