@@ -16,11 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var data: [MainModel] = []
-    private var dataDestaques: [DestaquesModel] = [DestaquesModel(nomeDestaque: "Ta na Disney?",
-                                                    descricaoDestaque: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!",
-                                                    imgDestaque: "disney"),
-                                                    DestaquesModel(nomeDestaque: "Ler até a madrugada",
-                                                    descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros")]
+    private var dataDestaques: [DestaquesModel] = []
 
     private let controller = MainController()
 
@@ -42,14 +38,16 @@ class MainViewController: UIViewController {
         self.tableView.showsVerticalScrollIndicator = false
         self.collectionView.showsHorizontalScrollIndicator = false
 
-        // Desabilitado o botão de procurar aqui
-        btnBusca.removeFromSuperview()
         setNavigation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         //TODO: Mudar foto de perfil default
         setUpButtons(button: btnPerfil, nome: "userDefault")
+
+        if !UserDefaults.standard.bool(forKey: "admin") {
+            btnBusca.removeFromSuperview()
+        }
     }
     
     func setUpTable() {
@@ -87,6 +85,13 @@ class MainViewController: UIViewController {
                 button.setImage(image, for: .normal)
             }
         }
+    }
+
+
+    @IBAction func btnTelaDestaque(_ sender: Any) {
+        let novaTela = TelaAdmViewController(nibName: "TelaAdmViewController", bundle: nil)
+        novaTela.modalPresentationStyle = .fullScreen
+        self.present(novaTela, animated: true, completion: nil)
     }
 
     @IBAction func btnPerfilAction(_ sender: Any) {
