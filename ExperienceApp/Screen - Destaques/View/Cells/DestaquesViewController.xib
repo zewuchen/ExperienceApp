@@ -39,17 +39,6 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ow7-K9-jpK">
-                                    <rect key="frame" x="354" y="30" width="40" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="5TB-Uj-o0X"/>
-                                        <constraint firstAttribute="height" constant="40" id="hMJ-5A-LHc"/>
-                                    </constraints>
-                                    <state key="normal" image="botaoSair"/>
-                                    <connections>
-                                        <action selector="sairBtn:" destination="-1" eventType="touchUpInside" id="R5i-HD-dhz"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwg-hx-7bO">
                                     <rect key="frame" x="24" y="400" width="366" height="171"/>
                                     <constraints>
@@ -60,7 +49,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Destaques" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T2E-qW-nCN">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Destaques" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T2E-qW-nCN">
                                     <rect key="frame" x="24" y="34" width="312" height="79"/>
                                     <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="48"/>
                                     <nil key="textColor"/>
@@ -75,16 +64,12 @@
                             </subviews>
                             <color key="backgroundColor" red="0.96863394979999995" green="0.96861582989999995" blue="0.96862810850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstItem="Ow7-K9-jpK" firstAttribute="leading" secondItem="T2E-qW-nCN" secondAttribute="trailing" constant="18" id="3G6-Ot-cb0"/>
                                 <constraint firstItem="tyN-eb-R1g" firstAttribute="leading" secondItem="2V8-Yq-IhT" secondAttribute="leading" constant="24" id="8Qp-te-0xi"/>
                                 <constraint firstAttribute="height" constant="1000" id="9NI-HY-yot"/>
                                 <constraint firstAttribute="trailing" secondItem="Pwg-hx-7bO" secondAttribute="trailing" constant="24" id="Awq-aY-WHZ"/>
                                 <constraint firstAttribute="trailing" secondItem="tyN-eb-R1g" secondAttribute="trailing" constant="24" id="Df8-hD-lTS"/>
-                                <constraint firstAttribute="trailing" secondItem="Ow7-K9-jpK" secondAttribute="trailing" constant="20" id="FTS-ou-Wur"/>
                                 <constraint firstItem="tyN-eb-R1g" firstAttribute="top" secondItem="Pwg-hx-7bO" secondAttribute="bottom" constant="8" id="Gwd-Iq-hdP"/>
-                                <constraint firstItem="T2E-qW-nCN" firstAttribute="top" secondItem="Ow7-K9-jpK" secondAttribute="top" constant="4" id="HCj-Qz-Mvh"/>
                                 <constraint firstItem="Pwg-hx-7bO" firstAttribute="leading" secondItem="2V8-Yq-IhT" secondAttribute="leading" constant="24" id="Vsh-Yk-Imi"/>
-                                <constraint firstItem="Ow7-K9-jpK" firstAttribute="top" secondItem="2V8-Yq-IhT" secondAttribute="top" constant="30" id="Wac-LK-HM6"/>
                                 <constraint firstItem="Pwg-hx-7bO" firstAttribute="top" secondItem="7tr-v6-v8C" secondAttribute="bottom" constant="16" id="ZbF-Xd-wSF"/>
                                 <constraint firstAttribute="trailing" secondItem="7tr-v6-v8C" secondAttribute="trailing" id="gaa-29-EbQ"/>
                                 <constraint firstAttribute="bottom" secondItem="tyN-eb-R1g" secondAttribute="bottom" constant="10" id="iNt-pQ-vRM"/>
@@ -118,7 +103,6 @@
         </view>
     </objects>
     <resources>
-        <image name="botaoSair" width="100" height="100"/>
         <image name="cacto" width="1106" height="1052"/>
     </resources>
 </document>
