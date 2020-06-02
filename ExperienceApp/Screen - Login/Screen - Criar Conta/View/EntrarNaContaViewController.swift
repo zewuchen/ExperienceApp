@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
+class EntrarNaContaViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var txtNome: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
@@ -17,7 +17,6 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var btnCriarConta: UIButton!
     
-
     let controller = CreateAccountController()
     var urlString = ""
 
@@ -28,10 +27,10 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
         controller.delegate = self
         setUpBiography()
         setUpButton()
+        txtNome.delegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+//        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         let selectorImage = UITapGestureRecognizer(target: self, action: #selector(addImage))
@@ -45,11 +44,11 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc func aparecerTeclado(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
+        guard let tamTeclado = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        if self.view.frame.origin.y == 0 {
+            view.frame.origin.y = -tamTeclado.height
         }
+        
     }
 
     @objc func esconderTeclado(notification: NSNotification) {
@@ -186,36 +185,54 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
         txtDescription.allowsEditingTextAttributes = false
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
     // MARK: UITextViewDelegates
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if textView == txtDescription {
+            NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
+        if textView == txtNome {
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil) 
+        }
+        
+        return true
+    }
    
-       func textViewDidBeginEditing(_ textView: UITextView) {
-           if textView.text == "Fale um pouco sobre você" {
-               textView.text = ""
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "Fale um pouco sobre você" {
+            textView.text = ""
 //            textView.textColor = UIColor(red: 183, green: 77, blue: 77, alpha: 1)
             textView.textColor = UIColor.black
-               textView.font = UIFont(name: "avenir", size: 16.0)
-           }
-       }
+            textView.font = UIFont(name: "avenir", size: 16.0)
+        }
+        
+        
+    }
        
-       func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-           if text == "\n" {
-               textView.resignFirstResponder()
-           }
-           return true
-       }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
        
-       func textViewDidEndEditing(_ textView: UITextView) {
-           if textView.text == "" {
-               textView.text = "Fale um pouco sobre você"
-               textView.textColor = UIColor.lightGray
-               textView.font = UIFont(name: "avenir", size: 16.0)
-           }
-       }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Fale um pouco sobre você"
+            textView.textColor = UIColor.lightGray
+            textView.font = UIFont(name: "avenir", size: 16.0)
+        }
+    }
 
-       override func didReceiveMemoryWarning() {
-           super.didReceiveMemoryWarning()
-           // Dispose of any resources that can be recreated.
-       }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     func setImage() {
         imageView.layer.shadowColor = UIColor.black.cgColor
