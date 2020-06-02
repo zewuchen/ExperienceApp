@@ -61,14 +61,6 @@ class ExperienciasInfoViewController: UIViewController {
         self.infoView.backgroundColor = .background
         self.infoScrollView.backgroundColor = .background
         
-        switch tagLabel1.text == "Label" {
-        case true:
-            tagsStackView.removeFromSuperview()
-            titlehostLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 20).isActive = true
-        default:
-            titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 20).isActive = true
-        }
-        
 //        Remove "h" de horas na data, mudar text se voltar a "Duraçāo" e remove page control da image
         self.hoursFixedLabel.text = ""
         self.imagePageControl.removeFromSuperview()
@@ -86,15 +78,25 @@ class ExperienciasInfoViewController: UIViewController {
             reviewButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
         }
         
-        descriptionLabel.topAnchor.constraint(equalTo: timeIconImage.bottomAnchor, constant: 25).isActive = true
-        hostImage.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 20).isActive = true
-         hostNameLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 20).isActive = true
-         descriptionHostLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 30).isActive = true
-         titleHowPartLabel.topAnchor.constraint(equalTo: descriptionHostLabel.bottomAnchor, constant: 20).isActive = true
-         descriptionHowPartLabel.topAnchor.constraint(equalTo: titleHowPartLabel.bottomAnchor, constant: 15).isActive = true
+//        remove tags vazias
+        switch tagLabel1.text == "" {
+         case true:
+            tagsStackView.removeFromSuperview()
+            titlehostLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 30).isActive = true
+         default:
+             titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 30).isActive = true
+         }
+//        Mark: Constraints
+        descriptionLabel.topAnchor.constraint(equalTo: timeIconImage.bottomAnchor, constant: 10).isActive = true
+        hostImage.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 10).isActive = true
+         hostNameLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 10).isActive = true
+         descriptionHostLabel.topAnchor.constraint(equalTo: hostNameLabel.bottomAnchor, constant: 5).isActive = true
+         titleHowPartLabel.topAnchor.constraint(equalTo: hostImage.bottomAnchor, constant: 30).isActive = true
+         descriptionHowPartLabel.topAnchor.constraint(equalTo: titleHowPartLabel.bottomAnchor, constant: 10).isActive = true
          whatDoINeedTitleLabel.topAnchor.constraint(equalTo: descriptionHowPartLabel.bottomAnchor, constant: 20).isActive = true
          whatDoINeedDescriptionLabel.topAnchor.constraint(equalTo: whatDoINeedTitleLabel.bottomAnchor, constant: 10).isActive = true
-        
+
+//        remove navigation bar
         navigationController?.navigationBar.isHidden = true
 
         setupHeaderDescription()
