@@ -16,6 +16,7 @@ class RecomendacoesTableViewCell: UITableViewCell {
     @IBOutlet weak var iconRating: UIImageView!
     @IBOutlet weak var lbRating: UILabel?
     @IBOutlet weak var costValue: UILabel?
+    var recordName = ""
     @IBOutlet weak var price: UILabel!
     
     override func awakeFromNib() {
@@ -40,9 +41,17 @@ class RecomendacoesTableViewCell: UITableViewCell {
         self.costValue?.text = model.precoExp
         self.titleCard?.text = model.nomeExp
         self.imageCard.image = UIImage(named: "cacto")
-
+    
         if let imagem = model.image {
             self.imageCard.image = UIImage(data: imagem)
         }
+
+        if model.isSelected {
+            self.titleCard?.textColor = .vermelhoTijolo
+        } else {
+            self.titleCard?.textColor = .black
+        }
+        
+        self.recordName = model.recordName
     }
 }
