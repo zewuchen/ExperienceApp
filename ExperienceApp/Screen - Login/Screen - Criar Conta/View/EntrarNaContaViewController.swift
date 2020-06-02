@@ -189,6 +189,13 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate, UITextF
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == txtNome || textField == txtEmail || textField == txtSenha {
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        }
+        return true
+    }
+    
     // MARK: UITextViewDelegates
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
@@ -196,10 +203,6 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate, UITextF
             NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
         }
-        if textView == txtNome {
-            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil) 
-        }
-        
         return true
     }
    
@@ -210,8 +213,6 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate, UITextF
             textView.textColor = UIColor.black
             textView.font = UIFont(name: "avenir", size: 16.0)
         }
-        
-        
     }
        
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
