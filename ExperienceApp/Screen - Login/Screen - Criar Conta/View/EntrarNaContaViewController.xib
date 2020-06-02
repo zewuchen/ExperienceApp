@@ -29,7 +29,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssy-72-ynz">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="914"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CriarConta5" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-ke-CR9">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CriarConta10" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-ke-CR9">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="914"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addFoto" translatesAutoresizingMaskIntoConstraints="NO" id="FRD-7g-jGC">
@@ -206,7 +206,7 @@
                                 <constraint firstItem="ati-rC-hjj" firstAttribute="leading" secondItem="Dfw-Kt-Klc" secondAttribute="leading" id="bhw-tN-236"/>
                                 <constraint firstItem="ati-rC-hjj" firstAttribute="centerX" secondItem="Ssy-72-ynz" secondAttribute="centerX" id="cYy-z0-sEB"/>
                                 <constraint firstAttribute="rightMargin" secondItem="uhm-ke-CR9" secondAttribute="right" constant="-8" id="dOd-0F-XYh"/>
-                                <constraint firstItem="uhm-ke-CR9" firstAttribute="top" secondItem="Ssy-72-ynz" secondAttribute="firstBaseline" id="dpL-0a-2qs"/>
+                                <constraint firstItem="uhm-ke-CR9" firstAttribute="top" secondItem="Ssy-72-ynz" secondAttribute="top" id="dpL-0a-2qs"/>
                                 <constraint firstAttribute="baseline" secondItem="uhm-ke-CR9" secondAttribute="bottom" id="fSK-y3-0dZ"/>
                                 <constraint firstItem="wpu-Xi-OY3" firstAttribute="centerX" secondItem="ati-rC-hjj" secondAttribute="centerX" id="feA-6u-i7O"/>
                                 <constraint firstItem="Gij-Fc-3cc" firstAttribute="top" secondItem="ywC-8e-j6E" secondAttribute="bottom" constant="8" id="fzj-T6-DCp"/>
@@ -245,7 +245,7 @@
         </view>
     </objects>
     <resources>
-        <image name="CriarConta5" width="414" height="896"/>
+        <image name="CriarConta10" width="414" height="896"/>
         <image name="addFoto" width="244" height="236"/>
     </resources>
 </document>
