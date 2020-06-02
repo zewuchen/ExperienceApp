@@ -156,17 +156,6 @@
                                         <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="dTl-py-24Y"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWW-43-kxG">
-                                    <rect key="frame" x="354" y="30" width="40" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="O1Y-kB-Ogl"/>
-                                        <constraint firstAttribute="height" constant="40" id="dZD-PL-Y2e"/>
-                                    </constraints>
-                                    <state key="normal" image="botaoSair"/>
-                                    <connections>
-                                        <action selector="sairBtn:" destination="-1" eventType="touchUpInside" id="Mr0-aH-IdJ"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnO-9Q-hHC">
                                     <rect key="frame" x="42" y="764" width="330" height="60"/>
                                     <color key="backgroundColor" red="0.96863394979999995" green="0.96861582989999995" blue="0.96862810850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -201,7 +190,6 @@
                                 <constraint firstAttribute="height" constant="914" id="Dxa-ec-fTa"/>
                                 <constraint firstItem="SnO-9Q-hHC" firstAttribute="centerX" secondItem="h99-xM-Gij" secondAttribute="centerX" id="FRI-qa-WnH"/>
                                 <constraint firstItem="ati-rC-hjj" firstAttribute="trailing" secondItem="Dfw-Kt-Klc" secondAttribute="trailing" id="FVc-Wd-jq8"/>
-                                <constraint firstItem="TWW-43-kxG" firstAttribute="top" secondItem="Ssy-72-ynz" secondAttribute="top" constant="30" id="GOD-MO-br1"/>
                                 <constraint firstItem="wpu-Xi-OY3" firstAttribute="leading" secondItem="Ssy-72-ynz" secondAttribute="leading" constant="25" id="InU-5m-wVk"/>
                                 <constraint firstItem="SnO-9Q-hHC" firstAttribute="top" secondItem="1wb-Mr-aYo" secondAttribute="bottom" constant="30" id="Jog-wK-och"/>
                                 <constraint firstItem="wpu-Xi-OY3" firstAttribute="top" secondItem="Gij-Fc-3cc" secondAttribute="bottom" constant="24" id="Qfh-FA-EIW"/>
@@ -227,7 +215,6 @@
                                 <constraint firstItem="Dfw-Kt-Klc" firstAttribute="top" secondItem="ati-rC-hjj" secondAttribute="bottom" constant="24" id="m1a-L5-KUO"/>
                                 <constraint firstItem="HCf-X5-sDf" firstAttribute="trailing" secondItem="ywC-8e-j6E" secondAttribute="trailing" id="nFl-0Z-kK5"/>
                                 <constraint firstItem="c5e-vG-CSe" firstAttribute="top" secondItem="FRD-7g-jGC" secondAttribute="bottom" constant="24" id="sLt-m7-IvM"/>
-                                <constraint firstAttribute="trailing" secondItem="TWW-43-kxG" secondAttribute="trailing" constant="20" id="w74-YL-9y4"/>
                                 <constraint firstItem="c5e-vG-CSe" firstAttribute="trailing" secondItem="HCf-X5-sDf" secondAttribute="trailing" id="yJq-qR-06Y"/>
                                 <constraint firstItem="HCf-X5-sDf" firstAttribute="leading" secondItem="ywC-8e-j6E" secondAttribute="leading" id="ySP-jg-kDP"/>
                                 <constraint firstItem="1wb-Mr-aYo" firstAttribute="centerX" secondItem="Ssy-72-ynz" secondAttribute="centerX" id="ywB-ZZ-hqs"/>
@@ -260,6 +247,5 @@
     <resources>
         <image name="CriarConta5" width="414" height="896"/>
         <image name="addFoto" width="244" height="236"/>
-        <image name="botaoSair" width="100" height="100"/>
     </resources>
 </document>
