@@ -46,11 +46,7 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var backgroundtExpImage: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var experienceButton: UIButton!
-    @IBOutlet weak var exitButton: UIButton!
-    @IBAction func exitButton(_
-        sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+
     var recordName: String = ""
     
     public var controller = ExperienciasInfoController()
