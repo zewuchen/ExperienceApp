@@ -55,6 +55,21 @@ class TelaAdmViewController: UIViewController, UITableViewDelegate {
         if validar() {
             guard let tema = txtFieldTemaDestaque.text else { return }
             guard let descricao = txtFieldDescricaoDestaque.text else { return }
+            let data = HighlightModel(title: tema, description: descricao, image: urlString, experiences: expSelecionadas)
+//            controller.createHighlight(data: data)
+            let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.style = UIActivityIndicatorView.Style.gray
+            loadingIndicator.startAnimating()
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
+
+            let when = DispatchTime.now() + 5
+            DispatchQueue.main.asyncAfter(deadline: when) {
+              alert.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
