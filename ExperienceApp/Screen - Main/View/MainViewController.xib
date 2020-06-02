@@ -49,6 +49,9 @@
                         <constraint firstAttribute="height" constant="45" id="96f-dt-IyS"/>
                         <constraint firstAttribute="width" constant="45" id="BTw-6e-OcS"/>
                     </constraints>
+                    <connections>
+                        <action selector="btnTelaDestaque:" destination="-1" eventType="touchUpInside" id="agn-uS-Wm9"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elE-aw-lNN">
                     <rect key="frame" x="12" y="363" width="197" height="31"/>
