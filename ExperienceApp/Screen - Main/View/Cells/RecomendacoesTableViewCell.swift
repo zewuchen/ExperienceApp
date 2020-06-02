@@ -16,6 +16,7 @@ class RecomendacoesTableViewCell: UITableViewCell {
     @IBOutlet weak var iconRating: UIImageView!
     @IBOutlet weak var lbRating: UILabel?
     @IBOutlet weak var costValue: UILabel?
+    var recordName = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,5 +38,7 @@ class RecomendacoesTableViewCell: UITableViewCell {
         if let imagem = model.image {
             self.imageCard.image = UIImage(data: imagem)
         }
+        
+        self.recordName = model.recordName
     }
 }

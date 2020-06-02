@@ -20,11 +20,13 @@ class TelaAdmViewController: UIViewController, UITableViewDelegate {
     var urlString = ""
     
     public var data: [MainModel] = []
+    var expSelecionadas: [String] = []
     private let controller = TelaAdmController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnEnviar.layer.cornerRadius = 10
+        controller.reload()
         controller.delegate = self
         setNavigation()
         setKeyboard()
@@ -126,5 +128,21 @@ extension TelaAdmViewController: UITableViewDataSource {
         celula?.setUp(model: data[indexPath.row])
         
         return celula ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            self.tableViewExpEscolhidas.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+
+        let celula = self.tableViewExpEscolhidas.cellForRow(at: indexPath) as? RecomendacoesTableViewCell
+
+        if let index = expSelecionadas.firstIndex(of: celula?.recordName ?? "Vazio") {
+            celula?.titleCard?.textColor = .black
+            expSelecionadas.remove(at: index)
+        } else {
+            if expSelecionadas.count <= 3 {
+                celula?.titleCard?.textColor = .vermelhoTijolo
+                expSelecionadas.append(celula?.recordName ?? "Vazio")
+            }
+        }
     }
 }
