@@ -131,7 +131,7 @@ extension TelaAdmViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            self.tableViewExpEscolhidas.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+        self.data[indexPath.row].isSelected = !self.data[indexPath.row].isSelected
 
         let celula = self.tableViewExpEscolhidas.cellForRow(at: indexPath) as? RecomendacoesTableViewCell
 
@@ -139,7 +139,7 @@ extension TelaAdmViewController: UITableViewDataSource {
             celula?.titleCard?.textColor = .black
             expSelecionadas.remove(at: index)
         } else {
-            if expSelecionadas.count <= 3 {
+            if expSelecionadas.count < 3 {
                 celula?.titleCard?.textColor = .vermelhoTijolo
                 expSelecionadas.append(celula?.recordName ?? "Vazio")
             }

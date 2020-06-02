@@ -34,11 +34,21 @@ class RecomendacoesTableViewCell: UITableViewCell {
         self.titleCard?.text = model.nomeExp
         self.titleCard?.font = UIFont.boldSystemFont(ofSize: 17)
         self.imageCard.image = UIImage(named: "cacto")
-
+    
         if let imagem = model.image {
             self.imageCard.image = UIImage(data: imagem)
+        }
+
+        if model.isSelected {
+            self.titleCard?.textColor = .vermelhoTijolo
+        } else {
+            self.titleCard?.textColor = .black
         }
         
         self.recordName = model.recordName
     }
+
+//    override func prepareForReuse() {
+//        dados = nil
+//    }
 }
