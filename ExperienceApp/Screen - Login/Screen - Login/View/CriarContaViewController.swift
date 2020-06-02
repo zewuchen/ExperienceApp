@@ -66,7 +66,7 @@ class CriarContaViewController: UIViewController {
         if txtEmail.text == "" || txtEmail.text == nil || validarEmail(txtEmail.text ?? "email") == false {
             txtEmail.layer.borderColor = corBordaErrada
             txtEmail.layer.borderWidth = 2.0
-            txtEmail.layer.cornerRadius = 6
+            txtEmail.layer.cornerRadius = 5
             arrayReturn.append(false)
         } else {
             txtSenha.layer.borderColor = corBordaCerta
@@ -77,7 +77,7 @@ class CriarContaViewController: UIViewController {
         if txtSenha.text == "" || txtSenha.text == nil {
             txtSenha.layer.borderColor = corBordaErrada
             txtSenha.layer.borderWidth = 2.0
-            txtSenha.layer.cornerRadius = 6
+            txtSenha.layer.cornerRadius = 5
             arrayReturn.append(false)
         } else {
             txtSenha.layer.borderColor = corBordaCerta

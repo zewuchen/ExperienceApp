@@ -217,11 +217,6 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate {
            // Dispose of any resources that can be recreated.
        }
     
-    @IBAction func sairBtn(_ sender: Any) {
-//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     func setImage() {
         imageView.layer.shadowColor = UIColor.black.cgColor
         imageView.layer.shadowOffset = CGSize(width: 4, height: 4)

@@ -20,10 +20,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login6" translatesAutoresizingMaskIntoConstraints="NO" id="Mqb-Uh-wHc">
+                    <rect key="frame" x="-8" y="0.0" width="430" height="896"/>
+                </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira tua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-UN-KNd">
-                    <rect key="frame" x="24" y="393" width="366" height="34"/>
+                    <rect key="frame" x="24" y="425" width="366" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="GPq-pm-PsX"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                     <userDefinedRuntimeAttributes>
@@ -32,24 +38,24 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcS-vQ-I2x">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcS-vQ-I2x">
                     <rect key="frame" x="25" y="159" width="365" height="41"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="ElH-BB-dmK"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
-                    <color key="textColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="34"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="highlightedColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-y7-bEF">
                     <rect key="frame" x="42" y="740" width="330" height="60"/>
-                    <color key="backgroundColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.96863394979999995" green="0.96861582989999995" blue="0.96862810850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="T5Z-gd-ayY"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                     <state key="normal" title="Entrar">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.66100192069999997" green="0.32208833100000001" blue="0.30979138610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -61,9 +67,12 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira teu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJk-rY-mjQ">
-                    <rect key="frame" x="24" y="306" width="366" height="34"/>
+                    <rect key="frame" x="24" y="312" width="366" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.71764705880000002" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dFV-f1-Xy5"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                     <userDefinedRuntimeAttributes>
@@ -79,7 +88,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYH-hd-jTz">
-                    <rect key="frame" x="25" y="356" width="68" height="33"/>
+                    <rect key="frame" x="25" y="382" width="68" height="33"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -89,23 +98,30 @@
             <constraints>
                 <constraint firstItem="xcS-vQ-I2x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="0M4-wy-oWz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bNt-y7-bEF" secondAttribute="bottom" constant="62" id="AaX-mz-GbB"/>
-                <constraint firstItem="fYH-hd-jTz" firstAttribute="top" secondItem="mJk-rY-mjQ" secondAttribute="bottom" constant="16" id="CAY-6v-260"/>
+                <constraint firstItem="fYH-hd-jTz" firstAttribute="top" secondItem="mJk-rY-mjQ" secondAttribute="bottom" constant="20" id="CAY-6v-260"/>
+                <constraint firstAttribute="bottom" secondItem="Mqb-Uh-wHc" secondAttribute="bottom" id="Djv-NP-fYY"/>
                 <constraint firstItem="mJk-rY-mjQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="DlN-rz-k3n"/>
-                <constraint firstItem="fYH-hd-jTz" firstAttribute="top" secondItem="Kta-Yz-HAH" secondAttribute="bottom" constant="54" id="Fkf-Eo-QIL"/>
+                <constraint firstItem="mJk-rY-mjQ" firstAttribute="top" secondItem="Kta-Yz-HAH" secondAttribute="bottom" constant="10" id="Fkf-Eo-QIL"/>
                 <constraint firstItem="xcS-vQ-I2x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="115" id="HtZ-5b-pGt"/>
                 <constraint firstItem="Kta-Yz-HAH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="MV7-OA-zS5"/>
+                <constraint firstItem="Mqb-Uh-wHc" firstAttribute="leftMargin" secondItem="i5M-Pr-FkT" secondAttribute="left" id="O6d-i8-5d8"/>
+                <constraint firstItem="Mqb-Uh-wHc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Q5x-WH-KW8"/>
                 <constraint firstItem="2hC-UN-KNd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="QyT-yt-mcz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2hC-UN-KNd" secondAttribute="trailing" constant="24" id="TfV-18-eNY"/>
                 <constraint firstItem="fYH-hd-jTz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="WLn-02-EYb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xcS-vQ-I2x" secondAttribute="trailing" constant="24" id="dXc-6U-Gao"/>
-                <constraint firstItem="2hC-UN-KNd" firstAttribute="top" secondItem="fYH-hd-jTz" secondAttribute="bottom" constant="4" id="fE8-6x-hXP"/>
+                <constraint firstItem="2hC-UN-KNd" firstAttribute="top" secondItem="fYH-hd-jTz" secondAttribute="bottom" constant="10" id="fE8-6x-hXP"/>
                 <constraint firstItem="bNt-y7-bEF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="l5e-Jj-l0n"/>
                 <constraint firstItem="Kta-Yz-HAH" firstAttribute="top" secondItem="xcS-vQ-I2x" secondAttribute="bottom" constant="69" id="peb-Ju-KdM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mJk-rY-mjQ" secondAttribute="trailing" constant="24" id="ptN-21-Svq"/>
+                <constraint firstAttribute="right" secondItem="Mqb-Uh-wHc" secondAttribute="rightMargin" id="vqj-QD-xsX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bNt-y7-bEF" secondAttribute="trailing" constant="42" id="yri-cb-C9p"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
         </view>
     </objects>
+    <resources>
+        <image name="Login6" width="414" height="896"/>
+    </resources>
 </document>
