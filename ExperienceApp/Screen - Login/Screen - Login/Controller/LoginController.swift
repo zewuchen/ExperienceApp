@@ -53,6 +53,17 @@ final class LoginController {
 
                     UserDefaults.standard.set(experiencesRecords, forKey: "marcadas")
                 }
+                if let admin = user["access"] {
+                    let privilege = admin as? Int
+
+                    if let privilege = privilege {
+                        if privilege == 0 {
+                            UserDefaults.standard.set(false, forKey: "admin")
+                        } else if (privilege == 1) {
+                            UserDefaults.standard.set(true, forKey: "admin")
+                        }
+                    }
+                }
             } else {
                 UserDefaults.standard.set(false, forKey: "logged")
             }

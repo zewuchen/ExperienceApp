@@ -37,6 +37,7 @@ class MainViewController: UIViewController {
         setUpButtons(button: btnPerfil, nome: "userDefault")
         setUpCollection()
         controller.reload()
+        controller.reloadHighlights()
         
         self.tableView.showsVerticalScrollIndicator = false
         self.collectionView.showsHorizontalScrollIndicator = false
@@ -56,12 +57,14 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: recomendacoesCell, bundle: nil), forCellReuseIdentifier: recomendacoesCell)
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .background
     }
     
     func setUpCollection() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: destaquesCell, bundle: nil), forCellWithReuseIdentifier: destaquesCell)
+        collectionView.backgroundColor = .background
     }
     
     func setNavigation() {
@@ -74,7 +77,7 @@ class MainViewController: UIViewController {
     }
     
     func setUpButtons(button: UIButton, nome: String) {
-        button.layer.cornerRadius = 22.5
+        button.layer.cornerRadius =  button.frame.size.height/2
         button.layer.masksToBounds = true
         button.setImage(UIImage(named: nome), for: .normal)
 
@@ -101,6 +104,13 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainControllerDelegate {
+    func reloadHighlight(data: [DestaquesModel]) {
+        self.dataDestaques = data
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+
     func reloadData(data: [MainModel]) {
         self.data = data
         DispatchQueue.main.async {
@@ -131,7 +141,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var tela = DestaquesViewController(nibName: "DestaquesViewController", bundle: nil)
         tela.data = self.dataDestaques[indexPath.row]
-        self.present(tela, animated: false, completion: nil)
+        self.present(tela, animated: true, completion: nil)
     }
 }
 

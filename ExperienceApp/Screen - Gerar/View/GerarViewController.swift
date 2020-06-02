@@ -8,17 +8,17 @@
 
 import UIKit
 
-class GerarViewController: UIViewController {
-
-    // TODO: Adicionar fotos
+class GerarViewController: UIViewController, UITextViewDelegate {
+    
     // TODO: Adicionar disponibilidade
     @IBOutlet weak var txtTema: UITextField!
-    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var txtTamanho: UITextField!
     @IBOutlet weak var txtRecursos: UITextField!
     @IBOutlet weak var txtParticipar: UITextField!
     @IBOutlet weak var imgFoto: UIImageView!
     @IBOutlet weak var txtData: UITextField!
+    @IBOutlet weak var btnCriar: UIButton!
     
     private var dataPicker: UIDatePicker?
     private let controller = GerarController()
@@ -34,15 +34,21 @@ class GerarViewController: UIViewController {
         setNavigation()
         controller.delegate = self
         setUpPicker()
+        setUpButton()
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
         let selectorImage = UITapGestureRecognizer(target: self, action: #selector(addImage))
         self.imgFoto.isUserInteractionEnabled = true
         self.imgFoto.addGestureRecognizer(selectorImage)
+        setUpDescription()
         
         NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func setUpButton() {
+        btnCriar.layer.cornerRadius = 10
     }
     
     @objc func aparecerTeclado(notification: NSNotification) {
@@ -125,6 +131,41 @@ class GerarViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.9921568627, blue: 0.9921568627, alpha: 1)
     }
+    func setUpDescription() {
+        txtDescription.layer.cornerRadius = 6
+        txtDescription.allowsEditingTextAttributes = false
+        txtDescription.text = "Conte como a experiência será incrível"
+        txtDescription.textColor = UIColor.lightGray
+        txtDescription.font = UIFont(name: "avenir", size: 16.0)
+        txtDescription.returnKeyType = .done
+        txtDescription.delegate = self
+        txtDescription.backgroundColor = UIColor.white
+        //Borda
+        txtDescription.layer.borderColor = UIColor.lightGray.cgColor
+        txtDescription.layer.borderWidth = 0.5
+        }
+        // MARK: UITextViewDelegates
+           func textViewDidBeginEditing(_ textView: UITextView) {
+               if textView.text == "Conte como a experiência será incrível" {
+                  textView.text = ""
+                  textView.textColor = UIColor.black
+                  textView.font = UIFont(name: "avenir", size: 16.0)
+               }
+           }
+           func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+               if text == "\n" {
+                   textView.resignFirstResponder()
+               }
+               return true
+           }
+           
+           func textViewDidEndEditing(_ textView: UITextView) {
+               if textView.text == "" {
+                   textView.text = "Conte como a experiência será incrível"
+                   textView.textColor = UIColor.lightGray
+                   textView.font = UIFont(name: "avenir", size: 16.0)
+               }
+           }
     
     func validate() -> Bool {
         // TODO: Validar os campos de dados aqui
@@ -141,19 +182,20 @@ class GerarViewController: UIViewController {
             txtTema.layer.borderWidth = 0.25
             arrayReturn.append(true)
         }
-        
-        
+      
         // Validando Texto Descrição
         if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 240 {
             txtDescription.layer.borderColor = corBordaErrada
             txtDescription.layer.borderWidth = 2.0
             txtDescription.layer.cornerRadius = 6
             arrayReturn.append(false)
+            print("Prencha a descrição")
         } else {
             txtDescription.layer.borderColor = corBordaCerta
 //            print(txtDescription.text?.count ?? "juu")
             txtDescription.layer.borderWidth = 0.25
             arrayReturn.append(true)
+             print("Descrição feita")
         }
         
         // Validando Texto Tamanhos
@@ -197,6 +239,28 @@ class GerarViewController: UIViewController {
             arrayReturn.append(true)
         }
 
+        // Validando Imagem
+        if self.urlString == "" {
+            self.imgFoto.layer.borderColor = corBordaErrada
+            self.imgFoto.layer.borderWidth = 2.0
+            arrayReturn.append(false)
+        } else {
+            self.imgFoto.layer.borderColor = corBordaCerta
+            self.imgFoto.layer.borderWidth = 0.25
+            arrayReturn.append(true)
+        }
+
+        // Validando a data com um intervalo de 5 minutos a frente
+        if self.data.addingTimeInterval(TimeInterval(5.0 * 60.0)) <= Date() {
+            self.txtData.layer.borderColor = corBordaErrada
+            self.txtData.layer.borderWidth = 2.0
+            arrayReturn.append(false)
+        } else {
+            self.txtData.layer.borderColor = corBordaCerta
+            self.txtData.layer.borderWidth = 0.25
+            arrayReturn.append(true)
+        }
+
         if arrayReturn.contains(false) {
             return false
         } else {
@@ -227,7 +291,7 @@ class GerarViewController: UIViewController {
 
 extension GerarViewController: GerarControllerDelegate {
     func setImageProfile() {
-        Camera().selecionadorImagem(self){ imagem in
+        Camera().selecionadorImagem(self) { imagem in
             self.imgFoto.image = imagem
 
             if self.urlString != "" {

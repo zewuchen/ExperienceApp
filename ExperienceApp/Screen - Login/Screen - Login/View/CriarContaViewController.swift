@@ -12,17 +12,23 @@ class CriarContaViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
-
+    @IBOutlet weak var btnEntrar: UIButton!
+    
     let controller = LoginController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPlaceholder()
+        setUpButton()
         controller.delegate = self
         controller.delegate = self
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
+    }
+    
+    func setUpButton() {
+        btnEntrar.layer.cornerRadius = 10
     }
     
     @objc func tirarTeclado() {
@@ -60,7 +66,7 @@ class CriarContaViewController: UIViewController {
         if txtEmail.text == "" || txtEmail.text == nil || validarEmail(txtEmail.text ?? "email") == false {
             txtEmail.layer.borderColor = corBordaErrada
             txtEmail.layer.borderWidth = 2.0
-            txtEmail.layer.cornerRadius = 6
+            txtEmail.layer.cornerRadius = 5
             arrayReturn.append(false)
         } else {
             txtSenha.layer.borderColor = corBordaCerta
@@ -71,7 +77,7 @@ class CriarContaViewController: UIViewController {
         if txtSenha.text == "" || txtSenha.text == nil {
             txtSenha.layer.borderColor = corBordaErrada
             txtSenha.layer.borderWidth = 2.0
-            txtSenha.layer.cornerRadius = 6
+            txtSenha.layer.cornerRadius = 5
             arrayReturn.append(false)
         } else {
             txtSenha.layer.borderColor = corBordaCerta

@@ -8,13 +8,16 @@
 
 import Foundation
 import CloudKit
+import UIKit
 
 protocol MainControllerDelegate: AnyObject {
     func reloadData(data: [MainModel])
+    func reloadHighlight(data: [DestaquesModel])
 }
 
 final class MainController {
     private var data: [MainModel] = []
+    private var dataHighlights: [DestaquesModel] = []
     weak public var delegate: MainControllerDelegate?
     
     public init() {
@@ -45,6 +48,11 @@ final class MainController {
                 guard let dataExperiencia = data as? Date else { return }
                 let formatarData = DateFormatter()
                 formatarData.dateFormat = "dd/MM/yyyy"
+                let vagas = record?["availableVacancies"] as? Int
+                var available: Bool = false
+                if let numVagas = vagas, numVagas >= 1 {
+                    available = true
+                }
 
                 if let image = record?["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
@@ -52,7 +60,8 @@ final class MainController {
                         if let dado = NSData(contentsOf: file.fileURL!) {
 //                            guard let tempImage = UIImage(data: dado as Data) else { return }
                             self.data.append(MainModel(nomeDestaque: "", nomeExp: name.description, descricaoExp: description.description, notaExp: 10.0, precoExp: description.description, recordName: record?.recordID.recordName ?? ""
-                                , image: dado as Data, recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description), responsible: pessoa.recordID.recordName, data: formatarData.string(from: dataExperiencia)))
+                                , image: dado as Data, recursos: recursos.description, comoParticipar: comoParticipar.description, tamanho: Int(tamanho.description),
+                                  responsible: pessoa.recordID.recordName, data: formatarData.string(from: dataExperiencia), available: available))
                         }
                     }
                 } else {
@@ -62,6 +71,32 @@ final class MainController {
             }
 
             self.delegate?.reloadData(data: self.data)
+        }
+    }
+
+    public func reloadHighlights() {
+        self.dataHighlights = []
+        Cloud.shared.getHighlight(data: nil) { (records, error) in
+            for record in records {
+                guard let name = record?["title"] else { return }
+                guard let description = record?["description"] else { return }
+                if let image = record?["image"], let experienciasID = record?["experiences"] {
+                    guard let file: CKAsset? = image as? CKAsset else { return }
+                    guard let experienciasID = experienciasID as? [CKRecord.Reference] else { return }
+                    if let file = file {
+                        if let dado = NSData(contentsOf: file.fileURL!) {
+                            var ids: [String] = []
+
+                            for recordName in experienciasID {
+                                ids.append(recordName.recordID.recordName)
+                            }
+
+                            self.dataHighlights.append(DestaquesModel(nomeDestaque: name.description, descricaoDestaque: description.description, imgDestaque: "disney", experienciasID: ids, image: UIImage(data: dado as Data) ?? UIImage()))
+                        }
+                    }
+                }
+            }
+            self.delegate?.reloadHighlight(data: self.dataHighlights)
         }
     }
 }

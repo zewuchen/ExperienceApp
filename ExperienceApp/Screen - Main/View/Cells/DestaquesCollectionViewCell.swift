@@ -14,13 +14,14 @@ class DestaquesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgDestaque: UIImageView!
     
     override func awakeFromNib() {
-        self.layer.cornerRadius = 30
+        self.lblTitulo.font = .Rockwell24
+        self.layer.cornerRadius = 5
         super.awakeFromNib()
     }
     
     func setUp(model: DestaquesModel) {
         self.lblTitulo.text = model.nomeDestaque
-        self.imgDestaque.image = UIImage(named: model.imgDestaque)
+        self.imgDestaque.image = model.image
         self.backgroundColor = .white
         
     }

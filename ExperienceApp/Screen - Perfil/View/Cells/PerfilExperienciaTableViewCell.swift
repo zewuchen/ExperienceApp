@@ -17,8 +17,8 @@ class PerfilExperienciaTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 20
-        self.imageCard.layer.cornerRadius = 20
+        self.layer.cornerRadius = 10
+        self.imageCard.layer.cornerRadius = 10
         self.titleCard.font = .AvenirHeavy20
         self.dataCard.font = .AvenirRoman
         self.linkCard.font = .AvenirRoman

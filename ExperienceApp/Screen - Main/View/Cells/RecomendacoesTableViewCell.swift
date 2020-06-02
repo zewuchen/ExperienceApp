@@ -17,9 +17,17 @@ class RecomendacoesTableViewCell: UITableViewCell {
     @IBOutlet weak var lbRating: UILabel?
     @IBOutlet weak var costValue: UILabel?
     var recordName = ""
+    @IBOutlet weak var price: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        titleCard?.font = .AvenirHeavy
+        subtitleCard.font = .AvenirRoman
+        lbRating?.font = .AvenirRoman
+        costValue?.font = .AvenirRoman
+        price.font = .AvenirRoman
+        price.textColor = .vermelhoTijolo
+        imageCard.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,7 +40,6 @@ class RecomendacoesTableViewCell: UITableViewCell {
         self.lbRating?.text = String(model.notaExp)
         self.costValue?.text = model.precoExp
         self.titleCard?.text = model.nomeExp
-        self.titleCard?.font = UIFont.boldSystemFont(ofSize: 17)
         self.imageCard.image = UIImage(named: "cacto")
     
         if let imagem = model.image {
@@ -47,8 +54,4 @@ class RecomendacoesTableViewCell: UITableViewCell {
         
         self.recordName = model.recordName
     }
-
-//    override func prepareForReuse() {
-//        dados = nil
-//    }
 }

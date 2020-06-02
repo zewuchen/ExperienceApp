@@ -10,12 +10,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var btnLogin: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
-        
+        btnLogin.layer.cornerRadius = 10
     }
     @objc func tirarTeclado() {
         self.view.endEditing(true)
@@ -29,7 +31,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLoginCreate(_ sender: Any) {
         let novaTela = EntrarNaContaViewController(nibName: "EntrarNaContaViewController", bundle: nil)
-        novaTela.modalPresentationStyle = .fullScreen
+//        novaTela.modalPresentationStyle = .fullScreen
         self.present(novaTela, animated: true, completion: nil)
     }
     

@@ -113,7 +113,7 @@ class ExperienciasInfoViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        setUserHasExperience()
+        let _ = setUserHasExperience()
     }
     
     func setupHeaderDescription() {
@@ -134,7 +134,6 @@ class ExperienciasInfoViewController: UIViewController {
         hostNameLabel.font = .AvenirHeavy
         descriptionHostLabel.font = .AvenirRoman
         hostImage.layer.cornerRadius = self.hostImage.frame.size.height/2
-        
     }
     
     func setupHowParticipate() {
@@ -152,7 +151,7 @@ class ExperienciasInfoViewController: UIViewController {
     func setupExperienceButton() {
         experienceButton.backgroundColor = .vermelhoTijolo
         experienceButton.titleLabel?.font = .RockwellBold20
-        experienceButton.layer.cornerRadius = 20
+        experienceButton.layer.cornerRadius = 10
         experienceButton.titleLabel?.textColor = .white
         experienceButton.layer.zPosition = 1
         experienceButton.titleLabel?.textAlignment = .center
@@ -204,16 +203,18 @@ class ExperienciasInfoViewController: UIViewController {
         }
     }
 
-    func setUserHasExperience() {
+    func setUserHasExperience() -> Bool {
         if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
             if !marcadas.isEmpty {
                 for record in 0...marcadas.count-1 {
                     if marcadas[record] == recordName {
                         setReserva(disponivel: false)
+                        return true
                     }
                 }
             }
         }
+        return false
     }
 
     // FIXME: Problema ao alterar o título da label quando clicada, o background vai normal
@@ -249,6 +250,12 @@ extension ExperienciasInfoViewController: ExperienciasInfoControllerDelegate {
             self.descriptionHowPartLabel.text = data.howParticipate
             self.whatDoINeedDescriptionLabel.text = data.whatYouNeedDescription
             self.timeLabel.text = data.data
+
+            // Desabilita o botão caso tenha todas as vagas preenchidas
+            if !data.available && !self.setUserHasExperience() {
+                self.experienceButton.isEnabled = false
+                self.experienceButton.isHidden = true
+            }
         }
 //        self.tagLabel1.text = data.tags[0]
         if let responsible = responsible {
