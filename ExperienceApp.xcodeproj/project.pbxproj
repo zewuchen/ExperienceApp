@@ -38,6 +38,8 @@
 		0F848F3A247C5D90000AB70E /* TelaAdmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F848F38247C5D90000AB70E /* TelaAdmViewController.swift */; };
 		0F848F3B247C5D90000AB70E /* TelaAdmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F848F39247C5D90000AB70E /* TelaAdmViewController.xib */; };
 		0F848F3F247C5DD8000AB70E /* TelaAdmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F848F3E247C5DD8000AB70E /* TelaAdmController.swift */; };
+		0FA0D4C72485739B00226731 /* ExperienciasTelaAdmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0D4C52485739B00226731 /* ExperienciasTelaAdmTableViewCell.swift */; };
+		0FA0D4C82485739B00226731 /* ExperienciasTelaAdmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA0D4C62485739B00226731 /* ExperienciasTelaAdmTableViewCell.xib */; };
 		6F5305412475C60F008D8449 /* ModelExperienciasInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */; };
 		9524877F2476FC5200C0A7F9 /* DeletarExpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */; };
 		952487802476FC5200C0A7F9 /* DeletarExpPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */; };
@@ -112,6 +114,8 @@
 		0F848F38247C5D90000AB70E /* TelaAdmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaAdmViewController.swift; sourceTree = "<group>"; };
 		0F848F39247C5D90000AB70E /* TelaAdmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelaAdmViewController.xib; sourceTree = "<group>"; };
 		0F848F3E247C5DD8000AB70E /* TelaAdmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaAdmController.swift; sourceTree = "<group>"; };
+		0FA0D4C52485739B00226731 /* ExperienciasTelaAdmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienciasTelaAdmTableViewCell.swift; sourceTree = "<group>"; };
+		0FA0D4C62485739B00226731 /* ExperienciasTelaAdmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienciasTelaAdmTableViewCell.xib; sourceTree = "<group>"; };
 		6F5305402475C60F008D8449 /* ModelExperienciasInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExperienciasInfo.swift; sourceTree = "<group>"; };
 		9524877D2476FC5200C0A7F9 /* DeletarExpPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletarExpPopUp.swift; sourceTree = "<group>"; };
 		9524877E2476FC5200C0A7F9 /* DeletarExpPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletarExpPopUp.xib; sourceTree = "<group>"; };
@@ -400,6 +404,8 @@
 			children = (
 				0F848F38247C5D90000AB70E /* TelaAdmViewController.swift */,
 				0F848F39247C5D90000AB70E /* TelaAdmViewController.xib */,
+				0FA0D4C52485739B00226731 /* ExperienciasTelaAdmTableViewCell.swift */,
+				0FA0D4C62485739B00226731 /* ExperienciasTelaAdmTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -711,6 +717,7 @@
 			files = (
 				9524878D2477220800C0A7F9 /* ExpCriadaPopUp.xib in Resources */,
 				CBED9A622473355D00739BFD /* LoginViewController.xib in Resources */,
+				0FA0D4C82485739B00226731 /* ExperienciasTelaAdmTableViewCell.xib in Resources */,
 				0F17C7C6246F1B1B00A2D212 /* RecomendacoesTableViewCell.xib in Resources */,
 				CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */,
 				0F2B3A0B247AEF250071BD65 /* LoginPopViewController.xib in Resources */,
@@ -767,6 +774,7 @@
 				0F35B05D247DA610006E5C06 /* TelaAdmModel.swift in Sources */,
 				0F17C7CD246F379700A2D212 /* DestaquesViewController.swift in Sources */,
 				CB5C5AD824745CAA00E91446 /* PerfilExperienciaTableViewCell.swift in Sources */,
+				0FA0D4C72485739B00226731 /* ExperienciasTelaAdmTableViewCell.swift in Sources */,
 				9524877F2476FC5200C0A7F9 /* DeletarExpPopUp.swift in Sources */,
 				CBFECD46246DB56E005B621F /* ViewController.swift in Sources */,
 				0F17C7D2246F37B900A2D212 /* DestaquesTableViewCell.swift in Sources */,
