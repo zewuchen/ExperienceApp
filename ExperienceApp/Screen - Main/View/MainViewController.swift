@@ -96,7 +96,7 @@ class MainViewController: UIViewController {
             novaTela.modalPresentationStyle = .fullScreen
         } else {
             novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
-            novaTela.modalPresentationStyle = .fullScreen
+//            novaTela.modalPresentationStyle = .fullScreen
         }
         self.present(novaTela, animated: true, completion: nil)
     }
@@ -165,7 +165,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let novaTela = ExperienciasInfoViewController(nibName: "ExperienciasInfoViewController", bundle: nil)
-        novaTela.modalPresentationStyle = .fullScreen
+//        novaTela.modalPresentationStyle = .fullScreen
         novaTela.controller.dataToConvert = data[indexPath.row]
         self.present(novaTela, animated: true, completion: nil)
     }
