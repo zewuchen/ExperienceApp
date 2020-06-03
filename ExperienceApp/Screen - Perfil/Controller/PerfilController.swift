@@ -13,6 +13,7 @@ import CloudKit
 protocol PerfilControllerDelegate: AnyObject {
     func reloadData(data: [ModelExperiencePerfil])
     func reloadProfileData(data: AuthModel)
+    func logoff()
 }
 
 final class PerfilController {
@@ -44,6 +45,21 @@ final class PerfilController {
         getExperiences()
 
         delegate?.reloadProfileData(data: user)
+    }
+
+    public func logoff() {
+        UserDefaults.standard.set("", forKey: "name")
+        UserDefaults.standard.set("", forKey: "email")
+        UserDefaults.standard.set("", forKey: "password")
+        UserDefaults.standard.set("", forKey: "description")
+        if let image = UserDefaults.standard.string(forKey: "image") {
+            FileHelper.deleteImage(filePathWithoutExtension: image)
+        }
+        UserDefaults.standard.set("", forKey: "image")
+        UserDefaults.standard.set([], forKey: "marcadas")
+        UserDefaults.standard.set("false", forKey: "logged")
+        UserDefaults.standard.set(false, forKey: "admin")
+        delegate?.logoff()
     }
 
     private func getExperiences() {
