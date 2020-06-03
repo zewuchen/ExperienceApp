@@ -1,5 +1,5 @@
 //
-//  CriarContaViewController.swift
+//  EntrarNaContaViewController.swift
 //  ExperienceApp
 //
 //  Created by Tamara Erlij on 18/05/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CriarContaViewController: UIViewController {
+class EntrarNaContaViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
@@ -100,7 +100,7 @@ class CriarContaViewController: UIViewController {
     }
 }
 
-extension CriarContaViewController: LoginControllerDelegate {
+extension EntrarNaContaViewController: LoginControllerDelegate {
     func authResponser() {
         // TODO: Fazer algo
         // TODO: Mostrar sucesso pro usuário ou erro

@@ -1,5 +1,5 @@
 //
-//  EntrarNaContaViewController.swift
+//  CriarContaViewController.swift
 //  ExperienceApp
 //
 //  Created by Tamara Erlij on 18/05/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EntrarNaContaViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var txtNome: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
@@ -152,11 +152,9 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate, UITextF
     }
 
     @IBAction func btnLogin(_ sender: Any) {
+        let novaTela = EntrarNaContaViewController(nibName: "EntrarNaContaViewController", bundle: nil)
         
-            let novaTela = CriarContaViewController(nibName: "CriarContaViewController", bundle: nil)
-      //     novaTela.modalPresentationStyle = .fullScreen
-        
-           self.present(novaTela, animated: true, completion: nil)
+        self.present(novaTela, animated: true, completion: nil)
     }
     
     func setUpPlaceholder() {
@@ -244,7 +242,7 @@ class EntrarNaContaViewController: UIViewController, UITextViewDelegate, UITextF
     }
 }
 
-extension EntrarNaContaViewController: CreateAccountControllerDelegate {
+extension CriarContaViewController: CreateAccountControllerDelegate {
     func setImageProfile() {
         Camera().selecionadorImagem(self){ imagem in
             self.imageView.image = imagem
