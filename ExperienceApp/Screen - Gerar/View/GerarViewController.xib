@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,6 +31,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-Qf-T7W">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1150"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CriarConta10" translatesAutoresizingMaskIntoConstraints="NO" id="4bM-3i-AFX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1150"/>
+                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promova uma experiência diferenciada!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yk-cC-qwe">
                                     <rect key="frame" x="20" y="86" width="374" height="54"/>
                                     <constraints>
@@ -192,6 +195,7 @@
                                 <constraint firstItem="BXU-uH-xBn" firstAttribute="trailing" secondItem="7mT-4X-WZV" secondAttribute="trailing" id="BLx-Vg-Un5"/>
                                 <constraint firstItem="7mT-4X-WZV" firstAttribute="top" secondItem="dwO-v0-bnP" secondAttribute="bottom" constant="24" id="BsO-5C-Muh"/>
                                 <constraint firstItem="aS3-EG-RPB" firstAttribute="top" secondItem="51Z-jx-okD" secondAttribute="bottom" constant="24" id="CnM-Wh-2Rf"/>
+                                <constraint firstAttribute="trailing" secondItem="4bM-3i-AFX" secondAttribute="trailing" id="Cqc-Vs-8s5"/>
                                 <constraint firstItem="9Vl-Lq-e4R" firstAttribute="leading" secondItem="CBp-2B-k9T" secondAttribute="leading" id="F4v-Mc-h5F"/>
                                 <constraint firstItem="dwO-v0-bnP" firstAttribute="leading" secondItem="7mT-4X-WZV" secondAttribute="leading" id="FEn-LL-z2W"/>
                                 <constraint firstItem="9Vl-Lq-e4R" firstAttribute="trailing" secondItem="KXB-W4-dGt" secondAttribute="trailing" id="GCQ-nH-NG1"/>
@@ -219,6 +223,7 @@
                                 <constraint firstItem="CBp-2B-k9T" firstAttribute="top" secondItem="aS3-EG-RPB" secondAttribute="bottom" constant="4" id="fCi-d3-f8Z"/>
                                 <constraint firstItem="LIn-0k-ESs" firstAttribute="top" secondItem="wGX-1a-ise" secondAttribute="bottom" constant="4" id="fg2-jK-FVr"/>
                                 <constraint firstItem="6yk-cC-qwe" firstAttribute="top" secondItem="un1-LW-VhP" secondAttribute="bottom" constant="16" id="fvh-a2-b6a"/>
+                                <constraint firstItem="4bM-3i-AFX" firstAttribute="leading" secondItem="IwA-Qf-T7W" secondAttribute="leading" id="gW5-yN-BKo"/>
                                 <constraint firstItem="qay-ie-GYn" firstAttribute="top" secondItem="hZJ-c4-lyp" secondAttribute="bottom" constant="4" id="gkw-bo-qtZ"/>
                                 <constraint firstItem="tca-wM-3pF" firstAttribute="top" secondItem="wWB-pd-EkA" secondAttribute="bottom" constant="4" id="hhu-9H-Z48"/>
                                 <constraint firstItem="BdV-Oh-HGE" firstAttribute="top" secondItem="tca-wM-3pF" secondAttribute="bottom" constant="24" id="j8P-x5-9JV"/>
@@ -234,6 +239,8 @@
                                 <constraint firstItem="wWB-pd-EkA" firstAttribute="trailing" secondItem="tca-wM-3pF" secondAttribute="trailing" id="v4T-5m-zl6"/>
                                 <constraint firstItem="51Z-jx-okD" firstAttribute="top" secondItem="BXU-uH-xBn" secondAttribute="bottom" constant="4" id="wp8-N7-P4B"/>
                                 <constraint firstItem="BXU-uH-xBn" firstAttribute="top" secondItem="7u8-Wc-ess" secondAttribute="bottom" constant="24" id="xC5-eY-ugx"/>
+                                <constraint firstAttribute="bottom" secondItem="4bM-3i-AFX" secondAttribute="bottom" id="xO0-gb-C0u"/>
+                                <constraint firstItem="4bM-3i-AFX" firstAttribute="top" secondItem="IwA-Qf-T7W" secondAttribute="top" id="xOn-Gt-auy"/>
                                 <constraint firstItem="9Vl-Lq-e4R" firstAttribute="trailing" secondItem="7u8-Wc-ess" secondAttribute="trailing" id="xvZ-A7-BMG"/>
                                 <constraint firstAttribute="height" constant="1150" id="yVZ-Ja-hML"/>
                                 <constraint firstItem="LIn-0k-ESs" firstAttribute="leading" secondItem="IwA-Qf-T7W" secondAttribute="leading" constant="20" id="ycO-lF-0f0"/>
@@ -264,6 +271,7 @@
         </view>
     </objects>
     <resources>
+        <image name="CriarConta10" width="414" height="896"/>
         <image name="addFoto" width="244" height="236"/>
         <image name="botaoSair" width="100" height="100"/>
     </resources>
