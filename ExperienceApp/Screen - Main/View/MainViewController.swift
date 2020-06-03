@@ -49,12 +49,16 @@ class MainViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        // BUGFIX: Reload no perfil quando deslogar
         if let btnPerfil = btnPerfil {
             setUpButtons(button: btnPerfil, nome: "userDefault")
         }
         if let btnBusca = btnBusca, UserDefaults.standard.bool(forKey: "admin") {
             btnBusca.isHidden = false
             btnBusca.isEnabled = true
+        } else {
+            btnBusca.isHidden = true
+            btnBusca.isEnabled = false
         }
     }
     
@@ -83,14 +87,16 @@ class MainViewController: UIViewController {
     }
     
     func setUpButtons(button: UIButton, nome: String) {
-        button.layer.cornerRadius =  button.frame.size.height/2
-        button.layer.masksToBounds = true
-        button.setImage(UIImage(named: nome), for: .normal)
+        DispatchQueue.main.async {
+            button.layer.cornerRadius =  button.frame.size.height/2
+            button.layer.masksToBounds = true
+            button.setImage(UIImage(named: nome), for: .normal)
 
-        if let nameImage = UserDefaults.standard.string(forKey: "image") {
-            if let imagePath = FileHelper.getFile(filePathWithoutExtension: nameImage) {
-                let image = UIImage(contentsOfFile: imagePath)
-                button.setImage(image, for: .normal)
+            if let nameImage = UserDefaults.standard.string(forKey: "image"), UserDefaults.standard.bool(forKey: "logged") {
+                if let imagePath = FileHelper.getFile(filePathWithoutExtension: nameImage) {
+                    let image = UIImage(contentsOfFile: imagePath)
+                    button.setImage(image, for: .normal)
+                }
             }
         }
     }

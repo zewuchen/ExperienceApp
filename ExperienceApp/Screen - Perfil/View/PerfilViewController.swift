@@ -79,6 +79,10 @@ class PerfilViewController: UIViewController {
         self.perfilScrollView.backgroundColor = .background
     }
 
+    @IBAction func btnLogoff(_ sender: Any) {
+        controller.logoff()
+    }
+
     @IBAction func btnNewExperience(_ sender: Any) {
         let novaTela = GerarViewController(nibName: "GerarViewController", bundle: nil)
         self.present(novaTela, animated: true, completion: nil)
@@ -87,6 +91,10 @@ class PerfilViewController: UIViewController {
 }
 
 extension PerfilViewController: PerfilControllerDelegate {
+    func logoff() {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+
     func reloadProfileData(data: AuthModel) {
         self.name.text = data.name
         self.biographyText.text = data.description
