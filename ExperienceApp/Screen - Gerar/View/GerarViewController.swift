@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GerarViewController: UIViewController, UITextViewDelegate {
+class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
     // TODO: Adicionar disponibilidade
     @IBOutlet weak var txtTema: UITextField!
@@ -43,8 +43,15 @@ class GerarViewController: UIViewController, UITextViewDelegate {
         self.imgFoto.addGestureRecognizer(selectorImage)
         setUpDescription()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        txtTema.delegate = self
+        txtDescription.delegate = self
+        txtRecursos.delegate = self
+        txtParticipar.delegate = self
+        txtTamanho.delegate = self
+        txtData.delegate = self
     }
     
     func setUpButton() {
@@ -52,11 +59,20 @@ class GerarViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc func aparecerTeclado(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
+        guard let tamTeclado = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y = -tamTeclado.height
         }
+    }
+    
+    @objc func esconderTeclado(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
 
     @IBAction func sairBtn(_ sender: Any) {
@@ -65,12 +81,6 @@ class GerarViewController: UIViewController, UITextViewDelegate {
     
     @objc func dismissTela() {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    @objc func esconderTeclado(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }
     }
     
     func setUpPicker() {
@@ -111,10 +121,6 @@ class GerarViewController: UIViewController, UITextViewDelegate {
                telaExpCriada.modalTransitionStyle  =  .crossDissolve
                telaExpCriada.modalPresentationStyle = .overCurrentContext
                self.present(telaExpCriada, animated: true, completion: nil)
-            
-//            let _ = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(dismissTela), userInfo: nil, repeats: true)
-            // TODO: Dar dismiss na tela quando criar a experiência
-//            self.navigationController?.popToRootViewController(animated: false)
         }
     }
     
@@ -144,28 +150,53 @@ class GerarViewController: UIViewController, UITextViewDelegate {
         txtDescription.layer.borderColor = UIColor.lightGray.cgColor
         txtDescription.layer.borderWidth = 0.5
         }
-        // MARK: UITextViewDelegates
-           func textViewDidBeginEditing(_ textView: UITextView) {
-               if textView.text == "Conte como a experiência será incrível" {
-                  textView.text = ""
-                  textView.textColor = UIColor.black
-                  textView.font = UIFont(name: "avenir", size: 16.0)
-               }
-           }
-           func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-               if text == "\n" {
-                   textView.resignFirstResponder()
-               }
-               return true
-           }
+    
+    // MARK: UITextFieldDelegates
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField == txtParticipar || textField == txtTamanho || textField == txtData {
+            NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
+        
+        if textField == txtTema || textField == txtRecursos {
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        }
+        return true
+    }
+        
+    // MARK: UITextViewDelegates
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if textView == txtDescription {
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        }
+        return true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "Conte como a experiência será incrível" {
+            textView.text = ""
+            textView.textColor = UIColor.black
+            textView.font = UIFont(name: "avenir", size: 16.0)
+        }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
            
-           func textViewDidEndEditing(_ textView: UITextView) {
-               if textView.text == "" {
-                   textView.text = "Conte como a experiência será incrível"
-                   textView.textColor = UIColor.lightGray
-                   textView.font = UIFont(name: "avenir", size: 16.0)
-               }
-           }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Conte como a experiência será incrível"
+            textView.textColor = UIColor.lightGray
+            textView.font = UIFont(name: "avenir", size: 16.0)
+        }
+    }
     
     func validate() -> Bool {
         // TODO: Validar os campos de dados aqui
