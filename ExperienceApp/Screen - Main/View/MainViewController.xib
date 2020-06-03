@@ -44,7 +44,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jo-cd-LOg">
-                    <rect key="frame" x="301.5" y="72" width="45" height="45"/>
+                    <rect key="frame" x="357" y="72" width="45" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="96f-dt-IyS"/>
                         <constraint firstAttribute="width" constant="45" id="BTw-6e-OcS"/>
@@ -85,10 +85,10 @@
             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="elE-aw-lNN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="1JY-xg-SPw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1jo-cd-LOg" secondAttribute="trailing" constant="12" id="1ez-sT-dMr"/>
                 <constraint firstItem="9AK-L8-9bO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="4sk-WU-jxG"/>
                 <constraint firstItem="8AK-ja-HuX" firstAttribute="top" secondItem="rI1-0X-BJi" secondAttribute="bottom" constant="13" id="6L4-v4-Xtl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9AK-L8-9bO" secondAttribute="trailing" constant="12" id="7Bz-av-Lx0"/>
-                <constraint firstItem="1jo-cd-LOg" firstAttribute="leading" secondItem="YiE-uj-m1r" secondAttribute="trailing" constant="36" id="Cv0-Jn-Hej"/>
                 <constraint firstItem="9AK-L8-9bO" firstAttribute="top" secondItem="elE-aw-lNN" secondAttribute="bottom" constant="5" id="EON-kg-4zj"/>
                 <constraint firstItem="rI1-0X-BJi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="FNT-Mh-Wm1"/>
                 <constraint firstItem="elE-aw-lNN" firstAttribute="top" secondItem="8AK-ja-HuX" secondAttribute="bottom" constant="10" id="JsT-bG-nmW"/>

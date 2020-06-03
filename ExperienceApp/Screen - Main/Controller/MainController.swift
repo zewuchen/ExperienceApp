@@ -23,12 +23,11 @@ final class MainController {
     public init() {
 //        self.data.append(MainModel(nomeDestaque: "Pandas", nomeExp: "Meditacao", descricaoExp: "panda panda panda", notaExp: 9.8, precoExp: "Milhões de dórares"))
 //        self.data.append(MainModel(nomeDestaque: "Pandas", nomeExp: "Meditacao", descricaoExp: "panda panda panda", notaExp: 9.8, precoExp: "Milhões de dórares"))
-        let _ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(getDataCloud), userInfo: nil, repeats: true)
+        let _ = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(getDataCloud), userInfo: nil, repeats: true)
     }
 
     @objc func getDataCloud() {
         reload()
-        print("buscou os dados")
     }
     
     public func reload() {

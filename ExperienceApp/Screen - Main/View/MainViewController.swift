@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // TODO: Mudar foto de perfil default
-        setUpButtons(button: btnPerfil, nome: "userDefault")
+        btnBusca.setImage(UIImage(named: "busca"), for: .normal)
     }
     
     func setUpTable() {

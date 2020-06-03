@@ -189,13 +189,13 @@ class GerarViewController: UIViewController, UITextViewDelegate {
             txtDescription.layer.borderWidth = 2.0
             txtDescription.layer.cornerRadius = 6
             arrayReturn.append(false)
-            print("Prencha a descrição")
+//            print("Prencha a descrição")
         } else {
             txtDescription.layer.borderColor = corBordaCerta
 //            print(txtDescription.text?.count ?? "juu")
             txtDescription.layer.borderWidth = 0.25
             arrayReturn.append(true)
-             print("Descrição feita")
+//             print("Descrição feita")
         }
         
         // Validando Texto Tamanhos

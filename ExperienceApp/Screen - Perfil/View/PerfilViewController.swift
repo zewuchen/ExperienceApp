@@ -44,7 +44,7 @@ class PerfilViewController: UIViewController {
     }
     
     @IBAction func sairBtn(_ sender: Any) {
-        self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     func setUpImage() {
