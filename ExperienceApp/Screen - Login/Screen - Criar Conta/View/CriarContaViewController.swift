@@ -16,6 +16,7 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
     @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var btnCriarConta: UIButton!
+    @IBOutlet weak var scrollViewCriarConta: UIScrollView!
     
     let controller = CreateAccountController()
     var urlString = ""
@@ -28,6 +29,7 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
         setUpBiography()
         setUpButton()
         txtNome.delegate = self
+        scrollViewCriarConta.delegate = self
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -258,5 +260,12 @@ extension CriarContaViewController: CreateAccountControllerDelegate {
     func authResponser() {
         // TODO: Fazer algo
         // TODO: Mostrar sucesso pro usuário ou erro
+    }
+}
+
+
+extension CriarContaViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.bounces = scrollView.contentOffset.y > 100
     }
 }
