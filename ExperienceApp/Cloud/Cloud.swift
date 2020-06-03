@@ -93,7 +93,7 @@ final class Cloud {
             do {
                 try dataImage.write(to: url)
             } catch let erro as NSError {
-                print("Error! \(erro)")
+//                print("Error! \(erro)")
                 return
             }
             user.setValue(CKAsset(fileURL: url), forKey: "image")
@@ -102,7 +102,7 @@ final class Cloud {
         authUser(data: data) { (record, error) in
             if let record = record {
                 // TODO: Tratar erro para quando já tiver o usuário logado
-                print("Usuário já registrado")
+//                print("Usuário já registrado")
             } else {
                 // FIXME: (Primeira vez que cadastra, ele buga)
                 self.cloudSave(record: user, database: self.publicDB)
@@ -114,18 +114,18 @@ final class Cloud {
         self.publicDB.save(record) { (record, error) in
             if let error = error {
                 // TODO: Tratar o erro quando salva o usuário
-                print("Erro ao salvar")
+//                print("Erro ao salvar")
             } else {
-                print("Salvo com Sucesso")
+//                print("Salvo com Sucesso")
             }
 
             // TODO: Tratar o erro de quando não se tem um arquivo para excluido, este save é genérico
             // CASE: Cliquei em Experimentar a experiência, não há arquivo para ser excluído
             do {
                 try FileManager.default.removeItem(at: self.url)
-                print("Temp file deletado com sucesso")
+//                print("Temp file deletado com sucesso")
             } catch let erro {
-                print("Error deleting temp file: \(erro)")
+//                print("Error deleting temp file: \(erro)")
             }
         }
     }
@@ -148,7 +148,6 @@ final class Cloud {
 
         publicDB.perform(query, inZoneWith: nil) { (records, error) in
             if let records = records {
-                print(records)
                 completionHandler(records.first, error)
             } else {
                 completionHandler(nil, error)
@@ -267,7 +266,7 @@ final class Cloud {
                     do {
                         try dataImage.write(to: self.url)
                     } catch let erro as NSError {
-                        print("Error! \(erro)")
+//                        print("Error! \(erro)")
                         return
                     }
                     experience.setValue(CKAsset(fileURL: self.url), forKey: "image")
@@ -413,7 +412,7 @@ final class Cloud {
             do {
                 try dataImage.write(to: url)
             } catch let erro as NSError {
-                print("Error! \(erro)")
+//                print("Error! \(erro)")
                 return
             }
             highlight.setValue(CKAsset(fileURL: url), forKey: "image")

@@ -17,8 +17,7 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var bottomTableView: NSLayoutConstraint!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+
     // MARK: Variáveis
     let destaquesCell = "DestaquesTableViewCell"
 //    var numberOfRows: Int = 2
@@ -68,10 +67,6 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
  
             return celulaTable ?? UITableViewCell()
         }
-    
-    @IBAction func sairBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
 
 extension DestaquesViewController: DestaquesControllerDelegate {

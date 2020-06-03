@@ -35,9 +35,9 @@ class FileHelper {
             let filename = getDocumentsDirectory().appendingPathComponent("\(nameWithoutExtension).jpg")
             do {
                 try data.write(to: filename)
-                print("Foto salva")
+//                print("Foto salva")
             } catch {
-                print("Erro ao salvar a foto:", error)
+//                print("Erro ao salvar a foto:", error)
             }
         }
     }
@@ -68,10 +68,10 @@ class FileHelper {
             let imagePath: URL = getDocumentsDirectory().appendingPathComponent("\(filePathWithoutExtension).jpg")
             if fileManager.fileExists(atPath: imagePath.relativePath) {
                 try fileManager.removeItem(at: imagePath)
-                print("Foto excluída")
+//                print("Foto excluída")
             }
         } catch {
-            print("Erro ao excluir a foto:", error)
+//            print("Erro ao excluir a foto:", error)
         }
     }
 }

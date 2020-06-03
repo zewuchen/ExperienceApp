@@ -16,11 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var data: [MainModel] = []
-    private var dataDestaques: [DestaquesModel] = [DestaquesModel(nomeDestaque: "Ta na Disney?",
-                                                    descricaoDestaque: "Você também é um amante de desenhos? É seu sonho de princesa ter todos os funkos da Disney? Bora ver essas experiências relacionadas com a Disney então!",
-                                                    imgDestaque: "disney"),
-                                                    DestaquesModel(nomeDestaque: "Ler até a madrugada",
-                                                    descricaoDestaque: "Indicações para leitores iniciantes - Recomendações de livros para quem gosta de Aventura", imgDestaque: "livros")]
+    private var dataDestaques: [DestaquesModel] = []
 
     private let controller = MainController()
 
@@ -42,14 +38,16 @@ class MainViewController: UIViewController {
         self.tableView.showsVerticalScrollIndicator = false
         self.collectionView.showsHorizontalScrollIndicator = false
 
-        // Desabilitado o botão de procurar aqui
-        btnBusca.removeFromSuperview()
         setNavigation()
+
+        if !UserDefaults.standard.bool(forKey: "admin") {
+            btnBusca.removeFromSuperview()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //TODO: Mudar foto de perfil default
-        setUpButtons(button: btnPerfil, nome: "userDefault")
+        // TODO: Mudar foto de perfil default
+        btnBusca.setImage(UIImage(named: "busca"), for: .normal)
     }
     
     func setUpTable() {
@@ -89,6 +87,13 @@ class MainViewController: UIViewController {
         }
     }
 
+
+    @IBAction func btnTelaDestaque(_ sender: Any) {
+        let novaTela = TelaAdmViewController(nibName: "TelaAdmViewController", bundle: nil)
+        novaTela.modalPresentationStyle = .fullScreen
+        self.present(novaTela, animated: true, completion: nil)
+    }
+
     @IBAction func btnPerfilAction(_ sender: Any) {
         var novaTela = UIViewController()
         if !UserDefaults.standard.bool(forKey: "logged") {
@@ -96,7 +101,7 @@ class MainViewController: UIViewController {
             novaTela.modalPresentationStyle = .fullScreen
         } else {
             novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
-            novaTela.modalPresentationStyle = .fullScreen
+//            novaTela.modalPresentationStyle = .fullScreen
         }
         self.present(novaTela, animated: true, completion: nil)
     }
@@ -165,7 +170,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let novaTela = ExperienciasInfoViewController(nibName: "ExperienciasInfoViewController", bundle: nil)
-        novaTela.modalPresentationStyle = .fullScreen
+//        novaTela.modalPresentationStyle = .fullScreen
         novaTela.controller.dataToConvert = data[indexPath.row]
         self.present(novaTela, animated: true, completion: nil)
     }

@@ -26,7 +26,7 @@
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.74117647060000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jFb-xj-Z0O">
-                                        <rect key="frame" x="16" y="131" width="231" height="28"/>
+                                        <rect key="frame" x="16" y="137" width="231" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="PPS-cY-ctT"/>
                                             <constraint firstAttribute="width" constant="231" id="ZOc-Mz-caA"/>
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="bottom" secondItem="TZZ-BG-0FU" secondAttribute="bottom" id="ifD-vE-74T"/>
                                     <constraint firstItem="jFb-xj-Z0O" firstAttribute="leading" secondItem="Yxr-nU-xzZ" secondAttribute="leading" constant="16" id="jgS-B7-9jJ"/>
                                     <constraint firstItem="TZZ-BG-0FU" firstAttribute="leading" secondItem="Yxr-nU-xzZ" secondAttribute="leading" id="pO0-Zr-xD9"/>
-                                    <constraint firstAttribute="bottom" secondItem="jFb-xj-Z0O" secondAttribute="bottom" constant="16" id="vQS-aF-Frn"/>
+                                    <constraint firstAttribute="bottom" secondItem="jFb-xj-Z0O" secondAttribute="bottom" constant="10" id="vQS-aF-Frn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
