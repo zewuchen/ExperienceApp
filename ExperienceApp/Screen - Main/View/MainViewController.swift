@@ -40,14 +40,17 @@ class MainViewController: UIViewController {
 
         setNavigation()
 
+        self.btnBusca.setImage(UIImage(named: "busca"), for: .normal)
+
         if !UserDefaults.standard.bool(forKey: "admin") {
             btnBusca.removeFromSuperview()
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        // TODO: Mudar foto de perfil default
-        btnBusca.setImage(UIImage(named: "busca"), for: .normal)
+        if let btnPerfil = btnPerfil {
+            setUpButtons(button: btnPerfil, nome: "userDefault")
+        }
     }
     
     func setUpTable() {
@@ -87,7 +90,6 @@ class MainViewController: UIViewController {
         }
     }
 
-
     @IBAction func btnTelaDestaque(_ sender: Any) {
         let novaTela = TelaAdmViewController(nibName: "TelaAdmViewController", bundle: nil)
         novaTela.modalPresentationStyle = .fullScreen
@@ -101,7 +103,6 @@ class MainViewController: UIViewController {
             novaTela.modalPresentationStyle = .fullScreen
         } else {
             novaTela = PerfilViewController(nibName: "PerfilViewController", bundle: nil)
-//            novaTela.modalPresentationStyle = .fullScreen
         }
         self.present(novaTela, animated: true, completion: nil)
     }
@@ -109,6 +110,7 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainControllerDelegate {
+
     func reloadHighlight(data: [DestaquesModel]) {
         self.dataDestaques = data
         DispatchQueue.main.async {
@@ -119,7 +121,6 @@ extension MainViewController: MainControllerDelegate {
     func reloadData(data: [MainModel]) {
         self.data = data
         DispatchQueue.main.async {
-//            self.collectionView.reloadData()
             self.tableView.reloadData()
         }
     }
@@ -156,11 +157,8 @@ extension MainViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-//        let celulaTable = RecomendacoesTableViewCell(style: .default, reuseIdentifier: recomendacoesCell)
     
         let celulaTable = self.tableView.dequeueReusableCell(withIdentifier: recomendacoesCell, for: indexPath) as? RecomendacoesTableViewCell
-        
         celulaTable?.setUp(model: data[indexPath.row])
     
         return celulaTable ?? UITableViewCell()
@@ -170,7 +168,6 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let novaTela = ExperienciasInfoViewController(nibName: "ExperienciasInfoViewController", bundle: nil)
-//        novaTela.modalPresentationStyle = .fullScreen
         novaTela.controller.dataToConvert = data[indexPath.row]
         self.present(novaTela, animated: true, completion: nil)
     }

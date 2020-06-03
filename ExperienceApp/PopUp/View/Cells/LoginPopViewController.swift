@@ -16,8 +16,9 @@ class LoginPopViewController: UIViewController {
     }
     
     @objc func chamarTela() {
-        let novaTela = MainViewController(nibName: "MainViewController", bundle: nil)
-        novaTela.modalPresentationStyle = .fullScreen
-        self.present(novaTela, animated: false, completion: nil)
+        if var appdelegate = UIApplication.shared.windows.first?.rootViewController {
+            appdelegate = MainViewController(nibName: "MainViewController", bundle: nil)
+        }
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
