@@ -43,13 +43,18 @@ class MainViewController: UIViewController {
         self.btnBusca.setImage(UIImage(named: "busca"), for: .normal)
 
         if !UserDefaults.standard.bool(forKey: "admin") {
-            btnBusca.removeFromSuperview()
+            btnBusca.isHidden = true
+            btnBusca.isEnabled = false
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         if let btnPerfil = btnPerfil {
             setUpButtons(button: btnPerfil, nome: "userDefault")
+        }
+        if let btnBusca = btnBusca, UserDefaults.standard.bool(forKey: "admin") {
+            btnBusca.isHidden = false
+            btnBusca.isEnabled = true
         }
     }
     
