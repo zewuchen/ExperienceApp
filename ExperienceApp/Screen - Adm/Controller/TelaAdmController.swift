@@ -75,4 +75,8 @@ final class TelaAdmController {
         guard let fileURL = fileURL else { return }
         FileHelper.deleteImage(filePathWithoutExtension: fileURL)
     }
+
+    public func createHighlight(data: HighlightModel) {
+        Cloud.shared.createHighlight(data: data)
+    }
 }
