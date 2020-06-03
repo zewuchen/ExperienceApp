@@ -43,9 +43,6 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         self.imgFoto.addGestureRecognizer(selectorImage)
         setUpDescription()
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(aparecerTeclado), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(esconderTeclado), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
         txtTema.delegate = self
         txtDescription.delegate = self
         txtRecursos.delegate = self
