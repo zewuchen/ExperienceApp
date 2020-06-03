@@ -39,15 +39,15 @@ class MainViewController: UIViewController {
         self.collectionView.showsHorizontalScrollIndicator = false
 
         setNavigation()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //TODO: Mudar foto de perfil default
-        setUpButtons(button: btnPerfil, nome: "userDefault")
 
         if !UserDefaults.standard.bool(forKey: "admin") {
             btnBusca.removeFromSuperview()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // TODO: Mudar foto de perfil default
+        setUpButtons(button: btnPerfil, nome: "userDefault")
     }
     
     func setUpTable() {
