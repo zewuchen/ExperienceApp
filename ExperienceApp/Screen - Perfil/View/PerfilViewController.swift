@@ -81,7 +81,6 @@ class PerfilViewController: UIViewController {
 
     @IBAction func btnNewExperience(_ sender: Any) {
         let novaTela = GerarViewController(nibName: "GerarViewController", bundle: nil)
-        novaTela.modalPresentationStyle = .fullScreen
         self.present(novaTela, animated: true, completion: nil)
     }
     
