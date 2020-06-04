@@ -93,7 +93,7 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
     
     func validar() -> Bool {
         let corBordaCerta = UIColor.lightGray.cgColor
-        let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
+        let corBordaErrada = UIColor.init(red: 0.5915914774, green: 0, blue: 0.2114774585, alpha: 1.0).cgColor
         var arrayReturn: [Bool] = []
 
         // Validar nome
@@ -133,7 +133,7 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
         }
         
         // Validar biografia/description
-        if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 240 {
+        if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 300 {
             txtDescription.layer.borderColor = corBordaErrada
             txtDescription.layer.borderWidth = 2.0
             txtDescription.layer.cornerRadius = 6

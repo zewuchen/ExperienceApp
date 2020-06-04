@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBFECD3D246DB56E005B621F"
-               BuildableName = "Experia.app"
+               BuildableName = "Newe.app"
                BlueprintName = "ExperienceApp"
                ReferencedContainer = "container:ExperienceApp.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBFECD3D246DB56E005B621F"
-            BuildableName = "Experia.app"
+            BuildableName = "Newe.app"
             BlueprintName = "ExperienceApp"
             ReferencedContainer = "container:ExperienceApp.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBFECD3D246DB56E005B621F"
-            BuildableName = "Experia.app"
+            BuildableName = "Newe.app"
             BlueprintName = "ExperienceApp"
             ReferencedContainer = "container:ExperienceApp.xcodeproj">
          </BuildableReference>
