@@ -19,6 +19,7 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
     @IBOutlet weak var imgFoto: UIImageView!
     @IBOutlet weak var txtData: UITextField!
     @IBOutlet weak var btnCriar: UIButton!
+    @IBOutlet weak var scrollViewGerar: UIScrollView!
     
     private var dataPicker: UIDatePicker?
     private let controller = GerarController()
@@ -35,6 +36,8 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         controller.delegate = self
         setUpPicker()
         setUpButton()
+        setImage()
+        scrollViewGerar.delegate = self
         let toque = UITapGestureRecognizer(target: self, action: #selector(tirarTeclado))
         self.view.addGestureRecognizer(toque)
         toque.cancelsTouchesInView = false
@@ -54,6 +57,15 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
     func setUpButton() {
         btnCriar.layer.cornerRadius = 10
     }
+    
+    func setImage() {
+        imgFoto.layer.shadowColor = UIColor.black.cgColor
+        imgFoto.layer.shadowOffset = CGSize(width: 4, height: 4)
+        imgFoto.layer.shadowOpacity = 0.04
+        imgFoto.layer.shadowRadius = 1.0
+        imgFoto.clipsToBounds = false
+    }
+    
     
     @objc func aparecerTeclado(notification: NSNotification) {
         guard let tamTeclado = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
@@ -332,5 +344,11 @@ extension GerarViewController: GerarControllerDelegate {
 
     func reload() {
         // TODO: Fazer algo
+    }
+}
+
+extension GerarViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.bounces = scrollView.contentOffset.y > 100
     }
 }
