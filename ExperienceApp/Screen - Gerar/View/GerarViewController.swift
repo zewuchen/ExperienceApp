@@ -333,6 +333,7 @@ extension GerarViewController: GerarControllerDelegate {
     func setImageProfile() {
         Camera().selecionadorImagem(self) { imagem in
             self.imgFoto.image = imagem
+            self.imgFoto.contentMode = .scaleAspectFit
 
             if self.urlString != "" {
                 self.controller.deleteFoto(fileURL: self.urlString)

@@ -28,7 +28,7 @@ class ModelExperienciasInfo {
     var available: Bool
     
     init(infoImage: UIImage, titleExp: String, durationTime: Int, howManyPeople: Int, tags: [String], descriptionExp: String,
-         hostImage:UIImage, hostName: String, hostDescription: String, howParticipate: String, whatYouNeedDescription: String, recordName: String, responsible: String, data: String, available: Bool = true) {
+        hostImage:UIImage, hostName: String, hostDescription: String, howParticipate: String, whatYouNeedDescription: String, recordName: String, responsible: String, data: String, available: Bool = true) {
         self.infoImage = infoImage
         self.titleExp = titleExp
         self.durationTime = durationTime

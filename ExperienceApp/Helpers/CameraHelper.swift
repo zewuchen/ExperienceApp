@@ -11,7 +11,7 @@ import UIKit
 class Camera: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //Instância o controle do sistema de imagens
-    var selecionador = UIImagePickerController();
+    var selecionador = UIImagePickerController()
 
     //Cria um alerta
     var alerta = UIAlertController(title: "Escolha uma opção", message: nil, preferredStyle: .actionSheet)
@@ -21,7 +21,6 @@ class Camera: NSObject, UIImagePickerControllerDelegate, UINavigationControllerD
 
     //Cria um callback @escaping
     var retornoSelecionador : ((UIImage) -> ())?
-
 
     /**
     *Seleciona a imagem da câmera ou galeria*

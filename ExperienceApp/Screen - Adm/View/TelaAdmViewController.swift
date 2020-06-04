@@ -114,6 +114,7 @@ class TelaAdmViewController: UIViewController, UITableViewDelegate {
         Camera().selecionadorImagem(self) {
             imagem in
             self.imgAdd.image = imagem
+            self.imgAdd.contentMode = .scaleAspectFit
             
             if self.urlString != ""{
                 self.controller.deleteFoto(fileURL: self.urlString)
