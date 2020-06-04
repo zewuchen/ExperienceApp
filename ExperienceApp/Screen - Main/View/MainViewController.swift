@@ -95,7 +95,7 @@ class MainViewController: UIViewController {
             if let nameImage = UserDefaults.standard.string(forKey: "image"), UserDefaults.standard.bool(forKey: "logged") {
                 if let imagePath = FileHelper.getFile(filePathWithoutExtension: nameImage) {
                     let image = UIImage(contentsOfFile: imagePath)
-                    button.setImage(image, for: .normal)
+                    self.btnPerfil.setImage(image, for: .normal)
                 }
             }
         }
@@ -156,7 +156,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var tela = DestaquesViewController(nibName: "DestaquesViewController", bundle: nil)
+        let tela = DestaquesViewController(nibName: "DestaquesViewController", bundle: nil)
         tela.data = self.dataDestaques[indexPath.row]
         self.present(tela, animated: true, completion: nil)
     }

@@ -95,8 +95,7 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
         let corBordaCerta = UIColor.lightGray.cgColor
         let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
         var arrayReturn: [Bool] = []
-        
-        
+
         // Validar nome
         if txtNome.text == "" || txtNome.text == nil || txtNome.text?.count ?? 1 > 42 {
             txtNome.layer.borderColor = corBordaErrada
@@ -121,7 +120,6 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
             arrayReturn.append(true)
         }
         
-        
         // Validar password
         if txtSenha.text == "" || txtSenha.text == nil {
             txtSenha.layer.borderColor = corBordaErrada
@@ -145,8 +143,7 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
             txtDescription.layer.borderWidth = 0.25
             arrayReturn.append(true)
         }
-        
-        
+
         if arrayReturn.contains(false) {
             return false
         }
@@ -246,8 +243,9 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
 
 extension CriarContaViewController: CreateAccountControllerDelegate {
     func setImageProfile() {
-        Camera().selecionadorImagem(self){ imagem in
+        Camera().selecionadorImagem(self) { imagem in
             self.imageView.image = imagem
+            self.imageView.contentMode = .scaleAspectFit
 
             if self.urlString != "" {
                 self.controller.deleteFoto(fileURL: self.urlString)
@@ -261,8 +259,8 @@ extension CriarContaViewController: CreateAccountControllerDelegate {
         // TODO: Fazer algo
         // TODO: Mostrar sucesso pro usuário ou erro
     }
+    
 }
-
 
 extension CriarContaViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

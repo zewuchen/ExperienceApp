@@ -205,7 +205,7 @@ class ExperienciasInfoViewController: UIViewController {
     }
 
     func setUserHasExperience() -> Bool {
-        if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
+        if let marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
             if !marcadas.isEmpty {
                 for record in 0...marcadas.count-1 {
                     if marcadas[record] == recordName {
