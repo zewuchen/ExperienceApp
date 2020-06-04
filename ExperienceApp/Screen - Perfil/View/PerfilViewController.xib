@@ -151,7 +151,7 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHl-9g-rbW">
                     <rect key="frame" x="194" y="816" width="200" height="50"/>
-                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.3566209078" green="0.2252809107" blue="0.32157757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="C9r-t5-m3n"/>
                         <constraint firstAttribute="height" constant="50" id="eRr-CZ-vzB"/>
