@@ -24,7 +24,7 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
     private var dataPicker: UIDatePicker?
     private let controller = GerarController()
     let corBordaCerta = UIColor.lightGray.cgColor
-    let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
+    let corBordaErrada = UIColor.init(red: 0.5915914774, green: 0, blue: 0.2114774585, alpha: 1.0).cgColor
     var arrayReturn: [Bool] = []
     var urlString = ""
     var data: Date = Date()
@@ -224,7 +224,7 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         }
       
         // Validando Texto Descrição
-        if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 240 {
+        if txtDescription.text == "" || txtDescription.text == nil || txtDescription.text?.count ?? 1 > 320 {
             txtDescription.layer.borderColor = corBordaErrada
             txtDescription.layer.borderWidth = 2.0
             txtDescription.layer.cornerRadius = 6
@@ -256,7 +256,7 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         }
         
         // Validando Texto HowToParticipate
-        if txtParticipar.text == "" || txtParticipar.text == nil || txtParticipar.text?.count ?? 1 > 240 {
+        if txtParticipar.text == "" || txtParticipar.text == nil || txtParticipar.text?.count ?? 1 > 300 {
             txtParticipar.layer.borderColor = corBordaErrada
             txtParticipar.layer.borderWidth = 2.0
             txtParticipar.layer.cornerRadius = 6
@@ -268,7 +268,7 @@ class GerarViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         }
         
         // Validando Texto Recursos
-        if txtRecursos.text == "" || txtRecursos.text == nil || txtRecursos.text?.count ?? 1 > 240 {
+        if txtRecursos.text == "" || txtRecursos.text == nil || txtRecursos.text?.count ?? 1 > 1000 {
             txtRecursos.layer.borderColor = corBordaErrada
             txtRecursos.layer.borderWidth = 2.0
             txtRecursos.layer.cornerRadius = 6

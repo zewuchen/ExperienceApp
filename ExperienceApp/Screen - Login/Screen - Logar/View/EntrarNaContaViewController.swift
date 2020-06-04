@@ -60,7 +60,7 @@ class EntrarNaContaViewController: UIViewController {
     
     func validar() -> Bool {
         var arrayReturn: [Bool] = []
-        let corBordaErrada = UIColor.init(red: 1.83, green: 0.77, blue: 0.77, alpha: 1.0).cgColor
+        let corBordaErrada = UIColor.init(red: 0.5915914774, green: 0, blue: 0.2114774585, alpha: 1.0).cgColor
         let corBordaCerta = UIColor.lightGray.cgColor
         
         if txtEmail.text == "" || txtEmail.text == nil || validarEmail(txtEmail.text ?? "email") == false {
