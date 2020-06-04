@@ -145,7 +145,7 @@
 		CBED9A5D2473301A00739BFD /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		CBED9A5F2473355D00739BFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBED9A602473355D00739BFD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		CBFECD3E246DB56E005B621F /* Experia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFECD3E246DB56E005B621F /* Newe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFECD41246DB56E005B621F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBFECD43246DB56E005B621F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CBFECD48246DB56E005B621F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -655,7 +655,7 @@
 		CBFECD3F246DB56E005B621F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBFECD3E246DB56E005B621F /* Experia.app */,
+				CBFECD3E246DB56E005B621F /* Newe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -721,7 +721,7 @@
 			);
 			name = ExperienceApp;
 			productName = ExperienceApp;
-			productReference = CBFECD3E246DB56E005B621F /* Experia.app */;
+			productReference = CBFECD3E246DB56E005B621F /* Newe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1015,7 +1015,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nathalia.ExperienceApp;
-				PRODUCT_NAME = Experia;
+				PRODUCT_NAME = Newe;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1035,7 +1035,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nathalia.ExperienceApp;
-				PRODUCT_NAME = Experia;
+				PRODUCT_NAME = Newe;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

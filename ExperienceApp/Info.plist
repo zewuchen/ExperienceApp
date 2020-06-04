@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Eae</string>
+	<string>Permissão para usar a câmera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Eae</string>
+	<string>Permissão para acessar a galeria</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

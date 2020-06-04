@@ -10,7 +10,11 @@ import UIKit
 
 extension UIColor {
     static var vermelhoTijolo: UIColor {
-        return #colorLiteral(red: 0.7111877799, green: 0.2967664301, blue: 0.2963447571, alpha: 1)
+        return #colorLiteral(red: 0.3789822757, green: 0.2177237272, blue: 0.327011168, alpha: 1)
+    }
+    
+    static var roxoTijolo: UIColor {
+        return #colorLiteral(red: 0.5915914774, green: 0, blue: 0.2114774585, alpha: 1)
     }
 
     static var background: UIColor {

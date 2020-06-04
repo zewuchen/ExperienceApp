@@ -29,7 +29,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                     <state key="normal" title="Entrar">
-                        <color key="titleColor" red="0.66100192069999997" green="0.32208833100000001" blue="0.30979138610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="titleColor" red="0.3566209078" green="0.2252809107" blue="0.32157757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">

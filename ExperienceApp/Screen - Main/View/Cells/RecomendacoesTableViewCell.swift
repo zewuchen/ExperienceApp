@@ -26,7 +26,7 @@ class RecomendacoesTableViewCell: UITableViewCell {
         lbRating?.font = .AvenirRoman
         costValue?.font = .AvenirRoman
         price.font = .AvenirRoman
-        price.textColor = .vermelhoTijolo
+        price.textColor = .roxoTijolo
         imageCard.layer.cornerRadius = 10
     }
 
