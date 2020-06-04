@@ -46,7 +46,8 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var backgroundtExpImage: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var experienceButton: UIButton!
-
+    @IBOutlet weak var hostBackgroundImg: UIImageView!
+    
     var recordName: String = ""
     
     public var controller = ExperienciasInfoController()
@@ -82,16 +83,18 @@ class ExperienciasInfoViewController: UIViewController {
         switch tagLabel1.text == "" {
          case true:
             tagsStackView.removeFromSuperview()
-            titlehostLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 30).isActive = true
+            titlehostLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 40).isActive = true
          default:
-             titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 30).isActive = true
+             titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 40).isActive = true
          }
 //        Mark: Constraints
         descriptionLabel.topAnchor.constraint(equalTo: timeIconImage.bottomAnchor, constant: 10).isActive = true
         hostImage.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 10).isActive = true
+        hostBackgroundImg.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 5).isActive = true
+        hostBackgroundImg.bottomAnchor.constraint(equalTo: hostImage.bottomAnchor, constant: 70).isActive = true
          hostNameLabel.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 10).isActive = true
          descriptionHostLabel.topAnchor.constraint(equalTo: hostNameLabel.bottomAnchor, constant: 5).isActive = true
-         titleHowPartLabel.topAnchor.constraint(equalTo: hostImage.bottomAnchor, constant: 30).isActive = true
+         titleHowPartLabel.topAnchor.constraint(equalTo: hostImage.bottomAnchor, constant: 60).isActive = true
          descriptionHowPartLabel.topAnchor.constraint(equalTo: titleHowPartLabel.bottomAnchor, constant: 10).isActive = true
          whatDoINeedTitleLabel.topAnchor.constraint(equalTo: descriptionHowPartLabel.bottomAnchor, constant: 20).isActive = true
          whatDoINeedDescriptionLabel.topAnchor.constraint(equalTo: whatDoINeedTitleLabel.bottomAnchor, constant: 10).isActive = true

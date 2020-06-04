@@ -15,6 +15,7 @@
                 <outlet property="descriptionLabel" destination="lnF-Hu-ksH" id="98e-vf-4oI"/>
                 <outlet property="experienceButton" destination="0bf-uV-pCV" id="7uz-QJ-vG8"/>
                 <outlet property="groupIconImage" destination="7z9-Ts-D3a" id="OnR-jH-l53"/>
+                <outlet property="hostBackgroundImg" destination="DcQ-Zw-6x7" id="ACg-vM-WGz"/>
                 <outlet property="hostImage" destination="GAs-T9-5fa" id="HmO-EX-RdF"/>
                 <outlet property="hostNameLabel" destination="Lzo-Gp-fyU" id="EpY-hc-1Qx"/>
                 <outlet property="hoursFixedLabel" destination="Zsa-1S-lvi" id="EAl-08-DGH"/>
@@ -62,6 +63,9 @@
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="109-3Y-DPu">
                             <rect key="frame" x="0.0" y="39" width="414" height="657.5"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Vector 4" translatesAutoresizingMaskIntoConstraints="NO" id="DcQ-Zw-6x7">
+                                    <rect key="frame" x="0.0" y="281" width="414" height="181"/>
+                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pandas comendo bambu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cl-YC-AB2">
                                     <rect key="frame" x="12" y="16" width="390" height="40"/>
                                     <constraints>
@@ -175,7 +179,7 @@
                                         <constraint firstAttribute="height" constant="29" id="Efu-Re-g6O"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" red="0.96863394979999995" green="0.96861582989999995" blue="0.96862810850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-T9-5fa">
@@ -191,14 +195,14 @@
                                         <constraint firstAttribute="height" constant="25" id="mJ7-1G-jv9"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" red="0.96863394979999995" green="0.96861582989999995" blue="0.96862810850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-fe-3bX">
                                     <rect key="frame" x="110" y="360" width="292" height="102"/>
                                     <string key="text">Oii! Eu me chamo Fernanda, sou fotógrafa e amo viajar!Tenho 25 anos e adoro compartilhar as minhas viagens. EU nao sei o que escrever mas quero que aumente aqui</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" red="0.96863394979999995" green="0.96861582989999995" blue="0.96862810850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Como posso participar ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5q-7p-0MS">
@@ -257,8 +261,10 @@
                                 <constraint firstItem="vsb-YD-t2e" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="12" id="0vc-Wa-5hV"/>
                                 <constraint firstItem="8cl-YC-AB2" firstAttribute="top" secondItem="109-3Y-DPu" secondAttribute="top" constant="16" id="2EB-Is-gmZ"/>
                                 <constraint firstItem="7z9-Ts-D3a" firstAttribute="centerY" secondItem="Zsa-1S-lvi" secondAttribute="centerY" id="3ZH-78-hor"/>
+                                <constraint firstItem="DcQ-Zw-6x7" firstAttribute="centerY" secondItem="GAs-T9-5fa" secondAttribute="centerY" id="4Mf-Di-pXn"/>
                                 <constraint firstAttribute="trailing" secondItem="8cl-YC-AB2" secondAttribute="trailing" constant="12" id="5Hh-zt-nsE"/>
                                 <constraint firstAttribute="trailing" secondItem="c5q-7p-0MS" secondAttribute="trailing" constant="12" id="6KQ-bX-BZt"/>
+                                <constraint firstAttribute="trailing" secondItem="DcQ-Zw-6x7" secondAttribute="trailing" id="6os-AD-jbW"/>
                                 <constraint firstItem="vsb-YD-t2e" firstAttribute="centerY" secondItem="s0u-JO-d0j" secondAttribute="centerY" id="78e-Ra-JL9"/>
                                 <constraint firstItem="GAs-T9-5fa" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="12" id="9Y8-PQ-7Ut"/>
                                 <constraint firstItem="ILh-vG-My7" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="249" id="BMw-hV-Xmd"/>
@@ -279,6 +285,7 @@
                                 <constraint firstItem="PEp-1w-JYW" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="20" id="U0j-du-Yhb"/>
                                 <constraint firstItem="s0u-JO-d0j" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="49" id="U9c-Tz-BAn"/>
                                 <constraint firstItem="Zsa-1S-lvi" firstAttribute="leading" secondItem="Q5V-3K-AwJ" secondAttribute="trailing" constant="5" id="Uj1-7g-WIw"/>
+                                <constraint firstItem="DcQ-Zw-6x7" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" id="Ut7-6C-Tie"/>
                                 <constraint firstAttribute="trailing" secondItem="Lzo-Gp-fyU" secondAttribute="trailing" constant="12" id="V3D-r0-q6b"/>
                                 <constraint firstItem="9ZH-fM-H5G" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="12" id="Vhs-c0-0Za"/>
                                 <constraint firstItem="DsU-Rc-fd0" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="50" id="Yne-r7-aFt"/>
@@ -371,6 +378,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Vector 4" width="629" height="317"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="star" catalog="system" width="128" height="116"/>
