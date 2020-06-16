@@ -48,7 +48,13 @@ class PerfilViewController: UIViewController {
     }
     
     func setUpImage() {
-        perfilImage.image = UIImage(named: "Fire_Demon_Ramen")!
+        perfilImage.image = UIImage(named: "userDefault")!
+        if let nameImage = UserDefaults.standard.string(forKey: "image"), UserDefaults.standard.bool(forKey: "logged") {
+            if let imagePath = FileHelper.getFile(filePathWithoutExtension: nameImage) {
+                let image = UIImage(contentsOfFile: imagePath)
+                self.perfilImage.image = image
+            }
+        }
         perfilImage.layer.cornerRadius = 10
     }
     

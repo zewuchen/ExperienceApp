@@ -97,6 +97,10 @@ class MainViewController: UIViewController {
                     let image = UIImage(contentsOfFile: imagePath)
                     self.btnPerfil.setImage(image, for: .normal)
                 }
+            } else {
+                if let image = UIImage(named: "userDefault") {
+                    self.btnPerfil.setImage(image, for: .normal)
+                }
             }
         }
     }
