@@ -28,6 +28,7 @@ final class LoginController {
                 UserDefaults.standard.set(user["description"], forKey: "description")
                 UserDefaults.standard.set(true, forKey: "logged")
                 UserDefaults.standard.set([], forKey: "marcadas")
+                UserDefaults.standard.set(user.recordID.recordName, forKey: "userID")
                 if let image = user["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
                     if let file = file {

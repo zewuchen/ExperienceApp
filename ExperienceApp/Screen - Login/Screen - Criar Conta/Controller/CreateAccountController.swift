@@ -52,6 +52,7 @@ final class CreateAccountController {
                 UserDefaults.standard.set(newUser["description"], forKey: "description")
                 UserDefaults.standard.set(true, forKey: "logged")
                 UserDefaults.standard.set([], forKey: "marcadas")
+                UserDefaults.standard.set(newUser.recordID.recordName, forKey: "userID")
                 if let image = newUser["image"] {
                     guard let file: CKAsset? = image as? CKAsset else { return }
                     if let file = file {
