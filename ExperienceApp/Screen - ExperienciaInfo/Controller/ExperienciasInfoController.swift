@@ -55,6 +55,9 @@ final class ExperienciasInfoController {
                             let responsible = UserResponsavel(image: dado as? Data ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
                             self.delegate?.reloadData(data: self.data, responsible: responsible)
                         }
+                    } else {
+                        let responsible = UserResponsavel(image: UIImage(named: "userDefault")?.pngData() ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
+                        self.delegate?.reloadData(data: self.data, responsible: responsible)
                     }
                 }
             }
