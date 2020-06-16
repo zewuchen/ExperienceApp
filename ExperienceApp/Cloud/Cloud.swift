@@ -76,7 +76,7 @@ final class Cloud {
     static let shared = Cloud()
 
     // MARK: Auth
-    public func createUser(data: AuthModel) {
+    public func createUser(data: AuthModel, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
         let user = CKRecord(recordType: "User")
 
         user.setValue(data.name, forKey: "name")
@@ -101,11 +101,11 @@ final class Cloud {
 
         authUser(data: data) { (record, error) in
             if let record = record {
-                // TODO: Tratar erro para quando já tiver o usuário logado
-//                print("Usuário já registrado")
+                completionHandler(record, error)
             } else {
-                // FIXME: (Primeira vez que cadastra, ele buga)
-                self.cloudSave(record: user, database: self.publicDB)
+                self.cloudSaveUser(record: user, database: self.publicDB) { (recordNew, errorNew) in
+                    completionHandler(recordNew, errorNew)
+                }
             }
         }
     }
@@ -129,6 +129,27 @@ final class Cloud {
             }
         }
     }
+
+    private func cloudSaveUser(record: CKRecord, database: CKDatabase, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
+            self.publicDB.save(record) { (record, error) in
+                if let record = record {
+                    // TODO: Tratar o erro quando salva o usuário
+    //                print("Erro ao salvar")
+                    completionHandler(record, error)
+                } else {
+                    completionHandler(record, error)
+                }
+
+                // TODO: Tratar o erro de quando não se tem um arquivo para excluido, este save é genérico
+                // CASE: Cliquei em Experimentar a experiência, não há arquivo para ser excluído
+                do {
+                    try FileManager.default.removeItem(at: self.url)
+    //                print("Temp file deletado com sucesso")
+                } catch let erro {
+    //                print("Error deleting temp file: \(erro)")
+                }
+            }
+        }
 
     public func encryptPassword(password: String) -> String {
         guard let keyChain = Bundle.main.object(forInfoDictionaryKey: "ChaveAcesso") else { return "" }
