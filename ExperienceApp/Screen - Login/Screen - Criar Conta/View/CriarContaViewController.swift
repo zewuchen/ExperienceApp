@@ -54,6 +54,8 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
             }
             txtNome.text = UserDefaults.standard.string(forKey: "name")
             txtEmail.text = UserDefaults.standard.string(forKey: "email")
+            txtEmail.isEnabled = false
+            txtEmail.alpha = 0.5
             txtSenha.text = "senhaAntiga"
             txtDescription.text = UserDefaults.standard.string(forKey: "description")
 
