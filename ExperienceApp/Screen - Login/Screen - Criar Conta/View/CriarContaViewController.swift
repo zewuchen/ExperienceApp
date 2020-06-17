@@ -41,25 +41,32 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
         self.imageView.isUserInteractionEnabled = true
         self.imageView.addGestureRecognizer(selectorImage)
         toque.cancelsTouchesInView = false
-
-        setEditingProfile()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        if editProfile {
-            DispatchQueue.main.async {
-               self.btnCriarConta.titleLabel?.text = "Atualizar"
-            }
-        }
+        setEditingProfile()
     }
 
     func setEditingProfile() {
         if editProfile {
-            btnLogin.removeFromSuperview()
+            if let botaoLogin = btnLogin {
+                botaoLogin.removeFromSuperview()
+            }
             txtNome.text = UserDefaults.standard.string(forKey: "name")
             txtEmail.text = UserDefaults.standard.string(forKey: "email")
             txtSenha.text = "senhaAntiga"
             txtDescription.text = UserDefaults.standard.string(forKey: "description")
+
+            DispatchQueue.main.async {
+                self.btnCriarConta.titleLabel?.text = "Atualizar"
+                self.imageView.image = UIImage(named: "userDefault")!
+                if let nameImage = UserDefaults.standard.string(forKey: "image"), UserDefaults.standard.bool(forKey: "logged") {
+                    if let imagePath = FileHelper.getFile(filePathWithoutExtension: nameImage) {
+                        let image = UIImage(contentsOfFile: imagePath)
+                        self.imageView.image = image
+                    }
+                }
+            }
         }
     }
     func setUpButton () {
