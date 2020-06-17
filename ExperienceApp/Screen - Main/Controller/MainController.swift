@@ -21,8 +21,6 @@ final class MainController {
     weak public var delegate: MainControllerDelegate?
     
     public init() {
-//        self.data.append(MainModel(nomeDestaque: "Pandas", nomeExp: "Meditacao", descricaoExp: "panda panda panda", notaExp: 9.8, precoExp: "Milhões de dórares"))
-//        self.data.append(MainModel(nomeDestaque: "Pandas", nomeExp: "Meditacao", descricaoExp: "panda panda panda", notaExp: 9.8, precoExp: "Milhões de dórares"))
         let _ = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(getDataCloud), userInfo: nil, repeats: true)
     }
 

@@ -20,11 +20,7 @@ final class PerfilController {
     private var data: [ModelExperiencePerfil] = []
     weak public var delegate: PerfilControllerDelegate?
     
-    public init() {
-//    self.data.append(ModelExperiencePerfil(titulo: "Panda", imagem: UIImage(named: "Fire_Demon_Ramen")!,descricao: "", data: "15/08/2020", link: "www.pandas.org"))
-//        
-//    self.data.append(ModelExperiencePerfil(titulo: "Lamen Com Demonios", imagem: UIImage(named: "Fire_Demon_Ramen")!, descricao: "", data: "13/09/2020", link: "demonio-do-fogo.com.br"))
-    }
+    public init() { }
     
     public func reload() {
         delegate?.reloadData(data: data)
@@ -56,6 +52,7 @@ final class PerfilController {
             FileHelper.deleteImage(filePathWithoutExtension: image)
         }
         UserDefaults.standard.set("", forKey: "image")
+        UserDefaults.standard.set("", forKey: "userID")
         UserDefaults.standard.set([], forKey: "marcadas")
         UserDefaults.standard.set("false", forKey: "logged")
         UserDefaults.standard.set(false, forKey: "admin")

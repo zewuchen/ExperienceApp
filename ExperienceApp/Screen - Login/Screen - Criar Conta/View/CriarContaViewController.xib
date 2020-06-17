@@ -7,9 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CriarContaViewController" customModule="Experia" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CriarContaViewController" customModule="Newe" customModuleProvider="target">
             <connections>
                 <outlet property="btnCriarConta" destination="SnO-9Q-hHC" id="llW-O1-7xQ"/>
+                <outlet property="btnLogin" destination="h99-xM-Gij" id="xOd-Bz-RVG"/>
                 <outlet property="imageView" destination="FRD-7g-jGC" id="VJ4-KY-sO1"/>
                 <outlet property="scrollViewCriarConta" destination="u6l-XE-6Ak" id="YyP-Hh-K1g"/>
                 <outlet property="txtDescription" destination="1wb-Mr-aYo" id="zPW-Lh-Ss7"/>

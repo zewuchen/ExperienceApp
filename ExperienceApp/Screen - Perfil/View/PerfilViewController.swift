@@ -42,13 +42,22 @@ class PerfilViewController: UIViewController {
         controller.reload()
         controller.setUpProfileData()
     }
-    
+
     @IBAction func sairBtn(_ sender: Any) {
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        let novaTela = CriarContaViewController(nibName: "CriarContaViewController", bundle: nil)
+        novaTela.editProfile = true
+        self.present(novaTela, animated: true, completion: nil)
     }
     
     func setUpImage() {
-        perfilImage.image = UIImage(named: "Fire_Demon_Ramen")!
+        perfilImage.image = UIImage(named: "userDefault")!
+        if let nameImage = UserDefaults.standard.string(forKey: "image"), UserDefaults.standard.bool(forKey: "logged") {
+            if let imagePath = FileHelper.getFile(filePathWithoutExtension: nameImage) {
+                let image = UIImage(contentsOfFile: imagePath)
+                self.perfilImage.image = image
+            }
+        }
         perfilImage.layer.cornerRadius = 10
     }
     

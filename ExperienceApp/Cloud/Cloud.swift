@@ -34,18 +34,18 @@ struct ExperienceModel {
     let description: String
     let recordName: String?
     let date: Date
-//    let duration: Double
+    //    let duration: Double
     let howToParticipate: String
     let lengthGroup: Int64
-//    let price: Double
+    //    let price: Double
     let whatToTake: String
-//    let availableVacancies: Int64
+    //    let availableVacancies: Int64
     // Essa parte é feita no backend
-//    let score: Double?
+    //    let score: Double?
     let image: String
-//    let participants: [AuthModel]
-//    let comments: [AuthModel]
-//    let tags: [String]
+    //    let participants: [AuthModel]
+    //    let comments: [AuthModel]
+    //    let tags: [String]
 }
 
 struct HighlightModel {
@@ -76,7 +76,7 @@ final class Cloud {
     static let shared = Cloud()
 
     // MARK: Auth
-    public func createUser(data: AuthModel) {
+    public func createUser(data: AuthModel, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
         let user = CKRecord(recordType: "User")
 
         user.setValue(data.name, forKey: "name")
@@ -93,7 +93,7 @@ final class Cloud {
             do {
                 try dataImage.write(to: url)
             } catch let erro as NSError {
-//                print("Error! \(erro)")
+                //                print("Error! \(erro)")
                 return
             }
             user.setValue(CKAsset(fileURL: url), forKey: "image")
@@ -101,11 +101,48 @@ final class Cloud {
 
         authUser(data: data) { (record, error) in
             if let record = record {
-                // TODO: Tratar erro para quando já tiver o usuário logado
-//                print("Usuário já registrado")
+                completionHandler(record, error)
             } else {
-                // FIXME: (Primeira vez que cadastra, ele buga)
-                self.cloudSave(record: user, database: self.publicDB)
+                self.cloudSaveUser(record: user, database: self.publicDB) { (recordNew, errorNew) in
+                    completionHandler(recordNew, errorNew)
+                }
+            }
+        }
+    }
+
+    public func updateUser(data: AuthModel, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
+        guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+        let oldUser = AuthModel(name: "", description: "", email: email, password: password, image: "")
+
+        authUser(data: oldUser, encryptedPassword: true) { (record, errors) in
+            if let record = record {
+                var userUpdate: CKRecord
+                userUpdate = record
+                userUpdate.setValue(data.name, forKey: "name")
+                userUpdate.setValue(data.description, forKey: "description")
+                userUpdate.setValue(data.email, forKey: "email")
+                userUpdate.setValue(self.encryptPassword(password: data.password), forKey: "password")
+                if data.password == "senhaAntiga" {
+                    userUpdate.setValue(password, forKey: "password")
+                }
+                userUpdate.setValue(Int64(0), forKey: "access")
+
+                self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
+
+                if data.image != "" {
+                    guard let image = UIImage(contentsOfFile: FileHelper.getFile(filePathWithoutExtension: data.image) ?? "") else { return }
+                    guard let dataImage = image.jpegData(compressionQuality: 0) else { return }
+                    do {
+                        try dataImage.write(to: self.url)
+                    } catch let erro as NSError {
+                        return
+                    }
+                    userUpdate.setValue(CKAsset(fileURL: self.url), forKey: "image")
+                }
+                self.cloudSaveUser(record: userUpdate, database: self.publicDB) { (recordNew, errorNew) in
+                    completionHandler(recordNew, errorNew)
+                }
             }
         }
     }
@@ -114,18 +151,39 @@ final class Cloud {
         self.publicDB.save(record) { (record, error) in
             if let error = error {
                 // TODO: Tratar o erro quando salva o usuário
-//                print("Erro ao salvar")
+                //                print("Erro ao salvar")
             } else {
-//                print("Salvo com Sucesso")
+                //                print("Salvo com Sucesso")
             }
 
             // TODO: Tratar o erro de quando não se tem um arquivo para excluido, este save é genérico
             // CASE: Cliquei em Experimentar a experiência, não há arquivo para ser excluído
             do {
                 try FileManager.default.removeItem(at: self.url)
-//                print("Temp file deletado com sucesso")
+                //                print("Temp file deletado com sucesso")
             } catch let erro {
-//                print("Error deleting temp file: \(erro)")
+                //                print("Error deleting temp file: \(erro)")
+            }
+        }
+    }
+
+    private func cloudSaveUser(record: CKRecord, database: CKDatabase, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
+        self.publicDB.save(record) { (record, error) in
+            if let record = record {
+                // TODO: Tratar o erro quando salva o usuário
+                //                print("Erro ao salvar")
+                completionHandler(record, error)
+            } else {
+                completionHandler(record, error)
+            }
+
+            // TODO: Tratar o erro de quando não se tem um arquivo para excluido, este save é genérico
+            // CASE: Cliquei em Experimentar a experiência, não há arquivo para ser excluído
+            do {
+                try FileManager.default.removeItem(at: self.url)
+                //                print("Temp file deletado com sucesso")
+            } catch let erro {
+                //                print("Error deleting temp file: \(erro)")
             }
         }
     }
@@ -142,8 +200,13 @@ final class Cloud {
         return hash.map { String(format: "%02hhx", $0) }.joined()
     }
 
-    public func authUser(data: AuthModel, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
+    public func authUser(data: AuthModel, encryptedPassword: Bool = false, completionHandler: @escaping (CKRecord?, Error?) -> Void) {
         self.predicate = NSPredicate(format: "email == '\(data.email)' AND password == '\(encryptPassword(password: data.password))'")
+
+        if encryptedPassword {
+            self.predicate = NSPredicate(format: "email == '\(data.email)' AND password == '\(data.password)'")
+        }
+
         let query = CKQuery(recordType: "User", predicate: predicate)
 
         publicDB.perform(query, inZoneWith: nil) { (records, error) in
@@ -199,11 +262,11 @@ final class Cloud {
         // Puxa somente as que tem vagas
         var query = CKQuery(recordType: "Experience", predicate: NSPredicate(format: "availableVacancies != 0"))
         // Puxa todas
-//        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
+        //        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
 
         if let data = data {
             guard let search = data.recordName else { return }
-//            self.predicate = NSPredicate(format: "title == '\(reference)'")
+            //            self.predicate = NSPredicate(format: "title == '\(reference)'")
             self.predicate = NSPredicate(format: "recordID = %@", CKRecord.ID(recordName: search))
             query = CKQuery(recordType: "Experience", predicate: predicate)
         }
@@ -251,12 +314,12 @@ final class Cloud {
                 experience.setValue(data.description, forKey: "description")
                 experience.setValue(data.date, forKey: "date")
                 experience.setValue(data.lengthGroup, forKey: "availableVacancies")
-//                experience.setValue(data.duration, forKey: "duration")
-//                experience.setValue(data.availableVacancies, forKey: "availableVacancies")
-//                experience.setValue(data.price, forKey: "price")
+                //                experience.setValue(data.duration, forKey: "duration")
+                //                experience.setValue(data.availableVacancies, forKey: "availableVacancies")
+                //                experience.setValue(data.price, forKey: "price")
                 // TODO: Pensar se o usuário excluir sua conta, suas experiências também serão excluídas
                 experience.setValue(CKRecord.Reference(recordID: record.recordID, action: .none), forKey: "responsible")
-//                experience.setValue(data.score, forKey: "score")
+                //                experience.setValue(data.score, forKey: "score")
 
                 self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!
 
@@ -266,7 +329,7 @@ final class Cloud {
                     do {
                         try dataImage.write(to: self.url)
                     } catch let erro as NSError {
-//                        print("Error! \(erro)")
+                        //                        print("Error! \(erro)")
                         return
                     }
                     experience.setValue(CKAsset(fileURL: self.url), forKey: "image")
@@ -380,11 +443,7 @@ final class Cloud {
                     var data = [CKRecord]()
 
                     if let recordData = recordData {
-//                        recordData.enumerated() // Devolve um vetor com todas as coisas
-//                        recordData.map {(chave, valor) -> Void in
-//                            data.append(valor)
-//                        } // Transformar um conjunto de dados num outro
-                        for(key, value) in recordData {
+                        for( _, value) in recordData {
                             data.append(value)
                         }
                         completionHandler(data, erros)
@@ -412,7 +471,7 @@ final class Cloud {
             do {
                 try dataImage.write(to: url)
             } catch let erro as NSError {
-//                print("Error! \(erro)")
+                //                print("Error! \(erro)")
                 return
             }
             highlight.setValue(CKAsset(fileURL: url), forKey: "image")
@@ -465,7 +524,7 @@ final class Cloud {
             var data = [CKRecord]()
 
             if let recordData = recordData {
-                for(key, value) in recordData {
+                for( _, value) in recordData {
                     data.append(value)
                 }
                 completionHandler(data, erros)
@@ -475,6 +534,4 @@ final class Cloud {
         }
         self.container.publicCloudDatabase.add(fetchOperation)
     }
-
-    public func teste() {}
 }
