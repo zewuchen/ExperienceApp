@@ -42,9 +42,12 @@ class PerfilViewController: UIViewController {
         controller.reload()
         controller.setUpProfileData()
     }
-    
+
     @IBAction func sairBtn(_ sender: Any) {
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        let novaTela = CriarContaViewController(nibName: "CriarContaViewController", bundle: nil)
+        novaTela.editProfile = true
+        self.present(novaTela, animated: true, completion: nil)
     }
     
     func setUpImage() {

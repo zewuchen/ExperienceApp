@@ -123,6 +123,9 @@ final class Cloud {
                 userUpdate.setValue(data.description, forKey: "description")
                 userUpdate.setValue(data.email, forKey: "email")
                 userUpdate.setValue(self.encryptPassword(password: data.password), forKey: "password")
+                if data.password == "senhaAntiga" {
+                    userUpdate.setValue(password, forKey: "password")
+                }
                 userUpdate.setValue(Int64(0), forKey: "access")
 
                 self.url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat") ?? URL(string: "")!

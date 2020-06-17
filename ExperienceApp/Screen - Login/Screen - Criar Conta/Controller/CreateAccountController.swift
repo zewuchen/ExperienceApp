@@ -95,6 +95,58 @@ final class CreateAccountController {
         }
     }
 
+    public func updateAccount(user: AuthModel) {
+        Cloud.shared.updateUser(data: user) { (user, errors) in
+            if let user = user {
+                UserDefaults.standard.set(user["name"], forKey: "name")
+                UserDefaults.standard.set(user["email"], forKey: "email")
+                UserDefaults.standard.set(user["password"], forKey: "password")
+                UserDefaults.standard.set(user["description"], forKey: "description")
+                UserDefaults.standard.set(true, forKey: "logged")
+                UserDefaults.standard.set([], forKey: "marcadas")
+                UserDefaults.standard.set(user.recordID.recordName, forKey: "userID")
+                if let image = user["image"] {
+                    guard let file: CKAsset? = image as? CKAsset else { return }
+                    if let file = file {
+                        if let dado = NSData(contentsOf: file.fileURL!) {
+                            guard let tempImage = UIImage(data: dado as Data) else { return }
+                            let fileName = UUID().uuidString
+                            FileHelper.saveImage(image: tempImage, nameWithoutExtension: fileName)
+                            UserDefaults.standard.set(fileName, forKey: "image")
+                        }
+                    }
+                }
+                if let experiences = user["experiences"] {
+                    let experiencias = user["experiences"] as? [CKRecord.Reference]
+
+                    var experiencesRecords: [String] = []
+
+                    if let experiencias = experiencias {
+                        for experiencia in experiencias {
+                            let recordName = experiencia.recordID.recordName
+                            experiencesRecords.append(recordName)
+                        }
+                    }
+
+                    UserDefaults.standard.set(experiencesRecords, forKey: "marcadas")
+                }
+                if let admin = user["access"] {
+                    let privilege = admin as? Int
+
+                    if let privilege = privilege {
+                        if privilege == 0 {
+                            UserDefaults.standard.set(false, forKey: "admin")
+                        } else if (privilege == 1) {
+                            UserDefaults.standard.set(true, forKey: "admin")
+                        }
+                    }
+                }
+            } else {
+                UserDefaults.standard.set(false, forKey: "logged")
+            }
+        }
+    }
+
     public func setImage() {
         delegate?.setImageProfile()
     }

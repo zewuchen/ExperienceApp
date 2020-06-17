@@ -17,6 +17,8 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var btnCriarConta: UIButton!
     @IBOutlet weak var scrollViewCriarConta: UIScrollView!
+    @IBOutlet weak var btnLogin: UIButton!
+    var editProfile = false
     
     let controller = CreateAccountController()
     var urlString = ""
@@ -39,8 +41,27 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
         self.imageView.isUserInteractionEnabled = true
         self.imageView.addGestureRecognizer(selectorImage)
         toque.cancelsTouchesInView = false
+
+        setEditingProfile()
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        if editProfile {
+            DispatchQueue.main.async {
+               self.btnCriarConta.titleLabel?.text = "Atualizar"
+            }
+        }
+    }
+
+    func setEditingProfile() {
+        if editProfile {
+            btnLogin.removeFromSuperview()
+            txtNome.text = UserDefaults.standard.string(forKey: "name")
+            txtEmail.text = UserDefaults.standard.string(forKey: "email")
+            txtSenha.text = "senhaAntiga"
+            txtDescription.text = UserDefaults.standard.string(forKey: "description")
+        }
+    }
     func setUpButton () {
         btnCriarConta.layer.cornerRadius = 10
     }
@@ -74,14 +95,32 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
             guard let email = txtEmail.text else { return }
             guard let password = txtSenha.text else { return }
             guard let description = txtDescription.text else { return }
-            
+
             let user = AuthModel(name: name, description: description, email: email, password: password, image: urlString)
-            controller.createAccount(user: user)
-            
-            let telaContaCriada = LoginCriarPopViewController()
-            telaContaCriada.modalTransitionStyle  =  .crossDissolve
-            telaContaCriada.modalPresentationStyle = .overCurrentContext
-            self.present(telaContaCriada, animated: false, completion: nil)
+
+            if editProfile {
+                controller.updateAccount(user: user)
+                let alert = UIAlertController(title: nil, message: "Atualizando perfil...", preferredStyle: .alert)
+                let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+                loadingIndicator.hidesWhenStopped = true
+                loadingIndicator.style = UIActivityIndicatorView.Style.gray
+                loadingIndicator.startAnimating()
+                alert.view.addSubview(loadingIndicator)
+                present(alert, animated: true, completion: nil)
+
+                let when = DispatchTime.now() + 5
+                DispatchQueue.main.asyncAfter(deadline: when) {
+                  alert.dismiss(animated: true, completion: nil)
+//                    self.dismiss(animated: true, completion: nil)
+                    self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+                }
+            } else {
+                controller.createAccount(user: user)
+                let telaContaCriada = LoginCriarPopViewController()
+                telaContaCriada.modalTransitionStyle  =  .crossDissolve
+                telaContaCriada.modalPresentationStyle = .overCurrentContext
+                self.present(telaContaCriada, animated: false, completion: nil)
+            }
         }
     }
 
