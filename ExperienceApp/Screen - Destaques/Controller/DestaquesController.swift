@@ -35,7 +35,7 @@ final class DestaquesController {
                             if let dado = NSData(contentsOf: file.fileURL!) {
                                 let model = ExperienciaDestaquesModel(tituloExp: name.description,
                                                                       imagemExp: UIImage(data: dado as? Data ?? Data()) ?? UIImage(),
-                                                                                         descricaoExp: description.description)
+                                                                      descricaoExp: description.description, recordName: record?.recordID.recordName ?? "")
                             self.dataDestaques.append(model)
                         }
                     }

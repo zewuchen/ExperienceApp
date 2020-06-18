@@ -4,7 +4,7 @@
 //
 //  Created by Juliana Vigato Pavan on 15/05/20.
 //  Copyright © 2020 Zewu Chen. All rights reserved.
-//
+//  swiftlint:disable cyclomatic_complexity
 
 import Foundation
 import UIKit
@@ -44,20 +44,88 @@ final class ExperienciasInfoController {
             , hostDescription: "", howParticipate: participar, whatYouNeedDescription: recursos, recordName: dataToConvert.recordName, responsible: dataToConvert.responsible ?? "", data: data, available: dataToConvert.available)
         self.data = newData
         self.delegate?.reloadData(data: self.data, responsible: nil)
-        
-        Cloud.shared.getUserResponsible(user: self.data.responsible) { (responsibleData, erros) in
-            if let responsibleData = responsibleData {
-                if let responsibleUser = responsibleData as? CKRecord {
-                    if let image = responsibleUser["image"] {
-                        guard let file: CKAsset? = image as? CKAsset else { return }
-                        if let file = file {
-                            let dado = NSData(contentsOf: file.fileURL!)
-                            let responsible = UserResponsavel(image: dado as? Data ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
+
+        if self.data.responsible != ""{
+            Cloud.shared.getUserResponsible(user: self.data.responsible) { (responsibleData, erros) in
+                if let responsibleData = responsibleData {
+                    if let responsibleUser = responsibleData as? CKRecord {
+                        if let image = responsibleUser["image"] {
+                            guard let file: CKAsset? = image as? CKAsset else { return }
+                            if let file = file {
+                                let dado = NSData(contentsOf: file.fileURL!)
+                                let responsible = UserResponsavel(image: dado as? Data ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
+                                self.delegate?.reloadData(data: self.data, responsible: responsible)
+                            }
+                        } else {
+                            let responsible = UserResponsavel(image: UIImage(named: "userDefault")?.pngData() ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
                             self.delegate?.reloadData(data: self.data, responsible: responsible)
                         }
+                    }
+                }
+            }
+        }
+
+    }
+
+    public func pushNewData(record: String) {
+        Cloud.shared.getExperience(data: ExperienceModel(title: "", description: "", recordName: record, date: Date(), howToParticipate: "", lengthGroup: Int64(0), whatToTake: "", image: "")) { (records, erros) in
+
+            for dado in records {
+                if let experience = dado {
+                    guard let name = experience["title"] else { return }
+                    guard let description = experience["description"] else { return }
+                    guard let comoParticipar = experience["howToParticipate"] else { return }
+                    guard let tamanho = experience["lengthGroup"] else { return }
+                    guard let recursos = experience["whatToTake"] else { return }
+                    let recordName = experience.recordID.recordName
+                    guard let responsible = experience["responsible"] else { return }
+                    guard let pessoa = responsible as? CKRecord.Reference else { return }
+                    guard let data = experience["date"] else { return }
+                    guard let dataExperiencia = data as? Date else { return }
+                    let formatarData = DateFormatter()
+                    formatarData.dateFormat = "dd/MM/yyyy"
+                    let vagas = experience["availableVacancies"] as? Int
+                    var available: Bool = false
+                    if let numVagas = vagas, numVagas >= 1 {
+                        available = true
+                    }
+
+                    if let image = experience["image"] {
+                        guard let file: CKAsset? = image as? CKAsset else { return }
+                        if let file = file {
+                            if let dado = NSData(contentsOf: file.fileURL!) {
+                                guard let tempImage = UIImage(data: dado as Data) else { return }
+                                let newData = ModelExperienciasInfo(infoImage: tempImage, titleExp: name.description, durationTime: 0, howManyPeople: tamanho as? Int ?? 0,
+                                                                    tags: [], descriptionExp: description.description, hostImage: UIImage(), hostName: "",hostDescription: "", howParticipate: comoParticipar.description,
+                                                                    whatYouNeedDescription: recursos.description, recordName: experience.recordID.recordName, responsible: pessoa.recordID.recordName, data: formatarData.string(from: dataExperiencia))
+                                self.data = newData
+                            }
+                        }
                     } else {
-                        let responsible = UserResponsavel(image: UIImage(named: "userDefault")?.pngData() ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
-                        self.delegate?.reloadData(data: self.data, responsible: responsible)
+                        let newData = ModelExperienciasInfo(infoImage: UIImage(), titleExp: name.description, durationTime: 0, howManyPeople: tamanho as? Int ?? 0,
+                                                            tags: [], descriptionExp: description.description, hostImage: UIImage(), hostName: "", hostDescription: "", howParticipate: comoParticipar.description,
+                                                            whatYouNeedDescription: recursos.description, recordName: experience.recordID.recordName, responsible: pessoa.recordID.recordName, data: formatarData.string(from: dataExperiencia))
+                        self.data = newData
+                    }
+
+                    self.delegate?.reloadData(data: self.data, responsible: nil)
+
+                    Cloud.shared.getUserResponsible(user: pessoa.recordID.recordName) { (responsibleData, erros) in
+                        if let responsibleData = responsibleData {
+                            if let responsibleUser = responsibleData as? CKRecord {
+                                if let image = responsibleUser["image"] {
+                                    guard let file: CKAsset? = image as? CKAsset else { return }
+                                    if let file = file {
+                                        let dado = NSData(contentsOf: file.fileURL!)
+                                        let responsible = UserResponsavel(image: dado as? Data ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
+                                        self.delegate?.reloadData(data: self.data, responsible: responsible)
+                                    }
+                                } else {
+                                    let responsible = UserResponsavel(image: UIImage(named: "userDefault")?.pngData() ?? Data(), name: responsibleData["name"] ?? "", description: responsibleData["description"] ?? "")
+                                    self.delegate?.reloadData(data: self.data, responsible: responsible)
+                                }
+                            }
+                        }
                     }
                 }
             }
