@@ -27,10 +27,8 @@ final class ExperienciasInfoController {
     weak public var delegate: ExperienciasInfoControllerDelegate?
     
     public init() {
-        self.data = ModelExperienciasInfo(infoImage: UIImage(named: "Fire_Demon_Ramen")!, titleExp: "Pandas fofos comendo bambu",durationTime: 3, howManyPeople: 5, tags: ["lala"],
-        descriptionExp: "Venha conhecer os pandas mais fofos que voce vera na sua vida! Eles comem bambu e sao felizes.",
-        hostImage: UIImage(named: "Fire_Demon_Ramen")!, hostName: "Merida Valente", hostDescription: "Eu sou Merida, princesa de um reino distante e gosto de ursos!",
-        howParticipate: "zoom é o caminho", whatYouNeedDescription: "Amor no coracao", recordName: "", responsible: "", data: "")
+        self.data = ModelExperienciasInfo(infoImage: UIImage(), titleExp: "" , durationTime: 0, howManyPeople: 0, tags: [""], descriptionExp: "", hostImage: UIImage(), hostName: "",
+            hostDescription: "", howParticipate: "", whatYouNeedDescription: "", recordName: "", responsible: "", data: "")
         self.dataToConvert = MainModel(nomeDestaque: "", nomeExp: "", descricaoExp: "", notaExp: 0, precoExp: "", recordName: "", image: Data(), recursos: "", comoParticipar: "", tamanho: 0, responsible: "", data: "")
     }
     

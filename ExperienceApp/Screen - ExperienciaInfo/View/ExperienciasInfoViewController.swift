@@ -120,6 +120,15 @@ class ExperienciasInfoViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         let _ = setUserHasExperience()
+
+        if pushExperienceFromDestaques {
+            DispatchQueue.main.async {
+                self.titleLabel.text = self.controller.data.titleExp
+                self.descriptionLabel.text = self.controller.data.descriptionExp
+                self.infoImage.image = self.controller.data.infoImage
+                self.peopleQuantLabel.text = String(self.controller.data.howManyPeople)
+            }
+        }
     }
     
     func setupHeaderDescription() {
