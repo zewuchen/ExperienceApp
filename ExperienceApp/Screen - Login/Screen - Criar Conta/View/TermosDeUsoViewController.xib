@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermosDeUsoViewController" customModule="Newe" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-Aj-Spe">
+                    <rect key="frame" x="20" y="95" width="374" height="801"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <mutableString key="text">Leia atenta e cuidadosamente estes termos de serviço (“Termos”), pois eles contêm informações importantes sobre seus direitos, recursos e obrigações. Ao acessar ou utilizar a Plataforma Newe, você concorda em cumprir com estes Termos e em estar sujeito a eles.
+
+Todo o relacionamento e interação dos Usuários com a plataforma Newe é realizada de forma digital e online. O Usuário não pagará qualquer tarifa pela a utilização da plataforma Newe. 
+
+Política de conteúdo
+Ao publicar conteúdo no Newe, você concorda em seguir essa política. Nós nos reservamos o direito de remover qualquer conteúdo, em parte ou inteiro, que viole essa política.
+
+Você é exclusivamente responsável por todo Conteúdo de Membro que você disponibilizar na plataforma Newe. Assim, você declara e garante que:
+Você não publicará, fará upload, enviará ou transmitirá qualquer conteúdo que: 
+(i) seja fraudulento, falso, enganoso (diretamente ou por omissão ou não atualização de informações) ou depreciativo;
+(ii) seja difamatório, calunioso, obsceno, pornográfico, vulgar ou ofensivo;
+(iii) promova discriminação, intolerância, racismo, ódio, assédio ou que prejudique qualquer indivíduo ou grupo;
+(iv) seja violento ou ameaçador ou promova violência ou ações que sejam ameaçadoras a qualquer pessoa ou animal; 
+(v) promova substâncias ou atividades prejudiciais ou ilegais; 
+(vi) viole a política de conteúdo da Experia ou qualquer outra política. A plataforma pode, sem qualquer aviso, remover ou desabilitar o acesso a qualquer conteúdo que consideremos uma violação à lei aplicável ou que possa ser repreensível ou prejudicial à Experia, seus membros, terceiros ou à sua propriedade.
+
+Newe respeita a lei de direitos autorais e espera que seus  membros façam o mesmo. Caso você acredite que qualquer conteúdo na Plataforma Newe infrinja direitos autorais de sua propriedade, notifique-nos de acordo com nossa Política de Direitos Autorais.
+
+Alterações, cancelamentos e reembolsos
+Se você tiver algum problema técnico que impeça que você ofereça a experiência, como problemas de vídeo ou áudio, será necessário reembolsar os hóspedes. Para enviar um reembolso:
+
+1. Acesse a experiência que você deseja cancelar
+2. Clique em “Reservado” e posteriormente "Cancelar experiência"
+3. Selecione Problemas com o Zoom como motivo
+4. Confirme o cancelamento
+
+Requisitos e privacidade
+Antes de participar de sua experiência, certifique-se de que seu dispositivo atende aos requisitos do sistema do Zoom e teste sua conexão de Internet participando de uma reunião de teste.
+
+- Um ID de reunião aleatório e protegido por senha é criado para cada experiência;
+- As experiências não podem ser gravadas;
+- O vídeo do hóspede é desativado depois que ele entra na sala de reuniões do Zoom
+- Não é possível transferir arquivos através do Zoom.
+
+Dicas para ajudar você a proteger sua privacidade: 
+
+- Não compartilhe o link de reunião do Zoom protegido por senha com mais ninguém 
+- Use a versão mais recente do aplicativo do Zoom 
+- Preste atenção ao seu ambiente e ao que está atrás de você ao abrir a câmera — seu anfitrião e outros hóspedes poderão vê-los 
+- Silencie seu microfone até que você esteja pronto para falar
+- Tome cuidado ao usar o recurso de bate-papo em grupo, pois todos os participantes poderão ler o que você escrever
+
+Como participar da experiência?
+Você receberá um link para se juntar à experiência online em seu email de confirmação e no email de lembrete enviado antes do início da experiência online. Você também pode encontrá-lo em teu perfil.
+Faça login no Zoom com pelo menos 5 minutos de antecedência para garantir que tudo está funcionando corretamente e que não se atrasará para a experiência. É importante ter em mente que o seu anfitrião tem a opção de rejeitar a entrada de hóspedes atrasados e que os hóspedes que chegam atrasados não são elegíveis para um reembolso.
+
+No caso de violações repetidas ou graves, podemos suspender ou desativar permanentemente as contas em questão.Você pode denunciar o conteúdo diretamente ou entrar em contato conosco para denunciar conteúdo que pareça violar esta política.
+
+O seguinte conteúdo nunca é permitido na plataforma Newe:
+
+- Conteúdo criado exclusivamente para fins de publicidade ou outro conteúdo comercial, incluindo logotipos, links ou nomes de empresas
+- Spam, contato indesejado ou conteúdo compartilhado repetidamente de maneira perturbadora
+- Conteúdo que endossa ou promove atividades ilegais ou prejudiciais, ou que seja sexualmente explícito, violento, gráfico, ameaçador ou abusivo
+- Conteúdo discriminatório
+- Tentativas de se passar por outra pessoa, outra conta ou entidade
+- Conteúdo ilegal ou que viole os direitos de outra pessoa ou entidade, incluindo direitos de propriedade intelectual e direitos de privacidade
+- Conteúdo que inclua informações privadas ou confidenciais de outra pessoa, incluindo conteúdo suficiente para identificar a localização de uma acomodação
+
+11. MODIFICAÇÕES 
+11.1. A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de Privacidade, a seu exclusivo critério. Quaisquer alterações nestes Termos de Uso e na Política de Privacidade serão informadas por meio da plataforma/aplicativo ou do site da Experia; e com prazo de antecedência de 30 (trinta) dias da efetiva modificação. 
+‍11.2. Será sempre indicada a data da última atualização realizada pela Experia aos presentes Termos de Uso. 
+‍11.3. O Usuário reconhece e aceita que, assim que publicada a alteração destes Termos de Uso e/ou da Política de Privacidade no site ou na plataforma/aplicativo, o uso dos mesmos passará a ser submetido aos Termos de Uso/Política de Privacidade atualizados. </mutableString>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="JxG-Aj-Spe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TdX-H7-njw"/>
+                <constraint firstItem="JxG-Aj-Spe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="51" id="W3F-Zc-ZoQ"/>
+                <constraint firstAttribute="bottom" secondItem="JxG-Aj-Spe" secondAttribute="bottom" id="b2i-kZ-20q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JxG-Aj-Spe" secondAttribute="trailing" constant="20" id="toZ-IF-xLQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+</document>

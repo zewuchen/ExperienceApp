@@ -239,6 +239,13 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
         imageView.layer.shadowRadius = 1.0
         imageView.clipsToBounds = false
     }
+    
+    @IBAction func btnTermsOfUse(_ sender: Any) {
+        let termosDeUso = TermosDeUsoViewController()
+        termosDeUso.modalTransitionStyle  =  .crossDissolve
+        termosDeUso.modalPresentationStyle = .overCurrentContext
+        self.present(termosDeUso, animated: false, completion: nil)
+    }
 }
 
 extension CriarContaViewController: CreateAccountControllerDelegate {
@@ -259,7 +266,6 @@ extension CriarContaViewController: CreateAccountControllerDelegate {
         // TODO: Fazer algo
         // TODO: Mostrar sucesso pro usuário ou erro
     }
-    
 }
 
 extension CriarContaViewController: UIScrollViewDelegate {

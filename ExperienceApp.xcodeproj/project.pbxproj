@@ -51,6 +51,8 @@
 		9542EBCD24730AA10049E27E /* EntrarNaContaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542EBCB24730AA10049E27E /* EntrarNaContaViewController.xib */; };
 		9542EBD124730ACA0049E27E /* CriarContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542EBCF24730ACA0049E27E /* CriarContaViewController.swift */; };
 		9542EBD224730ACA0049E27E /* CriarContaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542EBD024730ACA0049E27E /* CriarContaViewController.xib */; };
+		9579663D249BAFF800C80F09 /* TermosDeUsoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579663B249BAFF800C80F09 /* TermosDeUsoViewController.swift */; };
+		9579663E249BAFF800C80F09 /* TermosDeUsoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9579663C249BAFF800C80F09 /* TermosDeUsoViewController.xib */; };
 		CB18BD1D2475A45B00DAD245 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18BD1C2475A45B00DAD245 /* FileHelper.swift */; };
 		CB18BD1F2475A5B100DAD245 /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18BD1E2475A5B100DAD245 /* CameraHelper.swift */; };
 		CB1A9DFD2472F9D900946B78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A9DFC2472F9D900946B78 /* CloudKit.framework */; };
@@ -124,6 +126,8 @@
 		9542EBCB24730AA10049E27E /* EntrarNaContaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntrarNaContaViewController.xib; sourceTree = "<group>"; };
 		9542EBCF24730ACA0049E27E /* CriarContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContaViewController.swift; sourceTree = "<group>"; };
 		9542EBD024730ACA0049E27E /* CriarContaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CriarContaViewController.xib; sourceTree = "<group>"; };
+		9579663B249BAFF800C80F09 /* TermosDeUsoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosDeUsoViewController.swift; sourceTree = "<group>"; };
+		9579663C249BAFF800C80F09 /* TermosDeUsoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermosDeUsoViewController.xib; sourceTree = "<group>"; };
 		CB18BD1C2475A45B00DAD245 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		CB18BD1E2475A5B100DAD245 /* CameraHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelper.swift; sourceTree = "<group>"; };
 		CB1A9DFA2472F9D300946B78 /* ExperienceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExperienceApp.entitlements; sourceTree = "<group>"; };
@@ -472,6 +476,8 @@
 			children = (
 				9542EBCF24730ACA0049E27E /* CriarContaViewController.swift */,
 				9542EBD024730ACA0049E27E /* CriarContaViewController.xib */,
+				9579663B249BAFF800C80F09 /* TermosDeUsoViewController.swift */,
+				9579663C249BAFF800C80F09 /* TermosDeUsoViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -767,6 +773,7 @@
 				0F17C7C6246F1B1B00A2D212 /* RecomendacoesTableViewCell.xib in Resources */,
 				CB4F8F82246DB9110004B5E5 /* TesteViewController.xib in Resources */,
 				0F2B3A0B247AEF250071BD65 /* LoginPopViewController.xib in Resources */,
+				9579663E249BAFF800C80F09 /* TermosDeUsoViewController.xib in Resources */,
 				0F17C7DF246F386200A2D212 /* ExperienciasInfoViewController.xib in Resources */,
 				9542EBCD24730AA10049E27E /* EntrarNaContaViewController.xib in Resources */,
 				CB8A4AD7247461DD0037F9FD /* GerarViewController.xib in Resources */,
@@ -824,6 +831,7 @@
 				0F17C7D2246F37B900A2D212 /* DestaquesTableViewCell.swift in Sources */,
 				0F17C7E6246F391F00A2D212 /* DisponibilidadeViewController.swift in Sources */,
 				0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */,
+				9579663D249BAFF800C80F09 /* TermosDeUsoViewController.swift in Sources */,
 				0F17C7C1246F1B0300A2D212 /* DestaquesCollectionViewCell.swift in Sources */,
 				CB41A1A424770F2400A273DE /* DestaquesModel.swift in Sources */,
 				0F17C7D5246F37C500A2D212 /* DestaquesController.swift in Sources */,
