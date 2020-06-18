@@ -13,6 +13,6 @@ class TermosDeUsoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
-    
 }

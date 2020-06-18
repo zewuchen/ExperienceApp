@@ -22,7 +22,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <attributedString key="attributedText">
                         <fragment>
-                            <string key="content">Política de Privacidade
+                            <string key="content">Política de privacidade
 </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -59,7 +59,7 @@ Cg
 Cg
 </string>
                             <attributes>
-                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="12" name="Times-Roman"/>
                                 <real key="NSKern" value="0.0"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -78,7 +78,7 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">A sua privacidade é importante para nós. A política da Newe é respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no app Newe ou qualquer outra plataforma que possuí­mos e operamos. Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado.</string>
+                            <mutableString key="content">A sua privacidade é importante para nós. A política da Newe é respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no app Newe ou qualquer outra plataforma que possuí­mos e operamos. Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado.</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -130,8 +130,7 @@ Cgo
                                 <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
                         </fragment>
-                        <fragment>
-                            <string key="content">	•	</string>
+                        <fragment content="- ">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -242,8 +241,7 @@ Cgo
                                 <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
                         </fragment>
-                        <fragment>
-                            <string key="content">	•	</string>
+                        <fragment content="- ">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -370,9 +368,9 @@ Não compartilhamos </string>
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei. O nosso app possui links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e nãoo nos responsabilizamos por suas respectivas políticas de privacidade.
+                            <mutableString key="content"> de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei. O nosso app possui links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e nãoo nos responsabilizamos por suas respectivas políticas de privacidade.
 
-O uso continuado de nosso aplicativo será considerado como aceitação de nossas práticas em torno de privacidade e </string>
+O uso continuado de nosso aplicativo será considerado como aceitação de nossas práticas em torno de privacidade e </mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
