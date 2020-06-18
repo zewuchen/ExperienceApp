@@ -246,6 +246,14 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
         termosDeUso.modalPresentationStyle = .overCurrentContext
         self.present(termosDeUso, animated: false, completion: nil)
     }
+    
+    @IBAction func btnPrivacyPolicy(_ sender: Any) {
+        let politicaDePrivacidade = PoliticaDePrivacidadeViewController()
+            politicaDePrivacidade.modalTransitionStyle  =  .crossDissolve
+            politicaDePrivacidade.modalPresentationStyle = .overCurrentContext
+            self.present(politicaDePrivacidade, animated: false, completion: nil)
+    }
+    
 }
 
 extension CriarContaViewController: CreateAccountControllerDelegate {

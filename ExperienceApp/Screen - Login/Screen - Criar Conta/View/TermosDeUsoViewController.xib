@@ -23,7 +23,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <attributedString key="attributedText">
                         <fragment>
-                            <string key="content">Termos de uso
+                            <string key="content">Termos de Uso
 </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
