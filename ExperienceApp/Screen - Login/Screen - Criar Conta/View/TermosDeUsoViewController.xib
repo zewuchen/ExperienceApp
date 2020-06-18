@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermosDeUsoViewController" customModule="Newe" customModuleProvider="target">
             <connections>
+                <outlet property="termsOfUseTxtView" destination="JxG-Aj-Spe" id="X2D-6Z-hOn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,15 +18,68 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-Aj-Spe">
-                    <rect key="frame" x="20" y="95" width="374" height="801"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-Aj-Spe">
+                    <rect key="frame" x="20" y="74" width="374" height="821"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <mutableString key="text">Leia atenta e cuidadosamente estes termos de serviço (“Termos”), pois eles contêm informações importantes sobre seus direitos, recursos e obrigações. Ao acessar ou utilizar a Plataforma Newe, você concorda em cumprir com estes Termos e em estar sujeito a eles.
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">Termos de uso
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="30" name="Rockwell-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Data da última revisão: Junho, 2020. ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="  ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
+
+Leia atenta e cuidadosamente estes termos de serviço (“Termos”), pois eles contêm informações importantes sobre seus direitos, recursos e obrigações. Ao acessar ou utilizar a Plataforma Newe, você concorda em cumprir com estes Termos e em estar sujeito a eles.
 
 Todo o relacionamento e interação dos Usuários com a plataforma Newe é realizada de forma digital e online. O Usuário não pagará qualquer tarifa pela a utilização da plataforma Newe. 
 
-Política de conteúdo
-Ao publicar conteúdo no Newe, você concorda em seguir essa política. Nós nos reservamos o direito de remover qualquer conteúdo, em parte ou inteiro, que viole essa política.
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Política de conteúdo">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <font key="NSOriginalFont" size="20" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
+Ao publicar conteúdo na Newe, você concorda em seguir essa política. Nós nos reservamos o direito de remover qualquer conteúdo, em parte ou inteiro, que viole essa política.
 
 Você é exclusivamente responsável por todo Conteúdo de Membro que você disponibilizar na plataforma Newe. Assim, você declara e garante que:
 Você não publicará, fará upload, enviará ou transmitirá qualquer conteúdo que: 
@@ -38,60 +92,228 @@ Você não publicará, fará upload, enviará ou transmitirá qualquer conteúdo
 
 Newe respeita a lei de direitos autorais e espera que seus  membros façam o mesmo. Caso você acredite que qualquer conteúdo na Plataforma Newe infrinja direitos autorais de sua propriedade, notifique-nos de acordo com nossa Política de Direitos Autorais.
 
-Alterações, cancelamentos e reembolsos
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Alterações, cancelamentos e reembolsos">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <font key="NSOriginalFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
 Se você tiver algum problema técnico que impeça que você ofereça a experiência, como problemas de vídeo ou áudio, será necessário reembolsar os hóspedes. Para enviar um reembolso:
+1. Acesse a experiência que você deseja cancelar;
+2. Clique em “Reservado” e posteriormente "Cancelar experiência";
+3. Selecione Problemas com o Zoom como motivo;
+4. Confirme o cancelamento.
 
-1. Acesse a experiência que você deseja cancelar
-2. Clique em “Reservado” e posteriormente "Cancelar experiência"
-3. Selecione Problemas com o Zoom como motivo
-4. Confirme o cancelamento
-
-Requisitos e privacidade
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Requisitos e privacidade">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
 Antes de participar de sua experiência, certifique-se de que seu dispositivo atende aos requisitos do sistema do Zoom e teste sua conexão de Internet participando de uma reunião de teste.
-
 - Um ID de reunião aleatório e protegido por senha é criado para cada experiência;
 - As experiências não podem ser gravadas;
-- O vídeo do hóspede é desativado depois que ele entra na sala de reuniões do Zoom
+- O vídeo do hóspede é desativado depois que ele entra na sala de reuniões do Zoom;
 - Não é possível transferir arquivos através do Zoom.
 
-Dicas para ajudar você a proteger sua privacidade: 
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Dicas para ajudar você a proteger sua privacidade: ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
+- Não compartilhe o link de reunião do Zoom protegido por senha com mais ninguém;
+- Use a versão mais recente do aplicativo do Zoom; 
+- Preste atenção ao seu ambiente e ao que está atrás de você ao abrir a câmera — seu anfitrião e outros hóspedes poderão vê-los;
+- Silencie seu microfone até que você esteja pronto para falar;
+- Tome cuidado ao usar o recurso de bate-papo em grupo, pois todos os participantes poderão ler o que você escrever.
 
-- Não compartilhe o link de reunião do Zoom protegido por senha com mais ninguém 
-- Use a versão mais recente do aplicativo do Zoom 
-- Preste atenção ao seu ambiente e ao que está atrás de você ao abrir a câmera — seu anfitrião e outros hóspedes poderão vê-los 
-- Silencie seu microfone até que você esteja pronto para falar
-- Tome cuidado ao usar o recurso de bate-papo em grupo, pois todos os participantes poderão ler o que você escrever
-
-Como participar da experiência?
-Você receberá um link para se juntar à experiência online em seu email de confirmação e no email de lembrete enviado antes do início da experiência online. Você também pode encontrá-lo em teu perfil.
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Como participar da experiência?">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
+Você pode encontrar o link em teu perfil.
 Faça login no Zoom com pelo menos 5 minutos de antecedência para garantir que tudo está funcionando corretamente e que não se atrasará para a experiência. É importante ter em mente que o seu anfitrião tem a opção de rejeitar a entrada de hóspedes atrasados e que os hóspedes que chegam atrasados não são elegíveis para um reembolso.
 
-No caso de violações repetidas ou graves, podemos suspender ou desativar permanentemente as contas em questão.Você pode denunciar o conteúdo diretamente ou entrar em contato conosco para denunciar conteúdo que pareça violar esta política.
+No caso de violações repetidas ou graves, podemos suspender ou desativar permanentemente as contas em questão.V ocê pode denunciar o conteúdo diretamente ou entrar em contato conosco para denunciar conteúdo que pareça violar esta política.
 
-O seguinte conteúdo nunca é permitido na plataforma Newe:
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="O seguinte conteúdo nunca é permitido na plataforma Newe:">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
+- Conteúdo criado exclusivamente para fins de publicidade ou outro conteúdo comercial, incluindo logotipos, links ou nomes de empresas;
+- Spam, contato indesejado ou conteúdo compartilhado repetidamente de maneira perturbadora;
+- Conteúdo que endossa ou promove atividades ilegais ou prejudiciais, ou que seja sexualmente explícito, violento, gráfico, ameaçador ou abusivo;
+- Conteúdo discriminatório;
+- Tentativas de se passar por outra pessoa, outra conta ou entidade;
+- Conteúdo ilegal ou que viole os direitos de outra pessoa ou entidade, incluindo direitos de propriedade intelectual e direitos de privacidade;
+- Conteúdo que inclua informações privadas ou confidenciais de outra pessoa, incluindo conteúdo suficiente para identificar a localização de uma acomodação.
 
-- Conteúdo criado exclusivamente para fins de publicidade ou outro conteúdo comercial, incluindo logotipos, links ou nomes de empresas
-- Spam, contato indesejado ou conteúdo compartilhado repetidamente de maneira perturbadora
-- Conteúdo que endossa ou promove atividades ilegais ou prejudiciais, ou que seja sexualmente explícito, violento, gráfico, ameaçador ou abusivo
-- Conteúdo discriminatório
-- Tentativas de se passar por outra pessoa, outra conta ou entidade
-- Conteúdo ilegal ou que viole os direitos de outra pessoa ou entidade, incluindo direitos de propriedade intelectual e direitos de privacidade
-- Conteúdo que inclua informações privadas ou confidenciais de outra pessoa, incluindo conteúdo suficiente para identificar a localização de uma acomodação
-
-11. MODIFICAÇÕES 
-11.1. A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de Privacidade, a seu exclusivo critério. Quaisquer alterações nestes Termos de Uso e na Política de Privacidade serão informadas por meio da plataforma/aplicativo ou do site da Experia; e com prazo de antecedência de 30 (trinta) dias da efetiva modificação. 
-‍11.2. Será sempre indicada a data da última atualização realizada pela Experia aos presentes Termos de Uso. 
-‍11.3. O Usuário reconhece e aceita que, assim que publicada a alteração destes Termos de Uso e/ou da Política de Privacidade no site ou na plataforma/aplicativo, o uso dos mesmos passará a ser submetido aos Termos de Uso/Política de Privacidade atualizados. </mutableString>
-                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="M">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <font key="NSOriginalFont" size="20" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="odificações">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <font key="NSOriginalFont" size="20" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
+A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de Privacidade, a seu exclusivo critério. Quaisquer alterações nestes Termos de Uso e na Política de Privacidade serão informadas por meio da plataforma da Newe; e com prazo de antecedência de 30 (trinta) dias da efetiva modificação. </mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">
+‍</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name=".AppleColorEmojiUI"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Será sempre indicada a data da última atualização realizada pela Newe aos presentes Termos de Uso.">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="12" name="Times-Roman"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <real key="NSStrokeWidth" value="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="12" name="Times-Roman"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <real key="NSStrokeWidth" value="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">O usuário reconhece e aceita que, assim que publicada a alteração destes Termos de Uso e/ou da Política de Privacidade no site ou na plataforma/aplicativo, o uso dos mesmos passará a ser submetido aos Termos de Uso/Política de Privacidade atualizados. </string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-pD-Fiw">
+                    <rect key="frame" x="207" y="66" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="JHg-pD-Fiw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4EM-DI-Jfe"/>
                 <constraint firstItem="JxG-Aj-Spe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TdX-H7-njw"/>
-                <constraint firstItem="JxG-Aj-Spe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="51" id="W3F-Zc-ZoQ"/>
-                <constraint firstAttribute="bottom" secondItem="JxG-Aj-Spe" secondAttribute="bottom" id="b2i-kZ-20q"/>
+                <constraint firstItem="JxG-Aj-Spe" firstAttribute="top" secondItem="JHg-pD-Fiw" secondAttribute="bottom" constant="8" id="XZg-Qi-M0L"/>
+                <constraint firstAttribute="bottom" secondItem="JxG-Aj-Spe" secondAttribute="bottom" constant="1" id="b2i-kZ-20q"/>
+                <constraint firstItem="JHg-pD-Fiw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="fPY-Lm-7mN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JxG-Aj-Spe" secondAttribute="trailing" constant="20" id="toZ-IF-xLQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
