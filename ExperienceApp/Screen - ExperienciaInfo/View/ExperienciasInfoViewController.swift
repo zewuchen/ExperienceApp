@@ -186,14 +186,17 @@ class ExperienciasInfoViewController: UIViewController {
     }
 
     @IBAction func btnExperimentar(_ sender: Any) {
+        var mensagem = "lala"
         if UserDefaults.standard.bool(forKey: "logged") {
             if var marcadas = UserDefaults.standard.stringArray(forKey: "marcadas") {
                 var registro = true
+                
                 if !marcadas.isEmpty {
                     var indices: [Int] = []
                     for record in 0...marcadas.count-1 {
                         if marcadas[record] == recordName {
                             registro = false
+                            mensagem = "Retirando reserva, aguarde um momento..."
                             indices.append(record)
                             controller.desattach(recordName: recordName)
                             setReserva(disponivel: true)
@@ -206,9 +209,18 @@ class ExperienciasInfoViewController: UIViewController {
 
                 if registro {
                     marcadas.append(recordName)
+                    mensagem = "Reservando, aguarde um momento..."
                     controller.attach(recordName: recordName)
                     setReserva(disponivel: false)
+                    
                 }
+                
+                let telaPopUpExperimentar = ExperimentarViewController()
+                telaPopUpExperimentar.modalTransitionStyle  =  .crossDissolve
+                telaPopUpExperimentar.modalPresentationStyle = .overCurrentContext
+                telaPopUpExperimentar.lblPopUp?.text = mensagem
+                self.present(telaPopUpExperimentar, animated: false, completion: nil)
+                
                 UserDefaults.standard.set(marcadas, forKey: "marcadas")
             }
         } else {
@@ -238,6 +250,7 @@ class ExperienciasInfoViewController: UIViewController {
             DispatchQueue.main.async {
                 self.experienceButton.titleLabel?.text = "Experimentar"
                 self.experienceButton.backgroundColor = .vermelhoTijolo
+                
             }
         } else {
             DispatchQueue.main.async {

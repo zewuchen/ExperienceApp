@@ -7,8 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginPopViewController" customModule="Newe" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExperimentarViewController" customModule="Newe" customModuleProvider="target">
             <connections>
+                <outlet property="lblPopUp" destination="tEh-Iu-gSb" id="xdb-hZ-dHx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +18,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-50-nMX">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="357-lr-R5e">
                     <rect key="frame" x="32" y="372" width="350" height="152"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fazendo login, aguarde um momento..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk4-81-BsK">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-Iu-gSb">
                             <rect key="frame" x="31.5" y="56.5" width="287" height="39"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="287" id="84u-df-jJQ"/>
-                                <constraint firstAttribute="height" constant="39" id="wsw-B2-KaW"/>
+                                <constraint firstAttribute="height" constant="39" id="LqK-nX-DqW"/>
+                                <constraint firstAttribute="width" constant="287" id="rtt-dd-zh9"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                             <nil key="textColor"/>
@@ -33,8 +34,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="fk4-81-BsK" firstAttribute="centerX" secondItem="KMZ-50-nMX" secondAttribute="centerX" id="mDs-sp-57O"/>
-                        <constraint firstItem="fk4-81-BsK" firstAttribute="centerY" secondItem="KMZ-50-nMX" secondAttribute="centerY" id="zPo-zn-MMg"/>
+                        <constraint firstItem="tEh-Iu-gSb" firstAttribute="centerX" secondItem="357-lr-R5e" secondAttribute="centerX" id="6SG-xs-j6Q"/>
+                        <constraint firstItem="tEh-Iu-gSb" firstAttribute="centerY" secondItem="357-lr-R5e" secondAttribute="centerY" id="HG0-CS-SVD"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
@@ -45,13 +46,13 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="KMZ-50-nMX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="UEm-0c-UrC"/>
-                <constraint firstItem="KMZ-50-nMX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fNe-48-4YA"/>
-                <constraint firstItem="KMZ-50-nMX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lbR-i1-CgI"/>
-                <constraint firstItem="KMZ-50-nMX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="328" id="sQP-uI-46y"/>
+                <constraint firstItem="357-lr-R5e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kr0-UA-5od"/>
+                <constraint firstItem="357-lr-R5e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="eC8-mI-FhK"/>
+                <constraint firstItem="357-lr-R5e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="328" id="wse-xw-Ler"/>
+                <constraint firstItem="357-lr-R5e" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zL2-7E-1aY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="109"/>
+            <point key="canvasLocation" x="139" y="103"/>
         </view>
     </objects>
 </document>
