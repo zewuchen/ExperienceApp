@@ -19,8 +19,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-Aj-Spe">
-                    <rect key="frame" x="20" y="74" width="374" height="821"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="20" y="97" width="374" height="805"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                     <attributedString key="attributedText">
                         <fragment>
                             <string key="content">Termos de Uso
@@ -56,13 +56,13 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
+                            <string key="content">
 
 Leia atenta e cuidadosamente estes termos de serviço (“Termos”), pois eles contêm informações importantes sobre seus direitos, recursos e obrigações. Ao acessar ou utilizar a Plataforma Newe, você concorda em cumprir com estes Termos e em estar sujeito a eles.
 
 Todo o relacionamento e interação dos Usuários com a plataforma Newe é realizada de forma digital e online. O Usuário não pagará qualquer tarifa pela a utilização da plataforma Newe. 
 
-</mutableString>
+</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -78,7 +78,7 @@ Todo o relacionamento e interação dos Usuários com a plataforma Newe é reali
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
+                            <string key="content">
 Ao publicar conteúdo na Newe, você concorda em seguir essa política. Nós nos reservamos o direito de remover qualquer conteúdo, em parte ou inteiro, que viole essa política.
 
 Você é exclusivamente responsável por todo conteúdo que você disponibilizar na plataforma Newe. Assim, você declara e garante que:
@@ -92,7 +92,7 @@ Você não publicará, fará upload, enviará ou transmitirá qualquer conteúdo
 
 Newe respeita a lei de direitos autorais e espera que seus  membros façam o mesmo. Caso você acredite que qualquer conteúdo na plataforma Newe infrinja direitos autorais de sua propriedade, notifique-nos de acordo com nossa Política de Direitos Autorais.
 
-</mutableString>
+</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -108,14 +108,14 @@ Newe respeita a lei de direitos autorais e espera que seus  membros façam o mes
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
+                            <string key="content">
 Se você tiver algum problema técnico que impeça que você ofereça a experiência, como problemas de vídeo ou áudio, será necessário reembolsar os hóspedes. Para enviar um reembolso:
 1. Acesse a experiência que você deseja cancelar;
 2. Clique em “Reservado” e posteriormente "Cancelar experiência";
 3. Selecione Problemas com o Zoom como motivo;
 4. Confirme o cancelamento.
 
-</mutableString>
+</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -130,14 +130,14 @@ Se você tiver algum problema técnico que impeça que você ofereça a experiê
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
+                            <string key="content">
 Antes de participar de sua experiência, certifique-se de que seu dispositivo atende aos requisitos do sistema do Zoom e teste sua conexão de Internet participando de uma reunião de teste.
 - Um ID de reunião aleatório e protegido por senha é criado para cada experiência;
 - As experiências não podem ser gravadas;
 - O vídeo do hóspede é desativado depois que ele entra na sala de reuniões do Zoom;
 - Não é possível transferir arquivos através do Zoom.
 
-</mutableString>
+</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -152,14 +152,14 @@ Antes de participar de sua experiência, certifique-se de que seu dispositivo at
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
+                            <string key="content">
 - Não compartilhe o link de reunião do Zoom protegido por senha com mais ninguém;
 - Use a versão mais recente do aplicativo do Zoom; 
 - Preste atenção ao seu ambiente e ao que está atrás de você ao abrir a câmera — seu anfitrião e outros hóspedes poderão vê-los;
 - Silencie seu microfone até que você esteja pronto para falar;
 - Tome cuidado ao usar o recurso de bate-papo em grupo, pois todos os participantes poderão ler o que você escrever.
 
-</mutableString>
+</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -174,13 +174,13 @@ Antes de participar de sua experiência, certifique-se de que seu dispositivo at
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
+                            <string key="content">
 Você pode encontrar o link em teu perfil.
 Faça login no Zoom com pelo menos 5 minutos de antecedência para garantir que tudo está funcionando corretamente e que não se atrasará para a experiência. É importante ter em mente que o seu anfitrião tem a opção de rejeitar a entrada de hóspedes atrasados e que os hóspedes que chegam atrasados não são elegíveis para um reembolso.
 
 No caso de violações repetidas ou graves, podemos suspender ou desativar permanentemente as contas em questão.V ocê pode denunciar o conteúdo diretamente ou entrar em contato conosco para denunciar conteúdo que pareça violar esta política.
 
-</mutableString>
+</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -195,7 +195,7 @@ No caso de violações repetidas ou graves, podemos suspender ou desativar perma
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
+                            <string key="content">
 - Conteúdo criado exclusivamente para fins de publicidade ou outro conteúdo comercial, incluindo logotipos, links ou nomes de empresas;
 - Spam, contato indesejado ou conteúdo compartilhado repetidamente de maneira perturbadora;
 - Conteúdo que endossa ou promove atividades ilegais ou prejudiciais, ou que seja sexualmente explícito, violento, gráfico, ameaçador ou abusivo;
@@ -204,7 +204,7 @@ No caso de violações repetidas ou graves, podemos suspender ou desativar perma
 - Conteúdo ilegal ou que viole os direitos de outra pessoa ou entidade, incluindo direitos de propriedade intelectual e direitos de privacidade;
 - Conteúdo que inclua informações privadas ou confidenciais de outra pessoa, incluindo conteúdo suficiente para identificar a localização de uma acomodação.
 
-</mutableString>
+</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -235,8 +235,8 @@ No caso de violações repetidas ou graves, podemos suspender ou desativar perma
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">
-A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de Privacidade, a seu exclusivo critério. Quaisquer alterações nestes Termos de Uso e na Política de Privacidade serão informadas por meio da plataforma da Newe; e com prazo de antecedência de 30 (trinta) dias da efetiva modificação. </mutableString>
+                            <string key="content">
+A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de Privacidade, a seu exclusivo critério. Quaisquer alterações nestes Termos de Uso e na Política de Privacidade serão informadas por meio da plataforma da Newe; e com prazo de antecedência de 30 (trinta) dias da efetiva modificação. </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -248,7 +248,7 @@ A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de 
 ‍</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="18" name=".AppleColorEmojiUI"/>
+                                <font key="NSFont" metaFont="system" size="18"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -306,18 +306,35 @@ Cg
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obA-vq-2hH">
+                    <rect key="frame" x="354" y="45" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4Mx-sc-dkm"/>
+                        <constraint firstAttribute="width" constant="40" id="jc2-ov-5zC"/>
+                    </constraints>
+                    <state key="normal" image="botaoSair"/>
+                    <connections>
+                        <action selector="exitPageButton:" destination="-1" eventType="touchUpInside" id="htj-tq-tdY"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="obA-vq-2hH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="0P5-mB-ieM"/>
                 <constraint firstItem="JHg-pD-Fiw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4EM-DI-Jfe"/>
+                <constraint firstItem="JxG-Aj-Spe" firstAttribute="top" secondItem="obA-vq-2hH" secondAttribute="bottom" constant="12" id="4Ux-G0-7f9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="obA-vq-2hH" secondAttribute="trailing" constant="20" id="7eS-vc-78T"/>
                 <constraint firstItem="JxG-Aj-Spe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TdX-H7-njw"/>
-                <constraint firstItem="JxG-Aj-Spe" firstAttribute="top" secondItem="JHg-pD-Fiw" secondAttribute="bottom" constant="8" id="XZg-Qi-M0L"/>
-                <constraint firstAttribute="bottom" secondItem="JxG-Aj-Spe" secondAttribute="bottom" constant="1" id="b2i-kZ-20q"/>
+                <constraint firstAttribute="bottom" secondItem="JxG-Aj-Spe" secondAttribute="bottom" constant="-6" id="b2i-kZ-20q"/>
                 <constraint firstItem="JHg-pD-Fiw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="fPY-Lm-7mN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JxG-Aj-Spe" secondAttribute="trailing" constant="20" id="toZ-IF-xLQ"/>
+                <constraint firstItem="JxG-Aj-Spe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wNC-at-x8N"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </view>
     </objects>
+    <resources>
+        <image name="botaoSair" width="100" height="100"/>
+    </resources>
 </document>

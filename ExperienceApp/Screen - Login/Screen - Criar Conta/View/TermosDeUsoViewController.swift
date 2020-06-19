@@ -13,6 +13,10 @@ class TermosDeUsoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    @IBAction func exitPageButton(_ sender: Any) {
+          self.dismiss(animated: true, completion: nil)
+    }
+    
 }

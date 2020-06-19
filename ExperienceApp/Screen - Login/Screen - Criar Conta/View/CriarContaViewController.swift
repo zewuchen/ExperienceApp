@@ -242,12 +242,14 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
     
     @IBAction func btnTermsOfUse(_ sender: Any) {
         let termosDeUso = TermosDeUsoViewController()
+        termosDeUso.modalPresentationStyle = .fullScreen
         self.present(termosDeUso, animated: false, completion: nil)
     }
     
     @IBAction func btnPrivacyPolicy(_ sender: Any) {
         let politicaDePrivacidade = PoliticaDePrivacidadeViewController()
-            self.present(politicaDePrivacidade, animated: false, completion: nil)
+        politicaDePrivacidade.modalPresentationStyle = .fullScreen
+        self.present(politicaDePrivacidade, animated: false, completion: nil)
      
     }
 }

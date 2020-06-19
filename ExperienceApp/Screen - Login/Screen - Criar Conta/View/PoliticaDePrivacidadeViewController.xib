@@ -18,8 +18,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkB-1B-qkg">
-                    <rect key="frame" x="20" y="75" width="374" height="821"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="20" y="97" width="374" height="801"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                     <attributedString key="attributedText">
                         <fragment>
                             <string key="content">Política de privacidade
@@ -78,7 +78,7 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content">A sua privacidade é importante para nós. A política da Newe é respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no app Newe ou qualquer outra plataforma que possuí­mos e operamos. Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado.</mutableString>
+                            <string key="content">A sua privacidade é importante para nós. A política da Newe é respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no app Newe ou qualquer outra plataforma que possuí­mos e operamos. Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado.</string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -257,7 +257,7 @@ Cgo
                                 </paragraphStyle>
                             </attributes>
                         </fragment>
-                        <fragment content="Como não utilizamos as ">
+                        <fragment content="Como nós utilizamos as ">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -368,9 +368,9 @@ Não compartilhamos </string>
                             </attributes>
                         </fragment>
                         <fragment>
-                            <mutableString key="content"> de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei. O nosso app possui links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e nãoo nos responsabilizamos por suas respectivas políticas de privacidade.
+                            <string key="content"> de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei. O nosso app possui links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e nãoo nos responsabilizamos por suas respectivas políticas de privacidade.
 
-O uso continuado de nosso aplicativo será considerado como aceitação de nossas práticas em torno de privacidade e </mutableString>
+O uso continuado de nosso aplicativo será considerado como aceitação de nossas práticas em torno de privacidade e </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -434,24 +434,40 @@ O uso continuado de nosso aplicativo será considerado como aceitação de nossa
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gME-CZ-LFm">
-                    <rect key="frame" x="207" y="67" width="0.0" height="0.0"/>
+                    <rect key="frame" x="207" y="66" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pF-jp-Z8Z">
+                    <rect key="frame" x="354" y="45" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="6wk-nG-bTf"/>
+                        <constraint firstAttribute="height" constant="40" id="AEw-Jy-Gyk"/>
+                    </constraints>
+                    <state key="normal" image="botaoSair"/>
+                    <connections>
+                        <action selector="exitPageButton:" destination="-1" eventType="touchUpInside" id="Kfz-ed-9aN"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="VkB-1B-qkg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="29z-G5-2jc"/>
+                <constraint firstItem="1pF-jp-Z8Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="2oz-VP-qze"/>
                 <constraint firstItem="VkB-1B-qkg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8EG-er-npm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VkB-1B-qkg" secondAttribute="trailing" constant="20" id="D6X-cw-GVE"/>
-                <constraint firstItem="VkB-1B-qkg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="31" id="Unz-PV-L6f"/>
-                <constraint firstAttribute="bottom" secondItem="VkB-1B-qkg" secondAttribute="bottom" id="deX-TL-Z4H"/>
-                <constraint firstItem="VkB-1B-qkg" firstAttribute="top" secondItem="gME-CZ-LFm" secondAttribute="bottom" constant="8" id="fJl-OA-YVh"/>
+                <constraint firstItem="gME-CZ-LFm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="Qkn-NX-NKX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1pF-jp-Z8Z" secondAttribute="trailing" constant="20" id="d33-bz-xMM"/>
+                <constraint firstAttribute="bottom" secondItem="VkB-1B-qkg" secondAttribute="bottom" constant="-2" id="deX-TL-Z4H"/>
                 <constraint firstItem="gME-CZ-LFm" firstAttribute="centerX" secondItem="VkB-1B-qkg" secondAttribute="centerX" id="fgO-8v-338"/>
+                <constraint firstItem="VkB-1B-qkg" firstAttribute="top" secondItem="1pF-jp-Z8Z" secondAttribute="bottom" constant="12" id="mAF-hz-CJ8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="125"/>
         </view>
     </objects>
+    <resources>
+        <image name="botaoSair" width="100" height="100"/>
+    </resources>
 </document>
