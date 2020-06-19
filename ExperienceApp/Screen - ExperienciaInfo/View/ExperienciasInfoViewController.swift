@@ -49,6 +49,7 @@ class ExperienciasInfoViewController: UIViewController {
     @IBOutlet weak var hostBackgroundImg: UIImageView!
     
     var recordName: String = ""
+    var pushExperienceFromDestaques: Bool = false
     
     public var controller = ExperienciasInfoController()
 //    private var data: [ModelExperienciasInfo] = []
@@ -109,12 +110,25 @@ class ExperienciasInfoViewController: UIViewController {
         setupWhatDoINeed()
         setupTags()
         setupReviewButton()
-        
-        controller.reload()
+
+        if !pushExperienceFromDestaques {
+            controller.reload()
+        } else {
+            controller.pushNewData(record: controller.dataToConvert.recordName)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         let _ = setUserHasExperience()
+
+        if pushExperienceFromDestaques {
+            DispatchQueue.main.async {
+                self.titleLabel.text = self.controller.data.titleExp
+                self.descriptionLabel.text = self.controller.data.descriptionExp
+                self.infoImage.image = self.controller.data.infoImage
+                self.peopleQuantLabel.text = String(self.controller.data.howManyPeople)
+            }
+        }
     }
     
     func setupHeaderDescription() {

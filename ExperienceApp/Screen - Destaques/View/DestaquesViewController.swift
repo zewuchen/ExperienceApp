@@ -54,19 +54,29 @@ class DestaquesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.register(UINib(nibName: destaquesCell, bundle: nil), forCellReuseIdentifier: destaquesCell)
         tableView.separatorStyle = .none
     }
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            //  data.count
-            
-            return dataExpDestaques.count
-        }
 
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let celulaTable = self.tableView.dequeueReusableCell(withIdentifier: destaquesCell, for: indexPath) as? DestaquesTableViewCell
-            
-            celulaTable?.setUp(model: dataExpDestaques[indexPath.row])
- 
-            return celulaTable ?? UITableViewCell()
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //  data.count
+
+        return dataExpDestaques.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celulaTable = self.tableView.dequeueReusableCell(withIdentifier: destaquesCell, for: indexPath) as? DestaquesTableViewCell
+
+        celulaTable?.setUp(model: dataExpDestaques[indexPath.row])
+
+        return celulaTable ?? UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let novaTela = ExperienciasInfoViewController(nibName: "ExperienciasInfoViewController", bundle: nil)
+        let modelMain = MainModel(nomeDestaque: dataExpDestaques[indexPath.row].tituloExp, nomeExp: dataExpDestaques[indexPath.row].tituloExp, descricaoExp: dataExpDestaques[indexPath.row].descricaoExp,
+                                  notaExp: 0.0, precoExp: "", recordName: dataExpDestaques[indexPath.row].recordName, image: dataExpDestaques[indexPath.row].imagemExp.pngData() ?? Data(), recursos: "", comoParticipar: "", tamanho: 10, responsible: "", data: "")
+        novaTela.controller.dataToConvert = modelMain
+        novaTela.pushExperienceFromDestaques = true
+        self.present(novaTela, animated: true, completion: nil)
+    }
 }
 
 extension DestaquesViewController: DestaquesControllerDelegate {

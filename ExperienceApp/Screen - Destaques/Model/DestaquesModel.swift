@@ -29,10 +29,12 @@ struct ExperienciaDestaquesModel {
     var tituloExp: String
     var imagemExp = UIImage()
     var descricaoExp: String
+    var recordName: String
     
-    public init(tituloExp: String, imagemExp: UIImage, descricaoExp: String) {
+    public init(tituloExp: String, imagemExp: UIImage, descricaoExp: String, recordName: String) {
         self.tituloExp = tituloExp
         self.imagemExp = imagemExp
         self.descricaoExp = descricaoExp
+        self.recordName = recordName
     }
 }
