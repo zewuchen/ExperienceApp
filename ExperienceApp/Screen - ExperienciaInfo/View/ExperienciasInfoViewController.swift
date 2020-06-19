@@ -218,7 +218,9 @@ class ExperienciasInfoViewController: UIViewController {
                 let telaPopUpExperimentar = ExperimentarViewController()
                 telaPopUpExperimentar.modalTransitionStyle  =  .crossDissolve
                 telaPopUpExperimentar.modalPresentationStyle = .overCurrentContext
-                telaPopUpExperimentar.lblPopUp?.text = mensagem
+//                telaPopUpExperimentar.setLbl(title: mensagem)
+                telaPopUpExperimentar.titleMessage = mensagem
+//                telaPopUpExperimentar.lblTitle.text = mensagem
                 self.present(telaPopUpExperimentar, animated: false, completion: nil)
                 
                 UserDefaults.standard.set(marcadas, forKey: "marcadas")

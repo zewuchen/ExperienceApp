@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExperimentarViewController" customModule="Newe" customModuleProvider="target">
             <connections>
-                <outlet property="lblPopUp" destination="tEh-Iu-gSb" id="xdb-hZ-dHx"/>
+                <outlet property="lblTitle" destination="oe0-QI-ah5" id="RjP-Pd-Nmh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,41 +18,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="357-lr-R5e">
-                    <rect key="frame" x="32" y="372" width="350" height="152"/>
-                    <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-Iu-gSb">
-                            <rect key="frame" x="31.5" y="56.5" width="287" height="39"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="39" id="LqK-nX-DqW"/>
-                                <constraint firstAttribute="width" constant="287" id="rtt-dd-zh9"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe0-QI-ah5">
+                    <rect key="frame" x="57" y="438.5" width="300" height="19.5"/>
                     <constraints>
-                        <constraint firstItem="tEh-Iu-gSb" firstAttribute="centerX" secondItem="357-lr-R5e" secondAttribute="centerX" id="6SG-xs-j6Q"/>
-                        <constraint firstItem="tEh-Iu-gSb" firstAttribute="centerY" secondItem="357-lr-R5e" secondAttribute="centerY" id="HG0-CS-SVD"/>
+                        <constraint firstAttribute="width" constant="300" id="ykk-1a-tYI"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                            <integer key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="357-lr-R5e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kr0-UA-5od"/>
-                <constraint firstItem="357-lr-R5e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="eC8-mI-FhK"/>
-                <constraint firstItem="357-lr-R5e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="328" id="wse-xw-Ler"/>
-                <constraint firstItem="357-lr-R5e" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zL2-7E-1aY"/>
+                <constraint firstItem="oe0-QI-ah5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Rn4-GX-aEg"/>
+                <constraint firstItem="oe0-QI-ah5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T4w-O7-zRM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="103"/>
+            <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
         </view>
     </objects>
 </document>
