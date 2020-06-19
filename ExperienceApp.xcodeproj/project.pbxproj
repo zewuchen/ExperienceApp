@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0E801D249D61FB000D1358 /* ExperimentarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E801B249D61FB000D1358 /* ExperimentarViewController.swift */; };
+		0F0E801E249D61FB000D1358 /* ExperimentarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F0E801C249D61FB000D1358 /* ExperimentarViewController.xib */; };
 		0F17C7B5246F179400A2D212 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7B4246F179400A2D212 /* MainModel.swift */; };
 		0F17C7B9246F180300A2D212 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7B8246F180300A2D212 /* MainController.swift */; };
 		0F17C7BC246F184100A2D212 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17C7BA246F184100A2D212 /* MainViewController.swift */; };
@@ -80,6 +82,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0E801B249D61FB000D1358 /* ExperimentarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentarViewController.swift; sourceTree = "<group>"; };
+		0F0E801C249D61FB000D1358 /* ExperimentarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperimentarViewController.xib; sourceTree = "<group>"; };
 		0F17C7B4246F179400A2D212 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		0F17C7B8246F180300A2D212 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		0F17C7BA246F184100A2D212 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F0E801A249D61BB000D1358 /* PopUp - Experimentar */ = {
+			isa = PBXGroup;
+			children = (
+				0F0E801B249D61FB000D1358 /* ExperimentarViewController.swift */,
+				0F0E801C249D61FB000D1358 /* ExperimentarViewController.xib */,
+			);
+			path = "PopUp - Experimentar";
+			sourceTree = "<group>";
+		};
 		0F17C7B0246F16B500A2D212 /* Screen - Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +426,7 @@
 		952487812476FD2200C0A7F9 /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				0F0E801A249D61BB000D1358 /* PopUp - Experimentar */,
 				CBE825D924882DB10069C574 /* PopUp - Adicionar Experiencia */,
 				CBE825D824882DAE0069C574 /* PopUp - Criar Experiencia */,
 				CBE825DA24882DB40069C574 /* PopUp - Deletar Experiencia */,
@@ -777,6 +791,7 @@
 				0F17C7C2246F1B0300A2D212 /* DestaquesCollectionViewCell.xib in Resources */,
 				952487802476FC5200C0A7F9 /* DeletarExpPopUp.xib in Resources */,
 				CB5C5AD924745CAA00E91446 /* PerfilExperienciaTableViewCell.xib in Resources */,
+				0F0E801E249D61FB000D1358 /* ExperimentarViewController.xib in Resources */,
 				0F17C7BD246F184100A2D212 /* MainViewController.xib in Resources */,
 				CBFECD4E246DB571005B621F /* Assets.xcassets in Resources */,
 				0F848F3B247C5D90000AB70E /* TelaAdmViewController.xib in Resources */,
@@ -853,6 +868,7 @@
 				0F17C7EA246F393500A2D212 /* DisponibilidadeController.swift in Sources */,
 				9524878C2477220800C0A7F9 /* ExpCriadaPopUp.swift in Sources */,
 				0F17C7F8246F399C00A2D212 /* PerfilController.swift in Sources */,
+				0F0E801D249D61FB000D1358 /* ExperimentarViewController.swift in Sources */,
 				CBFECD4C246DB56E005B621F /* ExperienceApp.xcdatamodeld in Sources */,
 				0F17C7B9246F180300A2D212 /* MainController.swift in Sources */,
 				9542072624776FAA009C7A43 /* ExpAdicionadaPopUp.swift in Sources */,
