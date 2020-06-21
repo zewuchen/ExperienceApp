@@ -67,6 +67,7 @@ class ExperienciasInfoViewController: UIViewController {
         self.hoursFixedLabel.text = ""
         self.imagePageControl.removeFromSuperview()
         
+//        remove score vazio
         switch scoreLabel.text == "" {
         case true:
             scoreLabel.removeFromSuperview()
@@ -89,7 +90,7 @@ class ExperienciasInfoViewController: UIViewController {
              titlehostLabel.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 40).isActive = true
          }
 //        Mark: Constraints
-        descriptionLabel.topAnchor.constraint(equalTo: timeIconImage.bottomAnchor, constant: 10).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: timeIconImage.bottomAnchor, constant: 20).isActive = true
         hostImage.topAnchor.constraint(equalTo: titlehostLabel.bottomAnchor, constant: 10).isActive = true
         hostBackgroundImg.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 5).isActive = true
         hostBackgroundImg.bottomAnchor.constraint(equalTo: hostImage.bottomAnchor, constant: 70).isActive = true
