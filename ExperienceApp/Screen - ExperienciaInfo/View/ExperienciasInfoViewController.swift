@@ -67,6 +67,7 @@ class ExperienciasInfoViewController: UIViewController {
         self.hoursFixedLabel.text = ""
         self.imagePageControl.removeFromSuperview()
         
+//        remove score vazio
         switch scoreLabel.text == "" {
         case true:
             scoreLabel.removeFromSuperview()
