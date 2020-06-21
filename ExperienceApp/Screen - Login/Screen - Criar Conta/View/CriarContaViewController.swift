@@ -18,6 +18,10 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
     @IBOutlet weak var btnCriarConta: UIButton!
     @IBOutlet weak var scrollViewCriarConta: UIScrollView!
     @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var lblUso1: UILabel!
+    @IBOutlet weak var lblUso2: UIButton!
+    @IBOutlet weak var lblUso3: UILabel!
+    @IBOutlet weak var lblUso4: UIButton!
     var editProfile = false
     
     let controller = CreateAccountController()
@@ -49,8 +53,12 @@ class CriarContaViewController: UIViewController, UITextViewDelegate, UITextFiel
 
     func setEditingProfile() {
         if editProfile {
-            if let botaoLogin = btnLogin {
+            if let botaoLogin = btnLogin, let lblUso1 = lblUso1, let lblUso2 = lblUso2, let lblUso3 = lblUso3, let lblUso4 = lblUso4 {
                 botaoLogin.removeFromSuperview()
+                lblUso1.removeFromSuperview()
+                lblUso2.removeFromSuperview()
+                lblUso3.removeFromSuperview()
+                lblUso4.removeFromSuperview()   
             }
             txtNome.text = UserDefaults.standard.string(forKey: "name")
             txtEmail.text = UserDefaults.standard.string(forKey: "email")
