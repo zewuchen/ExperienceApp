@@ -102,13 +102,13 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsU-Rc-fd0">
-                                    <rect key="frame" x="50" y="100" width="29.5" height="20.5"/>
+                                    <rect key="frame" x="40" y="100" width="29.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5V-3K-AwJ">
-                                    <rect key="frame" x="84.5" y="100" width="10.5" height="20.5"/>
+                                    <rect key="frame" x="74.5" y="100" width="10.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zsa-1S-lvi">
-                                    <rect key="frame" x="100" y="100" width="10" height="20.5"/>
+                                    <rect key="frame" x="90" y="100" width="10" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -288,8 +288,8 @@
                                 <constraint firstItem="DcQ-Zw-6x7" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" id="Ut7-6C-Tie"/>
                                 <constraint firstAttribute="trailing" secondItem="Lzo-Gp-fyU" secondAttribute="trailing" constant="12" id="V3D-r0-q6b"/>
                                 <constraint firstItem="9ZH-fM-H5G" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="12" id="Vhs-c0-0Za"/>
-                                <constraint firstItem="DsU-Rc-fd0" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="50" id="Yne-r7-aFt"/>
                                 <constraint firstItem="GAs-T9-5fa" firstAttribute="top" secondItem="Lzo-Gp-fyU" secondAttribute="top" id="cv0-UC-3vY"/>
+                                <constraint firstItem="DsU-Rc-fd0" firstAttribute="leading" secondItem="0Fj-5x-63d" secondAttribute="trailing" constant="8" id="die-zc-ILG"/>
                                 <constraint firstItem="ILh-vG-My7" firstAttribute="centerY" secondItem="Y5O-rj-aka" secondAttribute="centerY" id="eWo-5y-ENf"/>
                                 <constraint firstItem="c5q-7p-0MS" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="12" id="fLu-sN-C7i"/>
                                 <constraint firstItem="9ml-3K-id4" firstAttribute="leading" secondItem="109-3Y-DPu" secondAttribute="leading" constant="12" id="fi0-XL-4cb"/>
