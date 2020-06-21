@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,6 +12,10 @@
                 <outlet property="btnCriarConta" destination="SnO-9Q-hHC" id="llW-O1-7xQ"/>
                 <outlet property="btnLogin" destination="h99-xM-Gij" id="xOd-Bz-RVG"/>
                 <outlet property="imageView" destination="FRD-7g-jGC" id="VJ4-KY-sO1"/>
+                <outlet property="lblUso1" destination="qhO-kw-kot" id="zKX-UK-iEU"/>
+                <outlet property="lblUso2" destination="eNN-yV-7LR" id="WAN-Ho-zj3"/>
+                <outlet property="lblUso3" destination="2p7-sm-8ao" id="KXc-eQ-j0k"/>
+                <outlet property="lblUso4" destination="qNU-xB-YJx" id="oDy-un-yeh"/>
                 <outlet property="scrollViewCriarConta" destination="u6l-XE-6Ak" id="YyP-Hh-K1g"/>
                 <outlet property="txtDescription" destination="1wb-Mr-aYo" id="zPW-Lh-Ss7"/>
                 <outlet property="txtEmail" destination="Gij-Fc-3cc" id="uEu-KN-hDK"/>
