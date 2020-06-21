@@ -78,7 +78,55 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">A sua privacidade é importante para nós. A política da Newe é respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no app Newe ou qualquer outra plataforma que possuí­mos e operamos. Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado.</string>
+                            <string key="content">A sua privacidade é importante para nós. A política da Newe é respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no app ou qualquer outra plataforma que possuí­mos e operamos.</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <real key="NSStrokeWidth" value="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="  ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="12" name="Times-Roman"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado.</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -117,7 +165,76 @@ Cgo
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados. As informações que retemos:
+                            <string key="content">Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados. </string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <real key="NSStrokeWidth" value="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="  ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="12" name="Times-Roman"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="As informações que retemos:">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <real key="NSStrokeWidth" value="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -130,187 +247,167 @@ Cgo
                                 <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
                         </fragment>
-                        <fragment content="- ">
-                            <attributes>
-                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="18" name="Avenir-Medium"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment content="I">
+                        <fragment content="- Informações de conta: Quando você se cadastra no aplicativo Newe, nós solicitamos certas informa">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
                                 <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
                                 </paragraphStyle>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
                         </fragment>
-                        <fragment content="nformações">
+                        <fragment content="ções">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
                                 <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
                                 </paragraphStyle>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </attributes>
                         </fragment>
-                        <fragment content=" de Conta: Quando você se cadastra em uma Conta Newe, nós solicitamos certas ">
+                        <fragment content=" como seu primeiro nome, sobrenome, endere">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
                                 <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
                                 </paragraphStyle>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
                         </fragment>
-                        <fragment content="informações">
+                        <fragment content="ço ">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
                                 <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
                                 </paragraphStyle>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> como seu primeiro nome, sobrenome, endereço de email e foto.
+                            <string key="content">de email e foto;
+- Informa</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <real key="NSStrokeWidth" value="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="ções ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="da experiência criada: coletamos dados que os usuários dispõem.">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <real key="NSStrokeWidth" value="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                <font key="NSFont" size="11" name="Avenir-Book"/>
                                 <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                    <tabStops/>
                                 </paragraphStyle>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
                         </fragment>
-                        <fragment content="- ">
-                            <attributes>
-                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="18" name="Avenir-Medium"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment content="Como nós utilizamos as ">
+                        <fragment content=" ">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
                                 <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
                                 </paragraphStyle>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
                         </fragment>
-                        <fragment content="informações">
+                        <fragment content=" ">
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="18" name="Avenir-Medium"/>
-                                <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="  ">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
                                 </paragraphStyle>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> que coletamos:
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="12" name="Times-Roman"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Como nós utilizamos as informações que coletamos:">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="20" name="Avenir-Heavy"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
                                 <real key="NSKern" value="0.0"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                    <tabStops>
-                                        <textTab alignment="left" location="11">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="natural" location="36">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
-                                </paragraphStyle>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                 <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <real key="NSStrokeWidth" value="0.0"/>
                             </attributes>
@@ -368,9 +465,9 @@ Não compartilhamos </string>
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei. O nosso app possui links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e nãoo nos responsabilizamos por suas respectivas políticas de privacidade.
+                            <mutableString key="content"> de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei. O nosso app possui links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre todas as práticas e conteúdo que são gerados pelos usuários, tal que cada usuário do aplicativo se responsabiliza integralmente pela sua criação de conteúdo na plataforma Newe.
 
-O uso continuado de nosso aplicativo será considerado como aceitação de nossas práticas em torno de privacidade e </string>
+O uso continuado de nosso aplicativo será considerado como aceitação de nossas práticas em torno de privacidade e </mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -417,7 +514,7 @@ O uso continuado de nosso aplicativo será considerado como aceitação de nossa
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">, entre em contato conosco.
+                            <string key="content">, entre em contato conosco!
 </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
