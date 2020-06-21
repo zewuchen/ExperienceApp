@@ -260,7 +260,7 @@ final class Cloud {
 
     public func getExperience(data: ExperienceModel?, completionHandler: @escaping ([CKRecord?], Error?) -> Void) {
         // Puxa somente as que tem vagas
-        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(format: "availableVacancies != 0"))
+        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(format: "availableVacancies != 0 AND approved == 1"))
         // Puxa todas
         //        var query = CKQuery(recordType: "Experience", predicate: NSPredicate(value: true))
 
@@ -314,6 +314,7 @@ final class Cloud {
                 experience.setValue(data.description, forKey: "description")
                 experience.setValue(data.date, forKey: "date")
                 experience.setValue(data.lengthGroup, forKey: "availableVacancies")
+                experience.setValue(Int64(0), forKey: "approved")
                 //                experience.setValue(data.duration, forKey: "duration")
                 //                experience.setValue(data.availableVacancies, forKey: "availableVacancies")
                 //                experience.setValue(data.price, forKey: "price")
