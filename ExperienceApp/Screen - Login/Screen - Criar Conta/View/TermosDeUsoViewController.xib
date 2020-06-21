@@ -56,13 +56,13 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
+                            <mutableString key="content">
 
-Leia atenta e cuidadosamente estes termos de serviço (“Termos”), pois eles contêm informações importantes sobre seus direitos, recursos e obrigações. Ao acessar ou utilizar a Plataforma Newe, você concorda em cumprir com estes Termos e em estar sujeito a eles.
+Leia atenta e cuidadosamente estes termos de serviço porque eles contêm informações importantes sobre seus direitos, recursos e obrigações. Ao acessar ou utilizar a Plataforma Newe, você concorda em cumprir com estes Termos e em estar sujeito a eles.
 
-Todo o relacionamento e interação dos Usuários com a plataforma Newe é realizada de forma digital e online. O Usuário não pagará qualquer tarifa pela a utilização da plataforma Newe. 
+Todo o relacionamento e interação dos Usuários com a plataforma Newe é realizada de forma digital e online. O usuário não pagará qualquer tarifa pela a utilização da plataforma Newe. 
 
-</string>
+</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -78,7 +78,7 @@ Todo o relacionamento e interação dos Usuários com a plataforma Newe é reali
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
+                            <mutableString key="content">
 Ao publicar conteúdo na Newe, você concorda em seguir essa política. Nós nos reservamos o direito de remover qualquer conteúdo, em parte ou inteiro, que viole essa política.
 
 Você é exclusivamente responsável por todo conteúdo que você disponibilizar na plataforma Newe. Assim, você declara e garante que:
@@ -90,9 +90,9 @@ Você não publicará, fará upload, enviará ou transmitirá qualquer conteúdo
 (v) promova substâncias ou atividades prejudiciais ou ilegais; 
 (vi) viole a política de conteúdo da Newe ou qualquer outra política. A plataforma pode, sem qualquer aviso, remover ou desabilitar o acesso a qualquer conteúdo que consideremos uma violação à lei aplicável ou que possa ser repreensível ou prejudicial à Newe, seus membros, terceiros ou à sua propriedade.
 
-Newe respeita a lei de direitos autorais e espera que seus  membros façam o mesmo. Caso você acredite que qualquer conteúdo na plataforma Newe infrinja direitos autorais de sua propriedade, notifique-nos de acordo com nossa Política de Direitos Autorais.
+Newe respeita a lei de direitos autorais e espera que seus  membros façam o mesmo. Caso você acredite que qualquer conteúdo na plataforma Newe infrinja direitos autorais de sua propriedade, notifique-nos.
 
-</string>
+</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -108,14 +108,13 @@ Newe respeita a lei de direitos autorais e espera que seus  membros façam o mes
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
-Se você tiver algum problema técnico que impeça que você ofereça a experiência, como problemas de vídeo ou áudio, será necessário reembolsar os hóspedes. Para enviar um reembolso:
+                            <mutableString key="content">
+Se você tiver algum problema técnico que impeça que você ofereça a experiência, como problemas de vídeo ou áudio, será necessário avisar aos participantes. Para isso:
 1. Acesse a experiência que você deseja cancelar;
 2. Clique em “Reservado” e posteriormente "Cancelar experiência";
-3. Selecione Problemas com o Zoom como motivo;
-4. Confirme o cancelamento.
+3. Confirme o cancelamento.
 
-</string>
+</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -130,14 +129,14 @@ Se você tiver algum problema técnico que impeça que você ofereça a experiê
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
+                            <mutableString key="content">
 Antes de participar de sua experiência, certifique-se de que seu dispositivo atende aos requisitos do sistema do Zoom e teste sua conexão de Internet participando de uma reunião de teste.
 - Um ID de reunião aleatório e protegido por senha é criado para cada experiência;
 - As experiências não podem ser gravadas;
-- O vídeo do hóspede é desativado depois que ele entra na sala de reuniões do Zoom;
+- O vídeo do participante é desativado depois que ele entra na sala de reuniões do Zoom;
 - Não é possível transferir arquivos através do Zoom.
 
-</string>
+</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -152,14 +151,14 @@ Antes de participar de sua experiência, certifique-se de que seu dispositivo at
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
+                            <mutableString key="content">
 - Não compartilhe o link de reunião do Zoom protegido por senha com mais ninguém;
 - Use a versão mais recente do aplicativo do Zoom; 
 - Preste atenção ao seu ambiente e ao que está atrás de você ao abrir a câmera — seu anfitrião e outros hóspedes poderão vê-los;
 - Silencie seu microfone até que você esteja pronto para falar;
 - Tome cuidado ao usar o recurso de bate-papo em grupo, pois todos os participantes poderão ler o que você escrever.
 
-</string>
+</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -174,13 +173,13 @@ Antes de participar de sua experiência, certifique-se de que seu dispositivo at
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
+                            <mutableString key="content">
 Você pode encontrar o link em teu perfil.
-Faça login no Zoom com pelo menos 5 minutos de antecedência para garantir que tudo está funcionando corretamente e que não se atrasará para a experiência. É importante ter em mente que o seu anfitrião tem a opção de rejeitar a entrada de hóspedes atrasados e que os hóspedes que chegam atrasados não são elegíveis para um reembolso.
+Faça login no Zoom com pelo menos 5 minutos de antecedência para garantir que tudo está funcionando corretamente e que não se atrasará para a experiência. É importante ter em mente que o seu anfitrião tem a opção de rejeitar a entrada de participantes atrasados e que os esses que chegam atrasados não são elegíveis para um reembolso.
 
-No caso de violações repetidas ou graves, podemos suspender ou desativar permanentemente as contas em questão.V ocê pode denunciar o conteúdo diretamente ou entrar em contato conosco para denunciar conteúdo que pareça violar esta política.
+No caso de violações repetidas ou graves, podemos suspender ou desativar permanentemente as contas em questão. Você pode denunciar o conteúdo ao entrar em contato conosco para denunciar conteúdo que pareça violar esta política.
 
-</string>
+</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -195,7 +194,7 @@ No caso de violações repetidas ou graves, podemos suspender ou desativar perma
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
+                            <mutableString key="content">
 - Conteúdo criado exclusivamente para fins de publicidade ou outro conteúdo comercial, incluindo logotipos, links ou nomes de empresas;
 - Spam, contato indesejado ou conteúdo compartilhado repetidamente de maneira perturbadora;
 - Conteúdo que endossa ou promove atividades ilegais ou prejudiciais, ou que seja sexualmente explícito, violento, gráfico, ameaçador ou abusivo;
@@ -204,7 +203,7 @@ No caso de violações repetidas ou graves, podemos suspender ou desativar perma
 - Conteúdo ilegal ou que viole os direitos de outra pessoa ou entidade, incluindo direitos de propriedade intelectual e direitos de privacidade;
 - Conteúdo que inclua informações privadas ou confidenciais de outra pessoa, incluindo conteúdo suficiente para identificar a localização de uma acomodação.
 
-</string>
+</mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -235,8 +234,8 @@ No caso de violações repetidas ou graves, podemos suspender ou desativar perma
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">
-A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de Privacidade, a seu exclusivo critério. Quaisquer alterações nestes Termos de Uso e na Política de Privacidade serão informadas por meio da plataforma da Newe; e com prazo de antecedência de 30 (trinta) dias da efetiva modificação. </string>
+                            <mutableString key="content">
+A Newe poderá, a qualquer tempo, alterar estes Termos de Uso ou a Política de Privacidade, a seu exclusivo critério. Quaisquer alterações nestes Termos de Uso e na Política de Privacidade serão informadas por meio da plataforma da Newe; e com prazo de antecedência de 30 (trinta) dias da efetiva modificação. </mutableString>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
@@ -288,7 +287,7 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content">O usuário reconhece e aceita que, assim que publicada a alteração destes Termos de Uso e/ou da Política de Privacidade no site ou na plataforma/aplicativo, o uso dos mesmos passará a ser submetido aos Termos de Uso/Política de Privacidade atualizados. </string>
+                            <string key="content">O usuário reconhece e aceita que, assim que publicada a alteração destes Termos de Uso e/ou da Política de Privacidade no site ou no aplicativo, o uso dos mesmos passará a ser submetido aos Termos de Uso/Política de Privacidade atualizados. </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <font key="NSFont" size="18" name="Avenir-Medium"/>
